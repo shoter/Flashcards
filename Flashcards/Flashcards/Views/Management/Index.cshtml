@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Manage flashcards";
+    ViewBag.Module = "Management.Index";
+}
+
+<div id="managementIndex">
+    <div class="filters">
+        <h3>Filters</h3>
+        Not implemented...yet
+    </div>
+    <div class="search">
+        <input placeholder="Search" class="form-control" id="searchForFlashcards" type="text" />
+    </div>
+    <div class="flashcardsList">
+
+    </div>
+</div>
+
+<script id="flashcardTemplate" type="text/x-jsrender">
+    <div class="flashcard">
+        <a href="\Management\{{:ID}}\">{{:Name}}</a>
+    </div>
+</script>
+
+

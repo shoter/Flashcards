@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FlashcardsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Files">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Filename" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FileTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FileTypes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlashcardImages">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="FileID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Flashcards">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FlashcardTranslations">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="SpecificImageFileID" Type="bigint" />
+          <Property Name="Translation" Type="nvarchar" MaxLength="75" Nullable="false" />
+          <Property Name="Pronounciation" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Significance" Type="decimal" Precision="3" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ImageDisallowedTranslations">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="FileID" />
+            <PropertyRef Name="TranslationID" />
+          </Key>
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="FileID" Type="bigint" Nullable="false" />
+          <Property Name="TranslationID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Symbol" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="EnglishName" Type="nvarchar" MaxLength="75" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserFlashcardMemories">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="bigint" Nullable="false" />
+          <Property Name="LastReviewTime" Type="datetime" Nullable="false" />
+          <Property Name="NextReviewTime" Type="datetime" Nullable="false" />
+          <Property Name="Strength" Type="decimal" Precision="8" Scale="6" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Files_FileTypes">
+          <End Role="FileTypes" Type="Self.FileTypes" Multiplicity="1" />
+          <End Role="Files" Type="Self.Files" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FileTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Files">
+              <PropertyRef Name="FileTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlaschardTranslations_FlashcardImages">
+          <End Role="FlashcardImages" Type="Self.FlashcardImages" Multiplicity="0..1" />
+          <End Role="FlashcardTranslations" Type="Self.FlashcardTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlashcardImages">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslations">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="SpecificImageFileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardImages_Files">
+          <End Role="Files" Type="Self.Files" Multiplicity="1" />
+          <End Role="FlashcardImages" Type="Self.FlashcardImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Files">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardImages">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardImages_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="FlashcardImages" Type="Self.FlashcardImages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardImages">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardTranslations_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="FlashcardTranslations" Type="Self.FlashcardTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslations">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardTranslations_Languages">
+          <End Role="Languages" Type="Self.Languages" Multiplicity="1" />
+          <End Role="FlashcardTranslations" Type="Self.FlashcardTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslations">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImageDisallowedTranslations_FlaschardTranslations">
+          <End Role="FlashcardTranslations" Type="Self.FlashcardTranslations" Multiplicity="1" />
+          <End Role="ImageDisallowedTranslations" Type="Self.ImageDisallowedTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlashcardTranslations">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ImageDisallowedTranslations">
+              <PropertyRef Name="TranslationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ImageDisallowedTranslations_FlashcardImages">
+          <End Role="FlashcardImages" Type="Self.FlashcardImages" Multiplicity="1" />
+          <End Role="ImageDisallowedTranslations" Type="Self.ImageDisallowedTranslations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlashcardImages">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="ImageDisallowedTranslations">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFlashcardMemories_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemories">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFlashcardMemories_Languages">
+          <End Role="Languages" Type="Self.Languages" Multiplicity="1" />
+          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemories">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FlashcardsModelStoreContainer">
+          <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileTypes" EntityType="Self.FileTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FlashcardImages" EntityType="Self.FlashcardImages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Flashcards" EntityType="Self.Flashcards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FlashcardTranslations" EntityType="Self.FlashcardTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImageDisallowedTranslations" EntityType="Self.ImageDisallowedTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserFlashcardMemories" EntityType="Self.UserFlashcardMemories" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Files_FileTypes" Association="Self.FK_Files_FileTypes">
+            <End Role="FileTypes" EntitySet="FileTypes" />
+            <End Role="Files" EntitySet="Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlaschardTranslations_FlashcardImages" Association="Self.FK_FlaschardTranslations_FlashcardImages">
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+            <End Role="FlashcardTranslations" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardImages_Files" Association="Self.FK_FlashcardImages_Files">
+            <End Role="Files" EntitySet="Files" />
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardImages_Flashcards" Association="Self.FK_FlashcardImages_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardTranslations_Flashcards" Association="Self.FK_FlashcardTranslations_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="FlashcardTranslations" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardTranslations_Languages" Association="Self.FK_FlashcardTranslations_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="FlashcardTranslations" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImageDisallowedTranslations_FlaschardTranslations" Association="Self.FK_ImageDisallowedTranslations_FlaschardTranslations">
+            <End Role="FlashcardTranslations" EntitySet="FlashcardTranslations" />
+            <End Role="ImageDisallowedTranslations" EntitySet="ImageDisallowedTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ImageDisallowedTranslations_FlashcardImages" Association="Self.FK_ImageDisallowedTranslations_FlashcardImages">
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+            <End Role="ImageDisallowedTranslations" EntitySet="ImageDisallowedTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFlashcardMemories_Flashcards" Association="Self.FK_UserFlashcardMemories_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFlashcardMemories_Languages" Association="Self.FK_UserFlashcardMemories_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FlashcardsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Filename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FileTypeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="FileType" Relationship="Self.FK_Files_FileTypes" FromRole="Files" ToRole="FileTypes" />
+          <NavigationProperty Name="FlashcardImages" Relationship="Self.FK_FlashcardImages_Files" FromRole="Files" ToRole="FlashcardImages" />
+        </EntityType>
+        <EntityType Name="FileType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Files" Relationship="Self.FK_Files_FileTypes" FromRole="FileTypes" ToRole="Files" />
+        </EntityType>
+        <EntityType Name="FlashcardImage">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="FileID" />
+          </Key>
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="FileID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="File" Relationship="Self.FK_FlashcardImages_Files" FromRole="FlashcardImages" ToRole="Files" />
+          <NavigationProperty Name="Flashcard" Relationship="Self.FK_FlashcardImages_Flashcards" FromRole="FlashcardImages" ToRole="Flashcards" />
+          <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlaschardTranslations_FlashcardImages" FromRole="FlashcardImage" ToRole="FlashcardTranslation" />
+          <NavigationProperty Name="FlashcardTranslations1" Relationship="FlashcardsModel.ImageDisallowedTranslations" FromRole="FlashcardImage" ToRole="FlashcardTranslation" />
+          </EntityType>
+        <EntityType Name="Flashcard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FlashcardImages" Relationship="Self.FK_FlashcardImages_Flashcards" FromRole="Flashcards" ToRole="FlashcardImages" />
+          <NavigationProperty Name="UserFlashcardMemories" Relationship="Self.FK_UserFlashcardMemories_Flashcards" FromRole="Flashcards" ToRole="UserFlashcardMemories" />
+          <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Flashcards" FromRole="Flashcard" ToRole="FlashcardTranslation" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Symbol" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="UserFlashcardMemories" Relationship="Self.FK_UserFlashcardMemories_Languages" FromRole="Languages" ToRole="UserFlashcardMemories" />
+          <Property Name="EnglishName" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Languages" FromRole="Language" ToRole="FlashcardTranslation" />
+        </EntityType>
+        <EntityType Name="UserFlashcardMemory">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int64" Nullable="false" />
+          <Property Name="LastReviewTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NextReviewTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Strength" Type="Decimal" Precision="8" Scale="6" Nullable="false" />
+          <NavigationProperty Name="Flashcard" Relationship="Self.FK_UserFlashcardMemories_Flashcards" FromRole="UserFlashcardMemories" ToRole="Flashcards" />
+          <NavigationProperty Name="Language" Relationship="Self.FK_UserFlashcardMemories_Languages" FromRole="UserFlashcardMemories" ToRole="Languages" />
+        </EntityType>
+        <Association Name="FK_Files_FileTypes">
+          <End Role="FileTypes" Type="Self.FileType" Multiplicity="1" />
+          <End Role="Files" Type="Self.File" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FileTypes">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Files">
+              <PropertyRef Name="FileTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardImages_Files">
+          <End Role="Files" Type="Self.File" Multiplicity="1" />
+          <End Role="FlashcardImages" Type="Self.FlashcardImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Files">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardImages">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardImages_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcard" Multiplicity="1" />
+          <End Role="FlashcardImages" Type="Self.FlashcardImage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardImages">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFlashcardMemories_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcard" Multiplicity="1" />
+          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemories">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFlashcardMemories_Languages">
+          <End Role="Languages" Type="Self.Language" Multiplicity="1" />
+          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemories">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FlashcardsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Files" EntityType="Self.File" />
+          <EntitySet Name="FileTypes" EntityType="Self.FileType" />
+          <EntitySet Name="FlashcardImages" EntityType="Self.FlashcardImage" />
+          <EntitySet Name="Flashcards" EntityType="Self.Flashcard" />
+          <EntitySet Name="Languages" EntityType="Self.Language" />
+          <EntitySet Name="UserFlashcardMemories" EntityType="Self.UserFlashcardMemory" />
+          <AssociationSet Name="FK_Files_FileTypes" Association="Self.FK_Files_FileTypes">
+            <End Role="FileTypes" EntitySet="FileTypes" />
+            <End Role="Files" EntitySet="Files" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardImages_Files" Association="Self.FK_FlashcardImages_Files">
+            <End Role="Files" EntitySet="Files" />
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardImages_Flashcards" Association="Self.FK_FlashcardImages_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="FlashcardImages" EntitySet="FlashcardImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFlashcardMemories_Flashcards" Association="Self.FK_UserFlashcardMemories_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFlashcardMemories_Languages" Association="Self.FK_UserFlashcardMemories_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+          <EntitySet Name="FlashcardTranslations" EntityType="FlashcardsModel.FlashcardTranslation" />
+          <AssociationSet Name="FK_FlaschardTranslations_FlashcardImages" Association="FlashcardsModel.FK_FlaschardTranslations_FlashcardImages">
+            <End Role="FlashcardImage" EntitySet="FlashcardImages" />
+            <End Role="FlashcardTranslation" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="ImageDisallowedTranslations" Association="FlashcardsModel.ImageDisallowedTranslations">
+            <End Role="FlashcardTranslation" EntitySet="FlashcardTranslations" />
+            <End Role="FlashcardImage" EntitySet="FlashcardImages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardTranslations_Flashcards" Association="FlashcardsModel.FK_FlashcardTranslations_Flashcards">
+            <End Role="Flashcard" EntitySet="Flashcards" />
+            <End Role="FlashcardTranslation" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FlashcardTranslations_Languages" Association="FlashcardsModel.FK_FlashcardTranslations_Languages">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="FlashcardTranslation" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="FlashcardTranslation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="SpecificImageFileID" Type="Int64" />
+          <Property Name="Translation" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Name="Pronounciation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Significance" Type="Decimal" Nullable="false" Precision="3" Scale="2" />
+          <NavigationProperty Name="FlashcardImage" Relationship="FlashcardsModel.FK_FlaschardTranslations_FlashcardImages" FromRole="FlashcardTranslation" ToRole="FlashcardImage" />
+          <NavigationProperty Name="FlashcardImages" Relationship="FlashcardsModel.ImageDisallowedTranslations" FromRole="FlashcardTranslation" ToRole="FlashcardImage" />
+          <NavigationProperty Name="Flashcard" Relationship="FlashcardsModel.FK_FlashcardTranslations_Flashcards" FromRole="FlashcardTranslation" ToRole="Flashcard" />
+          <NavigationProperty Name="Language" Relationship="FlashcardsModel.FK_FlashcardTranslations_Languages" FromRole="FlashcardTranslation" ToRole="Language" />
+        </EntityType>
+        <Association Name="FK_FlaschardTranslations_FlashcardImages">
+          <End Type="FlashcardsModel.FlashcardImage" Role="FlashcardImage" Multiplicity="0..1" />
+          <End Type="FlashcardsModel.FlashcardTranslation" Role="FlashcardTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FlashcardImage">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="FileID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslation">
+              <PropertyRef Name="FlashcardID" />
+              <PropertyRef Name="SpecificImageFileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ImageDisallowedTranslations">
+          <End Type="FlashcardsModel.FlashcardTranslation" Role="FlashcardTranslation" Multiplicity="*" />
+          <End Type="FlashcardsModel.FlashcardImage" Role="FlashcardImage" Multiplicity="*" />
+        </Association>
+        <Association Name="FK_FlashcardTranslations_Flashcards">
+          <End Type="FlashcardsModel.Flashcard" Role="Flashcard" Multiplicity="1" />
+          <End Type="FlashcardsModel.FlashcardTranslation" Role="FlashcardTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslation">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FlashcardTranslations_Languages">
+          <End Type="FlashcardsModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="FlashcardsModel.FlashcardTranslation" Role="FlashcardTranslation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FlashcardTranslation">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FlashcardsModelStoreContainer" CdmEntityContainer="FlashcardsEntities">
+          <EntitySetMapping Name="Files">
+            <EntityTypeMapping TypeName="FlashcardsModel.File">
+              <MappingFragment StoreEntitySet="Files">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Filename" ColumnName="Filename" />
+                <ScalarProperty Name="FileTypeID" ColumnName="FileTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileTypes">
+            <EntityTypeMapping TypeName="FlashcardsModel.FileType">
+              <MappingFragment StoreEntitySet="FileTypes">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlashcardImages">
+            <EntityTypeMapping TypeName="FlashcardsModel.FlashcardImage">
+              <MappingFragment StoreEntitySet="FlashcardImages">
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Flashcards">
+            <EntityTypeMapping TypeName="FlashcardsModel.Flashcard">
+              <MappingFragment StoreEntitySet="Flashcards">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Languages">
+            <EntityTypeMapping TypeName="FlashcardsModel.Language">
+              <MappingFragment StoreEntitySet="Languages">
+                <ScalarProperty Name="EnglishName" ColumnName="EnglishName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserFlashcardMemories">
+            <EntityTypeMapping TypeName="FlashcardsModel.UserFlashcardMemory">
+              <MappingFragment StoreEntitySet="UserFlashcardMemories">
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LastReviewTime" ColumnName="LastReviewTime" />
+                <ScalarProperty Name="NextReviewTime" ColumnName="NextReviewTime" />
+                <ScalarProperty Name="Strength" ColumnName="Strength" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FlashcardTranslations">
+            <EntityTypeMapping TypeName="FlashcardsModel.FlashcardTranslation">
+              <MappingFragment StoreEntitySet="FlashcardTranslations">
+                <ScalarProperty Name="Significance" ColumnName="Significance" />
+                <ScalarProperty Name="Pronounciation" ColumnName="Pronounciation" />
+                <ScalarProperty Name="Translation" ColumnName="Translation" />
+                <ScalarProperty Name="SpecificImageFileID" ColumnName="SpecificImageFileID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="ImageDisallowedTranslations" TypeName="FlashcardsModel.ImageDisallowedTranslations" StoreEntitySet="ImageDisallowedTranslations">
+            <EndProperty Name="FlashcardImage">
+              <ScalarProperty Name="FileID" ColumnName="FileID" />
+              <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+            </EndProperty>
+            <EndProperty Name="FlashcardTranslation">
+              <ScalarProperty Name="ID" ColumnName="TranslationID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

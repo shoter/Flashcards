@@ -1,0 +1,18 @@
+﻿#managementIndex .filters {
+  padding: 0 4rem 2rem 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem; }
+
+#managementIndex .search input {
+  width: 100%;
+  max-width: none; }
+
+#managementIndex .flashcardsList {
+  margin-top: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.4); }
+  #managementIndex .flashcardsList .flashcard {
+    margin-left: 1rem; }
+
+body > .container.body-content {
+  margin-top: 1rem; }
+

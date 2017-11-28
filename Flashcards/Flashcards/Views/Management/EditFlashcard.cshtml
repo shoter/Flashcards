@@ -1,0 +1,86 @@
+﻿@model Flashcards.Models.Manage.EditFlashcardViewModel
+
+
+@{
+    ViewBag.Title = "EditFlashcard";
+    var i = 0;
+}
+
+
+<div id="managementEditflashcard" class="row">
+    <div class="col-md-6 col-sm-12">
+        @using (Html.BeginForm(RouteDataHelper.ActionName, RouteDataHelper.ControllerName, FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.FlashcardID)
+
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ConnectedImage</th>
+                        <th>Translation</th>
+                        <th>Pronounciation</th>
+                        <th>Significance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var translation in Model.Translations)
+                    {
+                        <tr>
+                            <td>Remove</td>
+                            <td></td>
+                            <td><input type="text" name="translations[@i].Translation" value="@translation.Translation" /></td>
+                            <td><input type="text" name="translations[@i].Pronounciation" value="@translation.Pronounciation" /></td>
+                            <td><input type="number" step="0.01" name="translations[@i].Significance" value="@translation.Significance" /></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <button class="btn btn-success pull-right">Save table</button>
+
+            <hr/>
+        }
+        @using (Html.BeginForm("AddTranslation", RouteDataHelper.ControllerName, FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.FlashcardID)
+            <h4>New translation</h4>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.NewTranslation.Translation, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.NewTranslation.Translation, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.NewTranslation.Translation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.NewTranslation.Pronounciation, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.NewTranslation.Pronounciation, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.NewTranslation.Pronounciation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.NewTranslation.Significance, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.NewTranslation.Significance, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.NewTranslation.Significance, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <h4>Add new image</h4>
+        @using (Html.BeginForm("UploadNewImage", RouteDataHelper.ControllerName, FormMethod.Post, new { }))
+        {
+            @Html.HiddenFor(m => m.FlashcardID)
+
+            <input type="file" />
+            <button class="btn btn-success pull-right">Send</button>
+        }
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿<Window x:Class="Management.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Management"
+		xmlns:s="clr-namespace:Management.Settings"
+		
+		
+		Top="{Binding Source={x:Static s:UserSettings.Current}, Path=WindowY, Mode=TwoWay}"
+		Left="{Binding Source={x:Static s:UserSettings.Current}, Path=WindowX, Mode=TwoWay}"
+		Width="{Binding Source={x:Static s:UserSettings.Current}, Path=WindowWidth, Mode=TwoWay}"
+		Height="{Binding Source={x:Static s:UserSettings.Current}, Path=WindowHeight, Mode=TwoWay}"
+		
+		MinWidth="640"
+		MinHeight="480"
+		
+        mc:Ignorable="d"
+        Title="MainWindow">
+	
+	
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="{Binding Source={x:Static s:UserSettings.Current}, Path=FirstColumnWidth, Mode=TwoWay}" />
+			<ColumnDefinition Width="5" />
+			<ColumnDefinition Width="{Binding Source={x:Static s:UserSettings.Current}, Path=SecondColumnWidth, Mode=TwoWay}" />
+		</Grid.ColumnDefinitions>
+
+		<StackPanel Name="LeftColumn" >
+			<TextBox Name="FlashcardSearch" Height="25" FontSize="16" TextAlignment="Center" PreviewTextInput="searchPreviewTextInput">
+
+			</TextBox>
+			<ListView Name="FoundFlashcards">
+				
+			</ListView>
+		</StackPanel>
+
+		<GridSplitter Width="5" HorizontalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="1"/>
+
+		<Grid Grid.Column="2">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="{Binding Source={x:Static s:UserSettings.Current}, Path=FirstRowHeight, Mode=TwoWay}"/>
+				<RowDefinition Height="5"/>
+				<RowDefinition Height="{Binding Source={x:Static s:UserSettings.Current}, Path=SecondRowHeight, Mode=TwoWay}"/>
+			</Grid.RowDefinitions>
+
+			<StackPanel CanVerticallyScroll="true" Name="SecondColumnTranslations">
+				<Button IsEnabled="False" Name="SaveEverythingButton" Click="saveEverything">Save</Button>
+				<ComboBox SelectionChanged="languageChanges" IsEnabled="false" Name="AvailableLanguages">
+					
+				</ComboBox>
+				<DataGrid  AutoGenerateColumns="false" CanUserAddRows="false" IsEnabled="false" Name="TranslationsGrid">
+					<DataGrid.Columns>
+						<DataGridTemplateColumn Header="Image" Width="*" IsReadOnly="True">
+							<DataGridTemplateColumn.CellTemplate>
+								<DataTemplate>
+									
+										<Image  Source="{Binding TranslationImage}" />
+									
+								</DataTemplate>
+							</DataGridTemplateColumn.CellTemplate>
+						</DataGridTemplateColumn>
+						<DataGridTextColumn Header="Translation" Width="2*" Binding="{Binding Translation}" />
+						<DataGridTextColumn Header="Pronounciation" Width="2*" Binding="{Binding Pronounciation}"/>
+						<DataGridTextColumn Header="Significance" Width="40" Binding="{Binding Significance}"/>
+					</DataGrid.Columns>
+					
+				</DataGrid >
+				<Button IsEnabled="False" Name="AddNewTranslationButton" Click="AddNewTranslation" Content="Add new translation"/>
+			</StackPanel>
+
+			<GridSplitter Width="auto" Height="5" HorizontalAlignment="Stretch" Grid.Row="1" ResizeDirection="Rows" />
+		</Grid>
+		
+
+
+		
+	</Grid>
+</Window>

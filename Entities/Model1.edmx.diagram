@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc993caeb268465c8d65933ca2e8a394" Name="Diagram1" ZoomLevel="80">
+        <EntityTypeShape EntityType="FlashcardsModel.File" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlashcardsModel.FileType" Width="1.5" PointX="1.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlashcardsModel.FlashcardImage" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlashcardsModel.Flashcard" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlashcardsModel.Language" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FlashcardsModel.UserFlashcardMemory" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="FlashcardsModel.FK_Files_FileTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="FlashcardsModel.FK_FlashcardImages_Files" ManuallyRouted="false" />
+        <AssociationConnector Association="FlashcardsModel.FK_FlashcardImages_Flashcards" ManuallyRouted="false" />
+        <AssociationConnector Association="FlashcardsModel.FK_UserFlashcardMemories_Flashcards" ManuallyRouted="false" />
+        <AssociationConnector Association="FlashcardsModel.FK_UserFlashcardMemories_Languages" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FlashcardsModel.FlashcardTranslation" Width="1.5" PointX="5.25" PointY="3.75" />
+        <AssociationConnector Association="FlashcardsModel.FK_FlaschardTranslations_FlashcardImages" />
+        <AssociationConnector Association="FlashcardsModel.ImageDisallowedTranslations" />
+        <AssociationConnector Association="FlashcardsModel.FK_FlashcardTranslations_Flashcards" />
+        <AssociationConnector Association="FlashcardsModel.FK_FlashcardTranslations_Languages" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

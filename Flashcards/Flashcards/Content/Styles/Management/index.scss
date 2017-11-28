@@ -1,0 +1,31 @@
+﻿@import "../definitions.scss";
+
+#managementIndex
+{
+    .filters
+    {
+        padding: 0 4rem 2rem 4rem;
+        border: 1px solid rgba(black, 0.4);
+        margin-bottom: 1rem;
+    }
+
+    .search
+    {
+        input
+        {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    .flashcardsList
+    {
+        margin-top: 1rem;
+        border: 1px solid rgba(gray, 0.4);
+
+        .flashcard
+        {
+            margin-left: 1rem;
+        }
+    }
+}

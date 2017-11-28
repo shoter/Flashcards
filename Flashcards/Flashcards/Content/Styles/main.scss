@@ -1,0 +1,10 @@
+﻿@import "definitions.scss";
+@import "Management/index.scss";
+
+body
+{
+    &>.container.body-content
+        {
+            margin-top:1rem;
+        }
+}
