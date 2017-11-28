@@ -20,7 +20,7 @@ namespace Flashcards.Models.Manage
             TranslationID = flashcardTranslation.ID;
             Translation = flashcardTranslation.Translation;
             Pronounciation = flashcardTranslation.Pronounciation;
-            Significance = flashcardTranslation.Significance;
+            Significance = (double)flashcardTranslation.Significance;
         }
     }
 }

@@ -67,7 +67,7 @@ namespace Management
 
         private void searchPreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            displayFoundFlashcards(unit.FlashcardRepository.SearchForFlashcard(FlashcardSearch.Text));
+            //displayFoundFlashcards(unit.FlashcardRepository.SearchForFlashcard(FlashcardSearch.Text));
         }
 
         private void displayFoundFlashcards(List<Flashcard> flashcards)

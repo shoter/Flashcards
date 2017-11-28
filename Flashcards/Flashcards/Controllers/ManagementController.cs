@@ -14,10 +14,12 @@ namespace Flashcards.Controllers
     public class ManagementController : ControllerBase
     {
         private readonly FlashcardUnit unit;
+        private readonly IFlashcardTranslationService flashcardTranslationService;
 
-        public ManagementController(FlashcardUnit unit, IPopupService popupService) : base(popupService)
+        public ManagementController(FlashcardUnit unit, IPopupService popupService, IFlashcardTranslationService flashcardTranslationService) : base(popupService)
         {
             this.unit = unit;
+            this.flashcardTranslationService = flashcardTranslationService;
         }
 
         [Authorize(Roles = Groups.Administrator)]
@@ -42,6 +44,16 @@ namespace Flashcards.Controllers
 
         public ActionResult AddTranslation(int flashcardID, EditTranslationViewModel vm)
         {
+            var flashcard = unit.FlashcardRepository.GetById(flashcardID);
+            var result = flashcardTranslationService.CanAddTranslation(flashcard, vm.Translation, vm.Pronounciation, vm.Significance);
+
+            if (result.IsError)
+                return RedirectBackWithError(result);
+
+            flashcardTranslationService.AddTranslation(flashcard, vm.Translation, vm.Pronounciation, vm.Significance);
+
+            AddSuccess("Translation has been added!");
+            return RedirectBack();
 
         }
 
