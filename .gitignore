@@ -47,7 +47,7 @@ ipch/
 *.psess
 *.vsp
 
-*.vs/*
+.vs/*
 
 # ReSharper is a .NET coding add-in
 _ReSharper*
@@ -111,4 +111,4 @@ Flashcards/Flashcards/Scripts/Scala/target/*
 ###########
 Flashcards/Flashcards/Scripts/Scala/*.class
 Flashcards/Flashcards/Scripts/Scala/*.log
-Flashcards/Flashcards/Scripts/Scala/*/.idea/*
+Flashcards/Flashcards/Scripts/Scala/.idea/*
