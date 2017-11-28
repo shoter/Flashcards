@@ -47,6 +47,8 @@ ipch/
 *.psess
 *.vsp
 
+*.vs/*
+
 # ReSharper is a .NET coding add-in
 _ReSharper*
 
@@ -100,3 +102,13 @@ Desktop.ini
 Glimpse.log
 Sociatis/Logs
 Common/
+
+Flashcards/Flashcards/Scripts/Scala/project/target/*
+Flashcards/Flashcards/Scripts/Scala/target/*
+
+##########
+## SCALA
+###########
+Flashcards/Flashcards/Scripts/Scala/*.class
+Flashcards/Flashcards/Scripts/Scala/*.log
+Flashcards/Flashcards/Scripts/Scala/*/.idea/*
