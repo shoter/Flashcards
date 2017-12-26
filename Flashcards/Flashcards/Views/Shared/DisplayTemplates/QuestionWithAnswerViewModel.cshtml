@@ -1,0 +1,15 @@
+﻿@model Flashcards.Models.Flashcards.QuestionWithAnswerViewModel
+@{
+    ViewBag.Title = "Test";
+}
+@Html.HiddenFor(m => m.FlashcardID)
+<div id="question">
+    <div class="image">
+        @Html.DisplayFor(m => m.Image)
+    </div>
+    <div class="answer">
+        <input id="questionAnswer" class="form-control" placeholder="Answer" />
+        <button class="btn btn-success">Submit</button>
+    </div>
+</div>
+<!--Tu będzie answer-->

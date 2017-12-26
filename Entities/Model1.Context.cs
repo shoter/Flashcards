@@ -32,8 +32,8 @@ namespace Flashcards.Entities
         public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<FlashcardTranslation> FlashcardTranslations { get; set; }
         public virtual DbSet<UserFlashcardMemory> UserFlashcardMemories { get; set; }
-        public virtual DbSet<TrainingFlashcardMemory> TrainingFlashcardMemories { get; set; }
-        public virtual DbSet<TrainingCard> TrainingCards { get; set; }
         public virtual DbSet<TrainingSession> TrainingSessions { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<TrainingCard> TrainingCards { get; set; }
     }
 }

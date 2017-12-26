@@ -21,13 +21,13 @@
         <EntityTypeShape EntityType="FlashcardsModel.UserFlashcardMemory" Width="1.5" PointX="3" PointY="0.75" />
         <AssociationConnector Association="FlashcardsModel.FK_UserFlashcardMemories_Flashcards" />
         <AssociationConnector Association="FlashcardsModel.FK_UserFlashcardMemories_Languages" />
-        <EntityTypeShape EntityType="FlashcardsModel.TrainingFlashcardMemory" Width="1.5" PointX="3" PointY="0.75" />
-        <AssociationConnector Association="FlashcardsModel.FK_TrainingFlashcardMemories_TrainingFlashcardMemories" />
-        <AssociationConnector Association="FlashcardsModel.FK_TrainingFlashcardMemories_Languages" />
-        <EntityTypeShape EntityType="FlashcardsModel.TrainingCard" Width="1.5" PointX="3.375" PointY="7.75" />
         <EntityTypeShape EntityType="FlashcardsModel.TrainingSession" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="FlashcardsModel.AspNetUser" Width="1.5" PointX="0.75" PointY="1.75" />
+        <AssociationConnector Association="FlashcardsModel.FK_TrainingSessions_AspNetUsers" />
+        <AssociationConnector Association="FlashcardsModel.FK_UserFlashcardMemories_AspNetUsers" />
+        <EntityTypeShape EntityType="FlashcardsModel.TrainingCard" Width="1.5" PointX="9.625" PointY="4.625" />
         <AssociationConnector Association="FlashcardsModel.FK_TrainingCards_Flashcards" />
-        <AssociationConnector Association="FlashcardsModel.FK_TrainingCards_Languages" />
+        <AssociationConnector Association="FlashcardsModel.FK_TrainingSessions_Languages" />
         <AssociationConnector Association="FlashcardsModel.FK_TrainingCards_TrainingSessions" />
         </Diagram>
     </edmx:Diagrams>

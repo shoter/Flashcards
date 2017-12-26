@@ -12,7 +12,7 @@ namespace Flashcards.Controllers
     public class QuestionController : ControllerBase
     {
         private readonly FlashcardUnit unit;
-        public QuestionController(IPopupService popupService, FlashcardUnit unit) : base(popupService)
+        public QuestionController(IPopupService popupService, ISessionService sessionService, FlashcardUnit unit) : base(popupService, sessionService)
         {
             this.unit = unit;
         }

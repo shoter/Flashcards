@@ -10,24 +10,24 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Flashcards.Models;
 using Flashcards.Code;
+using Services.Interfaces;
 
 namespace Flashcards.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : ControllerBase
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
+
+        public AccountController(ISessionService sessionService, IPopupService popupService )
+            :base(popupService, sessionService)
         {
+            
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
+
 
         public ApplicationSignInManager SignInManager
         {
@@ -80,6 +80,7 @@ namespace Flashcards.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    sessionService.UserID = User.Identity.GetUserId();
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

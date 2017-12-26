@@ -28,9 +28,35 @@ namespace Services.Implementation
                 if (userInfo != null)
                     return userInfo;
 
-                throw new NotImplementedException();
-            }
+                var dbUserInfo = unit.InfoRepository.GetUserInfo(UserID);
 
+                userInfo = new UserInfo(dbUserInfo);
+                SetValue(userInfo);
+
+                return userInfo;
+            }
+        }
+
+        private int? languageID = null;
+        public int LanguageID
+        {
+            get
+            {
+                if (languageID == null)
+                    languageID = unit.LanguageRepository.FirstOrDefault().ID;
+
+                return languageID.Value;
+            }
+            set
+            {
+                languageID = value;
+            }
+        }
+
+        public string UserID
+        {
+            get => GetValue<string>();
+            set => SetValue(value);
         }
 
         public static void SetValue(object value, [CallerMemberName] string name = "")

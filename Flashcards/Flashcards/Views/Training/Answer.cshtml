@@ -1,0 +1,18 @@
+﻿@model Flashcards.Models.Flashcards.AnswerViewModel
+
+<div id="answer">
+    @if (Model.IsCorrect)
+    {
+        <h4 class="text-success">Correct answer</h4>
+    }
+    else
+    {
+        <h4 class="text-danger">Wrong answer</h4>
+    }
+
+    <br />
+
+    Possible answers: <br />
+
+    @Html.DisplayFor(m => m.TranslationList)
+</div>

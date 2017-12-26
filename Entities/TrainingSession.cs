@@ -23,7 +23,10 @@ namespace Flashcards.Entities
         public long ID { get; set; }
         public string UserID { get; set; }
         public System.DateTime DateStarted { get; set; }
+        public int LanguageID { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
+        public virtual Language Language { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrainingCard> TrainingCards { get; set; }
     }

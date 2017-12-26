@@ -20,7 +20,7 @@ namespace Flashcards.Controllers
         private readonly IFlashcardImageService flashcardImageService;
 
         public ManagementController(FlashcardUnit unit, IPopupService popupService, IFlashcardTranslationService flashcardTranslationService,
-            IFlashcardImageService flashcardImageService) : base(popupService)
+            IFlashcardImageService flashcardImageService, ISessionService sessionService) : base(popupService, sessionService)
         {
             this.unit = unit;
             this.flashcardTranslationService = flashcardTranslationService;

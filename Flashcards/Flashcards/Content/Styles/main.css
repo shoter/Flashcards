@@ -79,6 +79,17 @@ i.fa.info {
       min-width: 33vw;
       text-align: center; }
 
+#answer .possibleAnswer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  #answer .possibleAnswer .pronounciation {
+    color: gray;
+    font-size: small; }
+  #answer .possibleAnswer .translation {
+    font-size: large; }
+
 body > .container.body-content {
   margin-top: 1rem; }
 

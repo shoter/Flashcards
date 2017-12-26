@@ -10,5 +10,7 @@ namespace Services.Interfaces
     public interface ISessionService
     {
         UserInfo UserInfo { get; }
+        string UserID { get; set; }
+        int LanguageID { get; set; }
     }
 }

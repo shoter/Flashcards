@@ -12,27 +12,31 @@ namespace Flashcards.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class Flashcard
+    public partial class AspNetUser
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Flashcard()
+        public AspNetUser()
         {
-            this.FlashcardImages = new HashSet<FlashcardImage>();
-            this.FlashcardTranslations = new HashSet<FlashcardTranslation>();
+            this.TrainingSessions = new HashSet<TrainingSession>();
             this.UserFlashcardMemories = new HashSet<UserFlashcardMemory>();
-            this.TrainingCards = new HashSet<TrainingCard>();
         }
     
-        public int ID { get; set; }
-        public string Name { get; set; }
+        public string Id { get; set; }
+        public string Email { get; set; }
+        public bool EmailConfirmed { get; set; }
+        public string PasswordHash { get; set; }
+        public string SecurityStamp { get; set; }
+        public string PhoneNumber { get; set; }
+        public bool PhoneNumberConfirmed { get; set; }
+        public bool TwoFactorEnabled { get; set; }
+        public Nullable<System.DateTime> LockoutEndDateUtc { get; set; }
+        public bool LockoutEnabled { get; set; }
+        public int AccessFailedCount { get; set; }
+        public string UserName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FlashcardImage> FlashcardImages { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FlashcardTranslation> FlashcardTranslations { get; set; }
+        public virtual ICollection<TrainingSession> TrainingSessions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserFlashcardMemory> UserFlashcardMemories { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TrainingCard> TrainingCards { get; set; }
     }
 }

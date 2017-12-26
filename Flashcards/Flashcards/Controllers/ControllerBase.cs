@@ -13,16 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebUtils.Forms.Select2;
+using System.Web.Routing;
+using Microsoft.AspNet.Identity;
 
 namespace Flashcards.Controllers
 {
     public class ControllerBase : Controller
     {
         private readonly IPopupService popupService;
+        protected readonly ISessionService sessionService;
 
-        public ControllerBase(IPopupService popupService)
+        public ControllerBase(IPopupService popupService, ISessionService sessionService)
         {
             this.popupService = popupService;
+            this.sessionService = sessionService;
         }
         /// <summary>
         /// Add message which will be displayed after next HTTP Request
@@ -286,6 +290,12 @@ namespace Flashcards.Controllers
                     TempData.AddMessage(msg);
 
             base.OnActionExecuted(filterContext);
+        }
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            if (sessionService.UserID == null && User?.Identity?.GetUserId() != null)
+                sessionService.UserID = User.Identity.GetUserId();
+            base.OnActionExecuting(filterContext);
         }
 
 

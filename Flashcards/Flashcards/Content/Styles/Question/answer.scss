@@ -1,0 +1,24 @@
+﻿@import "../definitions.scss";
+
+
+#answer
+{
+    .possibleAnswer
+    {
+        margin-top:1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .pronounciation
+        {
+            color: $hintColor;
+            font-size: small;
+        }
+
+        .translation
+        {
+            font-size: large;
+        }
+    }
+}

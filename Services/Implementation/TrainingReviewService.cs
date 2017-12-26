@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services.Implementation.ServicesTests
+namespace Services.Implementation
 {
-    public class TrainingReviewService
+    public class TrainingReviewService : ITrainingReviewService
     {
         private readonly IFlashcardUnit unit;
         private readonly ISessionService sessionService;
@@ -23,36 +23,41 @@ namespace Services.Implementation.ServicesTests
 
         public List<Flashcard> GetTrainingFlashcards(int languageID, string userID)
         {
-            return unit.TrainingFlashcardMemoryRepository.GetTrainableFlaschards(languageID, userID, limit: 5);
+            return unit.TrainingCardRepository.GetTrainableFlaschards(languageID, userID, limit: 5);
         }
 
-        public void AcceptAnswer(TrainingFlashcardMemory trainingFlashcard)
+        public void AcceptAnswer(TrainingCard trainingFlashcard)
         {
             unit.UserFlashcardMemoryRepository.AddBasedOnTraining(trainingFlashcard);
             unit.SaveChanges();
         }
 
-        public void DeclineAnswer(TrainingFlashcardMemory trainingFlashcard)
+        public void DeclineAnswer(TrainingCard trainingFlashcard)
         {
             trainingFlashcard.InternalLossCount++;
             unit.SaveChanges();
         }
 
-        public bool IsTrainingSessionActive(int languageID, int userID)
+        public bool HasTrainingEnded(string userID, int languageID)
         {
-            var now = DateTime.Now;
-            return unit.TrainingFlashcardMemoryRepository
-                .Any(t => SqlMethods.DateDiffMinute(now, t.ReceivedTime) < 5);
+            return unit.TrainingCardRepository.GetCardForTraining(userID, languageID) == null;
         }
+
+        public TrainingCard GetTrainingCard(string userID, int languageID)
+        {
+            return unit.TrainingCardRepository.GetCardForTraining(userID, languageID);
+        }
+
 
         public void StartTraining(string userID, int languageID)
         {
-            var cards = unit.trainingRepository
+            var cards = unit.TrainingRepository
                 .GetTrainableFlashcards(userID, languageID, count: 5);
 
             var training = new TrainingSession()
             {
                 DateStarted = DateTime.Now,
+                LanguageID = languageID,
                 UserID = userID
             };
 
@@ -60,17 +65,18 @@ namespace Services.Implementation.ServicesTests
                 training.TrainingCards.Add(new TrainingCard()
                 {
                     FlashcardID = card.ID,
-                    InternalLossCount = 0,
-                    LanguageID = languageID
+                    InternalLossCount = 0
                 });
 
-            unit.trainingRepository.Add(training);
-            unit.trainingRepository.SaveChanges();
+            unit.TrainingRepository.Add(training);
+            unit.TrainingRepository.SaveChanges();
         }
 
         public bool IsAnswerCorrect(FlashcardAnswer answer)
         {
             var translations = unit.FlashcardTranslationRepository.GetTRanslationsForFlashcard(answer.Flashcard.ID, answer.Language.ID);
+
+
 
             foreach (var translation in translations)
             {
@@ -84,6 +90,8 @@ namespace Services.Implementation.ServicesTests
 
         public virtual double CalculateCorrectnessOfAnswer(string correct, string answer)
         {
+            correct = correct.ToLower();
+            answer = answer.ToLower();
             if (correct == answer)
                 return 1.0;
 
@@ -100,6 +108,17 @@ namespace Services.Implementation.ServicesTests
             if (DateTime.Now > trExpDate)
                 return true;
             return false;
+        }
+
+        public void StopLastTraining()
+        {
+            long trainingID = sessionService.UserInfo.TrainingInfo.TrainingID;
+            unit.TrainingRepository.Remove(trainingID);
+
+            sessionService.UserInfo.TrainingInfo = null;
+
+            unit.SaveChanges();
+
         }
 
         public virtual DateTime CalculateTrainingExpirationDate()

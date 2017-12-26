@@ -13,17 +13,17 @@ namespace Flashcards.Entities.Repositories
         {
         }
 
-        public void AddBasedOnTraining(TrainingFlashcardMemory training)
+        public void AddBasedOnTraining(TrainingCard card)
         {
             Add(new UserFlashcardMemory()
             {
-                FlashcardID = training.FlashcardID,
+                FlashcardID = card.FlashcardID,
                 IntervalCount = 0,
-                LanguageID = training.LanguageID,
+                LanguageID = card.TrainingSession.LanguageID,
                 LastInterval = 0,
                 ReviewDate = DateTime.Now,
-                Strength = 0.5m / (training.InternalLossCount + 1m),
-                UserID = training.UserID
+                Strength = 0.5m / (card.InternalLossCount + 1m),
+                UserID = card.TrainingSession.UserID
             });
         }
     }

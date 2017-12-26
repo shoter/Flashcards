@@ -16,11 +16,9 @@ namespace Flashcards.Entities
     {
         public long TrainingID { get; set; }
         public int FlashcardID { get; set; }
-        public int LanguageID { get; set; }
         public int InternalLossCount { get; set; }
     
         public virtual Flashcard Flashcard { get; set; }
-        public virtual Language Language { get; set; }
         public virtual TrainingSession TrainingSession { get; set; }
     }
 }

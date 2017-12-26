@@ -1,0 +1,17 @@
+﻿@model Flashcards.Models.Flashcards.AnswerTranslationList
+
+<div class="row">
+    @foreach (var translation in Model.Translations)
+    {
+        <div class="col-sm-4 col-md-3 col-lg-2">
+            <div class="possibleAnswer">
+                <div class="pronounciation">
+                    @translation.Pronounciation
+                </div>
+                <div class="translation">
+                    @translation.Translation
+                </div>
+            </div>
+        </div>
+    }
+</div>

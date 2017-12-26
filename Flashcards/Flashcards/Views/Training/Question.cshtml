@@ -1,0 +1,18 @@
+﻿@model Flashcards.Models.Trainings.TrainingQuestion
+@{
+    ViewBag.Title = "Question";
+    ViewBag.Module = "Training.Question";
+}
+
+
+
+@if (Model == null)
+{
+    <h4 class="text-center">You completed your training for LANGUAGE_NAME</h4>
+}
+else
+{
+    @Html.HiddenFor(m => m.TrainingID)
+    @Html.DisplayFor(m => m)
+}
+

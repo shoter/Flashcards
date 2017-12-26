@@ -30,6 +30,8 @@ namespace FlashcardCommon
             kernel.Bind<IFlashcardUnit>().To<FlashcardUnit>().InRequestScope();
             kernel.Bind<ITrainingRepository>().To<TrainingRepository>().InRequestScope();
             kernel.Bind<IInfoRepository>().To<InfoRepository>().InRequestScope();
+            kernel.Bind<ITrainingReviewService>().To<TrainingReviewService>().InRequestScope();
+            kernel.Bind<ISessionService>().To<SessionService>().InRequestScope();
         }
     }
 }

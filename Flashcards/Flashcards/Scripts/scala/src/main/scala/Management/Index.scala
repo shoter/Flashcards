@@ -42,11 +42,9 @@ class Index {
   }
 
   def onSearchSuccess(data : js.Any): Unit = {
-    g.console.log(data)
     val results = data.asInstanceOf[JsonData].Data.asInstanceOf[js.Array[BasicSearchResult]]
 
     flashcardList.html("");
-    g.console.log(template)
     for(result <- results)  {
       g.console.log(template.render(result))
       jQuery(template.render(result)).appendTo(flashcardList)

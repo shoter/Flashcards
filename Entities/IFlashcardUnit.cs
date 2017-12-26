@@ -13,9 +13,10 @@ namespace Flashcards.Entities
         ILanguageRepository LanguageRepository { get; }
         IFlashcardTranslationRepository FlashcardTranslationRepository { get; }
         IFlashcardImageRepository FlashcardImageRepository { get; }
-        ITrainingFlashcardMemoryRepository TrainingFlashcardMemoryRepository { get; }
+        ITrainingCardRepository TrainingCardRepository { get; }
         IUserFlashcardMemoryRepository UserFlashcardMemoryRepository { get; }
-        ITrainingRepository trainingRepository { get; }
+        ITrainingRepository TrainingRepository { get; }
+        IInfoRepository InfoRepository { get; }
 
         void SaveChanges();
     }

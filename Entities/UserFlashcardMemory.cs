@@ -24,5 +24,6 @@ namespace Flashcards.Entities
     
         public virtual Flashcard Flashcard { get; set; }
         public virtual Language Language { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

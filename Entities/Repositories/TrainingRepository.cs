@@ -39,6 +39,7 @@ namespace Flashcards.Entities.Repositories
             return query.ToList();
         }
 
+        
 
     }
 }

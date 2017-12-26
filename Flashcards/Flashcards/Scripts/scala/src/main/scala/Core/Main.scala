@@ -1,5 +1,7 @@
 package Flashcards.Core
 
+
+import Flashcards.Questions
 import scala.scalajs.js.annotation.JSExportTopLevel
 import org.scalajs.dom
 import dom.document
@@ -17,7 +19,7 @@ def main(args: Array[String]): Unit = {
       {
       case "Management.Index" => new  Flashcards.Management.Index().Run()
       case "Management.EditFlashcard" => new  Flashcards.Management.EditFlashcard().Run()
-
+      case "Training.Question" => new Flashcards.Questions.TrainingQuestion().Run()
     }
 
   }
