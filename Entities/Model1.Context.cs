@@ -30,7 +30,10 @@ namespace Flashcards.Entities
         public virtual DbSet<FlashcardImage> FlashcardImages { get; set; }
         public virtual DbSet<Flashcard> Flashcards { get; set; }
         public virtual DbSet<Language> Languages { get; set; }
-        public virtual DbSet<UserFlashcardMemory> UserFlashcardMemories { get; set; }
         public virtual DbSet<FlashcardTranslation> FlashcardTranslations { get; set; }
+        public virtual DbSet<UserFlashcardMemory> UserFlashcardMemories { get; set; }
+        public virtual DbSet<TrainingFlashcardMemory> TrainingFlashcardMemories { get; set; }
+        public virtual DbSet<TrainingCard> TrainingCards { get; set; }
+        public virtual DbSet<TrainingSession> TrainingSessions { get; set; }
     }
 }

@@ -23,6 +23,9 @@ namespace Flashcards.Entities
         public long ID { get; set; }
         public string Filename { get; set; }
         public int FileTypeID { get; set; }
+        public System.DateTime UploadTime { get; set; }
+        public string UploadedByID { get; set; }
+        public string OriginalFilename { get; set; }
     
         public virtual FileType FileType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

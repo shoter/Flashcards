@@ -3,7 +3,7 @@ package Flashcards.Core
 import scala.scalajs.js.annotation.JSExportTopLevel
 import org.scalajs.dom
 import dom.document
-import org.scalajs.jquery.jQuery
+import org.scalajs.jquery.{JQueryEventObject, jQuery}
 
 object Main {
 def main(args: Array[String]): Unit = {
@@ -15,9 +15,9 @@ def main(args: Array[String]): Unit = {
   {
     moduleName match
       {
-      case "Management.Index" => {
-        new  Flashcards.Management.Index().Run()
-      }
+      case "Management.Index" => new  Flashcards.Management.Index().Run()
+      case "Management.EditFlashcard" => new  Flashcards.Management.EditFlashcard().Run()
+
     }
 
   }

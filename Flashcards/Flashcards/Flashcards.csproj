@@ -227,14 +227,18 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagementController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\TrainingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\TempDataHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Common\ImageViewModel.cs" />
+    <Compile Include="Models\Flashcards\QuestionWithAnswerViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Manage\EditFlashcardImageViewModel.cs" />
     <Compile Include="Models\Manage\EditFlashcardViewModel.cs" />
     <Compile Include="Models\Manage\EditTranslationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -242,8 +246,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Styles\FontAwesome\font-awesome.css">
+      <DependentUpon>font-awesome.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\FontAwesome\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\main.css">
       <DependentUpon>main.scss</DependentUpon>
     </Content>
@@ -254,8 +267,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -266,7 +277,39 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\Styles\Management\index.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\Styles\Management\editFlashcard.scss" />
+    <Content Include="Content\Styles\FontAwesome\font-awesome.scss" />
+    <Content Include="Content\Styles\FontAwesome\_animated.scss" />
+    <Content Include="Content\Styles\FontAwesome\_bordered-pulled.scss" />
+    <Content Include="Content\Styles\FontAwesome\_core.scss" />
+    <Content Include="Content\Styles\FontAwesome\_fixed-width.scss" />
+    <Content Include="Content\Styles\FontAwesome\_icons.scss" />
+    <Content Include="Content\Styles\FontAwesome\_larger.scss" />
+    <Content Include="Content\Styles\FontAwesome\_list.scss" />
+    <Content Include="Content\Styles\FontAwesome\_mixins.scss" />
+    <Content Include="Content\Styles\FontAwesome\_path.scss" />
+    <Content Include="Content\Styles\FontAwesome\_rotated-flipped.scss" />
+    <Content Include="Content\Styles\FontAwesome\_screen-reader.scss" />
+    <Content Include="Content\Styles\FontAwesome\_stacked.scss" />
+    <Content Include="Content\Styles\FontAwesome\_variables.scss" />
+    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Fonts\FontAwesome.otf" />
+    <Content Include="Content\Styles\icons.scss" />
+    <Content Include="Content\Styles\Question\question.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -316,18 +359,10 @@
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\ImageViewModel.cshtml" />
     <Content Include="Views\Management\EditFlashcard.cshtml" />
+    <Content Include="Views\Question\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

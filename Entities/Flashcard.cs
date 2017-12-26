@@ -18,8 +18,10 @@ namespace Flashcards.Entities
         public Flashcard()
         {
             this.FlashcardImages = new HashSet<FlashcardImage>();
-            this.UserFlashcardMemories = new HashSet<UserFlashcardMemory>();
             this.FlashcardTranslations = new HashSet<FlashcardTranslation>();
+            this.UserFlashcardMemories = new HashSet<UserFlashcardMemory>();
+            this.TrainingFlashcardMemories = new HashSet<TrainingFlashcardMemory>();
+            this.TrainingCards = new HashSet<TrainingCard>();
         }
     
         public int ID { get; set; }
@@ -28,8 +30,12 @@ namespace Flashcards.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FlashcardImage> FlashcardImages { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FlashcardTranslation> FlashcardTranslations { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserFlashcardMemory> UserFlashcardMemories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FlashcardTranslation> FlashcardTranslations { get; set; }
+        public virtual ICollection<TrainingFlashcardMemory> TrainingFlashcardMemories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TrainingCard> TrainingCards { get; set; }
     }
 }

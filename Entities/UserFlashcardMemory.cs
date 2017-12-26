@@ -16,10 +16,11 @@ namespace Flashcards.Entities
     {
         public int FlashcardID { get; set; }
         public int LanguageID { get; set; }
-        public long UserID { get; set; }
-        public System.DateTime LastReviewTime { get; set; }
-        public System.DateTime NextReviewTime { get; set; }
+        public string UserID { get; set; }
         public decimal Strength { get; set; }
+        public int LastInterval { get; set; }
+        public System.DateTime ReviewDate { get; set; }
+        public int IntervalCount { get; set; }
     
         public virtual Flashcard Flashcard { get; set; }
         public virtual Language Language { get; set; }

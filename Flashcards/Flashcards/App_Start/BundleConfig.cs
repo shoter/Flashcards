@@ -39,6 +39,7 @@ namespace Flashcards
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
+                      "~/Content/Styles/FontAwesome/font-awesome.css",
                       "~/Content/Styles/main.css"));
         }
     }

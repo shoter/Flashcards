@@ -7,16 +7,42 @@ using System.Threading.Tasks;
 
 namespace Flashcards.Entities
 {
-    public class FlashcardUnit
+    public class FlashcardUnit : IDisposable, IFlashcardUnit
     {
-        public readonly IFlashcardRepository FlashcardRepository;
-        public readonly ILanguageRepository LanguageRepository;
-        public readonly IFlashcardTranslationRepository FlashcardTranslationRepository;
-        public FlashcardUnit(IFlashcardRepository flashcardRepository, ILanguageRepository languageRepository, IFlashcardTranslationRepository flashcardTranslationRepository)
+        public IFlashcardRepository FlashcardRepository { get; private set; }
+        public ILanguageRepository LanguageRepository { get; private set; }
+        public IFlashcardTranslationRepository FlashcardTranslationRepository { get; private set; }
+        public IFlashcardImageRepository FlashcardImageRepository { get; private set; }
+        public ITrainingFlashcardMemoryRepository TrainingFlashcardMemoryRepository { get; private set; }
+        public IUserFlashcardMemoryRepository UserFlashcardMemoryRepository { get; private set; }
+
+        public ITrainingRepository trainingRepository { get; private set; }
+
+        private readonly FlashcardsEntities context;
+
+        public FlashcardUnit(FlashcardsEntities context)
         {
-            this.FlashcardRepository = flashcardRepository;
-            this.LanguageRepository = languageRepository;
-            this.FlashcardTranslationRepository = flashcardTranslationRepository;
+            this.context = context;
+            this.FlashcardRepository = new FlashcardRepository(context); ;
+            this.LanguageRepository = new LanguageRepository(context);
+            this.FlashcardTranslationRepository = new FlashcardTranslationRepository(context);
+            this.FlashcardImageRepository = new FlashcardImageRepository(context);
+            this.TrainingFlashcardMemoryRepository = new TrainingFlashcardMemoryRepository(context);
+            this.UserFlashcardMemoryRepository = new UserFlashcardMemoryRepository(context);
+            this.trainingRepository = new TrainingRepository(context);
+        }
+
+        public void SaveChanges()
+        {
+            context.SaveChanges();
+        }
+
+        bool disposed = false;
+        public void Dispose()
+        {
+            if (disposed == false)
+                context.Dispose();
+            disposed = true;
         }
     }
 }

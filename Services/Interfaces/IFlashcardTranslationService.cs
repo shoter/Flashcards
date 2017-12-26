@@ -10,8 +10,8 @@ namespace Services.Interfaces
 {
     public interface IFlashcardTranslationService
     {
-        MethodResult CanAddTranslation(Flashcard flashcard, string translation, string pronounciation, double significance);
-        void AddTranslation(Flashcard flashcard, string translation, string pronounciation, double significance);
+        MethodResult CanAddTranslation(Flashcard flashcard, Language language, string translation, string pronounciation, double significance);
+        void AddTranslation(Flashcard flashcard, Language language, string translation, string pronounciation, double significance);
 
         MethodResult CanRemoveTranslation(FlashcardTranslation translation);
         void RemoveTranslation(FlashcardTranslation translation);

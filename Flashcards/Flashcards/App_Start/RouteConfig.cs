@@ -14,13 +14,16 @@ namespace Flashcards
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //addResolvers(routes);
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            
+
         }
 
        /* private static void addResolvers(RouteCollection routes)

@@ -1,0 +1,90 @@
+﻿@import "../definitions.scss";
+
+#managementEditflashcard
+{
+    .return
+        {
+        margin-bottom:1rem;
+        }
+    .row
+    {
+        & > div:first-child
+        {
+            @include respond-to(tablet)
+            {
+                border-right: 1px $decalBorderColor solid;
+            }
+
+            .translations
+            {
+                table
+                {
+                    td
+                    {
+                        i
+                        {
+                            cursor:pointer;
+                            &:hover
+                            {
+                                color: darken($dangerColor, 9%);
+                            }
+
+                            &:active
+                            {
+                                color: darken($dangerColor, 18%);
+                            }
+                        }
+
+
+                        word-break: break-all;
+                    }
+                }
+            }
+
+            .saveTranslations
+            {
+                overflow: hidden;
+                margin: 2rem 1rem;
+            }
+        }
+
+        & > div:last-child
+        {
+            .images
+            {
+                div.image
+                {
+                    position: relative;
+                    margin-bottom: 2rem;
+                    background-color: $decalBackground;
+                    border: 1px solid $decalBorderColor;
+                    display: flex;
+
+                    img
+                    {
+                        border-right: $decalBorderColor;
+                        max-height: 20vh;
+                        width: 10vw;
+                    }
+
+                    .imageInfo
+                    {
+                        padding: 1rem 1rem;
+                    }
+
+                    button
+                    {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                    }
+
+                    button:not(:hover)
+                    {
+                        opacity: 0.2;
+                    }
+                }
+            }
+        }
+    }
+}

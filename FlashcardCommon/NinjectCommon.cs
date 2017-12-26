@@ -20,9 +20,16 @@ namespace FlashcardCommon
 
             kernel.Bind<IFlashcardRepository>().To<FlashcardRepository>().InRequestScope();
             kernel.Bind<ILanguageRepository>().To<LanguageRepository>().InRequestScope();
+            kernel.Bind<IFileRepository>().To<FileRepository>().InRequestScope();
+            kernel.Bind<IFlashcardImageRepository>().To<FlashcardImageRepository>().InRequestScope();
             kernel.Bind<IPopupService>().To<PopupService>().InRequestScope();
+            kernel.Bind<IFlashcardTranslationService>().To<FlashcardTranslationService>().InRequestScope();
             kernel.Bind<IFlashcardTranslationRepository>().To<FlashcardTranslationRepository>().InRequestScope();
-            kernel.Bind<FlashcardUnit>().To<FlashcardUnit>().InRequestScope();
+            kernel.Bind<IFlashcardImageService>().To<FlashcardImageService>().InRequestScope();
+            kernel.Bind<IUploadService>().To<UploadService>().InRequestScope();
+            kernel.Bind<IFlashcardUnit>().To<FlashcardUnit>().InRequestScope();
+            kernel.Bind<ITrainingRepository>().To<TrainingRepository>().InRequestScope();
+            kernel.Bind<IInfoRepository>().To<InfoRepository>().InRequestScope();
         }
     }
 }

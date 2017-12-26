@@ -18,5 +18,11 @@ namespace Flashcards.Entities.Repositories
             return Where(ft => ft.FlashcardID == flashcardID)
                 .ToList();
         }
+
+        public List<FlashcardTranslation> GetTRanslationsForFlashcard(int flashcardID, int languageID)
+        {
+            return Where(ft => ft.FlashcardID == flashcardID && ft.LanguageID == languageID)
+                .ToList();
+        }
     }
 }

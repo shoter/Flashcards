@@ -12,5 +12,11 @@ namespace Flashcards.Entities.Repositories
         public LanguageRepository(FlashcardsEntities context) : base(context)
         {
         }
+
+        public Language GetBySymbol(string symbol)
+        {
+            symbol = symbol?.ToLower()?.Trim();
+            return FirstOrDefault(l => l.Symbol.ToLower() == symbol);
+        }
     }
 }

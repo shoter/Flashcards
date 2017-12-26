@@ -2,6 +2,9 @@
 $largeScreen: 1200px;
 $hintColor: gray;
 
+$decalBorderColor : rgba(gray, 0.41);
+$decalBackground : rgba(#c6c6c6, 0.21);
+
 $successColor: #20a320;
 $successBackground: rgba($successColor, .1);
 $successBorder: rgba(darken($successColor, 10%), 0.4);

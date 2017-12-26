@@ -1,10 +1,17 @@
 ﻿@import "definitions.scss";
+@import "icons.scss";
 @import "Management/index.scss";
-
+@import "Management/editFlashcard.scss";
+@import "Question/question.scss";
 body
 {
-    &>.container.body-content
-        {
-            margin-top:1rem;
-        }
+    & > .container.body-content
+    {
+        margin-top: 1rem;
+    }
+}
+
+.overflowHidden
+{
+    overflow: hidden;
 }

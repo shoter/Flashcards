@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TestSuite.Dummies;
 
-namespace UnitTests.Services
+namespace UnitTests.ServicesTests
 {
     [TestClass]
     public class FlashcardTranslationServiceTests
@@ -74,40 +74,46 @@ namespace UnitTests.Services
 
 
         [TestMethod]
-        public void CanAddTranslationNullTest()
+        public void CanAddTranslationFlashcardNullTest()
         {
-            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(null, "test", "test", 1.0).isSuccess);
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(null, getLang(), "test", "test", 1.0).isSuccess);
+        }
+
+        [TestMethod]
+        public void CanAddTranslationLanguageNullest()
+        {
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), null, "test", "test", 1.0).isSuccess);
         }
 
 
         [TestMethod]
         public void CanAddTranslationNegativeSignificanceTest()
         {
-            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), "test", "test", -1.0).isSuccess);
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), getLang(), "test", "test", -1.0).isSuccess);
         }
 
         [TestMethod]
         public void CanAddTranslationBiggerThan1SignificanceTest()
         {
-            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), "test", "test", 1.2).isSuccess);
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), getLang(), "test", "test", 1.2).isSuccess);
         }
 
         [TestMethod]
         public void CanAddTranslationEmptyTranslationTest()
         {
-            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), "", "test", 1.0).isSuccess);
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), getLang(), "", "test", 1.0).isSuccess);
         }
 
         [TestMethod]
         public void CanAddTranslationEmptyPronounceTest()
         {
-            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), "test", "", 1.0).isSuccess);
+            Assert.IsFalse(flashcardTranslationService.CanAddTranslation(getFlash(), getLang(), "test", "", 1.0).isSuccess);
         }
 
         [TestMethod]
         public void CanAddTranslationTest()
         {
-            Assert.IsTrue(flashcardTranslationService.CanAddTranslation(getFlash(), "test", "test", 0.2).isSuccess);
+            Assert.IsTrue(flashcardTranslationService.CanAddTranslation(getFlash(), getLang(), "test", "test", 0.2).isSuccess);
         }
 
 
@@ -151,10 +157,11 @@ namespace UnitTests.Services
         public void AddTranslationTest()
         {
             var flash = getFlash();
-            flashcardTranslationService.AddTranslation(flash, "test", "prop", 0.5);
+            var lang = getLang();
+            flashcardTranslationService.AddTranslation(flash, lang, "test", "prop", 0.5);
 
             flashcardTranslationRepository.Verify(x => x.Add(It.Is<FlashcardTranslation>(
-                t => t.Translation == "test" && t.Pronounciation == "prop" && t.Significance == 0.5m
+                t => t.Translation == "test" && t.Pronounciation == "prop" && t.Significance == 0.5m && t.LanguageID == lang.ID
                 )), Times.Once);
 
             flashcardTranslationRepository.Verify(x => x.SaveChanges(), Times.Once);
@@ -168,6 +175,11 @@ namespace UnitTests.Services
         private Flashcard getFlash()
         {
             return new FlashcardDummyCreator().Create();
+        }
+
+        private Language getLang()
+        {
+            return new LanguageDummyCreator().Create();
         }
     }
 }

@@ -3,84 +3,129 @@
 
 @{
     ViewBag.Title = "EditFlashcard";
+    ViewBag.Module = "Management.EditFlashcard";
     var i = 0;
 }
 
 
-<div id="managementEditflashcard" class="row">
-    <div class="col-md-6 col-sm-12">
-        @using (Html.BeginForm(RouteDataHelper.ActionName, RouteDataHelper.ControllerName, FormMethod.Post))
+<div id="managementEditflashcard">
+    <a href="@Url.Action("Index", "Management")" class="btn btn-info return">
+        Return
+    </a>
+    <div class="languageChange">
+        @using (Html.BeginForm("PostEditFlashcard", RouteDataHelper.ControllerName, FormMethod.Post, new { id = "changeLanguage" }))
         {
             @Html.HiddenFor(m => m.FlashcardID)
-
-            <table>
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>ConnectedImage</th>
-                        <th>Translation</th>
-                        <th>Pronounciation</th>
-                        <th>Significance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var translation in Model.Translations)
-                    {
-                        <tr>
-                            <td>Remove</td>
-                            <td></td>
-                            <td><input type="text" name="translations[@i].Translation" value="@translation.Translation" /></td>
-                            <td><input type="text" name="translations[@i].Pronounciation" value="@translation.Pronounciation" /></td>
-                            <td><input type="number" step="0.01" name="translations[@i].Significance" value="@translation.Significance" /></td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-
-            <button class="btn btn-success pull-right">Save table</button>
-
-            <hr/>
+            @Html.DropDownListFor(m => m.LanguageSymbol, Model.Languages)
         }
-        @using (Html.BeginForm("AddTranslation", RouteDataHelper.ControllerName, FormMethod.Post))
-        {
-            @Html.HiddenFor(m => m.FlashcardID)
-            <h4>New translation</h4>
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.NewTranslation.Translation, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.NewTranslation.Translation, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.NewTranslation.Translation, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.NewTranslation.Pronounciation, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.NewTranslation.Pronounciation, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.NewTranslation.Pronounciation, "", new { @class = "text-danger" })
-                </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.NewTranslation.Significance, new { @class = "col-md-2 control-label" })
-                <div class="col-md-10">
-                    @Html.TextBoxFor(m => m.NewTranslation.Significance, new { @class = "form-control" })
-                    @Html.ValidationMessageFor(m => m.NewTranslation.Significance, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        }
-
     </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            @using (Html.BeginForm("ChangeTranslations", RouteDataHelper.ControllerName, FormMethod.Post))
+            {
+                @Html.HiddenFor(m => m.FlashcardID)
 
-    <div class="col-md-6 col-sm-12">
-        <h4>Add new image</h4>
-        @using (Html.BeginForm("UploadNewImage", RouteDataHelper.ControllerName, FormMethod.Post, new { }))
-        {
-            @Html.HiddenFor(m => m.FlashcardID)
+                <div class="translations">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Connected Image</th>
+                                <th>Translation</th>
+                                <th>Pronounciation</th>
+                                <th>Significance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var translation in Model.Translations)
+                            {
 
-            <input type="file" />
-            <button class="btn btn-success pull-right">Send</button>
-        }
+                                <tr>
+                                    <td>
+                                        <input type="hidden" name="translations[@i].TranslationID" value="@translation.TranslationID" />
+                                        <i class="fa fa-2x fa-trash danger"></i>
+                                    </td>
+                                    <td></td>
+                                    <td><input @Model.Disabled class="form-control" type="text" name="translations[@i].Translation" value="@translation.Translation" /></td>
+                                    <td><input @Model.Disabled class="form-control" type="text" name="translations[@i].Pronounciation" value="@translation.Pronounciation" /></td>
+                                    <td><input @Model.Disabled class="form-control" type="number" step="0.01" name="translations[@i].Significance" value="@translation.Significance" /></td>
+                                </tr>
+                                i++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="saveTranslations">
+                    <button @Model.Disabled class="btn btn-success pull-right">Save table</button>
+                </div>
+
+                <hr />
+            }
+            @using (Html.BeginForm("AddTranslation", RouteDataHelper.ControllerName, FormMethod.Post))
+            {
+                @Html.HiddenFor(m => m.FlashcardID)
+                @Html.HiddenFor(m => m.LanguageID)
+                <h4>New translation</h4>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NewTranslation.Translation)
+                    <div>
+                        @Html.TextBoxFor(m => m.NewTranslation.Translation, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NewTranslation.Translation, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NewTranslation.Pronounciation)
+                    <div>
+                        @Html.TextBoxFor(m => m.NewTranslation.Pronounciation, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NewTranslation.Pronounciation, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NewTranslation.Significance)
+                    <div>
+                        @Html.TextBoxFor(m => m.NewTranslation.Significance, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NewTranslation.Significance, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <button @Model.Disabled class="btn btn-success pull-right">Add</button>
+            }
+
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <h4>Add new image</h4>
+            @using (Html.BeginForm("AddNewImageToFlashcard", RouteDataHelper.ControllerName, FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.HiddenFor(m => m.FlashcardID)
+
+                <input name="file" type="file" />
+                <div class="overflowHidden">
+                    <button class="btn btn-success pull-right">Send</button>
+                </div>
+            }
+            <hr />
+            <h4>Images</h4>
+            <div class="images">
+                @foreach (var img in Model.Images)
+            {
+                var imgVM = (Flashcards.Models.Common.ImageViewModel)img;
+                    <div class="image">
+                        @Html.DisplayFor(m => imgVM)
+                        <div class="imageInfo">
+                            Original filename: @img.OriginalFilename <br/>
+                            Uploaded at date : @img.UploadTime.ToShortDateString() <br/>
+                            AuthorID : @img.AuthorID
+                        </div>
+                        <button disabled class="btn btn-danger">Remove</button>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
 </div>
+
+

@@ -19,12 +19,13 @@ namespace Services.Implementation
             this.flashcardTranslationRepository = flashcardTranslationRepository;
         }
 
-        public void AddTranslation(Flashcard flashcard, string translation, string pronounciation, double significance)
+        public void AddTranslation(Flashcard flashcard, Language lang, string translation, string pronounciation, double significance)
         {
             var dbTranslation = new FlashcardTranslation()
             {
                 FlashcardID = flashcard.ID,
                 Translation = translation,
+                LanguageID = lang.ID,
                 Pronounciation = pronounciation,
                 Significance = (decimal)significance
             };
@@ -33,10 +34,13 @@ namespace Services.Implementation
             flashcardTranslationRepository.SaveChanges();
         }
 
-        public MethodResult CanAddTranslation(Flashcard flashcard, string translation, string pronounciation, double significance)
+        public MethodResult CanAddTranslation(Flashcard flashcard, Language language, string translation, string pronounciation, double significance)
         {
             if (flashcard == null)
                 return new MethodResult("Flashcard does not exist!");
+            if (language == null)
+                return new MethodResult("Language does not exist!");
+
             return checkCorrectnesOfTranslation(translation, pronounciation, significance);
 
         }

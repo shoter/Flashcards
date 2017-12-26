@@ -1,4 +1,22 @@
-﻿<!DOCTYPE html>
+﻿@using Services.Models;
+@using Services.Enums;
+
+@{
+    var messages = TempData["Messages"];
+    List<PopupMessageViewModel> messageList = null;
+    if (messages != null)
+    {
+        messageList = messages as List<PopupMessageViewModel>;
+    }
+    else
+    {
+        messageList = new List<PopupMessageViewModel>();
+    }
+}
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -28,6 +46,17 @@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
+    </div>
+    <div class="warningMessages">
+        @foreach (var message in messageList)
+        {
+            <div class="popupMessage @message.MessageType.GetMessageClass()">
+                <div class="close"><i class="fa fa-close"></i></div>
+                <div class="message">
+                    @Html.Raw(message.Content)
+                </div>
+            </div>
+        }
     </div>
     <div class="container body-content">
         @RenderBody()

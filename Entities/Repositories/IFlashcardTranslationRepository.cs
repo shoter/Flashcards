@@ -10,5 +10,6 @@ namespace Flashcards.Entities.Repositories
     public interface IFlashcardTranslationRepository : IRepository<FlashcardTranslation>
     {
         List<FlashcardTranslation> GetTranslationsForFlashcard(int flashcardID);
+        List<FlashcardTranslation> GetTRanslationsForFlashcard(int flashcardID, int languageID);
     }
 }

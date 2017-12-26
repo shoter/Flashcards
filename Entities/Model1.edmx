@@ -12,6 +12,9 @@
           <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Filename" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="FileTypeID" Type="int" Nullable="false" />
+          <Property Name="UploadTime" Type="datetime" Nullable="false" />
+          <Property Name="UploadedByID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="OriginalFilename" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityType Name="FileTypes">
           <Key>
@@ -62,8 +65,39 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="Symbol" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Symbol" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="EnglishName" Type="nvarchar" MaxLength="75" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrainingCards">
+          <Key>
+            <PropertyRef Name="TrainingID" />
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="TrainingID" Type="bigint" Nullable="false" />
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="InternalLossCount" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrainingFlashcardMemories">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="InternalLossCount" Type="int" Nullable="false" />
+          <Property Name="ReceivedTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TrainingSessions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="DateStarted" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="UserFlashcardMemories">
           <Key>
@@ -73,10 +107,11 @@
           </Key>
           <Property Name="FlashcardID" Type="int" Nullable="false" />
           <Property Name="LanguageID" Type="int" Nullable="false" />
-          <Property Name="UserID" Type="bigint" Nullable="false" />
-          <Property Name="LastReviewTime" Type="datetime" Nullable="false" />
-          <Property Name="NextReviewTime" Type="datetime" Nullable="false" />
-          <Property Name="Strength" Type="decimal" Precision="8" Scale="6" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Strength" Type="decimal" Precision="10" Scale="8" Nullable="false" />
+          <Property Name="LastInterval" Type="int" Nullable="false" />
+          <Property Name="ReviewDate" Type="datetime" Nullable="false" />
+          <Property Name="IntervalCount" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Files_FileTypes">
           <End Role="FileTypes" Type="Self.FileTypes" Multiplicity="1" />
@@ -178,6 +213,66 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TrainingCards_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="TrainingCards" Type="Self.TrainingCards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCards">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingCards_Languages">
+          <End Role="Languages" Type="Self.Languages" Multiplicity="1" />
+          <End Role="TrainingCards" Type="Self.TrainingCards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCards">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingCards_TrainingSessions">
+          <End Role="TrainingSessions" Type="Self.TrainingSessions" Multiplicity="1" />
+          <End Role="TrainingCards" Type="Self.TrainingCards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrainingSessions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCards">
+              <PropertyRef Name="TrainingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingFlashcardMemories_Languages">
+          <End Role="Languages" Type="Self.Languages" Multiplicity="1" />
+          <End Role="TrainingFlashcardMemories" Type="Self.TrainingFlashcardMemories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingFlashcardMemories">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingFlashcardMemories_TrainingFlashcardMemories">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="TrainingFlashcardMemories" Type="Self.TrainingFlashcardMemories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingFlashcardMemories">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_UserFlashcardMemories_Flashcards">
           <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
           <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemories" Multiplicity="*" />
@@ -210,6 +305,9 @@
           <EntitySet Name="FlashcardTranslations" EntityType="Self.FlashcardTranslations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ImageDisallowedTranslations" EntityType="Self.ImageDisallowedTranslations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrainingCards" EntityType="Self.TrainingCards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrainingFlashcardMemories" EntityType="Self.TrainingFlashcardMemories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrainingSessions" EntityType="Self.TrainingSessions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserFlashcardMemories" EntityType="Self.UserFlashcardMemories" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Files_FileTypes" Association="Self.FK_Files_FileTypes">
             <End Role="FileTypes" EntitySet="FileTypes" />
@@ -243,6 +341,26 @@
             <End Role="FlashcardImages" EntitySet="FlashcardImages" />
             <End Role="ImageDisallowedTranslations" EntitySet="ImageDisallowedTranslations" />
           </AssociationSet>
+          <AssociationSet Name="FK_TrainingCards_Flashcards" Association="Self.FK_TrainingCards_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="TrainingCards" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingCards_Languages" Association="Self.FK_TrainingCards_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="TrainingCards" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingCards_TrainingSessions" Association="Self.FK_TrainingCards_TrainingSessions">
+            <End Role="TrainingSessions" EntitySet="TrainingSessions" />
+            <End Role="TrainingCards" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingFlashcardMemories_Languages" Association="Self.FK_TrainingFlashcardMemories_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="TrainingFlashcardMemories" EntitySet="TrainingFlashcardMemories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingFlashcardMemories_TrainingFlashcardMemories" Association="Self.FK_TrainingFlashcardMemories_TrainingFlashcardMemories">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="TrainingFlashcardMemories" EntitySet="TrainingFlashcardMemories" />
+          </AssociationSet>
           <AssociationSet Name="FK_UserFlashcardMemories_Flashcards" Association="Self.FK_UserFlashcardMemories_Flashcards">
             <End Role="Flashcards" EntitySet="Flashcards" />
             <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
@@ -265,6 +383,9 @@
           <Property Name="FileTypeID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="FileType" Relationship="Self.FK_Files_FileTypes" FromRole="Files" ToRole="FileTypes" />
           <NavigationProperty Name="FlashcardImages" Relationship="Self.FK_FlashcardImages_Files" FromRole="Files" ToRole="FlashcardImages" />
+          <Property Name="UploadTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UploadedByID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="OriginalFilename" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="FileType">
           <Key>
@@ -293,33 +414,22 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="FlashcardImages" Relationship="Self.FK_FlashcardImages_Flashcards" FromRole="Flashcards" ToRole="FlashcardImages" />
-          <NavigationProperty Name="UserFlashcardMemories" Relationship="Self.FK_UserFlashcardMemories_Flashcards" FromRole="Flashcards" ToRole="UserFlashcardMemories" />
           <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Flashcards" FromRole="Flashcard" ToRole="FlashcardTranslation" />
+          <NavigationProperty Name="UserFlashcardMemories" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Flashcards" FromRole="Flashcard" ToRole="UserFlashcardMemory" />
+          <NavigationProperty Name="TrainingFlashcardMemories" Relationship="FlashcardsModel.FK_TrainingFlashcardMemories_TrainingFlashcardMemories" FromRole="Flashcard" ToRole="TrainingFlashcardMemory" />
+          <NavigationProperty Name="TrainingCards" Relationship="FlashcardsModel.FK_TrainingCards_Flashcards" FromRole="Flashcard" ToRole="TrainingCard" />
         </EntityType>
         <EntityType Name="Language">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="Symbol" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="UserFlashcardMemories" Relationship="Self.FK_UserFlashcardMemories_Languages" FromRole="Languages" ToRole="UserFlashcardMemories" />
+          <Property Name="Symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EnglishName" Type="String" Nullable="false" MaxLength="75" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Languages" FromRole="Language" ToRole="FlashcardTranslation" />
-        </EntityType>
-        <EntityType Name="UserFlashcardMemory">
-          <Key>
-            <PropertyRef Name="FlashcardID" />
-            <PropertyRef Name="LanguageID" />
-            <PropertyRef Name="UserID" />
-          </Key>
-          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
-          <Property Name="LanguageID" Type="Int32" Nullable="false" />
-          <Property Name="UserID" Type="Int64" Nullable="false" />
-          <Property Name="LastReviewTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="NextReviewTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Strength" Type="Decimal" Precision="8" Scale="6" Nullable="false" />
-          <NavigationProperty Name="Flashcard" Relationship="Self.FK_UserFlashcardMemories_Flashcards" FromRole="UserFlashcardMemories" ToRole="Flashcards" />
-          <NavigationProperty Name="Language" Relationship="Self.FK_UserFlashcardMemories_Languages" FromRole="UserFlashcardMemories" ToRole="Languages" />
+          <NavigationProperty Name="UserFlashcardMemories" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Languages" FromRole="Language" ToRole="UserFlashcardMemory" />
+          <NavigationProperty Name="TrainingFlashcardMemories" Relationship="FlashcardsModel.FK_TrainingFlashcardMemories_Languages" FromRole="Language" ToRole="TrainingFlashcardMemory" />
+          <NavigationProperty Name="TrainingCards" Relationship="FlashcardsModel.FK_TrainingCards_Languages" FromRole="Language" ToRole="TrainingCard" />
         </EntityType>
         <Association Name="FK_Files_FileTypes">
           <End Role="FileTypes" Type="Self.FileType" Multiplicity="1" />
@@ -357,37 +467,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_UserFlashcardMemories_Flashcards">
-          <End Role="Flashcards" Type="Self.Flashcard" Multiplicity="1" />
-          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemory" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Flashcards">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="UserFlashcardMemories">
-              <PropertyRef Name="FlashcardID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_UserFlashcardMemories_Languages">
-          <End Role="Languages" Type="Self.Language" Multiplicity="1" />
-          <End Role="UserFlashcardMemories" Type="Self.UserFlashcardMemory" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Languages">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="UserFlashcardMemories">
-              <PropertyRef Name="LanguageID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="FlashcardsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Files" EntityType="Self.File" />
           <EntitySet Name="FileTypes" EntityType="Self.FileType" />
           <EntitySet Name="FlashcardImages" EntityType="Self.FlashcardImage" />
           <EntitySet Name="Flashcards" EntityType="Self.Flashcard" />
           <EntitySet Name="Languages" EntityType="Self.Language" />
-          <EntitySet Name="UserFlashcardMemories" EntityType="Self.UserFlashcardMemory" />
           <AssociationSet Name="FK_Files_FileTypes" Association="Self.FK_Files_FileTypes">
             <End Role="FileTypes" EntitySet="FileTypes" />
             <End Role="Files" EntitySet="Files" />
@@ -399,14 +484,6 @@
           <AssociationSet Name="FK_FlashcardImages_Flashcards" Association="Self.FK_FlashcardImages_Flashcards">
             <End Role="Flashcards" EntitySet="Flashcards" />
             <End Role="FlashcardImages" EntitySet="FlashcardImages" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserFlashcardMemories_Flashcards" Association="Self.FK_UserFlashcardMemories_Flashcards">
-            <End Role="Flashcards" EntitySet="Flashcards" />
-            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserFlashcardMemories_Languages" Association="Self.FK_UserFlashcardMemories_Languages">
-            <End Role="Languages" EntitySet="Languages" />
-            <End Role="UserFlashcardMemories" EntitySet="UserFlashcardMemories" />
           </AssociationSet>
           <EntitySet Name="FlashcardTranslations" EntityType="FlashcardsModel.FlashcardTranslation" />
           <AssociationSet Name="FK_FlaschardTranslations_FlashcardImages" Association="FlashcardsModel.FK_FlaschardTranslations_FlashcardImages">
@@ -424,6 +501,38 @@
           <AssociationSet Name="FK_FlashcardTranslations_Languages" Association="FlashcardsModel.FK_FlashcardTranslations_Languages">
             <End Role="Language" EntitySet="Languages" />
             <End Role="FlashcardTranslation" EntitySet="FlashcardTranslations" />
+          </AssociationSet>
+          <EntitySet Name="UserFlashcardMemories" EntityType="FlashcardsModel.UserFlashcardMemory" />
+          <AssociationSet Name="FK_UserFlashcardMemories_Flashcards" Association="FlashcardsModel.FK_UserFlashcardMemories_Flashcards">
+            <End Role="Flashcard" EntitySet="Flashcards" />
+            <End Role="UserFlashcardMemory" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserFlashcardMemories_Languages" Association="FlashcardsModel.FK_UserFlashcardMemories_Languages">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="UserFlashcardMemory" EntitySet="UserFlashcardMemories" />
+          </AssociationSet>
+          <EntitySet Name="TrainingFlashcardMemories" EntityType="FlashcardsModel.TrainingFlashcardMemory" />
+          <AssociationSet Name="FK_TrainingFlashcardMemories_TrainingFlashcardMemories" Association="FlashcardsModel.FK_TrainingFlashcardMemories_TrainingFlashcardMemories">
+            <End Role="Flashcard" EntitySet="Flashcards" />
+            <End Role="TrainingFlashcardMemory" EntitySet="TrainingFlashcardMemories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingFlashcardMemories_Languages" Association="FlashcardsModel.FK_TrainingFlashcardMemories_Languages">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="TrainingFlashcardMemory" EntitySet="TrainingFlashcardMemories" />
+          </AssociationSet>
+          <EntitySet Name="TrainingCards" EntityType="FlashcardsModel.TrainingCard" />
+          <EntitySet Name="TrainingSessions" EntityType="FlashcardsModel.TrainingSession" />
+          <AssociationSet Name="FK_TrainingCards_Flashcards" Association="FlashcardsModel.FK_TrainingCards_Flashcards">
+            <End Role="Flashcard" EntitySet="Flashcards" />
+            <End Role="TrainingCard" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingCards_Languages" Association="FlashcardsModel.FK_TrainingCards_Languages">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="TrainingCard" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TrainingCards_TrainingSessions" Association="FlashcardsModel.FK_TrainingCards_TrainingSessions">
+            <End Role="TrainingSession" EntitySet="TrainingSessions" />
+            <End Role="TrainingCard" EntitySet="TrainingCards" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="FlashcardTranslation">
@@ -484,7 +593,144 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="UserFlashcardMemory">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Strength" Type="Decimal" Nullable="false" Precision="10" Scale="8" />
+          <Property Name="LastInterval" Type="Int32" Nullable="false" />
+          <Property Name="ReviewDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IntervalCount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Flashcard" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Flashcards" FromRole="UserFlashcardMemory" ToRole="Flashcard" />
+          <NavigationProperty Name="Language" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Languages" FromRole="UserFlashcardMemory" ToRole="Language" />
+        </EntityType>
+        <Association Name="FK_UserFlashcardMemories_Flashcards">
+          <End Type="FlashcardsModel.Flashcard" Role="Flashcard" Multiplicity="1" />
+          <End Type="FlashcardsModel.UserFlashcardMemory" Role="UserFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemory">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserFlashcardMemories_Languages">
+          <End Type="FlashcardsModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="FlashcardsModel.UserFlashcardMemory" Role="UserFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="UserFlashcardMemory">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TrainingFlashcardMemory">
+          <Key>
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="InternalLossCount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Flashcard" Relationship="FlashcardsModel.FK_TrainingFlashcardMemories_TrainingFlashcardMemories" FromRole="TrainingFlashcardMemory" ToRole="Flashcard" />
+          <NavigationProperty Name="Language" Relationship="FlashcardsModel.FK_TrainingFlashcardMemories_Languages" FromRole="TrainingFlashcardMemory" ToRole="Language" />
+          <Property Name="ReceivedTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <Association Name="FK_TrainingFlashcardMemories_TrainingFlashcardMemories">
+          <End Type="FlashcardsModel.Flashcard" Role="Flashcard" Multiplicity="1" />
+          <End Type="FlashcardsModel.TrainingFlashcardMemory" Role="TrainingFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingFlashcardMemory">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingFlashcardMemories_Languages">
+          <End Type="FlashcardsModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="FlashcardsModel.TrainingFlashcardMemory" Role="TrainingFlashcardMemory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingFlashcardMemory">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TrainingCard">
+          <Key>
+            <PropertyRef Name="TrainingID" />
+            <PropertyRef Name="FlashcardID" />
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="TrainingID" Type="Int64" Nullable="false" />
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="InternalLossCount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Flashcard" Relationship="FlashcardsModel.FK_TrainingCards_Flashcards" FromRole="TrainingCard" ToRole="Flashcard" />
+          <NavigationProperty Name="Language" Relationship="FlashcardsModel.FK_TrainingCards_Languages" FromRole="TrainingCard" ToRole="Language" />
+          <NavigationProperty Name="TrainingSession" Relationship="FlashcardsModel.FK_TrainingCards_TrainingSessions" FromRole="TrainingCard" ToRole="TrainingSession" />
+        </EntityType>
+        <EntityType Name="TrainingSession">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="TrainingCards" Relationship="FlashcardsModel.FK_TrainingCards_TrainingSessions" FromRole="TrainingSession" ToRole="TrainingCard" />
+        </EntityType>
+        <Association Name="FK_TrainingCards_Flashcards">
+          <End Type="FlashcardsModel.Flashcard" Role="Flashcard" Multiplicity="1" />
+          <End Type="FlashcardsModel.TrainingCard" Role="TrainingCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCard">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingCards_Languages">
+          <End Type="FlashcardsModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="FlashcardsModel.TrainingCard" Role="TrainingCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCard">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TrainingCards_TrainingSessions">
+          <End Type="FlashcardsModel.TrainingSession" Role="TrainingSession" Multiplicity="1" />
+          <End Type="FlashcardsModel.TrainingCard" Role="TrainingCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrainingSession">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TrainingCard">
+              <PropertyRef Name="TrainingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -493,6 +739,9 @@
           <EntitySetMapping Name="Files">
             <EntityTypeMapping TypeName="FlashcardsModel.File">
               <MappingFragment StoreEntitySet="Files">
+                <ScalarProperty Name="OriginalFilename" ColumnName="OriginalFilename" />
+                <ScalarProperty Name="UploadedByID" ColumnName="UploadedByID" />
+                <ScalarProperty Name="UploadTime" ColumnName="UploadTime" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Filename" ColumnName="Filename" />
                 <ScalarProperty Name="FileTypeID" ColumnName="FileTypeID" />
@@ -532,18 +781,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserFlashcardMemories">
-            <EntityTypeMapping TypeName="FlashcardsModel.UserFlashcardMemory">
-              <MappingFragment StoreEntitySet="UserFlashcardMemories">
-                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
-                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="LastReviewTime" ColumnName="LastReviewTime" />
-                <ScalarProperty Name="NextReviewTime" ColumnName="NextReviewTime" />
-                <ScalarProperty Name="Strength" ColumnName="Strength" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="FlashcardTranslations">
             <EntityTypeMapping TypeName="FlashcardsModel.FlashcardTranslation">
               <MappingFragment StoreEntitySet="FlashcardTranslations">
@@ -566,6 +803,49 @@
               <ScalarProperty Name="ID" ColumnName="TranslationID" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="UserFlashcardMemories">
+            <EntityTypeMapping TypeName="FlashcardsModel.UserFlashcardMemory">
+              <MappingFragment StoreEntitySet="UserFlashcardMemories">
+                <ScalarProperty Name="IntervalCount" ColumnName="IntervalCount" />
+                <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+                <ScalarProperty Name="LastInterval" ColumnName="LastInterval" />
+                <ScalarProperty Name="Strength" ColumnName="Strength" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrainingFlashcardMemories">
+            <EntityTypeMapping TypeName="FlashcardsModel.TrainingFlashcardMemory">
+              <MappingFragment StoreEntitySet="TrainingFlashcardMemories">
+                <ScalarProperty Name="ReceivedTime" ColumnName="ReceivedTime" />
+                <ScalarProperty Name="InternalLossCount" ColumnName="InternalLossCount" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrainingCards">
+            <EntityTypeMapping TypeName="FlashcardsModel.TrainingCard">
+              <MappingFragment StoreEntitySet="TrainingCards">
+                <ScalarProperty Name="InternalLossCount" ColumnName="InternalLossCount" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+                <ScalarProperty Name="TrainingID" ColumnName="TrainingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrainingSessions">
+            <EntityTypeMapping TypeName="FlashcardsModel.TrainingSession">
+              <MappingFragment StoreEntitySet="TrainingSessions">
+                <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
