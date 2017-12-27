@@ -13,7 +13,7 @@ namespace Flashcards.Entities.Repositories
         {
         }
 
-        public void AddBasedOnTraining(TrainingCard card)
+        public void AddBasedOnTraining(TrainingCard card, decimal correctness)
         {
             Add(new UserFlashcardMemory()
             {
@@ -22,7 +22,7 @@ namespace Flashcards.Entities.Repositories
                 LanguageID = card.TrainingSession.LanguageID,
                 LastInterval = 0,
                 ReviewDate = DateTime.Now,
-                Strength = 0.5m / (card.InternalLossCount + 1m),
+                Strength = (0.5m / (card.InternalLossCount + 1m)) * correctness,
                 UserID = card.TrainingSession.UserID
             });
         }

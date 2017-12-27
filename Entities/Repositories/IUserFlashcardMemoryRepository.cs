@@ -9,6 +9,6 @@ namespace Flashcards.Entities.Repositories
 {
     public interface IUserFlashcardMemoryRepository : IRepository<UserFlashcardMemory>
     {
-        void AddBasedOnTraining(TrainingCard training);
+        void AddBasedOnTraining(TrainingCard training, decimal correctness);
     }
 }

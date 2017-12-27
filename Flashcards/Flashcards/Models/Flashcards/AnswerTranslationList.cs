@@ -12,11 +12,11 @@ namespace Flashcards.Models.Flashcards
     {
         public List<AnswerTranslation> Translations { get; set; } = new List<AnswerTranslation>();
 
-        public AnswerTranslationList(Flashcard flashcard, Language language)
+        public AnswerTranslationList(int flashcardID, Language language)
         {
             var translationRepository = DependencyResolver.Current.GetService<IFlashcardTranslationRepository>();
 
-            var translations = translationRepository.GetTRanslationsForFlashcard(flashcard.ID, language.ID);
+            var translations = translationRepository.GetTRanslationsForFlashcard(flashcardID, language.ID);
 
             foreach (var translation in translations)
             {

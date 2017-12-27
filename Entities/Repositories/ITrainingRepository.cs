@@ -12,5 +12,7 @@ namespace Flashcards.Entities.Repositories
         void DeleteTraining(int trainingID);
         void DeleteTrianing(string userID);
         List<Flashcard> GetTrainableFlashcards(string userID, int languageID, int? count = null);
+
+       
     }
 }

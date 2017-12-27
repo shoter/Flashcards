@@ -49,25 +49,27 @@ namespace Flashcards.Controllers
             return View(vm);
         }
 
-        public ActionResult Answer(int trainingID, long flashcardID, string answer)
+        public ActionResult Answer(int trainingID, long trainingCardID, string answer)
         {
             var training = unit.TrainingRepository.GetById(trainingID);
-            var card = training.TrainingCards.First(c => c.FlashcardID == flashcardID);
+            var card = training.TrainingCards.First(c => c.FlashcardID == trainingCardID);
 
             var ans = new FlashcardAnswer(card.Flashcard, training.Language, answer);
 
             bool isCorrect = false;
-
+            double correctness = 0.0;
+            int flashcardID = card.FlashcardID;
             if ((isCorrect = trainingReviewService.IsAnswerCorrect(ans)) == true)
             {
-                trainingReviewService.AcceptAnswer(card);
+                correctness = trainingReviewService.AcceptAnswer(card, ans);
+                
             }
             else
             {
                 trainingReviewService.DeclineAnswer(card);
             }
 
-            var vm = new AnswerViewModel(card.Flashcard, training.Language, isCorrect);
+            var vm = new AnswerViewModel(flashcardID, training.Language, isCorrect, correctness);
 
             return PartialView(vm);            
         }

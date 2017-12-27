@@ -19,6 +19,7 @@ class TrainingQuestion {
   val answerInput = jQuery("input#questionAnswer")
   val question = jQuery("#question")
   val submit = jQuery("#question .answer button")
+  var questionAnswer = jQuery("#questionAnswer")
 
   val flashcardID = jQuery("#FlashcardID").value()
   var trainingID = jQuery("#TrainingID").value()
@@ -36,7 +37,7 @@ class TrainingQuestion {
 
     var data = js.Dynamic.literal(
       trainingID = trainingID,
-      flashcardID = flashcardID,
+      trainingCardID = flashcardID,
       answer = answer,
     )
 
@@ -56,5 +57,6 @@ class TrainingQuestion {
     var html = jQuery(data)
     question.after(html)
     submit.remove()
+    questionAnswer.remove()
   }
 }

@@ -1,6 +1,6 @@
 ﻿@using Services.Models;
 @using Services.Enums;
-
+@using Flashcards.Code;
 @{
     var messages = TempData["Messages"];
     List<PopupMessageViewModel> messageList = null;
@@ -12,6 +12,8 @@
     {
         messageList = new List<PopupMessageViewModel>();
     }
+
+    var langs = Globals.GenerateLanguageSelectList();
 }
 
 
@@ -35,6 +37,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
@@ -42,6 +45,12 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Training", "Training", "Training")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>
+                        @using (Html.BeginForm("ChangeLanguage", "Language", FormMethod.Post, new { id = "languageChangeForm" }))
+                        {
+                            @Html.DropDownList("currentLanguageID", langs)
+                        }
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

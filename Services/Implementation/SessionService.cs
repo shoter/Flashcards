@@ -42,14 +42,14 @@ namespace Services.Implementation
         {
             get
             {
-                if (languageID == null)
-                    languageID = unit.LanguageRepository.FirstOrDefault().ID;
+                if (GetObjectValue() == null)
+                    SetValue(unit.LanguageRepository.FirstOrDefault().ID);
 
-                return languageID.Value;
+                return (int)GetObjectValue();
             }
             set
             {
-                languageID = value;
+                SetValue(value);
             }
         }
 
@@ -71,6 +71,14 @@ namespace Services.Implementation
                 return null;
 
             return (T)HttpContext.Current.Session[name];
+        }
+
+        public static object GetObjectValue([CallerMemberName] string name = "")
+        {
+            if (HttpContext.Current.Session[name] == null)
+                return null;
+
+            return HttpContext.Current.Session[name];
         }
 
     }

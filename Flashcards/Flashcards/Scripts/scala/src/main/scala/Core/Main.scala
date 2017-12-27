@@ -8,8 +8,14 @@ import dom.document
 import org.scalajs.jquery.{JQueryEventObject, jQuery}
 
 object Main {
+  val languageSelect = jQuery("#currentLanguageID")
+  val languageSelectForm = jQuery("#languageChangeForm")
 def main(args: Array[String]): Unit = {
-    jQuery("#click-me-button").click(() => addClickedMessage())
+  languageSelect.change(() => changeLanguage())
+  }
+
+  def changeLanguage(): Unit = {
+    languageSelectForm.submit()
   }
 
   @JSExportTopLevel("InitFlashcard")
@@ -23,10 +29,4 @@ def main(args: Array[String]): Unit = {
     }
 
   }
-
-
-    @JSExportTopLevel("addClickedMessage")
-    def addClickedMessage(): Unit = {
-      jQuery("body").append("<p>Hello World</p>")
-    }
 }

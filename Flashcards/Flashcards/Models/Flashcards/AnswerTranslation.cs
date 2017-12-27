@@ -10,11 +10,12 @@ namespace Flashcards.Models.Flashcards
     {
         public string Translation { get; set; }
         public string Pronounciation { get; set; }
-
+        public double Significance { get; set; }
         public AnswerTranslation(FlashcardTranslation translation)
         {
             Translation = translation.Translation;
             Pronounciation = translation.Pronounciation;
+            Significance = (double)translation.Significance;
         }
     }
 }

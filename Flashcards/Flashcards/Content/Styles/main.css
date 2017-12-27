@@ -79,16 +79,30 @@ i.fa.info {
       min-width: 33vw;
       text-align: center; }
 
+#answer .nexter {
+  display: flex;
+  justify-content: center; }
+
 #answer .possibleAnswer {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.12);
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
   #answer .possibleAnswer .pronounciation {
     color: gray;
     font-size: small; }
   #answer .possibleAnswer .translation {
     font-size: large; }
+  #answer .possibleAnswer:hover div {
+    opacity: 1 !important; }
 
 body > .container.body-content {
   margin-top: 1rem; }

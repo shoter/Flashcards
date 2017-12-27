@@ -1,4 +1,5 @@
-﻿using Flashcards.Entities;
+﻿using Common.Words.Similiraties;
+using Flashcards.Entities;
 using Services.Interfaces;
 using Services.Models;
 using Services.Session.Models;
@@ -15,6 +16,7 @@ namespace Services.Implementation
     {
         private readonly IFlashcardUnit unit;
         private readonly ISessionService sessionService;
+        private ISimilarityAlgorithm similarityAlgorithm = new ShoterSimilarityAlgorithm();
         public TrainingReviewService(IFlashcardUnit unit, ISessionService sessionService)
         {
             this.unit = unit;
@@ -26,10 +28,13 @@ namespace Services.Implementation
             return unit.TrainingCardRepository.GetTrainableFlaschards(languageID, userID, limit: 5);
         }
 
-        public void AcceptAnswer(TrainingCard trainingFlashcard)
+        public double AcceptAnswer(TrainingCard trainingFlashcard, FlashcardAnswer answer)
         {
-            unit.UserFlashcardMemoryRepository.AddBasedOnTraining(trainingFlashcard);
+            var correctness = CalculateCorrectnessOfAnswer(answer);
+            unit.UserFlashcardMemoryRepository.AddBasedOnTraining(trainingFlashcard, (decimal)(correctness* correctness));
+            unit.TrainingCardRepository.Remove(trainingFlashcard);
             unit.SaveChanges();
+            return correctness;
         }
 
         public void DeclineAnswer(TrainingCard trainingFlashcard)
@@ -53,6 +58,8 @@ namespace Services.Implementation
         {
             var cards = unit.TrainingRepository
                 .GetTrainableFlashcards(userID, languageID, count: 5);
+            if (cards.Count == 0)
+                return;
 
             var training = new TrainingSession()
             {
@@ -74,28 +81,32 @@ namespace Services.Implementation
 
         public bool IsAnswerCorrect(FlashcardAnswer answer)
         {
-            var translations = unit.FlashcardTranslationRepository.GetTRanslationsForFlashcard(answer.Flashcard.ID, answer.Language.ID);
+            var correctess = CalculateCorrectnessOfAnswer(answer);
 
-
-
-            foreach (var translation in translations)
-            {
-                var score = CalculateCorrectnessOfAnswer(translation.Translation, answer.Answer);
-                if (score >= 0.9)
-                    return true;
-            }
+            if (correctess > 0.82f)
+                return true;
 
             return false;
         }
 
         public virtual double CalculateCorrectnessOfAnswer(string correct, string answer)
         {
-            correct = correct.ToLower();
-            answer = answer.ToLower();
-            if (correct == answer)
-                return 1.0;
+            return similarityAlgorithm.CalculateSimilarity(correct, answer);
+        }
 
-            return 0.0;
+        public virtual double CalculateCorrectnessOfAnswer(FlashcardAnswer answer)
+        {
+            var translations = unit.FlashcardTranslationRepository.GetTRanslationsForFlashcard(answer.Flashcard.ID, answer.Language.ID);
+
+            double maxScore = 0.0;
+            foreach (var translation in translations)
+            {
+                var score = CalculateCorrectnessOfAnswer(translation.Translation, answer.Answer) * (double)translation.Significance;
+                if (score > maxScore)
+                    maxScore = score;
+            }
+
+            return maxScore;
         }
 
         public bool ShouldStopLastTraining()
@@ -107,6 +118,10 @@ namespace Services.Implementation
 
             if (DateTime.Now > trExpDate)
                 return true;
+
+            if (HasTrainingEnded(sessionService.UserID, sessionService.LanguageID))
+                return true;
+
             return false;
         }
 

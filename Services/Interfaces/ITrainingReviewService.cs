@@ -18,9 +18,12 @@ namespace Services.Interfaces
 
         bool HasTrainingEnded(string userID, int languageID);
 
-        void AcceptAnswer(TrainingCard trainingFlashcard);
+        double AcceptAnswer(TrainingCard trainingFlashcard, FlashcardAnswer answer);
         void DeclineAnswer(TrainingCard trainingFlashcard);
 
         bool IsAnswerCorrect(FlashcardAnswer answer);
+
+        double CalculateCorrectnessOfAnswer(string correct, string answer);
+        double CalculateCorrectnessOfAnswer(FlashcardAnswer answer);
     }
 }

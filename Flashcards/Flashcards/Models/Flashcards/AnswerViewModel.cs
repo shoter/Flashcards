@@ -10,10 +10,12 @@ namespace Flashcards.Models.Flashcards
     {
         public AnswerTranslationList TranslationList { get; set; }
         public bool IsCorrect { get; set; }
-        public AnswerViewModel(Flashcard flashcard, Language language, bool isCorrect)
+        public double Correctness { get; set; }
+        public AnswerViewModel(int flashcardID, Language language, bool isCorrect, double correctness)
         {
-            TranslationList = new AnswerTranslationList(flashcard, language);
+            TranslationList = new AnswerTranslationList(flashcardID, language);
             IsCorrect = isCorrect;
+            Correctness = correctness;
         }
     }
 }

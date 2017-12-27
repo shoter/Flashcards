@@ -1,6 +1,15 @@
 ﻿@model Flashcards.Models.Flashcards.AnswerViewModel
 
-<div id="answer">
+<div id="answer"
+     }>
+    <div class="nexter">
+        <a href="@Url.Action("Training", "Training")" class="btn"
+           @if (Model.IsCorrect) { <text>
+           style="background-color:rgba(0,255,0, @Model.Correctness)"
+           </text>  } else { <text>
+           style="background-color:rgba(255, 0, 0, 0.83); color:white;"
+           </text>  }>Go to next question</a>
+    </div>
     @if (Model.IsCorrect)
     {
         <h4 class="text-success">Correct answer</h4>
