@@ -30,6 +30,7 @@ namespace Flashcards.Entities.Repositories
         {
             var query =  context.Flashcards
                 .Where(f => f.UserFlashcardMemories.Any(mem => mem.UserID == userID && mem.LanguageID == languageID) == false) //it is not revieved yet.
+                .Where(f => f.TrainingCards.Any(c => c.TrainingSession.UserID == userID && c.TrainingSession.LanguageID == languageID) == false)//it is not trained actually
                 .Where(f => f.FlashcardTranslations.Any(trans => trans.LanguageID == languageID)); // it is in given language
 
 

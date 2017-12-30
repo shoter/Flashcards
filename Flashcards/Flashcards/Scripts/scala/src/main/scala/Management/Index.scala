@@ -19,6 +19,10 @@ class Index {
   def Run(): Unit =
   {
     jQuery("#searchForFlashcards").change((JQueryEventObject) => onSearch(JQueryEventObject))
+    jQuery("#searchForFlashcards").keyup((JqueryEventObject) =>{
+      if(JqueryEventObject.which == 13)
+        onSearch(JqueryEventObject)
+    })
   }
 
   def onSearch(e : JQueryEventObject) :Unit =

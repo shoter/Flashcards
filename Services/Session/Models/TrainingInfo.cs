@@ -30,5 +30,10 @@ namespace Services.Session.Models
                 .Select(card => new TrainingCardInfo(card))
                 .ToList();
         }
+
+        public void AddCard(TrainingCard card, int languageID)
+        {
+            Cards.Add(new TrainingCardInfo(card, languageID));
+        }
     }
 }

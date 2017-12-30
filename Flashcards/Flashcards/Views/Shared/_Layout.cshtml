@@ -74,11 +74,11 @@
             @{
                 var session = DependencyResolver.Current.GetService<Services.Interfaces.ISessionService>();
                 var userInfo = session.UserInfo;
-                var training = userInfo.TrainingInfo;
-                var review = userInfo.ReviewInfo;
+                var training = userInfo?.TrainingInfo;
+                var review = userInfo?.ReviewInfo;
             }
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            <p>@userInfo.Username - @userInfo.UserID - @session.LanguageID</p>
+            <p>@(userInfo?.Username) - @(userInfo?.UserID) - @session.LanguageID</p>
 
             @if (review != null)
             {

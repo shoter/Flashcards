@@ -12,5 +12,7 @@ namespace Services.Interfaces
         UserInfo UserInfo { get; }
         string UserID { get; set; }
         int LanguageID { get; set; }
+
+        void ClearUserInfo();
     }
 }

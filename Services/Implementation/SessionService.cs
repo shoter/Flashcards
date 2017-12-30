@@ -24,6 +24,9 @@ namespace Services.Implementation
         {
             get
             {
+                if (UserID == null)
+                    return null;
+
                 var userInfo = GetValue<UserInfo>();
                 if (userInfo != null)
                     return userInfo;
@@ -35,6 +38,15 @@ namespace Services.Implementation
 
                 return userInfo;
             }
+            private set
+            {
+                SetValue(value);
+            }
+        }
+
+        public void ClearUserInfo()
+        {
+            UserInfo = null;
         }
 
         private int? languageID = null;

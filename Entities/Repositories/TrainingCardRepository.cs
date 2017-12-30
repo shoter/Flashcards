@@ -50,6 +50,12 @@ namespace Flashcards.Entities.Repositories
                  .FirstOrDefault();
         }
 
+        public TrainingCard GetCardForTraining(long trainingID, int flashcardID)
+        {
+            return
+                 Where(card => card.TrainingID == trainingID && card.FlashcardID == flashcardID)
+                 .FirstOrDefault();
+        }
 
     }
 }

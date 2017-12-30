@@ -395,6 +395,8 @@ namespace Flashcards.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            sessionService.UserID = null;
+            sessionService.ClearUserInfo();
             return RedirectToAction("Index", "Home");
         }
 

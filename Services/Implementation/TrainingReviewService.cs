@@ -36,13 +36,21 @@ namespace Services.Implementation
             unit.UserFlashcardMemoryRepository.AddBasedOnTraining(trainingFlashcard, (decimal)(correctness* correctness));
             unit.TrainingCardRepository.Remove(trainingFlashcard);
             unit.SaveChanges();
+
+            sessionService.UserInfo.TrainingInfo.Cards.RemoveAt(0);
             return correctness;
         }
 
         public void DeclineAnswer(TrainingCard trainingFlashcard)
         {
             trainingFlashcard.InternalLossCount++;
-            unit.SaveChanges();
+
+            var first = sessionService.UserInfo.TrainingInfo.Cards[0];
+            first.InternalLossCount++;
+            sessionService.UserInfo.TrainingInfo.Cards.RemoveAt(0);
+            sessionService.UserInfo.TrainingInfo.Cards.Add(first);
+
+          unit.SaveChanges();
         }
 
         public virtual bool HasTrainingEnded(string userID, int languageID)
@@ -52,7 +60,43 @@ namespace Services.Implementation
 
         public TrainingCard GetTrainingCard(string userID, int languageID)
         {
-            return unit.TrainingCardRepository.GetCardForTraining(userID, languageID);
+            if ((sessionService.UserInfo?.TrainingInfo?.Cards?.Count ?? 0) == 0)
+                return null;
+
+            var card = unit.TrainingCardRepository.GetCardForTraining(sessionService.UserInfo.TrainingInfo.TrainingID, sessionService.UserInfo.TrainingInfo.Cards[0].FlashcardID);
+            //we could start review in the same request. We created this entity using only ID of the flashcard and there is no information on entity framework side about flashcard.
+            if (card.Flashcard == null && card.FlashcardID > 0)
+                card.Flashcard = unit.FlashcardRepository.GetById(card.FlashcardID);
+            return card;
+        }
+
+        public void TryToAddNewCards()
+        {
+            if (sessionService.UserInfo.TrainingInfo == null)
+                return;
+            while (AddNewReviewCardIfAble()) ;
+
+        }
+
+        public bool AddNewReviewCardIfAble()
+        {
+            if (sessionService.UserInfo.TrainingInfo.Cards.Count >= 5)
+                return false;
+
+            var card = unit.TrainingRepository.GetTrainableFlashcards(sessionService.UserID, sessionService.LanguageID, 1).FirstOrDefault();
+
+            if (card == null)
+                return false;
+
+            var trainingCard = new TrainingCard()
+            {
+                FlashcardID = card.ID,
+                TrainingID = sessionService.UserInfo.TrainingInfo.TrainingID
+            };
+            unit.TrainingCardRepository.Add(trainingCard);
+            unit.SaveChanges();
+            sessionService.UserInfo.TrainingInfo.AddCard(trainingCard, sessionService.LanguageID);
+            return true;
         }
 
 
@@ -79,6 +123,8 @@ namespace Services.Implementation
 
             unit.TrainingRepository.Add(training);
             unit.TrainingRepository.SaveChanges();
+
+            sessionService.UserInfo.TrainingInfo = new TrainingInfo(training);
         }
 
         public bool IsAnswerCorrect(FlashcardAnswer answer)

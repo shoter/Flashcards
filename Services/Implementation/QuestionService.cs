@@ -13,7 +13,7 @@ namespace Services.Implementation
     public class QuestionService : IQuestionService
     {
         private readonly IFlashcardUnit unit;
-        private ISimilarityAlgorithm similarityAlgorithm = new ShoterSimilarityAlgorithm();
+        private ISimilarityAlgorithm similarityAlgorithm = new LevenshteinSimilarity();
 
         public QuestionService(IFlashcardUnit unit)
         {

@@ -20,6 +20,13 @@ namespace Services.Session.Models
             InternalLossCount = cardInfo.InternalLossCount;
         }
 
+        public TrainingCardInfo(TrainingCard card, int languageID)
+        {
+            FlashcardID = card.FlashcardID;
+            LanguageID = languageID;
+            InternalLossCount = card.InternalLossCount;
+        }
+
         public TrainingCardInfo(TrainingCard card)
         {
             FlashcardID = card.FlashcardID;

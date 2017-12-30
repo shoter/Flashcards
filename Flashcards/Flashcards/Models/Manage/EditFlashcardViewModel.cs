@@ -12,6 +12,7 @@ namespace Flashcards.Models.Manage
         public int FlashcardID { get; set; }
         public string LanguageSymbol { get; set; }
         public int? LanguageID { get; set; }
+        public string Name { get; set; }
 
         public List<SelectListItem> Languages { get; set; } = new List<SelectListItem>();
         public List<EditTranslationViewModel> Translations { get; set; } = new List<EditTranslationViewModel>();
@@ -26,6 +27,7 @@ namespace Flashcards.Models.Manage
         public EditFlashcardViewModel(Flashcard flashcard, Language currentLanguage, IEnumerable<Language> languages)
         {
             FlashcardID = flashcard.ID;
+            Name = flashcard.Name;
             if (currentLanguage != null)
             {
                 var translations = flashcard.FlashcardTranslations.Where(t => t.LanguageID == currentLanguage.ID).ToList();

@@ -368,12 +368,13 @@
     <Content Include="Views\Management\EditFlashcard.cshtml" />
     <Content Include="Views\Question\Test.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\QuestionWithAnswerViewModel.cshtml" />
-    <Content Include="Views\Training\Question.cshtml" />
+    <Content Include="Views\Training\Training.cshtml" />
     <Content Include="Views\Training\Answer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\AnswerTranslationList.cshtml" />
     <Content Include="Views\Review\Review.cshtml" />
     <Content Include="Views\Review\QuestionError.cshtml" />
     <Content Include="Views\Review\Answer.cshtml" />
+    <Content Include="Views\Management\AddFlashcard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

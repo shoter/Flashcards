@@ -1,4 +1,5 @@
-﻿using Common.Operations;
+﻿using Common.Extensions;
+using Common.Operations;
 using Flashcards.Code;
 using Flashcards.Entities;
 using Flashcards.Models.Manage;
@@ -52,6 +53,36 @@ namespace Flashcards.Controllers
 
             var vm = new EditFlashcardViewModel(flashcard, language, languages);
             return View(vm);
+        }
+
+        [Authorize(Roles = Groups.Administrator)]
+        [HttpGet]
+        public ActionResult AddFlashcard()
+        {
+            return View();
+        }
+        [Authorize(Roles = Groups.Administrator)]
+        [HttpPost]
+        public ActionResult AddFlashcard(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+                AddError("Flashcard name is empty!");
+            else
+            {
+                name = name.ToLower();
+                var flash = unit.FlashcardRepository.FirstOrDefault(f => f.Name.ToLower() == name);
+                if (flash != null)
+                    AddError("Flashcard with this name exists!");
+                else
+                {
+                    flash = new Flashcard() { Name = name.FirstUpper() };
+                    unit.FlashcardRepository.Add(flash);
+                    unit.FlashcardRepository.SaveChanges();
+                    return EditFlashcard(flash.ID);
+                    //return RedirectToAction(nameof(EditFlashcard), "Management", new { flashcardID = flash.ID, languageSymbol = (string)null });
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         [Authorize(Roles = Groups.Administrator)]

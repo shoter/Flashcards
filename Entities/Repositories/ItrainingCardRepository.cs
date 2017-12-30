@@ -15,5 +15,7 @@ namespace Flashcards.Entities.Repositories
         /// Can return null
         /// </summary>
         TrainingCard GetCardForTraining(string userID, int languageID);
+
+        TrainingCard GetCardForTraining(long trainingID, int flashcardID);
     }
 }

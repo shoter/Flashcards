@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Add Flashcard";
+}
+
+@using (Html.BeginForm(RouteDataHelper.ActionName, RouteDataHelper.ControllerName, FormMethod.Post))
+{
+    <label>Name</label>
+    <input class="form-control" name="name" />
+    <button>Add</button>
+}
+

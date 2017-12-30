@@ -22,5 +22,7 @@ namespace Services.Interfaces
         void DeclineAnswer(TrainingCard trainingFlashcard);
 
         bool IsAnswerCorrect(FlashcardAnswer answer);
+
+        void TryToAddNewCards();
     }
 }

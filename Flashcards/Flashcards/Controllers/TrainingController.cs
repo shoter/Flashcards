@@ -33,11 +33,8 @@ namespace Flashcards.Controllers
             if (trainingReviewService.HasTrainingEnded(sessionService.UserID, sessionService.LanguageID))
                 trainingReviewService.StartTraining(sessionService.UserID, sessionService.LanguageID);
 
-            return RedirectToAction(nameof(Question));
-        }
+            trainingReviewService.TryToAddNewCards();
 
-        public ActionResult Question()
-        {
             TrainingQuestion vm = null;
 
             if (trainingReviewService.HasTrainingEnded(sessionService.UserID, sessionService.LanguageID) == false)

@@ -50,6 +50,9 @@ namespace Services.Implementation
 
         public bool AddNewReviewCardIfAble()
         {
+            if (sessionService.UserInfo.ReviewInfo.ReviewCards.Count >= 30)
+                return false;
+
             var memory = unit.UserFlashcardMemoryRepository.GetFirstTrainableMemories(sessionService.UserID, sessionService.LanguageID, 1).FirstOrDefault();
 
             if (memory == null)
