@@ -77,6 +77,15 @@
           <Property Name="FileID" Type="bigint" Nullable="false" />
           <Property Name="TranslationID" Type="bigint" Nullable="false" />
         </EntityType>
+        <EntityType Name="InternalReviews">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="LanguageID" Type="int" Nullable="false" />
+          <Property Name="DateStarted" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="Languages">
           <Key>
             <PropertyRef Name="ID" />
@@ -84,6 +93,15 @@
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Symbol" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="EnglishName" Type="nvarchar" MaxLength="75" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReviewCards">
+          <Key>
+            <PropertyRef Name="ReviewID" />
+            <PropertyRef Name="FlashcardID" />
+          </Key>
+          <Property Name="ReviewID" Type="bigint" Nullable="false" />
+          <Property Name="FlashcardID" Type="int" Nullable="false" />
+          <Property Name="InternallLossCount" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="TrainingCards">
           <Key>
@@ -98,7 +116,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LanguageID" Type="int" Nullable="false" />
           <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="DateStarted" Type="datetime" Nullable="false" />
@@ -217,6 +235,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_InternalReviews_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="InternalReviews" Type="Self.InternalReviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InternalReviews">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InternalReviews_Languages">
+          <End Role="Languages" Type="Self.Languages" Multiplicity="1" />
+          <End Role="InternalReviews" Type="Self.InternalReviews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Languages">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InternalReviews">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewCards_Flashcards">
+          <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
+          <End Role="ReviewCards" Type="Self.ReviewCards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcards">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReviewCards">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewCards_InternalReviews">
+          <End Role="InternalReviews" Type="Self.InternalReviews" Multiplicity="1" />
+          <End Role="ReviewCards" Type="Self.ReviewCards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InternalReviews">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReviewCards">
+              <PropertyRef Name="ReviewID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_TrainingCards_Flashcards">
           <End Role="Flashcards" Type="Self.Flashcards" Multiplicity="1" />
           <End Role="TrainingCards" Type="Self.TrainingCards" Multiplicity="*" />
@@ -311,7 +377,9 @@
           <EntitySet Name="Flashcards" EntityType="Self.Flashcards" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FlashcardTranslations" EntityType="Self.FlashcardTranslations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ImageDisallowedTranslations" EntityType="Self.ImageDisallowedTranslations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InternalReviews" EntityType="Self.InternalReviews" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReviewCards" EntityType="Self.ReviewCards" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrainingCards" EntityType="Self.TrainingCards" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrainingSessions" EntityType="Self.TrainingSessions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserFlashcardMemories" EntityType="Self.UserFlashcardMemories" Schema="dbo" store:Type="Tables" />
@@ -346,6 +414,22 @@
           <AssociationSet Name="FK_ImageDisallowedTranslations_FlashcardImages" Association="Self.FK_ImageDisallowedTranslations_FlashcardImages">
             <End Role="FlashcardImages" EntitySet="FlashcardImages" />
             <End Role="ImageDisallowedTranslations" EntitySet="ImageDisallowedTranslations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InternalReviews_AspNetUsers" Association="Self.FK_InternalReviews_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="InternalReviews" EntitySet="InternalReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InternalReviews_Languages" Association="Self.FK_InternalReviews_Languages">
+            <End Role="Languages" EntitySet="Languages" />
+            <End Role="InternalReviews" EntitySet="InternalReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewCards_Flashcards" Association="Self.FK_ReviewCards_Flashcards">
+            <End Role="Flashcards" EntitySet="Flashcards" />
+            <End Role="ReviewCards" EntitySet="ReviewCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewCards_InternalReviews" Association="Self.FK_ReviewCards_InternalReviews">
+            <End Role="InternalReviews" EntitySet="InternalReviews" />
+            <End Role="ReviewCards" EntitySet="ReviewCards" />
           </AssociationSet>
           <AssociationSet Name="FK_TrainingCards_Flashcards" Association="Self.FK_TrainingCards_Flashcards">
             <End Role="Flashcards" EntitySet="Flashcards" />
@@ -423,6 +507,7 @@
           <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Flashcards" FromRole="Flashcard" ToRole="FlashcardTranslation" />
           <NavigationProperty Name="UserFlashcardMemories" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Flashcards" FromRole="Flashcard" ToRole="UserFlashcardMemory" />
           <NavigationProperty Name="TrainingCards" Relationship="FlashcardsModel.FK_TrainingCards_Flashcards" FromRole="Flashcard" ToRole="TrainingCard" />
+          <NavigationProperty Name="ReviewCards" Relationship="FlashcardsModel.FK_ReviewCards_Flashcards" FromRole="Flashcard" ToRole="ReviewCard" />
         </EntityType>
         <EntityType Name="Language">
           <Key>
@@ -434,6 +519,7 @@
           <NavigationProperty Name="FlashcardTranslations" Relationship="FlashcardsModel.FK_FlashcardTranslations_Languages" FromRole="Language" ToRole="FlashcardTranslation" />
           <NavigationProperty Name="UserFlashcardMemories" Relationship="FlashcardsModel.FK_UserFlashcardMemories_Languages" FromRole="Language" ToRole="UserFlashcardMemory" />
           <NavigationProperty Name="TrainingSessions" Relationship="FlashcardsModel.FK_TrainingSessions_Languages" FromRole="Language" ToRole="TrainingSession" />
+          <NavigationProperty Name="InternalReviews" Relationship="FlashcardsModel.FK_InternalReviews_Languages" FromRole="Language" ToRole="InternalReview" />
         </EntityType>
         <Association Name="FK_Files_FileTypes">
           <End Role="FileTypes" Type="Self.FileType" Multiplicity="1" />
@@ -537,6 +623,24 @@
           <AssociationSet Name="FK_TrainingCards_TrainingSessions" Association="FlashcardsModel.FK_TrainingCards_TrainingSessions">
             <End Role="TrainingSession" EntitySet="TrainingSessions" />
             <End Role="TrainingCard" EntitySet="TrainingCards" />
+          </AssociationSet>
+          <EntitySet Name="InternalReviews" EntityType="FlashcardsModel.InternalReview" />
+          <EntitySet Name="ReviewCards" EntityType="FlashcardsModel.ReviewCard" />
+          <AssociationSet Name="FK_InternalReviews_AspNetUsers" Association="FlashcardsModel.FK_InternalReviews_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="InternalReview" EntitySet="InternalReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewCards_Flashcards" Association="FlashcardsModel.FK_ReviewCards_Flashcards">
+            <End Role="Flashcard" EntitySet="Flashcards" />
+            <End Role="ReviewCard" EntitySet="ReviewCards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InternalReviews_Languages" Association="FlashcardsModel.FK_InternalReviews_Languages">
+            <End Role="Language" EntitySet="Languages" />
+            <End Role="InternalReview" EntitySet="InternalReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewCards_InternalReviews" Association="FlashcardsModel.FK_ReviewCards_InternalReviews">
+            <End Role="InternalReview" EntitySet="InternalReviews" />
+            <End Role="ReviewCard" EntitySet="ReviewCards" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="FlashcardTranslation">
@@ -668,6 +772,7 @@
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TrainingSessions" Relationship="FlashcardsModel.FK_TrainingSessions_AspNetUsers" FromRole="AspNetUser" ToRole="TrainingSession" />
           <NavigationProperty Name="UserFlashcardMemories" Relationship="FlashcardsModel.FK_UserFlashcardMemories_AspNetUsers" FromRole="AspNetUser" ToRole="UserFlashcardMemory" />
+          <NavigationProperty Name="InternalReviews" Relationship="FlashcardsModel.FK_InternalReviews_AspNetUsers" FromRole="AspNetUser" ToRole="InternalReview" />
         </EntityType>
         <Association Name="FK_TrainingSessions_AspNetUsers">
           <End Type="FlashcardsModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
@@ -739,6 +844,77 @@
             </Principal>
             <Dependent Role="TrainingCard">
               <PropertyRef Name="TrainingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="InternalReview">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="LanguageID" Type="Int32" Nullable="false" />
+          <Property Name="DateStarted" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AspNetUser" Relationship="FlashcardsModel.FK_InternalReviews_AspNetUsers" FromRole="InternalReview" ToRole="AspNetUser" />
+          <NavigationProperty Name="Language" Relationship="FlashcardsModel.FK_InternalReviews_Languages" FromRole="InternalReview" ToRole="Language" />
+          <NavigationProperty Name="ReviewCards" Relationship="FlashcardsModel.FK_ReviewCards_InternalReviews" FromRole="InternalReview" ToRole="ReviewCard" />
+        </EntityType>
+        <EntityType Name="ReviewCard">
+          <Key>
+            <PropertyRef Name="ReviewID" />
+            <PropertyRef Name="FlashcardID" />
+          </Key>
+          <Property Name="ReviewID" Type="Int64" Nullable="false" />
+          <Property Name="FlashcardID" Type="Int32" Nullable="false" />
+          <Property Name="InternallLossCount" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Flashcard" Relationship="FlashcardsModel.FK_ReviewCards_Flashcards" FromRole="ReviewCard" ToRole="Flashcard" />
+          <NavigationProperty Name="InternalReview" Relationship="FlashcardsModel.FK_ReviewCards_InternalReviews" FromRole="ReviewCard" ToRole="InternalReview" />
+        </EntityType>
+        <Association Name="FK_InternalReviews_AspNetUsers">
+          <End Type="FlashcardsModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="FlashcardsModel.InternalReview" Role="InternalReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InternalReview">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewCards_Flashcards">
+          <End Type="FlashcardsModel.Flashcard" Role="Flashcard" Multiplicity="1" />
+          <End Type="FlashcardsModel.ReviewCard" Role="ReviewCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Flashcard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReviewCard">
+              <PropertyRef Name="FlashcardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InternalReviews_Languages">
+          <End Type="FlashcardsModel.Language" Role="Language" Multiplicity="1" />
+          <End Type="FlashcardsModel.InternalReview" Role="InternalReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="InternalReview">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewCards_InternalReviews">
+          <End Type="FlashcardsModel.InternalReview" Role="InternalReview" Multiplicity="1" />
+          <End Type="FlashcardsModel.ReviewCard" Role="ReviewCard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InternalReview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ReviewCard">
+              <PropertyRef Name="ReviewID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -862,6 +1038,25 @@
                 <ScalarProperty Name="InternalLossCount" ColumnName="InternalLossCount" />
                 <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
                 <ScalarProperty Name="TrainingID" ColumnName="TrainingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InternalReviews">
+            <EntityTypeMapping TypeName="FlashcardsModel.InternalReview">
+              <MappingFragment StoreEntitySet="InternalReviews">
+                <ScalarProperty Name="DateStarted" ColumnName="DateStarted" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReviewCards">
+            <EntityTypeMapping TypeName="FlashcardsModel.ReviewCard">
+              <MappingFragment StoreEntitySet="ReviewCards">
+                <ScalarProperty Name="InternallLossCount" ColumnName="InternallLossCount" />
+                <ScalarProperty Name="FlashcardID" ColumnName="FlashcardID" />
+                <ScalarProperty Name="ReviewID" ColumnName="ReviewID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

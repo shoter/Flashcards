@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flashcards.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,15 @@ namespace Services.Session.Models
             Cards = userInfo.TrainingCards
                 .Select(card => new TrainingCardInfo(card))
                 .ToList();
-
         }
 
-
+        public TrainingInfo(TrainingSession training)
+        {
+            TrainingID = training.ID;
+            DateStarted = training.DateStarted;
+            Cards = training.TrainingCards
+                .Select(card => new TrainingCardInfo(card))
+                .ToList();
+        }
     }
 }

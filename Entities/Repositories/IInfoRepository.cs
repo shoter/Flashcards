@@ -9,6 +9,6 @@ namespace Flashcards.Entities.Repositories
 {
     public interface IInfoRepository
     {
-        UserInfo GetUserInfo(string userID);
+        UserInfo GetUserInfo(string userID, int languageID);
     }
 }

@@ -22,8 +22,5 @@ namespace Services.Interfaces
         void DeclineAnswer(TrainingCard trainingFlashcard);
 
         bool IsAnswerCorrect(FlashcardAnswer answer);
-
-        double CalculateCorrectnessOfAnswer(string correct, string answer);
-        double CalculateCorrectnessOfAnswer(FlashcardAnswer answer);
     }
 }

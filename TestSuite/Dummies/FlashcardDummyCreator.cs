@@ -16,7 +16,7 @@ namespace TestSuite.Dummies
 
         public FlashcardDummyCreator()
         {
-            flashcard = new Flashcard();
+            flashcard = create();
         }
 
         private Flashcard create()

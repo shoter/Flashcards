@@ -38,7 +38,7 @@ namespace Flashcards.Controllers
 
         public ActionResult Question()
         {
-            QuestionWithAnswerViewModel vm = null;
+            TrainingQuestion vm = null;
 
             if (trainingReviewService.HasTrainingEnded(sessionService.UserID, sessionService.LanguageID) == false)
             {

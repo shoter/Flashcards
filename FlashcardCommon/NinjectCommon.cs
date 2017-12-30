@@ -32,6 +32,14 @@ namespace FlashcardCommon
             kernel.Bind<IInfoRepository>().To<InfoRepository>().InRequestScope();
             kernel.Bind<ITrainingReviewService>().To<TrainingReviewService>().InRequestScope();
             kernel.Bind<ISessionService>().To<SessionService>().InRequestScope();
+            kernel.Bind<IReviewCardRepository>().To<ReviewCardRepository>().InRequestScope();
+            kernel.Bind<IInternalReviewRepository>().To<InternalReviewRepository>().InRequestScope();
+            kernel.Bind<IInternalReviewService>().To<InternalReviewService>().InRequestScope();
+            kernel.Bind<IUserFLashcardMemoryService>().To<UserFLashcardMemoryService>().InRequestScope();
+            kernel.Bind<IStrengthService>().To<StrengthService>().InRequestScope();
+            kernel.Bind<IIntervalService>().To<IntervalService>().InRequestScope();
+            kernel.Bind<IQuestionService>().To<QuestionService>().InRequestScope();
+            
         }
     }
 }

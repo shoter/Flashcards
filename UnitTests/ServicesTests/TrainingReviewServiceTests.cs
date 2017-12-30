@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TestSuite.Dummies;
 
 namespace UnitTests.ServicesTests
 {
@@ -21,41 +22,17 @@ namespace UnitTests.ServicesTests
         Mock<ISessionService> sessionService = new Mock<ISessionService>();
         Mock<IFlashcardUnit> unit = new Mock<IFlashcardUnit>();
         Mock<ITrainingRepository> trainingRepository = new Mock<ITrainingRepository>();
+        Mock<IQuestionService> questionService = new Mock<IQuestionService>();
         TrainingReviewService trainingReviewService => mockTrainingReviewService.Object;
 
         public TrainingReviewServiceTests()
         {
             unit.Setup(x => x.TrainingRepository).Returns(trainingRepository.Object);
 
-            mockTrainingReviewService = new Mock<TrainingReviewService>(unit.Object, sessionService.Object);
+            mockTrainingReviewService = new Mock<TrainingReviewService>(unit.Object, sessionService.Object, questionService.Object);
             mockTrainingReviewService.CallBase = true;
         }
-        [TestMethod]
-        public void IsAnswerCorrect_correct_test()
-        {
-            Assert.AreEqual(1.0,
-                trainingReviewService.CalculateCorrectnessOfAnswer("test_answer", "test_answer"));
-        }
 
-        [TestMethod]
-        public void IsAnswerCorrect_correct_mixedCase_test()
-        {
-            Assert.AreEqual(1.0,
-                trainingReviewService.CalculateCorrectnessOfAnswer("test_AnsWer", "Test_answeR"));
-        }
-
-        [TestMethod]
-        public void IsAnswerCorrect_correct2_test()
-        {
-            Assert.AreEqual(1.0,
-                trainingReviewService.CalculateCorrectnessOfAnswer("test_answer12345", "test_answer12345"));
-        }
-
-        [TestMethod]
-        public void IsAnswerCorrect_not_correct_test()
-        {
-            Assert.IsTrue(trainingReviewService.CalculateCorrectnessOfAnswer("zupa", "testowa") < 1.0);
-        }
 
         [TestMethod]
         public void ShouldStopLastTraining_noLastTraining_test()
@@ -81,6 +58,8 @@ namespace UnitTests.ServicesTests
         [TestMethod]
         public void ShouldStopLastTraining_justBeforeHour_test()
         {
+            mockTrainingReviewService.Setup(x => x.HasTrainingEnded(It.IsAny<string>(), It.IsAny<int>()))
+                .Returns(false);
             mockTraining();
 
             mockTrainingReviewService.Setup(x => x.CalculateTrainingExpirationDate())
@@ -106,13 +85,16 @@ namespace UnitTests.ServicesTests
 
         private void mockTraining()
         {
-            sessionService.SetupGet(x => x.UserInfo)
+           sessionService.SetupGet(x => x.UserInfo)
+                .Returns(new SessionUserInfoDummyCreator().Create());
+
+         /*   sessionService.SetupGet(x => x.UserInfo)
                            .Returns(new UserInfo(new Flashcards.Entities.Models.UserInfo()
                            {
                                TrainingID = 1,
                                TrainingDateStarted = DateTime.Now,
                                TrainingCards = new List<Flashcards.Entities.Models.TrainingCardInfo>()
-                           }));
+                           }));*/
         }
     }
 }

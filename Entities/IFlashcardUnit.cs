@@ -17,6 +17,8 @@ namespace Flashcards.Entities
         IUserFlashcardMemoryRepository UserFlashcardMemoryRepository { get; }
         ITrainingRepository TrainingRepository { get; }
         IInfoRepository InfoRepository { get; }
+        IInternalReviewRepository InternalReviewRepository { get; }
+        IReviewCardRepository ReviewCardRepository { get; }
 
         void SaveChanges();
     }

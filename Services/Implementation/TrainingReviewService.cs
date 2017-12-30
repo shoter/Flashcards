@@ -16,11 +16,13 @@ namespace Services.Implementation
     {
         private readonly IFlashcardUnit unit;
         private readonly ISessionService sessionService;
-        private ISimilarityAlgorithm similarityAlgorithm = new ShoterSimilarityAlgorithm();
-        public TrainingReviewService(IFlashcardUnit unit, ISessionService sessionService)
+        private readonly IQuestionService questionService;
+        
+        public TrainingReviewService(IFlashcardUnit unit, ISessionService sessionService, IQuestionService questionService)
         {
             this.unit = unit;
             this.sessionService = sessionService;
+            this.questionService = questionService;
         }
 
         public List<Flashcard> GetTrainingFlashcards(int languageID, string userID)
@@ -43,7 +45,7 @@ namespace Services.Implementation
             unit.SaveChanges();
         }
 
-        public bool HasTrainingEnded(string userID, int languageID)
+        public virtual bool HasTrainingEnded(string userID, int languageID)
         {
             return unit.TrainingCardRepository.GetCardForTraining(userID, languageID) == null;
         }
@@ -89,24 +91,11 @@ namespace Services.Implementation
             return false;
         }
 
-        public virtual double CalculateCorrectnessOfAnswer(string correct, string answer)
-        {
-            return similarityAlgorithm.CalculateSimilarity(correct, answer);
-        }
+        
 
         public virtual double CalculateCorrectnessOfAnswer(FlashcardAnswer answer)
         {
-            var translations = unit.FlashcardTranslationRepository.GetTRanslationsForFlashcard(answer.Flashcard.ID, answer.Language.ID);
-
-            double maxScore = 0.0;
-            foreach (var translation in translations)
-            {
-                var score = CalculateCorrectnessOfAnswer(translation.Translation, answer.Answer) * (double)translation.Significance;
-                if (score > maxScore)
-                    maxScore = score;
-            }
-
-            return maxScore;
+            return questionService.CalculateCorrectnessOfAnswer(answer);
         }
 
         public bool ShouldStopLastTraining()

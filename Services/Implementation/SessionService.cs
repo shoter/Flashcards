@@ -28,7 +28,7 @@ namespace Services.Implementation
                 if (userInfo != null)
                     return userInfo;
 
-                var dbUserInfo = unit.InfoRepository.GetUserInfo(UserID);
+                var dbUserInfo = unit.InfoRepository.GetUserInfo(UserID, LanguageID);
 
                 userInfo = new UserInfo(dbUserInfo);
                 SetValue(userInfo);
@@ -50,6 +50,20 @@ namespace Services.Implementation
             set
             {
                 SetValue(value);
+
+                //try to find review/training for new language
+                var review = unit.InternalReviewRepository.GetReviewForUser(UserID, value);
+                var training = unit.TrainingRepository.GetTrainingForUser(UserID, value);
+                if (review != null)
+                    UserInfo.ReviewInfo = new ReviewInfo(review);
+                else
+                    UserInfo.ReviewInfo = null;
+                if (training != null)
+                    UserInfo.TrainingInfo = new TrainingInfo(training);
+                else
+                    UserInfo.TrainingInfo = null;
+
+                
             }
         }
 

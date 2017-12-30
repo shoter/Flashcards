@@ -19,12 +19,16 @@ namespace Flashcards.Entities
         public ITrainingRepository TrainingRepository { get; private set; }
         public IInfoRepository InfoRepository { get; private set; }
 
+        public IInternalReviewRepository InternalReviewRepository { get; private set; }
+
+        public IReviewCardRepository ReviewCardRepository { get; private set; }
+
         private readonly FlashcardsEntities context;
 
         public FlashcardUnit(FlashcardsEntities context)
         {
             this.context = context;
-            this.FlashcardRepository = new FlashcardRepository(context); ;
+            this.FlashcardRepository = new FlashcardRepository(context);
             this.LanguageRepository = new LanguageRepository(context);
             this.FlashcardTranslationRepository = new FlashcardTranslationRepository(context);
             this.FlashcardImageRepository = new FlashcardImageRepository(context);
@@ -32,6 +36,8 @@ namespace Flashcards.Entities
             this.UserFlashcardMemoryRepository = new UserFlashcardMemoryRepository(context);
             this.TrainingRepository = new TrainingRepository(context);
             this.InfoRepository = new InfoRepository(context);
+            this.InternalReviewRepository = new InternalReviewRepository(context);
+            this.ReviewCardRepository = new ReviewCardRepository(context);
         }
 
         public void SaveChanges()

@@ -44,7 +44,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Training", "Training", "Training")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Review", "Review", "Review")</li>
                     <li>
                         @using (Html.BeginForm("ChangeLanguage", "Language", FormMethod.Post, new { id = "languageChangeForm" }))
                         {
@@ -71,7 +71,46 @@
         @RenderBody()
         <hr />
         <footer>
+            @{
+                var session = DependencyResolver.Current.GetService<Services.Interfaces.ISessionService>();
+                var userInfo = session.UserInfo;
+                var training = userInfo.TrainingInfo;
+                var review = userInfo.ReviewInfo;
+            }
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>@userInfo.Username - @userInfo.UserID - @session.LanguageID</p>
+
+            @if (review != null)
+            {
+            <p>Review Info</p>
+            <div>
+                ID - @review.ReviewID, languageID - @review.LanguageID, Date Started - @review.DateStarted.ToShortDateString()
+                <ul>
+                    @foreach (var card in review.ReviewCards)
+                    {
+                        <li>
+                            @card.FlashcardID - @card.InternalLossCount
+                        </li>
+                    }
+                </ul>
+            </div>
+            }
+
+            @if (training != null)
+            {
+                <p>Training Info</p>
+                <div>
+                    ID - @training.TrainingID, Date Started - @training.DateStarted.ToShortDateString()
+                    <ul>
+                        @foreach (var card in training.Cards)
+                        {
+                            <li>
+                                @card.FlashcardID - @card.InternalLossCount - @card.LanguageID
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
         </footer>
     </div>
     @Scripts.Render("~/bundles/scalaDependencies")

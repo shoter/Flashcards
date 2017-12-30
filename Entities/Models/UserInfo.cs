@@ -13,6 +13,12 @@ namespace Flashcards.Entities.Models
         public long? TrainingID { get; set; }
         public DateTime? TrainingDateStarted { get; set; }
 
+        public long? ReviewID { get; set; }
+        public DateTime? ReviewDateStarted { get; set; }
+        public int? ReviewLanguageID { get; set; }
+
+        public IEnumerable<DbReviewCard> ReviewCards { get; set; }
+
         public IEnumerable<TrainingCardInfo> TrainingCards { get; set; }
     }
 }

@@ -35,5 +35,7 @@ namespace Flashcards.Entities
         public virtual DbSet<TrainingSession> TrainingSessions { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
         public virtual DbSet<TrainingCard> TrainingCards { get; set; }
+        public virtual DbSet<InternalReview> InternalReviews { get; set; }
+        public virtual DbSet<ReviewCard> ReviewCards { get; set; }
     }
 }

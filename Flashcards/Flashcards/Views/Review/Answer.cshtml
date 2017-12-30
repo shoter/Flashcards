@@ -1,0 +1,29 @@
+﻿@model Flashcards.Models.Flashcards.AnswerViewModel
+
+<div id="answer">
+    <div class="nexter">
+        <a href="@Url.Action("Review", "Review")" class="btn"
+           @if (Model.IsCorrect) { <text>
+           style="background-color:rgba(0,255,0, @Model.Correctness)"
+           </text>   } else { <text>
+           style="background-color:rgba(255, 0, 0, 0.83); color:white;"
+           </text>   }>Go to next question</a>
+    </div>
+    @if (Model.IsCorrect)
+    {
+        <h4 class="text-success">Correct answer</h4>
+    }
+    else
+    {
+        <h4 class="text-danger">Wrong answer</h4>
+    }
+
+    <br />
+
+    Correctness : @Model.Correctness
+    <br/>
+
+    Possible answers: <br />
+
+    @Html.DisplayFor(m => m.TranslationList)
+</div>

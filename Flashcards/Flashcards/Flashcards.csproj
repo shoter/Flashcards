@@ -228,6 +228,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\TrainingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -244,6 +245,7 @@
     <Compile Include="Models\Manage\EditFlashcardImageViewModel.cs" />
     <Compile Include="Models\Manage\EditFlashcardViewModel.cs" />
     <Compile Include="Models\Manage\EditTranslationViewModel.cs" />
+    <Compile Include="Models\Reviews\ReviewQuestionViewModel.cs" />
     <Compile Include="Models\Trainings\TrainingQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -369,6 +371,9 @@
     <Content Include="Views\Training\Question.cshtml" />
     <Content Include="Views\Training\Answer.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\AnswerTranslationList.cshtml" />
+    <Content Include="Views\Review\Review.cshtml" />
+    <Content Include="Views\Review\QuestionError.cshtml" />
+    <Content Include="Views\Review\Answer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

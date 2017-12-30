@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Flashcards.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,13 @@ namespace Services.Session.Models
             FlashcardID = cardInfo.FlashcardID;
             LanguageID = cardInfo.LanguageID;
             InternalLossCount = cardInfo.InternalLossCount;
+        }
+
+        public TrainingCardInfo(TrainingCard card)
+        {
+            FlashcardID = card.FlashcardID;
+            LanguageID = card.TrainingSession.LanguageID;
+            InternalLossCount = card.InternalLossCount;
         }
 
     }

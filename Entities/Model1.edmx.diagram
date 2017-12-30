@@ -29,6 +29,12 @@
         <AssociationConnector Association="FlashcardsModel.FK_TrainingCards_Flashcards" />
         <AssociationConnector Association="FlashcardsModel.FK_TrainingSessions_Languages" />
         <AssociationConnector Association="FlashcardsModel.FK_TrainingCards_TrainingSessions" />
+        <EntityTypeShape EntityType="FlashcardsModel.InternalReview" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="FlashcardsModel.ReviewCard" Width="1.5" PointX="8.25" PointY="1.875" />
+        <AssociationConnector Association="FlashcardsModel.FK_InternalReviews_AspNetUsers" />
+        <AssociationConnector Association="FlashcardsModel.FK_ReviewCards_Flashcards" />
+        <AssociationConnector Association="FlashcardsModel.FK_InternalReviews_Languages" />
+        <AssociationConnector Association="FlashcardsModel.FK_ReviewCards_InternalReviews" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

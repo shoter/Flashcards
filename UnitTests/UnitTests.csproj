@@ -55,9 +55,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DummyTests\ReviewInfoCreatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesTests\FlashcardTranslationServiceTests.cs" />
+    <Compile Include="ServicesTests\InternalReviewServiceTests.cs" />
+    <Compile Include="ServicesTests\IntervalServiceTests.cs" />
+    <Compile Include="ServicesTests\QuestionServiceTests.cs" />
     <Compile Include="ServicesTests\TrainingReviewServiceTests.cs" />
+    <Compile Include="ServicesTests\UserFLashcardMemoryServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -19,6 +19,7 @@ namespace Flashcards.Entities
         {
             this.TrainingSessions = new HashSet<TrainingSession>();
             this.UserFlashcardMemories = new HashSet<UserFlashcardMemory>();
+            this.InternalReviews = new HashSet<InternalReview>();
         }
     
         public string Id { get; set; }
@@ -38,5 +39,7 @@ namespace Flashcards.Entities
         public virtual ICollection<TrainingSession> TrainingSessions { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserFlashcardMemory> UserFlashcardMemories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<InternalReview> InternalReviews { get; set; }
     }
 }

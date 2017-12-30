@@ -39,7 +39,10 @@ namespace Flashcards.Entities.Repositories
             return query.ToList();
         }
 
-        
+        public TrainingSession GetTrainingForUser(string userID, int languageID)
+        {
+            return FirstOrDefault(t => t.UserID == userID && t.LanguageID == languageID);
+        }
 
     }
 }

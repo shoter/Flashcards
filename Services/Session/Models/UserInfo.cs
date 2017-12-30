@@ -12,6 +12,7 @@ namespace Services.Session.Models
         public string UserID { get; set; }
 
         public TrainingInfo TrainingInfo { get; set; }
+        public ReviewInfo ReviewInfo { get; set; }
 
         public UserInfo(Flashcards.Entities.Models.UserInfo userInfo)
         {
@@ -20,6 +21,9 @@ namespace Services.Session.Models
 
             if (userInfo.TrainingID.HasValue)
                 TrainingInfo = new TrainingInfo(userInfo);
+
+            if (userInfo.ReviewID.HasValue)
+                ReviewInfo = new ReviewInfo(userInfo);
         }
 
     }

@@ -26,6 +26,7 @@ def main(args: Array[String]): Unit = {
       case "Management.Index" => new  Flashcards.Management.Index().Run()
       case "Management.EditFlashcard" => new  Flashcards.Management.EditFlashcard().Run()
       case "Training.Question" => new Flashcards.Questions.TrainingQuestion().Run()
+      case "Review.Question" => new Flashcards.Questions.ReviewQuestion().Run()
     }
 
   }

@@ -14,49 +14,17 @@ import scala.scalajs.js.annotation.JSExportTopLevel
 import js.Dynamic.{global => g}
 import scala.scalajs.js.JSON
 
-class TrainingQuestion {
-
-  val answerInput = jQuery("input#questionAnswer")
-  val question = jQuery("#question")
-  val submit = jQuery("#question .answer button")
-  var questionAnswer = jQuery("#questionAnswer")
-
-  val flashcardID = jQuery("#FlashcardID").value()
+class TrainingQuestion extends BaseQuestion {
   var trainingID = jQuery("#TrainingID").value()
 
-  def Run(): Unit = {
-
-    submit.click((JqueryEventObject) => onAnswer(JqueryEventObject))
-
-  }
-
-  def onAnswer(e: JQueryEventObject): Unit =
+  override def getUrl : String = Url.CreateAddress("Answer", "Training")
+  override def createData: js.Dynamic =
   {
-    val answer = answerInput.value();
-    val url = Url.CreateAddress("Answer", "Training")
-
-    var data = js.Dynamic.literal(
+    val answer = answerInput.value()
+    return js.Dynamic.literal(
       trainingID = trainingID,
       trainingCardID = flashcardID,
       answer = answer,
-    )
-
-    var settings = js.Dynamic.literal(
-      url = url,
-      data = data,
-      success = onSearchSuccess _,
-      `type` = "POST"
-    ).asInstanceOf[JQueryAjaxSettings]
-
-    g.console.log(answer)
-    jQuery.ajax(settings)
-  }
-
-  def onSearchSuccess(data : js.Any): Unit = {
-    g.console.log(data);
-    var html = jQuery(data)
-    question.after(html)
-    submit.remove()
-    questionAnswer.remove()
+    );
   }
 }

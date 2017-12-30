@@ -44,6 +44,11 @@
     <Compile Include="Dummies\FlashcardTranslationDummyCreator.cs" />
     <Compile Include="Dummies\IDummyCreator.cs" />
     <Compile Include="Dummies\LanguageDummyCreator.cs" />
+    <Compile Include="Dummies\ReviewCardInfoDummyCreator.cs" />
+    <Compile Include="Dummies\ReviewInfoDummyCreator.cs" />
+    <Compile Include="Dummies\SessionUserInfoDummyCreator.cs" />
+    <Compile Include="Dummies\TrainingCardInfoDummyCreator.cs" />
+    <Compile Include="Dummies\TrainingInfoDummyCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +59,10 @@
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{685DE338-7D51-484D-88FC-93F5E2FAAEEC}</Project>
       <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{9C388B06-44D1-4F0B-9003-93CBB95D642B}</Project>
+      <Name>Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
