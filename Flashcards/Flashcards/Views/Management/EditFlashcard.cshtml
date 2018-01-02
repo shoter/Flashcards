@@ -120,7 +120,7 @@
                             Uploaded at date : @img.UploadTime.ToShortDateString() <br/>
                             AuthorID : @img.AuthorID
                         </div>
-                        <button disabled class="btn btn-danger">Remove</button>
+                        <a href="@Url.Action("RemoveImage", new { flashcardID = Model.FlashcardID, fileID = img.FileID })" class="btn btn-danger">Remove</a>
                     </div>
                 }
             </div>

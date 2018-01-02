@@ -14,6 +14,11 @@
     }
 
     var langs = Globals.GenerateLanguageSelectList();
+
+    var session = DependencyResolver.Current.GetService<Services.Interfaces.ISessionService>();
+    var userInfo = session.UserInfo;
+    var training = userInfo?.TrainingInfo;
+    var review = userInfo?.ReviewInfo;
 }
 
 
@@ -43,8 +48,15 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Training", "Training", "Training")</li>
-                    <li>@Html.ActionLink("Review", "Review", "Review")</li>
+                    @if (session.UserID != null)
+                    {
+                        <li>@Html.ActionLink("Training", "Training", "Training")</li>
+                        <li>@Html.ActionLink("Review", "Review", "Review")</li>
+                    }
+                    @if (session.UserInfo != null && session.UserInfo.Username == "admin")
+                    {
+                        <li>@Html.ActionLink("Management", "Index", "Management")</li>
+                    }
                     <li>
                         @using (Html.BeginForm("ChangeLanguage", "Language", FormMethod.Post, new { id = "languageChangeForm" }))
                         {
@@ -71,29 +83,23 @@
         @RenderBody()
         <hr />
         <footer>
-            @{
-                var session = DependencyResolver.Current.GetService<Services.Interfaces.ISessionService>();
-                var userInfo = session.UserInfo;
-                var training = userInfo?.TrainingInfo;
-                var review = userInfo?.ReviewInfo;
-            }
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
             <p>@(userInfo?.Username) - @(userInfo?.UserID) - @session.LanguageID</p>
 
             @if (review != null)
             {
-            <p>Review Info</p>
-            <div>
-                ID - @review.ReviewID, languageID - @review.LanguageID, Date Started - @review.DateStarted.ToShortDateString()
-                <ul>
-                    @foreach (var card in review.ReviewCards)
-                    {
-                        <li>
-                            @card.FlashcardID - @card.InternalLossCount
-                        </li>
-                    }
-                </ul>
-            </div>
+                <p>Review Info</p>
+                <div>
+                    ID - @review.ReviewID, languageID - @review.LanguageID, Date Started - @review.DateStarted.ToShortDateString()
+                    <ul>
+                        @foreach (var card in review.ReviewCards)
+                        {
+                            <li>
+                                @card.FlashcardID - @card.InternalLossCount
+                            </li>
+                        }
+                    </ul>
+                </div>
             }
 
             @if (training != null)

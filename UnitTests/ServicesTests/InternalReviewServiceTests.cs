@@ -27,7 +27,7 @@ namespace UnitTests.ServicesTests
         private SessionUserInfoDummyCreator userInfoCreator = new SessionUserInfoDummyCreator();
         public InternalReviewServiceTests()
         {
-            mockInternalReviewService = new Mock<InternalReviewService>(unit.Object, sessionService.Object);
+            mockInternalReviewService = new Mock<InternalReviewService>(unit.Object, sessionService.Object, Mock.Of<IUserFLashcardMemoryService>(), Mock.Of<IQuestionService>());
             mockInternalReviewService.CallBase = true;
         }
 

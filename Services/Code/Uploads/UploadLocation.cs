@@ -1,4 +1,5 @@
-﻿using Flashcards.Entities.Enums.Files;
+﻿using Flashcards.Entities;
+using Flashcards.Entities.Enums.Files;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,16 @@ namespace Services.Code.Uploads
                     return TempFolder;
             }
             throw new NotImplementedException();
+        }
+
+        public static UploadLocation Get(File file)
+        {
+            return Get((FileTypeEnum)file.FileTypeID);
+        }
+
+        public static string GetAbsoluteFilePathForLocation(File file)
+        {
+            return Get(file).GetAbsoluteFilePathForLocation(file.Filename);
         }
 
         public string GetAbsoluteFilePathForLocation(string filename)

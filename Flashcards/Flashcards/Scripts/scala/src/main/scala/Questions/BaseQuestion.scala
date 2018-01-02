@@ -1,6 +1,7 @@
 package Flashcards.Questions
 
 import Flashcards.Jquery.myquery.jQuery
+import Jquery.JqOffset
 import org.scalajs.jquery.{JQueryAjaxSettings, JQueryEventObject}
 
 import scalajs.js
@@ -19,11 +20,21 @@ abstract class BaseQuestion {
   def Run(): Unit = {
 
     submit.click((JqueryEventObject) => onAnswer(JqueryEventObject))
-
+    questionAnswer.keyup((eventObject: JQueryEventObject) =>{
+      if(eventObject.which == 13)
+        onAnswer(eventObject)
+    })
+    questionAnswer.focus()
   }
 
+  var answerStarted = false;
   def onAnswer(e: JQueryEventObject): Unit =
   {
+    if(questionAnswer.value() == "")
+      return
+    if(answerStarted)
+      return
+    answerStarted = true;
 
     val url = getUrl
     var data = createData
@@ -44,6 +55,23 @@ abstract class BaseQuestion {
     question.after(html)
     submit.remove()
     questionAnswer.remove()
+
+    var offset = jQuery("#afterTranslations").offset().asInstanceOf[JqOffset]
+
+    val animateSettings = js.Dynamic.literal(
+      scrollTop = offset.top
+    )
+
+    g.console.log(animateSettings);
+    jQuery("html, body").animate(animateSettings, "slow");
+
+    val gotonext = jQuery("#gotoNext");
+    val href = gotonext.attr("href")
+    jQuery("body").keyup((eventObject: JQueryEventObject) =>{
+      if(eventObject.which == 13)
+        g.window.location.href = href
+
+    })
   }
 
   def getUrl: String

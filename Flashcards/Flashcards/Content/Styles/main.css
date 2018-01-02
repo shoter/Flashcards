@@ -54,11 +54,11 @@ i.fa.info {
     width: 10vw; }
   #managementEditflashcard .row > div:last-child .images div.image .imageInfo {
     padding: 1rem 1rem; }
-  #managementEditflashcard .row > div:last-child .images div.image button {
+  #managementEditflashcard .row > div:last-child .images div.image a {
     position: absolute;
     bottom: 0;
     left: 0; }
-  #managementEditflashcard .row > div:last-child .images div.image button:not(:hover) {
+  #managementEditflashcard .row > div:last-child .images div.image a:not(:hover) {
     opacity: 0.2; }
 
 #question {

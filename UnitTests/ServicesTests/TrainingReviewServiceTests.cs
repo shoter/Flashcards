@@ -78,9 +78,7 @@ namespace UnitTests.ServicesTests
 
             trainingRepository.Verify(x => x.Remove(It.IsAny<long>()), Times.Once);
             unit.Verify(x => x.SaveChanges(), Times.Once);
-
             Assert.AreEqual(null, sessionService.Object.UserInfo.TrainingInfo);
-            
         }
 
         private void mockTraining()

@@ -46,6 +46,7 @@ namespace UnitTests.ServicesTests
         public void RemoveTranslationTest()
         {
             var t = getTranslation();
+
             flashcardTranslationService.RemoveTranslation(t);
 
             flashcardTranslationRepository.Verify(x => x.Remove(It.Is<FlashcardTranslation>(
@@ -57,8 +58,7 @@ namespace UnitTests.ServicesTests
         public void ChangeTranslationTest()
         {
             var t = getTranslation();
-            
-
+           
             var pron = "japko";
             var trans = "jabłko";
             var sig = 0.1;

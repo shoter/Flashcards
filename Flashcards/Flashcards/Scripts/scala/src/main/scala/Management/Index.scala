@@ -19,9 +19,9 @@ class Index {
   def Run(): Unit =
   {
     jQuery("#searchForFlashcards").change((JQueryEventObject) => onSearch(JQueryEventObject))
-    jQuery("#searchForFlashcards").keyup((JqueryEventObject) =>{
-      if(JqueryEventObject.which == 13)
-        onSearch(JqueryEventObject)
+    jQuery("#searchForFlashcards").keyup((eventObject: JQueryEventObject) =>{
+      if(eventObject.which == 13)
+        onSearch(eventObject)
     })
   }
 

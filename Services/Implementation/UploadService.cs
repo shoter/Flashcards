@@ -52,6 +52,10 @@ namespace Services.Implementation
 
         public void RemoveUploadFile(Flashcards.Entities.File file)
         {
+            var absPath = UploadLocation.GetAbsoluteFilePathForLocation(file);
+            if (File.Exists(absPath))
+                File.Delete(absPath);
+
             fileRepository.Remove(file);
             fileRepository.SaveChanges();
         }

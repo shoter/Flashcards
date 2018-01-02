@@ -19,6 +19,7 @@ namespace FlashcardCommon
             kernel.Bind<FlashcardsEntities>().ToSelf().InRequestScope();
 
             kernel.Bind<IFlashcardRepository>().To<FlashcardRepository>().InRequestScope();
+			
             kernel.Bind<ILanguageRepository>().To<LanguageRepository>().InRequestScope();
             kernel.Bind<IFileRepository>().To<FileRepository>().InRequestScope();
             kernel.Bind<IFlashcardImageRepository>().To<FlashcardImageRepository>().InRequestScope();

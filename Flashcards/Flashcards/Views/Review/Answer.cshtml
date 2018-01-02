@@ -2,7 +2,7 @@
 
 <div id="answer">
     <div class="nexter">
-        <a href="@Url.Action("Review", "Review")" class="btn"
+        <a id="gotoNext" href="@Url.Action("Review", "Review")" class="btn"
            @if (Model.IsCorrect) { <text>
            style="background-color:rgba(0,255,0, @Model.Correctness)"
            </text>   } else { <text>

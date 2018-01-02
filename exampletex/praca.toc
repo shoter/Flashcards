@@ -1,13 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \select@language {polish}
-\contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{3}{chapter.1}
-\contentsline {chapter}{\numberline {2}.NET}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Implementacje .NET}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}.NET Core}{6}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}.NET Framework}{6}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Mono}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Universal Windows Platform (\textit {UWP})}{6}{subsection.2.1.4}
-\contentsline {chapter}{\numberline {3}ASP.NET MVC}{7}{chapter.3}
-\contentsline {subsection}{\numberline {3.0.1}Model-View-Controller}{7}{subsection.3.0.1}
-\contentsline {chapter}{\numberline {4}TODO: Cz\IeC {\k e}\IeC {\'s}\IeC {\'c} g\IeC {\l }\IeC {\'o}wna pracy}{9}{chapter.4}
-\contentsline {chapter}{\numberline {5}Podsumowanie oraz wnioski}{11}{chapter.5}
+\contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Przyswajanie wiedzy}{5}{chapter.2}
+\contentsline {chapter}{\numberline {3}Opis aplikacji}{6}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Za\IeC {\l }o\IeC {\.z}enia aplikacji}{6}{subsection.3.0.1}
+\contentsline {chapter}{\numberline {4}Podsumowanie oraz wnioski}{7}{chapter.4}

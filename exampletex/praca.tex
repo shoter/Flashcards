@@ -62,7 +62,8 @@
 % see: https://tex.stackexchange.com/questions/57915/cannot-copy-letters-with-diacritics-from-pdflatex-pdf
 \usepackage{lmodern}
 \usepackage{listings}
-
+%notki todo
+\usepackage{todonotes}
 % Polskie literki w listingach:
 \lstset{
     literate=
@@ -213,29 +214,29 @@
 % Prawdopodobnie niektóre z poniższych nie są nigdy używane.
 % Jeśli o tym wiesz, to warto rozwinąć ten szablon i udostępnić go dalej ;)
 
-\author{TODO: Author}
-\shortauthor{TODO: Short~author}
+\author{TODO: Damian Łączak}
+\shortauthor{TODO: Damian Łączak}
 
-\titlePL{TODO: TitlePL}
-\titleEN{TODO: TitleEN}
+\titlePL{TODO: Aplikacja internetowa do nauki języka obcego}
+\titleEN{TODO: Internet application for foreign language learning}
 
 % Skrócone wersje tytułów po polsku/angielsku
 % wyświetlane np. gdy normalne są bardzo długie
-\shorttitlePL{TODO: Short title PL}
-\shorttitleEN{TODO: Short title EN}
+\shorttitlePL{TODO: Aplikacja internetowa do nauki języka}
+\shorttitleEN{TODO: Internet application for language learning}
 
 % Rodzaj pracy
 \thesistype{Praca dyplomowa magisterska}
 %\thesistype{Master of Science Thesis}
 
 % Promotor/opiekun pracy
-\supervisor{TODO: Promotor}
+\supervisor{TODO: dr hab. inż Tomasz Bołd}
 
 % Kierunek studiów
 \degreeprogramme{Informatyka Stosowana}
 
 % TODO: DATE
-\date{2017}
+\date{2018}
 
 % TODO: Można zakomentować jeśli nie chcemy wyświetlać katedry
 % TODO: Nie jest pewne, czy to jest gdzieś wykorzystywane
@@ -317,7 +318,12 @@
 }
 
 \setcounter{tocdepth}{2}
+\setcounter{page}{1}
 \tableofcontents
+\clearpage
+
+\newpage
+\listoftodos
 \clearpage
 
 \include{intro}

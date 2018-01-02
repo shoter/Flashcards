@@ -19,13 +19,14 @@ namespace Flashcards.Controllers
         private readonly FlashcardUnit unit;
         private readonly IFlashcardTranslationService flashcardTranslationService;
         private readonly IFlashcardImageService flashcardImageService;
-
+        private readonly IUploadService uploadService;
         public ManagementController(FlashcardUnit unit, IPopupService popupService, IFlashcardTranslationService flashcardTranslationService,
-            IFlashcardImageService flashcardImageService, ISessionService sessionService) : base(popupService, sessionService)
+            IFlashcardImageService flashcardImageService, ISessionService sessionService, IUploadService uploadService) : base(popupService, sessionService)
         {
             this.unit = unit;
             this.flashcardTranslationService = flashcardTranslationService;
             this.flashcardImageService = flashcardImageService;
+            this.uploadService = uploadService;
         }
 
         [Authorize(Roles = Groups.Administrator)]
@@ -78,11 +79,20 @@ namespace Flashcards.Controllers
                     flash = new Flashcard() { Name = name.FirstUpper() };
                     unit.FlashcardRepository.Add(flash);
                     unit.FlashcardRepository.SaveChanges();
-                    return EditFlashcard(flash.ID);
-                    //return RedirectToAction(nameof(EditFlashcard), "Management", new { flashcardID = flash.ID, languageSymbol = (string)null });
+                   // return EditFlashcard(flash.ID);
+                    return RedirectToAction("EditFlashcard", "Management", new { flashcardID = flash.ID, languageSymbol = (string)null });
                 }
             }
             return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = Groups.Administrator)]
+        public ActionResult RemoveImage(int flashcardID, int fileID)
+        {
+            var image = unit.FlashcardImageRepository.First(f => f.FlashcardID == flashcardID && f.FileID == fileID);
+            uploadService.RemoveUploadFile(image.File);
+            AddSuccess("Image removed!");
+            return RedirectBack();
         }
 
         [Authorize(Roles = Groups.Administrator)]
@@ -159,7 +169,7 @@ namespace Flashcards.Controllers
             {
 
                 var flashcards = unit.FlashcardRepository.SearchForFlashcard(query)
-                    .Take(10).ToList();
+                    .Take(100).ToList();
 
                 return JsonData(flashcards.Select(f => new
                 {

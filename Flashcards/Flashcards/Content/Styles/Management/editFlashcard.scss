@@ -72,14 +72,14 @@
                         padding: 1rem 1rem;
                     }
 
-                    button
+                    a
                     {
                         position: absolute;
                         bottom: 0;
                         left: 0;
                     }
 
-                    button:not(:hover)
+                    a:not(:hover)
                     {
                         opacity: 0.2;
                     }
