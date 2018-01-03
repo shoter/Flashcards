@@ -13,17 +13,18 @@
 \BOOKMARK [1][-]{section.4.3}{Jednostka PracyRepositoryUnitOfWorkPattern}{chapter.4}% 13
 \BOOKMARK [1][-]{section.4.4}{Mapowanie obiektowo-relacyjne}{chapter.4}% 14
 \BOOKMARK [1][-]{section.4.5}{Wstrzykiwanie zaleznosci}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Testy}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Testy Jednostkowe}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{Testy Integracyjne}{chapter.5}% 18
-\BOOKMARK [0][-]{chapter.6}{Kaskadowe Arkusze Styli}{}% 19
-\BOOKMARK [1][-]{section.6.1}{Syntaktycznie Zarabiste Arkusze Styli}{chapter.6}% 20
-\BOOKMARK [0][-]{chapter.7}{ScalaScalaWiki}{}% 21
-\BOOKMARK [1][-]{section.7.1}{Javascript}{chapter.7}% 22
-\BOOKMARK [1][-]{section.7.2}{Scala w wersji JS}{chapter.7}% 23
-\BOOKMARK [2][-]{subsection.7.2.1}{sbt}{section.7.2}% 24
-\BOOKMARK [2][-]{subsection.7.2.2}{Proces budowania projektu}{section.7.2}% 25
-\BOOKMARK [2][-]{subsection.7.2.3}{Hello World}{section.7.2}% 26
-\BOOKMARK [0][-]{chapter.8}{Opis aplikacji}{}% 27
-\BOOKMARK [1][-]{subsection.8.0.1}{Zalozenia aplikacji}{chapter.8}% 28
-\BOOKMARK [0][-]{chapter.9}{Podsumowanie oraz wnioski}{}% 29
+\BOOKMARK [0][-]{chapter.5}{Microsoft SQL Server}{}% 16
+\BOOKMARK [0][-]{chapter.6}{Testy}{}% 17
+\BOOKMARK [1][-]{section.6.1}{Testy Jednostkowe}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.2}{Testy Integracyjne}{chapter.6}% 19
+\BOOKMARK [0][-]{chapter.7}{Kaskadowe Arkusze Styli}{}% 20
+\BOOKMARK [1][-]{section.7.1}{Syntaktycznie Zarabiste Arkusze Styli}{chapter.7}% 21
+\BOOKMARK [0][-]{chapter.8}{Scala}{}% 22
+\BOOKMARK [1][-]{section.8.1}{Javascript}{chapter.8}% 23
+\BOOKMARK [1][-]{section.8.2}{Scala w wersji JS}{chapter.8}% 24
+\BOOKMARK [2][-]{subsection.8.2.1}{sbt}{section.8.2}% 25
+\BOOKMARK [2][-]{subsection.8.2.2}{Proces budowania projektu}{section.8.2}% 26
+\BOOKMARK [2][-]{subsection.8.2.3}{Hello World}{section.8.2}% 27
+\BOOKMARK [0][-]{chapter.9}{Opis aplikacji}{}% 28
+\BOOKMARK [1][-]{subsection.9.0.1}{Zalozenia aplikacji}{chapter.9}% 29
+\BOOKMARK [0][-]{chapter.10}{Podsumowanie oraz wnioski}{}% 30

@@ -15,22 +15,23 @@
 \contentsline {section}{\numberline {4.3}Jednostka Pracy\cite {RepositoryUnitOfWorkPattern}}{7}{section.4.3}
 \contentsline {section}{\numberline {4.4}Mapowanie obiektowo-relacyjne}{7}{section.4.4}
 \contentsline {section}{\numberline {4.5}Wstrzykiwanie zale\IeC {\.z}no\IeC {\'s}ci}{8}{section.4.5}
-\contentsline {chapter}{\numberline {5}Testy}{11}{chapter.5}
-\contentsline {section}{\numberline {5.1}Testy Jednostkowe}{11}{section.5.1}
-\contentsline {section}{\numberline {5.2}Testy Integracyjne}{12}{section.5.2}
-\contentsline {chapter}{\numberline {6}Kaskadowe Arkusze Styli}{13}{chapter.6}
-\contentsline {section}{\numberline {6.1}Syntaktycznie Zar\IeC {\k a}biste Arkusze Styli}{13}{section.6.1}
-\contentsline {chapter}{\numberline {7}Scala\cite {ScalaWiki}}{15}{chapter.7}
-\contentsline {section}{\numberline {7.1}Javascript}{15}{section.7.1}
-\contentsline {section}{\numberline {7.2}Scala w wersji JS}{16}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}sbt}{17}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Proces budowania projektu}{18}{subsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.2.1}Pocz\IeC {\k a}tkowa kompilacja}{18}{subsubsection.7.2.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2.2}Szybka optymalizacja}{19}{subsubsection.7.2.2.2}
-\contentsline {subsubsection}{\numberline {7.2.2.3}Pe\IeC {\l }na optymalizacja}{19}{subsubsection.7.2.2.3}
-\contentsline {subsubsection}{\numberline {7.2.2.4}Pliki javascript}{19}{subsubsection.7.2.2.4}
-\contentsline {subsubsection}{\numberline {7.2.2.5}Debugowanie}{20}{subsubsection.7.2.2.5}
-\contentsline {subsection}{\numberline {7.2.3}Hello World}{21}{subsection.7.2.3}
-\contentsline {chapter}{\numberline {8}Opis aplikacji}{22}{chapter.8}
-\contentsline {subsection}{\numberline {8.0.1}Za\IeC {\l }o\IeC {\.z}enia aplikacji}{22}{subsection.8.0.1}
-\contentsline {chapter}{\numberline {9}Podsumowanie oraz wnioski}{23}{chapter.9}
+\contentsline {chapter}{\numberline {5}Microsoft SQL Server}{11}{chapter.5}
+\contentsline {chapter}{\numberline {6}Testy}{12}{chapter.6}
+\contentsline {section}{\numberline {6.1}Testy Jednostkowe}{12}{section.6.1}
+\contentsline {section}{\numberline {6.2}Testy Integracyjne}{13}{section.6.2}
+\contentsline {chapter}{\numberline {7}Kaskadowe Arkusze Styli}{14}{chapter.7}
+\contentsline {section}{\numberline {7.1}Syntaktycznie Zar\IeC {\k a}biste Arkusze Styli}{14}{section.7.1}
+\contentsline {chapter}{\numberline {8}Scala}{16}{chapter.8}
+\contentsline {section}{\numberline {8.1}Javascript}{16}{section.8.1}
+\contentsline {section}{\numberline {8.2}Scala w wersji JS}{17}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}sbt}{18}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Proces budowania projektu}{19}{subsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.1}Pocz\IeC {\k a}tkowa kompilacja}{19}{subsubsection.8.2.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2.2}Szybka optymalizacja}{20}{subsubsection.8.2.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.3}Pe\IeC {\l }na optymalizacja}{20}{subsubsection.8.2.2.3}
+\contentsline {subsubsection}{\numberline {8.2.2.4}Pliki javascript}{20}{subsubsection.8.2.2.4}
+\contentsline {subsubsection}{\numberline {8.2.2.5}Debugowanie}{21}{subsubsection.8.2.2.5}
+\contentsline {subsection}{\numberline {8.2.3}Hello World}{21}{subsection.8.2.3}
+\contentsline {chapter}{\numberline {9}Opis aplikacji}{23}{chapter.9}
+\contentsline {subsection}{\numberline {9.0.1}Za\IeC {\l }o\IeC {\.z}enia aplikacji}{23}{subsection.9.0.1}
+\contentsline {chapter}{\numberline {10}Podsumowanie oraz wnioski}{25}{chapter.10}

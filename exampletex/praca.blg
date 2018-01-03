@@ -26,45 +26,45 @@ Warning--I didn't find a database entry for "CSSDoc"
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 16 entries,
+You've used 17 entries,
             6256 wiz_defined-function locations,
-            1248 strings with 10396 characters,
-and the built_in function-call counts, 54189 in all, are:
-= -- 1628
-> -- 4342
-< -- 387
-+ -- 3853
-- -- 3623
-* -- 1931
-:= -- 5891
+            1253 strings with 10496 characters,
+and the built_in function-call counts, 57129 in all, are:
+= -- 1684
+> -- 4608
+< -- 410
++ -- 4093
+- -- 3856
+* -- 2005
+:= -- 6189
 add.period$ -- 0
-call.type$ -- 16
-change.case$ -- 46
-chr.to.int$ -- 390
-cite$ -- 30
-duplicate$ -- 4898
-empty$ -- 5146
+call.type$ -- 17
+change.case$ -- 48
+chr.to.int$ -- 414
+cite$ -- 32
+duplicate$ -- 5178
+empty$ -- 5442
 format.name$ -- 175
-if$ -- 8897
+if$ -- 9355
 int.to.chr$ -- 0
-int.to.str$ -- 19
+int.to.str$ -- 20
 missing$ -- 0
-newline$ -- 230
+newline$ -- 241
 num.names$ -- 152
-pop$ -- 4879
+pop$ -- 5200
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 60
 quote$ -- 0
-skip$ -- 1659
+skip$ -- 1746
 stack$ -- 0
-substring$ -- 2908
-swap$ -- 1486
-text.length$ -- 329
+substring$ -- 3002
+swap$ -- 1575
+text.length$ -- 347
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 532
+type$ -- 566
 warning$ -- 0
-while$ -- 467
+while$ -- 487
 width$ -- 0
-write$ -- 215
+write$ -- 225
 (There was 1 warning)

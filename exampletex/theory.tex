@@ -16,8 +16,8 @@ Trzeba także zwrócić uwagę na fakt, iż w rzeczywistości\cite{ForgettingCur
 
 \section{Interwały potwórzeń}
 
-W celu jak najlepszego zapamiętania wyuczonych informacji należy, poza odpowiednim programem nauczania, zwrócić uwagę na fakt w jakich interwałach czasowych powtarzamy przerabiany materiał\cite{ForgettingCurve}.
-Interwał musi być wystarczająco krótki aby zapobiec zapominaniu i wystarczająco długi, aby zbyt często nie przyswajać powtarzanego materiału.
+W celu jak najlepszego zapamiętania wyuczonych informacji należy, poza odpowiednim programem nauczania, zwrócić uwagę na fakt, w jakich interwałach czasowych powtarzamy przerabiany materiał\cite{ForgettingCurve}.
+Interwał musi być wystarczająco krótki, aby zapobiec zapominaniu i wystarczająco długi, aby zbyt często nie przyswajać powtarzanego materiału.
 
 
 
@@ -29,11 +29,11 @@ Interwał musi być wystarczająco krótki aby zapobiec zapominaniu i wystarczaj
 \label{cha:wstep}
 
 %https://docs.microsoft.com/en-us/dotnet/standard/tour
-.NET jest platformą programistyczną umożliwiającą pisanie nowoczesnych aplikacji w językach wysokiego poziomu, do których zalicza się m.in C\# , VB oraz F\#. Platforma ta wyróżnia się tym iż:
+.NET jest platformą programistyczną umożliwiającą pisanie nowoczesnych aplikacji w językach wysokiego poziomu, do których zalicza się m.in C\#, VB oraz F\#. Platforma ta wyróżnia się tym iż:
 \begin{itemize}
-	\item Pozwala na użycie wielu języków programowania podczas pisania naszych programów
-	\item Ma zaimplementowane mechanizmy do obsługi operacji asynchronicznych i współbieżnych
-	\item Można ją stosować na różnych platformach, które posiadają środowisko wykonywalne .NET
+	\item Pozwala na użycie wielu języków programowania podczas pisania naszych programów.
+	\item Ma zaimplementowane mechanizmy do obsługi operacji asynchronicznych i współbieżnych.
+	\item Można ją stosować na różnych platformach, które posiadają środowisko wykonywalne .NET.
 \end{itemize}
 Wszystkie języki używane w platformie .NET kompilowane są do Wspólnego Języka Pośredniego (po ang. \textit{Common Intermediate Language}), który następnie jest tłumaczony na kod bajtowy i wykonywany za pomocą środowiska wykonywalnego danej implementacji .NET.
 
@@ -87,9 +87,9 @@ ASP.NET MVC jest frameworkiem do budowania aplikacji internetowych w oparciu o w
 
 \section{Model-Widok-Kontroler}
 
-Większość dzisiejszych systemów komputerowych działa na zasadzie wyświetlania danych, które aktualnie znajdują się w bazie danych i ewentualna ich modyfikacja. Z tego też powodu narodził się wzorzec Model-Widok-Kontroler(ang. Model-View-Controller), który rozdziela logikę aplikacji na 3 główne segmenty:
+Większość dzisiejszych systemów komputerowych działa na zasadzie wyświetlania danych, które aktualnie znajdują się w bazie danych i ewentualnie ich modyfikacji. W celu ujednolicenia tych systemów stosowane jest wzorzec Model-Widok-Kontroler(ang. Model-View-Controller), który rozdziela logikę aplikacji na 3 główne segmenty:
 \begin{enumerate}
-	\item Model - Służy do przechowywania danych, pobierania danych i ich ewentualnej zmiany na podstawie zapytań z kontrolera.
+	\item Model - Służy do pobierania, przechowywania i zamiany danych.
 	\item Kontroler - przetwarza zapytania użytkownika, które przekazuje do modelu, który jest następnie wyświetlany jako widok.
 	\item Widok - Służy do wyświetlania informacji 
 \end{enumerate}
@@ -101,14 +101,16 @@ Większość dzisiejszych systemów komputerowych działa na zasadzie wyświetla
 	 \caption{Podać źródło}
 \end{figure}
 
-Cała moja aplikacja została skonstruowana zgodnie z tym wzorcem projektowym. ASP.NET MVC, jak już sama nazwa wskazuje, bardzo mocno opiera się na nim. Dostarczana jest klasa bazowa \textbf{Controller}, która dostarcza wszystkie podstawowe metody do wyświetlania odpowiednich treści danych i zarządzania zapytaniami.
-Całe to rozwiązanie niesie za sobą korzyści związane z warstwą wyświetlania prezentowanych danych. Jest to warstwa aplikacji, w której bardzo często dochodzi do zmian. Dzięki podejściu MVC i odseparowaniu danych od widoku jesteśmy w stanie tworzyć jak i zmieniać widoki, bez wpływu na kod biznesowy aplikacji.
+Cała aplikacja została skonstruowana zgodnie z tym wzorcem projektowym. ASP.NET MVC posiada wiele narzędzi, które ułatwiają zastosowanie tego wzorca. Dostarczana jest klasa bazowa \textbf{Controller}, która posiada wszystkie podstawowe metody do wyświetlania odpowiednich treści danych i zarządzania zapytaniami.
+
+Wzorzec MVC niesie za sobą korzyści związane z warstwą wyświetlania danych. Jest to warstwa aplikacji, w której bardzo często dochodzi do zmian. Dzięki odseparowaniu danych od widoku jesteśmy w stanie tworzyć, jak i zmieniać widoki, bez wpływu na kod biznesowy aplikacji.
 
 \section{Wzorzec Repozytorium\cite{RepositoryUnitOfWorkPattern}}
 
-Wewnątrz naszej aplikacji będziemy używać bazy danych Microsoft SQL. Bardzo często jest tworzony kod, którego celem jest zwrócenie bardzo podobnych danych. W celu zmniejszenia redundancji kodu jak i odseparowania zależności i odpowiedzialności wykorzystałem wzorzec Repozytorium (z ang. Repository Pattern).
+Wewnątrz aplikacji będziemy używać bazy danych Microsoft SQL.
+Do komunikacji z bazą bardzo często jest tworzony kod, który zwraca podobne dane. W celu zmniejszenia redundancji kodu, jak i odseparowania zależności i odpowiedzialności wykorzystałem wzorzec Repozytorium (z ang. Repository Pattern).
 
-Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których jedynym zadaniem jest pobieranie i modyfikowanie danych po stronie serwera SQL. Nie zawierają żadnej logiki biznesowej i są niezwiązane z resztą kodu danej aplikacji. 
+Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których zadaniem jest pobieranie i modyfikowanie danych po stronie serwera SQL. Nie zawierają żadnej logiki biznesowej i są niezwiązane z resztą kodu danej aplikacji. 
 
 \begin{figure}[h]
 	\centering
@@ -116,8 +118,11 @@ Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których jedynym zadaniem
 	 \caption{Wzorzec repozytorium. Źródło: msdn.microsoft.com}
 \end{figure}
 
-Wewnątrz mojego projektu cały wzorzec repozytorium został oparty na interfejsach \textbf{IRepository} i \textbf{IRepository<T>} (który implementuje \textbf{IRepository}). W założeniu te interfejsy mówią jedynie o tym jakie operacje można zrealizować na danym obiekcie klasy 'T'. Informacje o tym jak te informacje są realizowane jak i to, iż są one realizowane za pomocą bazy danych Microsoftu są przechowywane w klasie \textbf{RepositoryBase<T>}.
-Wszystkie kolejne stworzone repozytoria dziedziczą po \textbf{RepositoryBase<T>} a ich interfejsy implementują \textbf{IRepository<T>}. Takie działanie pozwala nam na brak ścisłego powiązania naszych repozytoriów z bazą danych Microsoft SQL. Wystarczy iż zmienimy \textbf{RepositoryBase<T>} na jakąkolwiek inną klasę implementującą \textbf{IRepository<T>} i wykorzystamy ją w naszych repozytoriach. Dzięki temu małym nakładem siły moglibyśmy zastąpić Microsoft SQL danymi zapisywanymi w pamięci RAM naszego komputera wewnątrz wyspecjalizowanych kolekcji. 
+\todo[inline]{źródło podmień?}
+
+Wewnątrz projektu cały wzorzec repozytorium został oparty na interfejsach \textbf{IRepository} i \textbf{IRepository<T>} (który implementuje \textbf{IRepository}). W założeniu te interfejsy definiują operacje, które można zrealizować na danym obiekcie klasy 'T'. Informacje o tym jak te informacje są realizowane, jak i to, iż są one realizowane za pomocą bazy danych są przechowywane w klasie \textbf{RepositoryBase<T>}.
+Wszystkie kolejne stworzone repozytoria dziedziczą po \textbf{RepositoryBase<T>} a ich interfejsy implementują \textbf{IRepository<T>}. 
+Takie działanie pozwala nam na separację reprezentacji persystentnej (baza danych) i reprezentacji bieżącej (repozytoria). Wystarczy, iż zmienimy \textbf{RepositoryBase<T>} na jakąkolwiek inną klasę implementującą \textbf{IRepository<T>} i wykorzystamy ją w naszych repozytoriach. Dzięki temu możemy zastąpić Microsoft SQL inną implementacją.
 
 
 \begin{figure}[h]
@@ -139,7 +144,7 @@ Wzorzec Jednostki Pracy (z ang. Unit of Work) ma na celu uporządkowanie pracy z
 
 \section{Mapowanie obiektowo-relacyjne}
 
-Wewnątrz mojego projektu wykorzystałem narzędzie Entity Framework, które pozwala na korzystanie z mapowania obiektowo-relacyjnego. Dzięki tej technicę mogę uprzednio zdefiniowane dane tabelaryczne odzworować za pomocą klas, które zostaną stworzone na podstawie definicji tabeli i relacji między nimi. Powstałe klasy są używane wewnątrz kolekcji, implementujących interfejs \textbf{IQueryable<T>}, na których możemy wykonywać zapytania z pomocą \textbf{LINQ}a. 
+Wewnątrz mojego projektu wykorzystałem narzędzie Entity Framework, które pozwala na korzystanie z mapowania obiektowo-relacyjnego. Dzięki tej technice mogę uprzednio zdefiniowane dane tabelaryczne odwzorować za pomocą klas, które zostaną stworzone na podstawie definicji tabeli i relacji między nimi. Powstałe klasy są używane wewnątrz kolekcji, implementujących interfejs \textbf{IQueryable<T>}, na których możemy wykonywać zapytania z pomocą \textbf{LINQ}a, które następnie zostaną przetłumaczone na zapytania SQL.
 \\ \\
 Takowe rozwiązanie ma wiele zalet :
 \begin{enumerate}
@@ -148,6 +153,8 @@ Takowe rozwiązanie ma wiele zalet :
 	\item Zmniejsza to zakres potrzebnych umiejętności w celu używania danych występujących w bazie danych. Dany programista nie musi znać języka SQL, aby w sposób bezproblemowy pobrać interesujące go dane, nawet gdy tworzy bardzo skomplikowane zapytania.
 	\item Łatwiejsza nawigacja po zależnościach między tabelami. Na danym typie możemy na przykład wykorzystać operacje \textbf{Find All References}, która wskaże nam użycia danego typu w naszym kodzie. W przypadku kodu SQL nie mielibyśmy takiej możliwości.
 \end{enumerate}
+
+\todo[inline]{Można napisać coś o lazy loading tego rozwiązania}
 
 \section{Wstrzykiwanie zależności}
 
@@ -158,7 +165,7 @@ Informacja o tym, iż dana klasa ma zamiar używać instancji innej klasy może 
 W przypadku mojej aplikacji użyłem do tego biblioteki Ninject\cite{NinjectGithub}. Jest to bardzo popularna biblioteka realizująca wzorzec wstrzykiwania zależności. Dzięki niej możemy zdefiniować listę potrzebnych interfejsów/klas jako parametry konstruktora naszego kontrolera, a te utworzą się automatycznie podczas żądania użytkownika. Jeśli tworzone klasy także będą wymagały do swojego istnienia pewnych interfejsów bądź klas i zostanie to uściślone w ich konstruktorze to także dla nich zostaną dostarczone odpowiednie instancje.
 \\ \\
 Jednakże sam interfejs nie daje żadnej informacji o tym, jaką klasę należy zinstancjować, ponieważ może być wykorzystywany przez wiele klas pochodnych. W tym celu należy poinformować Ninject o tym, jakie klasy mają zostać zinstancjonowane poprzez zbindowanie interfejsów do odpowiednich klas. To działanie jest przedstawione na poniższym listingu:
-
+\todo[inline]{Nie zawsze chodzi tylko o interfejsy - uściślić}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
 caption={Przykładowy kod bindowania dla biblioteki Ninject}]
 public static void RegisterServices(IKernel kernel)
@@ -188,25 +195,44 @@ Ninject dodatkowo potrafi zbindować dany typ do \textbf{metody} lub klasy imple
 
 
 %https://github.com/ninject/ninject/wiki/Object-Scopes
-Ninject w swoim domyślnym zachowaniu za każdym razem jak poprosimy go obiekt danej klasy to tworzony jest następny obiekt danej klasy. Jednakże często dochodzi do sytuacji, że w danym segmencie kodu chcielibyśmy aby obiekt danej klasy był współdzielony między wszystkimi instacjami wytworzonymi przez Ninject. Wtedy za każdym razem jak poprosimy obiekt klasy A to zawsze w ramach danego zasięgu dostaniemy ten sam obiekt i nie zostanie on utworzony ponownie.
-Jest to szczególnie przydatne w środowisku serwerowym, gdy chcemy aby dla każdego zapytania klienta wszystkie repozytoria i serwisy były zawsze takie same. Nie tylko nie ponosimy kosztów utworzenia danej instancji, lecz także współdzielone repozytoria mogą szybciej zwracać informacje odnośnie danych po stronie serwera SQL gdy zobaczą iż mają te dane w swoim cache'u.
+Ninject w swoim domyślnym zachowaniu za każdym razem jak poprosimy go obiekt danej klasy to tworzy on następny obiekt danej klasy. Jednakże często dochodzi do sytuacji, gdzie w danym segmencie kodu chcielibyśmy, aby obiekt danej klasy był współdzielony między wszystkimi instancjami wytworzonymi przez Ninject. Wtedy za każdym razem jak poprosimy obiekt klasy A to zawsze w ramach danego zasięgu dostaniemy ten sam obiekt i nie zostanie on utworzony ponownie.
+Jest to szczególnie przydatne w środowisku serwerowym, gdy chcemy, aby dla każdego zapytania klienta wszystkie repozytoria i serwisy były zawsze takie same. Nie tylko nie ponosimy kosztów utworzenia danej instancji, lecz także współdzielone repozytoria mogą szybciej zwracać informacje odnośnie danych po stronie serwera SQL, gdy zobaczą, iż mają te dane w swoim cache'u.
+
+\newpage
+{\let\cleardoublepage\relax \chapter{Microsoft SQL Server}}
+
+Microsoft SQL Server\cite{SqlServer} jest aplikacją, umożliwiającą zarządzanie serwerami baz danych. Został stworzony przez firmę Microsoft. Jego pierwsza edycja ukazała się w roku 1989.
+
+Do tworzenia zapytań wykorzystano tutaj język Transact-SQL (T-SQL). Jest to rozszerzenie języka SQL (Structured Query Language), które między innymi wprowadza:
+
+\begin{enumerate}
+	\item Lokalne zmienne.
+	\item Blok \textbf{Try Catch}, wspierający obsługę wyjątków.
+	\item Dodatkowe funkcjonalności związane z obsługą tekstu, kalendarza i matematyki.
+	\item Możliwość tworzenia pętli oraz instrukcji warunkowych.
+	\item Procedury, funkcje składowane i wyzwalacze.
+\end{enumerate} 
+
+W celu integracji serwera Microsoft SQL z projektem napisanym w języku C\# należy pobrać paczkę NuGet\footnote{NuGet jest menadżerem paczek w środowisku .NET.\cite{Nuget}} o nazwie \textbf{System.Data.SqlClient}.
+
+
+
 
 \newpage
 {\let\cleardoublepage\relax \chapter{Testy}}
 
-Bardzo ciężko jest napisać w dzisiejszym świecie aplikację nie zaopatrując się w zestaw testów bądź innych mechanizmów sprawdzających poprawność wykonania kodu. Z tego też powodu napisałem duży zestaw testów jednostkowych, które sprawdzają, czy pojedyncze funkcjonalności danych serwisów są funkcjonalne. 
+%wykorzystuje tutaj metodę bottom-up
+
+Aplikacje tworzone w dzisiejszych czasach wymagają dostarczenia zestawu testów, których zadaniem jest sprawdzenie poprawności działania aplikacji. Z tego też powodu napisany został zestaw testów, które sprawdzają, czy poszczególne komponenty aplikacji działają poprawnie.
 
 \section{Testy Jednostkowe}
 
-Odwołania do innych serwisów/obiektów w większości zastąpiłem za pomocą atrap obiektów (z ang. mock object), które zastępują wywołania danych funkcjonalności poprzez zwrócenie domyślnych wartości. Możemy także zastąpić daną funkcjonalność atrapy jakąś mało skomplikowaną logiką w celach testowych. Taka atrapa nie dość, iż potrafi odłączyć nasz obiekt od reszty systemu, przez co jesteśmy w stanie testować go jednostkowo to dodatkowo zawiera bardzo dużo funkcjonalności pomagających zweryfikować czy dany test przebiegł poprawnie. W celu tworzenia atrap wykorzystałem framework Moq\cite{MoqGithub}.
-
-
-
-Większość, jeśli nie wszystkie testy zostały ułożone zgodnie ze wzorcem AAA\cite{UnitTestingMicrosoft} - Aranżacja (z ang. Arrange) Akcja (z ang. Act) Asercja (z ang. assert). Takie ułożenie testów sprawia, iż testy są konsystentne i czytelne. Potrzebujemy bardzo małej ilości czasu, aby zaznajomić się z danym testem.
-
+Testy jednostkowe mają za zadanie sprawdzić poprawność działania pojedynczego modułu. Wszelkie odwołania do innych komponentów zostają zastąpione przez atrapy obiektów (po ang. mock objects), które symulują działanie ich prawdziwych odpowiedników.
+ Wewnątrz projektu do operacji związanych z atrapami wykorzystany został framework Moq, który zawiera także dodatkowe funkcjonalności pozwalające ocenić czy dany test przebiegł poprawnie.
+Testy zostały ułożone zgodnie ze wzorcem AAA\cite{UnitTestingMicrosoft} - Aranżacja (po ang. Arrange) Akcja (po ang. Act) Asercja (po ang. assert).  Dzięki temu testy są konsystentne i czytelne, przez co nie potrzeba dużej ilości czasu, aby zaznajomić się z nimi.
 
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy test jednostkowy wykorzystujący metodę AAA}]
+caption={Przykładowy test jednostkowy wykorzystujący wzorzec AAA}]
 public void StopLastTraining_assert_tests()
 {
 	//Aranżacja - stworzenie wewnętrznej atrapy obiektu dla atrapy serwisu
@@ -221,35 +247,60 @@ public void StopLastTraining_assert_tests()
 \end{lstlisting}
 
 \section{Testy Integracyjne}
-%Czy to jest potrzebne???
-\todo[inline]{Czy ten fragment jest potrzebny? Omawiam tutaj co prawda część aplikacji, lecz niestety nie jest on de facto wykorzystywany przeze mnie}
-Dla potrzeb porzuconej części aplikacji został także napisany mały zestaw testów integracyjnych testujących serwis do obsługi zapisu i odczytu plików XML, jak i test tworzenia tymczasowych plików w systemie Windows. 
-Testy te miały za zadanie testować współdziałanie powyższych funkcjonalności z zewnętrznymi komponentami nieobsługiwanymi przez moją aplikację. Z tego też powodu nie został tutaj wykorzystany framework do tworzenia atrap. Wszystkie testy, pomimo tego, iż poprawne to aktualnie nie dowodzą poprawności żadnego elementu aktualnie używanej aplikacji, ponieważ były wykorzystywane przez porzuconą część aplikacji.
 
+Testy integracyjne mają za zadanie wykryć potencjalne błędy występujące pomiędzy modułami. 
 
+Takowe testy nie sprawdzają
+
+\begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
+caption={Test integracyjny wykorzystany w projekcie.}]
+[TestMethod]
+public void ExistTest()
+{
+	using (var temp = new WindowsTempFile())
+		Assert.IsTrue(File.Exists(temp.Path));
+}}
+\end{lstlisting}
 
 \newpage
 {\let\cleardoublepage\relax \chapter{Kaskadowe Arkusze Styli}}
 
-W moim projekcie wykorzystuję tzw. Kaskadowe Arkusze Styli \cite{CSSDoc}. Ich przeznaczeniem jest stylizować wygląd wyświetlanej strony HTML dla użytkownika. Pewne fragmenty strony są odnajdywane dzięki selektorom i są formatowane według reguł zdefiniowanych dla danego selektora. To pozwala nam na ponowne użycie tych samych styli w obrębie naszych aplikacji, dzięki zdefiniowaniu bardziej uogólnionych selektorów.
+Kaskadowe Arkusze Styli (po ang. Cascading Style Sheets, w skrócie CSS)\cite{CSSDoc} wykorzystywane są w celu opisu sposobu wyświetlania elementów stron WWW. Pozwalają zdefiniować między innymi takie właściwości elementów jak: kolory, czcionki, położenie. Dzięki oddzieleniu danych od sposobu ich wyświetlania możliwe jest wykorzystanie tych samych arkuszów styli na wielu stronach. 
+W celu określenia wyglądu danego elementu należy zdefiniować odpowiednią regułę, na którą składa się :
+\begin{enumerate}
+	\item Selektor, który określa dla jakich elementów przeznaczona jest dana reguła.
+	\item Zestaw właściwości wraz z przypisanymi do nich wartościami
+\end{enumerate}
+
+\begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
+caption={Przykład prostego selektora, który sprawi, iż wszystkie paragrafy będą miały domyślnie kolor pomarańczowy.}]
+p //seletor p
+{
+//Właściwość color do której przypisano wartość orange
+    color: orange;
+}
+\end{lstlisting}
 
 \section{Syntaktycznie Zarąbiste Arkusze Styli}
 
-W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już czystego języka CSS do tworzenia styli. Przy tworzeniu styli dla danej strony stykamy się z bardzo dużą redundancją kodu, która jest związana z tym iż pewne fragmenty strony wyglądają zawsze tak samo (np. motyw kolorystyczny dla większości elementów jest ten sam). Brak zmiennych w języku CSS powoduje, iż zmiana kolorystyki strony jest żmudnym i ciężkim zadaniem.
-Z tego tez powodu wykorzystuję język SASS - Syntactically Awesome Style Sheets (Syntaktycznie Zarąbiste Arkusze Styli)\cite{Sass}. Jest on kompatybilny ze wszystkimi wersjami CSS. Co powoduje, iż każdy kod napisany w CSS jest zgodny z językiem SASS. 
-Sass oferuje nam bardzo dużo funkcjonalności, między innymi:
+W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już czystego języka CSS do tworzenia arkuszy styli. 
+Wynika to z faktu występowania zbyt dużej redundancji kodu, która jest związana z tym, iż niektóre fragmenty strony są formatowane zawsze w ten sam sposób (np. motyw kolorystyczny dla większości elementów jest ten sam). 
+
+Jest to spowodowane brakiem zmiennych, szablonów, oraz innych konstrukcji, które pomogłoby w ograniczeniu powyższego problemu. 
+
+Z tego też powodu powstały rozwiązania niedogodności występujących w języku CSS. Jednym z nich jest język SASS - Syntactically Awesome Style Sheets (z ang. Syntaktycznie Zarąbiste Arkusze Styli)\cite{Sass}. Jest on kompatybilny ze wszystkimi wersjami CSS, przez co każdy kod napisany w CSS jest z nim zgodny. Oferuje bardzo dużo funkcjonalności, między innymi:
 \begin{enumerate}
-	\item Zmienne - dane wartości możemy zapisywać jako zmienne i używać ich wielokrotnie w obrębie naszych plików.
-	\item Zagnieżdżanie - możemy zagnieżdżac selektory wewnątrz siebie. Odwzorowywuje to naturę plików HTML, przez co kod jest bardziej czytelny.
-	\item Możliwość załączania innych plików. Pozwala to na logiczne podzielenie arkuszy styli.
-	\item Mixin - Pozwala na tworzenie grup deklaracji, które można ponownie wykorzystać w danym stylu.
-	\item Dziedziczenie - potrafimy za pomocą słówka kluczowego \textbf{@extend} odziedziczyć właściwości danego selektora.
-	\item Operatory - Możemy wykorzystywać znaki \textbf{+}, \textbf{-}, \textbf{*}, \textbf{/}, \textbf{\%} do operacji na liczbach.
+	\item Zmienne, które pozwalają wielokrotnie używać danych wartości
+	\item Możliwość zagnieżdżania reguł w innych regułach.
+	\item Możliwość załączania plików pozwalająca na podział arkuszy styli.
+	\item Mixin - szablony reguł, które można ponownie wykorzystywać.
+	\item Dziedziczenie reguł za pomocą słówka kluczowego \textbf{@extend}
+	\item Za pomocą operatorów \textbf{+}, \textbf{-}, \textbf{*}, \textbf{/}, \textbf{\%} można wykonywać operacjach na liczbach.
 \end{enumerate}
 
 
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy kod SCSS wykorzystujący mixin}]
+caption={Przykładowy kod SCSS wykorzystujący mixin.}]
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -261,9 +312,9 @@ caption={Przykładowy kod SCSS wykorzystujący mixin}]
 \end{lstlisting}
 
 \newpage
-{\let\cleardoublepage\relax \chapter{Scala\cite{ScalaWiki}}}
+{\let\cleardoublepage\relax \chapter{Scala}}
 
-Scala jest językiem programowania ogólnego zastosowania, który został wprowadzony na rynek przez Laboratorium "École Polytechnique Fédérale de Lausanne". Jest to język, który jest kompilowany bezpośrednio do kodu bajtowego Javy, co powoduje, iż programy w nim napisane z łatwością uruchamiają się w środowisku wykonywalnym maszyny wirtualnej Javy. 
+Scala\cite{ScalaWiki} jest językiem programowania ogólnego zastosowania, który został wprowadzony na rynek przez Laboratorium "École Polytechnique Fédérale de Lausanne". Jest to język kompilowalny bezpośrednio do kodu bajtowego Javy, przez co programy w nim napisane z łatwością uruchamiają się w środowisku wykonywalnym maszyny wirtualnej Javy. 
 Scala jest językiem wielo-paradygmatowym\cite{ScalaTour}. Korzysta z dobrodziejstw programowania funkcjonalnego i obiektowego.
 
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
@@ -277,8 +328,8 @@ object HelloWorld {
 
 \section{Javascript}
 
-Mankamentem tworzenia aplikacji webowych jest używanie Javascriptu. Coraz większa rzesza programistów odchodzi od jego używania na rzecz innych języków, które są kompilowalne do niego, takich jak np. Typescript, Coffescript, bądź jak w moim przypadku Scala.JS. Taka zmiana pozwala nam popełniać o wiele mniej błędów pisząc kod. Pomimo tego, iż wynikowym kod nadal będzie w tym samym języku.
-Wszystko jest spowodowane przez to, iż Javascript posiada:
+Javascript jest głównym językiem programowania wykorzystywanym na stronach internetowych. Może być on interpretowany bądź kompilowany metodą Just In Time, która kompiluje kod tuż przed jego wykonaniem. Jest to dynamiczny język wieloparadygmatowy bazujący na prototypach. Wspiera programowanie obiektowe, imperatywne i deklaratywne.\cite[AboutJS}
+Javascript jako język posiada wiele problemów, które mogą doprowadzić do wystąpięnia błędów, między innymi takich jak:
 \begin{enumerate}
 	\item Niejawne rzutowania, które objawiają się przy użyciu operatora ==. Są przyczyną wielu trudnych do odkrycia błędów
 	\item Automatyczne wstawianie średników, co może spowodować, iż program działa inaczej niż zamierzał to programista. Czasami potrafi to uratować program napisany przez programistę, lecz często prowadzi do dziwnych i niezrozumiałych błędów, takich jak w przypadku poniższego listingu: \ref{lst:javascriptSUCKS}
@@ -298,32 +349,41 @@ function foo() {
 \end{lstlisting}
 
 
+Z tego też powodu powstały języki, które starają się być lepsze i przyjaźniejsze dla programisty niż Javascript. Jest to między innymi: Typescript, Coffescript, Dart czy Scala.js. Takie języki programowania nie są wykonywane/kompilowane bezpośrednio w przeglądarce, lecz wpierw są kompilowane do kodu Javascript. Spowodowane jest to używaniem przez przeglądarki jedynie języka Javascript do wykonywania kodu\footnote{Wyjątkiem jest tutaj przeglądarka Dartium, która potrafi posiada maszynę wirtualną języka Dart\cite{Dartium}}. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics{images/javagod.png}
-	 \caption{Przykład dziwnego zachowania języka. Źródło: devrant.com}
+	 \caption{Przykład dziwnego zachowania języka Javascript. Źródło: devrant.com}
 \end{figure}
-
-\todo[inline]{Chyba jak cytuję obrazek muszę dać pełne źródło jako [x] + na samym dole odnośnik}
 
 \section{Scala w wersji JS}
 
-Z powodu powyższych problemów zdecydowałem się na użycie scali, która z pomocą projektu scala-js\cite{ScalaJS} jest językiem kompilowalnym do javascripta. 
-Dzięki temu jestem w stanie wykorzystać wszystkie zalety języka Scala, w tym:
+Scala.js jest językiem kompilowalnym do Javascripta, który umożliwia pozbycie się niedogodności związanych z używaniem języka Javascript. \cite{ScalaJS}. 
+
+
+
 \begin{enumerate}
-	\item Silne typowanie. Dzięki temu mój kod nie zawiera bardzo prostych błędów, które mogą wystąpić w procesie tworzenia oprogramowania.
-	\item Brak skupiania się na dziwnych i frustrujących aspektach języka Javascripta. Dzięki temu jestem w stanie zająć się pisanym przeze mnie kodem, aniżeli walczyć z głupimi błędami.
+	\item Silne typowanie, dzięki któremu pisany kod nie zawiera bardzo prostych błędów.
+	\item Podczas programowania nie trzeba się skupiać na dziwnych i frustrujących \hyperref[lst:javascriptSUCKS]{aspektach języka Javascript}.
 \end{enumerate}
 
 
 \subsection{sbt}
 	
 
-sbt (Simple Build Tool) jest narzędziem o otwartym kodzie źródłowym, pozwalającym nam na zarządzanie procesem budowania naszej aplikacji napisanej w języku Scala lub Java. W celu wykorzystania naszej aplikacji należy użyć polecenia \textbf{sbt new sbt/scala-seed.g8}, które spowoduje utworzenie minimalnego projektu Scali, który możemy dostosować do własnych potrzeb.
-Z tego też powodu musimy wykonać pare istotnych zmian w projekcie, aby był on kompilowalny do języka Javascript.
+sbt (Simple Build Tool) jest narzędziem o otwartym kodzie źródłowym, pozwalającym na zarządzanie procesem budowania aplikacji napisanej w języku Scala lub Java. Jest to narzędzie bardzo rozbudowane, które m.in. umożliwia:
+\begin{enumerate}
+	\item Współpracę z wieloma narzędziami testującymi dla scali.
+	\item Inkrementacyjne kompilowanie i testowanie.
+	\item Zarządzanie zależnościami przy pomocy menadżera paczek Ivy.\cite{ApacheIvy}
+	\item Ciąglą wdrażanie, kompilowanie i testowanie kodu.
+\end{enumerate}
 
-\todo[inline]{Budowanie dziwnie brzmi. Czy może powinienem tu użyć angielskiej nazwy?}
+\hline{2cm}
+
+W celu wykorzystania naszej aplikacji należy użyć polecenia \textbf{sbt new sbt/scala-seed.g8}, które spowoduje utworzenie minimalnego projektu Scali, który możemy dostosować do własnych potrzeb.
+Z tego też powodu musimy wykonać parę istotnych zmian w projekcie, aby był on kompilowalny do języka Javascript za pomocą Scali.js.
 
 \begin{enumerate}
 	\item Należy dodać plik ./project/plugins.sbt\footnote{./ jest katalogiem głównym projektu w tym przypadku.}, wewnątrz którego znajdzie się instrukcja \textbf{addSbtPlugin("org.scala-js" \% "sbt-scalajs" \% "0.6.20")}, która informuje o tym, iż chcemy użyć Scali.JS
@@ -331,7 +391,7 @@ Z tego też powodu musimy wykonać pare istotnych zmian w projekcie, aby był on
 	\begin{lstlisting}[numbers = none]
 		sbt.version=0.13.16
 	\end{lstlisting}
-	\item Następnie musimy zmodyfikować plik build.sbt znajdujący się w głównym folderze projektu. Przykładowy plik znajduje, który jest używany w projekcie, znajduje się na listingu \ref{lst:scalasbt}.
+	\item Następnie musimy zmodyfikować plik build.sbt znajdujący się w głównym folderze projektu. Przykładowy plik, który jest używany w projekcie, znajduje się na listingu \ref{lst:scalasbt}.
 \end{enumerate}
 
 
@@ -357,18 +417,18 @@ jsDependencies += "org.webjars.bower" % "jsrender" % "1.0.0-rc.70" / "1.0.0-rc.7
 
 \subsection{Proces budowania projektu}
 
-Projekt kompilacji projektu jest podzielony na 2 etapy\cite{HandsOnScalaPipeline}:
+Projekt kompilacji projektu jest podzielony na 3 etapy\cite{HandsOnScalaPipeline}:
 \begin{enumerate}
 	\item Początkową kompilację
 	\item Szybką optymalizację
-	\item Pełną optymalizację
+	\item Pełną optymalizację (Opcjonalny)
 \end{enumerate}
 
 \subsubsection{Początkowa kompilacja}
 
 W trakcie kompilacji pliki .scala są kompilowane do plików .class i .sjsir. 
-Pliki .class nie biorą udziału w tworzeniu kodu javascript. Ich zadaniem jest współpraca z innymi narzędziami, które być może będą ich używać. Przykładem takiego narzędzia może być \textbf{IntelliJ} lub \textbf{Eclipse}, które tych plików używa w celu wspomagania pisania kodu Scali.
-Pliki .sjsir (Nazwa rozszerzenia jest skrótem od "ScalaJS Intermediate Representation")\cite{ScalaCompilationProcess} zawierają kod przejściowy między Scalą a Javascriptem. Większość konstrukcji została zastapiona przez ekwiwalenty z języka Javascript. 
+Pliki .class nie biorą udziału w tworzeniu kodu javascript. Ich zadaniem jest współpraca z innymi narzędziami, które być może będą ich używać. Przykładem takiego narzędzia może być \textbf{IntelliJ} lub \textbf{Eclipse}, które plików .class używają w celu wspomagania programisty w trakcie pisania kodu.
+Pliki .sjsir (Nazwa rozszerzenia jest skrótem od \"ScalaJS Intermediate Representation")\cite{ScalaCompilationProcess} zawierają kod przejściowy między Scalą a Javascriptem. Większość konstrukcji została zastąpiona przez ekwiwalenty z języka Javascript. 
 Gdybyśmy połączyli wszystkie pliki .sjsir, wyprodukowane przez sbt to ich wynikiem byłby plik większy niż 20 MB. Wynika to z faktu, iż w tym pliku nadal znajduje się wiele niepotrzebnych bibliotek i konstrukcji. Jak na przykład \textbf{cała} biblioteka standardowa Scali.
 
 
@@ -395,37 +455,33 @@ module class Ltutorial_webapp_TutorialApp$ extends O {
 }
 \end{lstlisting}
 
-\todo[inline]{Czy tutaj powinienem napisać o mojej obserwacji o tym, iż pliki bibliotek sjsir nie znajdują się w plikach wytworzonych przez kompilator scala.js?}
-
- 
-
-
 \subsubsection{Szybka optymalizacja}
-Z tego też powodu stosuje się drugi krok, który jest optymalizacją kodu .sjsir i stworzeniem kodu wynikowego. W tym celu używamy optymalizatora FastOptJS poprzez wpisanie komendy \textbf{FastOptJS} w sbt. Optymalizacja ma na celu:
+
+W celu optymalizacji poprzedniego kroku stosuje się szybką optymalizację kodu .sjsir, która jako rezultat swej pracy stworzy kod Javascript. W tym celu należy użyć optymalizatora FastOptJS poprzez wpisanie komendy \textbf{FastOptJS} w sbt. Optymalizacja ma na celu:
 \begin{enumerate}
-	\item Wyeliminowanie fragmentów kodu, które są nieużywane. Na przykład kod biblioteki standardowej, którego nie użyliśmy.
+	\item Wyeliminowanie fragmentów kodu, które są nieużywane. Na przykład kod biblioteki standardowej, który nie zostanie wywołany.
 	\item Inline'owanie małych funkcji. Zmniejsza to koszt wywołań i wielkość kodu.
 	\item Zmiana zmiennych na stałe, jeśli ich wartość jest znana w trakcie kompilacji.
-	\todo[inline]{Czy termin inline'owanie jest poprawny?}
 \end{enumerate}
 
-Dzięki tej operacji nasz kod wykonywalny zmniejszy się z 20 MB do 1.5-2.5MB\cite{ScalaCompilationProcess}.
+Dzięki tej operacji kod wykonywalny zmniejszy się z 20 MB do 1.5-2.5MB\cite{ScalaCompilationProcess}.
 
 
 \subsubsection{Pełna optymalizacja}
 
-Kod, który jest tworzony przez Scala.js jest zgodny z restrykcjami narzuconymi przez kompilator Closure\cite{Closure}. Jest to narzędzie stworzone przez firmę Google, które potrafi optymalizować kod Javascriptowy.\cite{ClosureCompiler}
-
-Ten kompilator jest wykorzystywany jako ostateczny krok optymalizacyjny Scali.js. Stworzony w tym procesie kod wykonywalny będzie miał wielkość między 150 KB do kilkuset KB.\cite{ScalaCompilationProcess}
+Kod, który jest tworzony przez Scala.js jest zgodny z restrykcjami narzuconymi przez kompilator Closure\cite{Closure}. Jest to narzędzie stworzone przez firmę Google, które potrafi optymalizować kod Javascriptowy.\cite{ClosureCompiler} Celem tego kroku jest zmniejszenie rozmiaru pliku javascript i uczynienie konstrukcji w nim występujących bardziej wydajnymi.
+W wyniku tego procesu otrzymywany jest plik wykonywalny o rozmiarze między 150KB do kilkuset KB\cite{ScalaCompilationProcess}.
 W celu użycia pełnej optymalizacji należy wywołać polecenie \textbf{FullOptJS} w sbt.
 
 \subsubsection{Pliki javascript}
 
-W wyniku działań optymalizatorów są tworzone poniższe pliki javascript. Należy mieć na uwadze fakt, iż pliki bibliotek muszą zostać dołączone do kodu strony przed plikiem z naszym kodem wykonywalnym.
+W wyniku działań optymalizatorów tworzone są poniższe pliki javascript. Należy mieć na uwadze fakt, iż pliki bibliotek muszą zostać dołączone do kodu strony przed plikiem z kodem wykonywalnym.
 
+\todo[inline]{Dodać nagłówki do tabeli wyjasniające co zawiera dana kolumna}
 \begin{center}
 \begin{tabular}{| l | l | p{8cm} |}
 \hline
+Typ kompilacji & Wytworzony plik & Zawartość pliku \\ \hline
 FastOptJS & scala-js-[Nazwa-Projektu]-fastopt.js & Plik z kodem wykonywalnym \\ \hline
 
 FastOptJS & scala-js-[Nazwa-Projektu]-fastopt.js.map & Plik mapujący kod Scali do kodu Javascript. \\ \hline
@@ -444,19 +500,20 @@ FullOptJS & scala-js-[Nazwa-Projektu]-jsdeps.min.js & Plik z kodem zewnętrznych
 \end{center}
 \subsubsection{Debugowanie}
 
-Kod stworzony za pomocą kompilatorów scala.js jest bardzo łatwy w debugowaniu. Użytkownik nie musi analizować bardzo trudnego, zoptymalizowanego kodu javascript w celu analizy programu. Zamiast tego używane są mapy kodów źródłowych\cite{SourceMapProposal}, które mapują skompilowane pliki do plików źródłowych. Dzięki temu jesteśmy w stanie debugować kod w przeglądarce internetowej analizując kod Scali, pomimo tego, iż pod spodem działa tak naprawdę Javascript.
-Wszystkie pliki z mapami kodów źródłowych mają format \textbf{\{SkompilowanyPlik\}.map}, gdzie SkompilowanyPlik jest artefaktem naszego procesu kompilacji, np.  \textbf{scala-js-[Nazwa-Projektu]-fastopt.js}.
 
+Jednym z najważniejszych procesów, które na celu mają znalezienie błędów w powstałym kodzie jest debugowanie. Proces debugowania aplikacji powinien umożliwiać programiście przynajmniej możliwość zatrzymania kodu w dowolnym miejscu, podejrzenia kodu źródłowego jak i możliwość odczytu i modyfikacji zmiennych.
+Kod stworzony za pomocą kompilatora scala.js jest bardzo łatwy w debugowaniu. Przeglądarki posiadają możliwość dołączenia mapy kodów źródłowych, które do danych linijek kodu javascript przypisują ich odpowiedniki w pliku źródłowym. Umożliwia to prace z oryginalnym kodem źródłowym podczas używania przeglądarki internetowej. 
+Pliki z mapami źródłowymi mają format \textbf{\{SkompilowanyPlik\}.map}, gdzie SkompilowanyPlik jest artefaktem naszego procesu kompilacji, np.  \textbf{scala-js-[Nazwa-Projektu]-fastopt.js}. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{images/debug.png}
 	 \caption[Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World.]
-	 {Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World. \footnote{Na obrazku na stronie widnieje już napis Hello World. Jest to artefakt, który został stworzony przy poprzednim uruchomieniu strony i jeszcze się nie odświeżył.}}
+	 {Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World. \footnotemark}
 \end{figure}
 
-\todo[inline]{Foot note nie wyświetla - zbadać dlaczego}
+\footnotetext{Na obrazku na stronie widnieje już napis Hello World. Jest to artefakt, który został stworzony przy poprzednim uruchomieniu strony i jeszcze się nie odświeżył.}
 
 
 \subsection{Hello World}
 
-\todo[inline]{Warto jest robić tą sekcję gdzie opisze proces tworzenia hello worlda? Nie będe tego aktualnie pisał bo tylko będe tracił czas jeśli jest to zbedne. Ale z chęcią bym to opisał}
+\todo[inline]{Warto jest robić tą sekcję gdzie opisze proces tworzenia hello worlda? Nie będe tego aktualnie pisał bo tylko będe tracił czas jeśli jest to zbedne. Ale z chęcią bym to opisał. Czyli jakie pliki źródłowe utworzyć i podać minimalny kod aby odpalić kod.}

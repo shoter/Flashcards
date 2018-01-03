@@ -87,13 +87,24 @@
     \field{urlyear}{2017}
   \endentry
 
-  \entry{MoqGithub}{online}{}
+  \entry{SqlServer}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Moq}
+    \field{title}{SQL Server 2016}
     \verb{url}
-    \verb https://github.com/moq/moq
+    \verb https://www.microsoft.com/pl-pl/sql-server/sql-server-2016
     \endverb
-    \field{urlday}{01}
+    \field{urlday}{03}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{Nuget}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{What is NuGet?}
+    \verb{url}
+    \verb https://www.nuget.org/
+    \endverb
+    \field{urlday}{03}
     \field{urlmonth}{01}
     \field{urlyear}{2017}
   \endentry
