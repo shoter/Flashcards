@@ -4,7 +4,7 @@
 
 Hermann Ebbinghaus\cite{HumanMemory} (1850-1909) był Niemieckim psychologiem, który jako jeden z pierwszych zajmował się tematyką eksperymentalnej psychologii związanej z przyswajaniem wiedzy. 
 Jednym z jego pierwszych eksperymentów było stworzenie testu, podczas którego uczył się zestawu 20 sylab, które były bezsensowne ze względu na fakt, iż w jego języku nie występowały żadne słowa, które ich używały.
-Eksperyment ten pozwolił mu skonstruować pierwszą na świecie krzywą zapominania. Miała ona charakter eksponencjalny. 
+Eksperyment ten pozwolił mu skonstruować pierwszą na świecie krzywą zapominania. Miała ona charakter eksponencjalny.  Możemy z niej wywnioskować, iż podczas początkowego okresu zapominania tracimy najwięcej zapamiętanych informacji.
 
 \begin{figure}[h]
 	\centering
@@ -377,11 +377,14 @@ frame=single, numbers=none,captionpos=b,
 caption={Przykładowy plik .sjsir dla projektu wyświetlającego HelloWorld na ekranie.}]
 module class Ltutorial_webapp_TutorialApp$ extends O {
   def main__AT__V(args: T[]) {
-    this.appendPar__Lorg_scalajs_dom_raw_Node__T__V(mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()["body"], "Hello World")
+    this.appendPar__Lorg_scalajs_dom_raw_Node__T__V
+    (mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()["body"], "Hello World")
   }
   def appendPar__Lorg_scalajs_dom_raw_Node__T__V(targetNode: any, text: T) {
-    val parNode: any = mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()["createElement"]("p");
-    val textNode: any = mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()["createTextNode"](text);
+    val parNode: any = mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()
+    ["createElement"]("p");
+    val textNode: any = mod:Lorg_scalajs_dom_package$.document__Lorg_scalajs_dom_raw_HTMLDocument()
+    ["createTextNode"](text);
     parNode["appendChild"](textNode);
     targetNode["appendChild"](parNode)
   }
@@ -442,13 +445,16 @@ FullOptJS & scala-js-[Nazwa-Projektu]-jsdeps.min.js & Plik z kodem zewnętrznych
 \subsubsection{Debugowanie}
 
 Kod stworzony za pomocą kompilatorów scala.js jest bardzo łatwy w debugowaniu. Użytkownik nie musi analizować bardzo trudnego, zoptymalizowanego kodu javascript w celu analizy programu. Zamiast tego używane są mapy kodów źródłowych\cite{SourceMapProposal}, które mapują skompilowane pliki do plików źródłowych. Dzięki temu jesteśmy w stanie debugować kod w przeglądarce internetowej analizując kod Scali, pomimo tego, iż pod spodem działa tak naprawdę Javascript.
-Wszystkie pliki z mapami kodów źródłowych mają format \textbf{{SkompilowanyPlik}.map}, gdzie SkompilowanyPlik jest artefaktem naszego procesu kompilacji, np.  \textbf{scala-js-[Nazwa-Projektu]-fastopt.js}.
+Wszystkie pliki z mapami kodów źródłowych mają format \textbf{\{SkompilowanyPlik\}.map}, gdzie SkompilowanyPlik jest artefaktem naszego procesu kompilacji, np.  \textbf{scala-js-[Nazwa-Projektu]-fastopt.js}.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics{images/debug.png}
-	 \caption{Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World. \footnote{Na obrazku na stronie widnieje już napis Hello World. Jest to artefakt, który został stworzony przy poprzednim uruchomieniu strony i jeszcze się nie odświeżył.}
+	\includegraphics[width=\textwidth]{images/debug.png}
+	 \caption[Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World.]
+	 {Przykład procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World. \footnote{Na obrazku na stronie widnieje już napis Hello World. Jest to artefakt, który został stworzony przy poprzednim uruchomieniu strony i jeszcze się nie odświeżył.}}
 \end{figure}
+
+\todo[inline]{Foot note nie wyświetla - zbadać dlaczego}
 
 
 \subsection{Hello World}
