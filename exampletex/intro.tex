@@ -1,15 +1,15 @@
 {\let\cleardoublepage\relax \chapter{Wstęp}}
 \label{cha:wstep}
-
-Tematem pracy inżynierskiej jest opracowanie aplikacji internetowej do nauki języków obcych
-
 \section{Cel Aplikacji}
 
-Zadaniem aplikacji jest umożliwienie nauki wybranych słówek danego języka obcego z pomocą wirtualnych fiszek, które będą prezentowane użytkownikowi w nieregularnych odstępach czasowych obliczanych na podstawie poprawności udzielonych odpowiedzi.
+
+Zadaniem aplikacji jest umożliwienie nauki wybranych słówek danego języka obcego z pomocą wirtualnych fiszek, które będą prezentowane użytkownikowi w nieregularnych odstępach czasowych obliczanych na podstawie poprawności udzielonych odpowiedzi. Program podczas odpytywania użytkownika o dane słowo używa obrazów powiązanych z danym słowem. 
+\\
+Warstwa serwerowa projektu do uruchomienia wymaga środowiska .NET i zainstalowanego serwera Microsoft SQL. Warstwa klienta potrzebuje do uruchomienia sprawnego urządzenia umożliwiającego połączenie z siecią internet.
 
 
 
-Coraz większą popularność w dzisiejszym świecie zdobywają aplikację internetowe. Ich niewątpliwą zaletą jest możliwość uruchomienia ich na dowolnym urządzeniu posiadającym internet i przeglądarkę internetową. Jeszcze do nie dawna były to jedynie komputery i urządzenia mobilne, lecz wraz ze wzrostem popularności inteligentnych technologii (po ang. smart) coraz więcej produktów codziennego użytku potrafi łączyć się z internetem. Do takich urządzeń zaliczają się mikrofalówki, lodówki, telewizory i wiele innych.
+Coraz większą popularność w dzisiejszym świecie zdobywają aplikację internetowe. Ich niewątpliwą zaletą jest możliwość uruchomienia ich na dowolnym urządzeniu posiadającym internet i przeglądarkę internetową. Jeszcze do niedawna były to jedynie komputery i urządzenia mobilne, lecz wraz ze wzrostem popularności inteligentnych technologii coraz więcej produktów codziennego użytku potrafi łączyć się z internetem. Do takich urządzeń zaliczają się mikrofalówki, lodówki, telewizory i wiele innych.
 
 \begin{figure}[h]
 	\centering
@@ -18,18 +18,19 @@ Coraz większą popularność w dzisiejszym świecie zdobywają aplikację inter
 \end{figure}
 
 
+W ciągu ostatnich kilku lat coraz większa ilość aplikacji powstaje bądź jest przenoszona w środowisko internetowe. Taka decyzja jest spowodowana nie tylko faktem większej ilości klientów na takim rynku. Aplikacje internetowe nie wymagają żadnego dodatkowego oprogramowania, ponieważ większość dzisiejszych urządzeń ma już je wbudowane. Dodatkowo są one uruchamiane na zewnętrznym serwerze co powoduje, iż obciążenie obliczeniowe aplikacji jest przenoszone na dostawcę usługi, a nie na użytkownika. 
+
+Dzięki temu klient nie ponosi większych kosztów wymagających użycia serwisu. Nie musi wymieniać sprzętu, instalować sterowników, pobierać aktualizacji. \\
+
+\vspace{1cm}
+W niniejszej pracy został ukazany projekt aplikacji internetowej, której zadaniem jest umożliwienie nauki wybranych słówek danego języka obcego za pomocą wirtualnych fiszek, które będą prezentowane użytkownikowi w nieregularnych odstępach czasowych obliczanych na podstawie poprawności udzielonych odpowiedzi. Program podczas odpytywania użytkownika o dane słowo używa obrazów powiązanych z danym słowem. 
+
+%Zadaniem aplikacji jest umożliwienie nauki wybranych słówek danego języka obcego z pomocą wirtualnych fiszek, które będą prezentowane użytkownikowi w nieregularnych odstępach czasowych obliczanych na podstawie poprawności udzielonych odpowiedzi.
+%Program powinien umożliwiać:
+%\begin{itemize}
+%	\item Dodawanie, modyfikowanie i usuwanie fiszek.
+%	\item 
+%\end{itemize}
 
 
-\newpage
-{\let\cleardoublepage\relax \chapter{Założenia projektu}}
-\subsection{Założenia aplikacji}
-
-Zadaniem aplikacji jest umożliwienie nauki wybranych słówek danego języka obcego z pomocą wirtualnych fiszek, które będą prezentowane użytkownikowi w nieregularnych odstępach czasowych obliczanych na podstawie poprawności udzielonych odpowiedzi.
-Program powinien umożliwiać:
-\begin{itemize}
-	\item Dodawanie, modyfikowanie i usuwanie fiszek.
-	\item 
-\end{itemize}
-
-
-Program został stworzony w języku C\# z użyciem frameworka ASP.NET MVC. Wszystkie dane są przechowywane na serwerze Microsoft SQL. Po stronie klienta użyto języka HTML wraz z arkuszami styli stworzonymi w oparciu o język SASS. Wszystkie skrypty napisano w języku Scala, który jest potem kompilowany przez narzędzie Scala.js do 
+%Program został stworzony w języku C\# z użyciem frameworka ASP.NET MVC. Wszystkie dane są przechowywane na serwerze Microsoft SQL. Po stronie klienta użyto języka HTML wraz z arkuszami styli stworzonymi w oparciu o język SASS. Wszystkie skrypty napisano w języku Scala, który jest potem kompilowany przez narzędzie Scala.js do 
