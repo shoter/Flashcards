@@ -1,41 +1,51 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \select@language {polish}
 \contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Cel Aplikacji}{1}{section.1.1}
-\contentsline {chapter}{\numberline {2}Za\IeC {\l }o\IeC {\.z}enia projektu}{2}{chapter.2}
-\contentsline {subsection}{\numberline {2.0.1}Za\IeC {\l }o\IeC {\.z}enia aplikacji}{2}{subsection.2.0.1}
-\contentsline {chapter}{\numberline {3}Przyswajanie wiedzy}{3}{chapter.3}
-\contentsline {section}{\numberline {3.1}Interwa\IeC {\l }y potw\IeC {\'o}rze\IeC {\'n}}{3}{section.3.1}
-\contentsline {section}{\numberline {3.2}Efekt przewagi obraz\IeC {\'o}w}{4}{section.3.2}
-\contentsline {chapter}{\numberline {4}.NET}{4}{chapter.4}
-\contentsline {section}{\numberline {4.1}Implementacje .NET}{5}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}.NET Core}{5}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}.NET Framework}{5}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Mono}{5}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Universal Windows Platform (\textit {UWP})}{6}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}C\#}{6}{section.4.2}
-\contentsline {chapter}{\numberline {5}ASP.NET MVC}{7}{chapter.5}
-\contentsline {section}{\numberline {5.1}Model-Widok-Kontroler}{7}{section.5.1}
-\contentsline {section}{\numberline {5.2}Wzorzec Repozytorium}{8}{section.5.2}
-\contentsline {section}{\numberline {5.3}Jednostka Pracy}{8}{section.5.3}
-\contentsline {section}{\numberline {5.4}Mapowanie obiektowo-relacyjne}{10}{section.5.4}
-\contentsline {section}{\numberline {5.5}Wstrzykiwanie zale\IeC {\.z}no\IeC {\'s}ci}{11}{section.5.5}
-\contentsline {chapter}{\numberline {6}Microsoft SQL Server}{13}{chapter.6}
-\contentsline {chapter}{\numberline {7}Testy}{14}{chapter.7}
-\contentsline {section}{\numberline {7.1}Testy Jednostkowe}{14}{section.7.1}
-\contentsline {section}{\numberline {7.2}Testy Integracyjne}{15}{section.7.2}
-\contentsline {chapter}{\numberline {8}Kaskadowe Arkusze Styli}{16}{chapter.8}
-\contentsline {section}{\numberline {8.1}Syntaktycznie Zar\IeC {\k a}biste Arkusze Styli}{16}{section.8.1}
-\contentsline {chapter}{\numberline {9}Scala}{18}{chapter.9}
-\contentsline {section}{\numberline {9.1}Javascript}{18}{section.9.1}
-\contentsline {section}{\numberline {9.2}Scala w wersji JS}{19}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}sbt}{20}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Proces budowania projektu}{20}{subsection.9.2.2}
-\contentsline {subsubsection}{\numberline {9.2.2.1}Pocz\IeC {\k a}tkowa kompilacja}{20}{subsubsection.9.2.2.1}
-\contentsline {subsubsection}{\numberline {9.2.2.2}Szybka optymalizacja}{21}{subsubsection.9.2.2.2}
-\contentsline {subsubsection}{\numberline {9.2.2.3}Pe\IeC {\l }na optymalizacja}{21}{subsubsection.9.2.2.3}
-\contentsline {subsubsection}{\numberline {9.2.2.4}Pliki javascript}{22}{subsubsection.9.2.2.4}
-\contentsline {subsubsection}{\numberline {9.2.2.5}Debugowanie}{22}{subsubsection.9.2.2.5}
-\contentsline {subsection}{\numberline {9.2.3}Hello World}{23}{subsection.9.2.3}
-\contentsline {chapter}{\numberline {10}Opis aplikacji}{26}{chapter.10}
-\contentsline {chapter}{\numberline {11}Podsumowanie oraz wnioski}{27}{chapter.11}
+\contentsline {section}{\numberline {1.1}Cel aplikacji}{2}{section.1.1}
+\contentsline {chapter}{\numberline {2}Przyswajanie wiedzy}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Interwa\IeC {\l }y potw\IeC {\'o}rze\IeC {\'n}}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Efekt przewagi obraz\IeC {\'o}w}{4}{section.2.2}
+\contentsline {chapter}{\numberline {3}.NET}{4}{chapter.3}
+\contentsline {section}{\numberline {3.1}Implementacje .NET}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}.NET Core}{5}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}.NET Framework}{5}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Mono}{5}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Universal Windows Platform (\textit {UWP})}{6}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}C\#}{6}{section.3.2}
+\contentsline {chapter}{\numberline {4}ASP.NET MVC}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Model-Widok-Kontroler}{7}{section.4.1}
+\contentsline {section}{\numberline {4.2}Wzorzec Repozytorium}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3}Jednostka Pracy}{8}{section.4.3}
+\contentsline {section}{\numberline {4.4}Mapowanie obiektowo-relacyjne}{10}{section.4.4}
+\contentsline {section}{\numberline {4.5}Wstrzykiwanie zale\IeC {\.z}no\IeC {\'s}ci}{11}{section.4.5}
+\contentsline {chapter}{\numberline {5}Microsoft SQL Server}{13}{chapter.5}
+\contentsline {chapter}{\numberline {6}Testy}{14}{chapter.6}
+\contentsline {section}{\numberline {6.1}Testy Jednostkowe}{14}{section.6.1}
+\contentsline {section}{\numberline {6.2}Testy Integracyjne}{15}{section.6.2}
+\contentsline {chapter}{\numberline {7}Kaskadowe Arkusze Styli}{16}{chapter.7}
+\contentsline {section}{\numberline {7.1}Syntaktycznie Zar\IeC {\k a}biste Arkusze Styli}{16}{section.7.1}
+\contentsline {chapter}{\numberline {8}Scala}{18}{chapter.8}
+\contentsline {section}{\numberline {8.1}Javascript}{18}{section.8.1}
+\contentsline {section}{\numberline {8.2}Scala w wersji JS}{19}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}sbt}{20}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Proces budowania projektu}{20}{subsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.1}Pocz\IeC {\k a}tkowa kompilacja}{20}{subsubsection.8.2.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2.2}Szybka optymalizacja}{21}{subsubsection.8.2.2.2}
+\contentsline {subsubsection}{\numberline {8.2.2.3}Pe\IeC {\l }na optymalizacja}{21}{subsubsection.8.2.2.3}
+\contentsline {subsubsection}{\numberline {8.2.2.4}Pliki javascript}{22}{subsubsection.8.2.2.4}
+\contentsline {subsubsection}{\numberline {8.2.2.5}Debugowanie}{22}{subsubsection.8.2.2.5}
+\contentsline {subsection}{\numberline {8.2.3}Hello World}{23}{subsection.8.2.3}
+\contentsline {chapter}{\numberline {9}Opis dzia\IeC {\l }ania aplikacji}{26}{chapter.9}
+\contentsline {section}{\numberline {9.1}Diagram przypadk\IeC {\'o}w u\IeC {\.z}ycia}{26}{section.9.1}
+\contentsline {section}{\numberline {9.2}Proces nauczania}{26}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Trening}{26}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Powt\IeC {\'o}rka}{26}{subsection.9.2.2}
+\contentsline {subsubsection}{\numberline {9.2.2.1}Miejsce w kolejce}{28}{subsubsection.9.2.2.1}
+\contentsline {subsection}{\numberline {9.2.3}Si\IeC {\l }a}{28}{subsection.9.2.3}
+\contentsline {section}{\numberline {9.3}Narz\IeC {\k e}dzia administratorskie}{28}{section.9.3}
+\contentsline {section}{\numberline {9.4}Diagramy klas}{28}{section.9.4}
+\contentsline {chapter}{\numberline {10}Kwestie implementacyjne}{30}{chapter.10}
+\contentsline {section}{\numberline {10.1}Struktura programu}{30}{section.10.1}
+\contentsline {section}{\numberline {10.2}Przechowywanie danych}{30}{section.10.2}
+\contentsline {section}{\numberline {10.3}Wy\IeC {\'s}wietlanie stron}{30}{section.10.3}
+\contentsline {chapter}{\numberline {11}Podsumowanie oraz wnioski}{31}{chapter.11}
