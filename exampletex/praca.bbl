@@ -62,6 +62,18 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{CPlotekInfo}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction to the C\# Language and the .NET Framework}
+    \verb{url}
+    \verb https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/introd
+    \verb uction-to-the-csharp-language-and-the-net-framework
+    \endverb
+    \field{urlday}{03}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{RepositoryUnitOfWorkPattern}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Implementing the Repository and Unit of Work Patterns in an
@@ -162,13 +174,24 @@
     \field{urlyear}{2017}
   \endentry
 
-  \entry{ScalaJS}{online}{}
+  \entry{Dartium}{online}{}
     \field{labeltitlesource}{title}
-    \field{title}{Scala.js}
+    \field{title}{Dartium: Chromium with the Dart VM}
     \verb{url}
-    \verb http://www.scala-js.org/
+    \verb https://webdev.dartlang.org/tools/dartium
     \endverb
-    \field{urlday}{02}
+    \field{urlday}{03}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{ApacheIvy}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Apache Ivy™}
+    \verb{url}
+    \verb http://ant.apache.org/ivy/
+    \endverb
+    \field{urlday}{03}
     \field{urlmonth}{01}
     \field{urlyear}{2017}
   \endentry
@@ -212,28 +235,6 @@
     \field{title}{Closure Compiler}
     \verb{url}
     \verb https://developers.google.com/closure/compiler/
-    \endverb
-    \field{urlday}{02}
-    \field{urlmonth}{01}
-    \field{urlyear}{2017}
-  \endentry
-
-  \entry{SourceMapProposal}{online}{}
-    \name{author}{1}{}{%
-      {{hash=JLNF}{%
-         family={John\bibnamedelima Lenz},
-         familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod},
-         given={Nick\bibnamedelima Fitzgerald},
-         giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{JLNF1}
-    \strng{fullhash}{JLNF1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{Source Map Revision 3 Proposal}
-    \verb{url}
-    \verb https://sourcemaps.info/spec.html
     \endverb
     \field{urlday}{02}
     \field{urlmonth}{01}
