@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  4 JAN 2018 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  5 JAN 2018 08:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2103,7 +2103,7 @@ ted-to.pdf>
 _cmyk-eps-converted-to.pdf images/agh_nzw_a_pl_1w_wbr_cmyk.eps>
 (epstopdf)             \includegraphics on input line 267.
 Package epstopdf Info: Output file is already uptodate.
-<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=179, pagebox=cropbox,
+<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=212, pagebox=cropbox,
  323.2075pt x 107.40125pt>
 File: images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2142,7 +2142,7 @@ w_a_pl_1w_wbr_cmyk-eps-converted-to.pdf>] [2] (./praca.toc [3])
 
  (./intro.tex
 Rozdzia\l  1.
-<images/Browser.jpg, id=259, 3025.3025pt x 1701.35625pt>
+<images/Browser.jpg, id=305, 3025.3025pt x 1701.35625pt>
 File: images/Browser.jpg Graphic file (type jpg)
 <use images/Browser.jpg>
 Package pdftex.def Info: images/Browser.jpg  used on input line 16. on input li
@@ -2167,7 +2167,7 @@ l.330 \include{intro}
 
  (./theory.tex
 Rozdzia\l  2.
-<images/curve.png, id=269, 1445.4pt x 745.28438pt>
+<images/curve.png, id=315, 1445.4pt x 745.28438pt>
 File: images/curve.png Graphic file (type png)
 <use images/curve.png>
 Package pdftex.def Info: images/curve.png  used on input line 9. on input line 
@@ -2207,7 +2207,7 @@ been already used, duplicate ignored
 l.90 \section{C\#}
                    [5] [6]
 Rozdzia\l  4.
-<images/mvc.png, id=326, 218.8175pt x 184.69pt>
+<images/mvc.png, id=372, 218.8175pt x 184.69pt>
 File: images/mvc.png Graphic file (type png)
 <use images/mvc.png>
 Package pdftex.def Info: images/mvc.png  used on input line 130. on input line 
@@ -2215,49 +2215,58 @@ Package pdftex.def Info: images/mvc.png  used on input line 130. on input line
 Package pdftex.def Info: Requested size: 170.23622pt x 143.68642pt on input lin
 e 130.
 [7 <./images/mvc.png>]
-<images/RepositoryPattern.png, id=337, 545.03625pt x 190.7125pt>
+Overfull \hbox (17.0pt too wide) in paragraph at lines 146--154
+[]$[]$ 
+ []
+
+<images/RepositoryPattern.png, id=384, 545.03625pt x 190.7125pt>
 File: images/RepositoryPattern.png Graphic file (type png)
 <use images/RepositoryPattern.png>
-Package pdftex.def Info: images/RepositoryPattern.png  used on input line 146. 
-on input line 146.
+Package pdftex.def Info: images/RepositoryPattern.png  used on input line 163. 
+on input line 163.
 Package pdftex.def Info: Requested size: 455.24411pt x 159.29237pt on input lin
-e 146.
-<images/ReviewRepository.png, id=339, 905.63344pt x 381.67593pt>
+e 163.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/ReviewRepository.png, id=386, 905.63344pt x 381.67593pt>
 File: images/ReviewRepository.png Graphic file (type png)
 <use images/ReviewRepository.png>
-Package pdftex.def Info: images/ReviewRepository.png  used on input line 157. o
-n input line 157.
+Package pdftex.def Info: images/ReviewRepository.png  used on input line 174. o
+n input line 174.
 Package pdftex.def Info: Requested size: 455.24411pt x 191.85667pt on input lin
-e 157.
-
+e 174.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8 <./images/RepositoryPattern.png>]
-<images/UnitOfWork.png, id=349, 182.18062pt x 274.02374pt>
+
+Underfull \vbox (badness 3088) has occurred while \output is active []
+
+ [8]
+<images/UnitOfWork.png, id=399, 182.18062pt x 274.02374pt>
 File: images/UnitOfWork.png Graphic file (type png)
 <use images/UnitOfWork.png>
-Package pdftex.def Info: images/UnitOfWork.png  used on input line 168. on inpu
-t line 168.
+Package pdftex.def Info: images/UnitOfWork.png  used on input line 185. on inpu
+t line 185.
 Package pdftex.def Info: Requested size: 182.18016pt x 274.02307pt on input lin
-e 168.
+e 185.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[9 <./images/ReviewRepository.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 175--179
+[9 <./images/RepositoryPattern.png> <./images/ReviewRepository.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
 [10 <./images/UnitOfWork.png>]
-<images/ninject.png, id=365, 491.9178pt x 135.6267pt>
+<images/ninject.png, id=417, 491.9178pt x 135.6267pt>
 File: images/ninject.png Graphic file (type png)
 <use images/ninject.png>
-Package pdftex.def Info: images/ninject.png  used on input line 208. on input l
-ine 208.
+Package pdftex.def Info: images/ninject.png  used on input line 225. on input l
+ine 225.
 Package pdftex.def Info: Requested size: 455.24411pt x 125.51688pt on input lin
-e 208.
+e 225.
  [11 <./images/ninject.png>] [12]
 Rozdzia\l  5.
 [13]
@@ -2269,45 +2278,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [15]
 Rozdzia\l  7.
 
-LaTeX Warning: Citation 'CSSDoc' on page 16 undefined on input line 287.
+LaTeX Warning: Citation 'CSSDoc' on page 16 undefined on input line 304.
 
 [16] [17]
 Rozdzia\l  8.
-
-LaTeX Warning: Citation 'AboutJS' on page 18 undefined on input line 350.
-
 [18]
-<images/javagod.png, id=482, 238.64156pt x 202.50656pt>
+<images/javagod.png, id=536, 238.64156pt x 202.50656pt>
 File: images/javagod.png Graphic file (type png)
 <use images/javagod.png>
-Package pdftex.def Info: images/javagod.png  used on input line 375. on input l
-ine 375.
+Package pdftex.def Info: images/javagod.png  used on input line 392. on input l
+ine 392.
 Package pdftex.def Info: Requested size: 238.64096pt x 202.50604pt on input lin
-e 375.
+e 392.
  [19 <./images/javagod.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 424--449
+Overfull \hbox (17.0pt too wide) in paragraph at lines 441--466
 []$[]$ 
  []
 
 [20] [21]
-Overfull \hbox (17.81808pt too wide) in paragraph at lines 472--490
+Overfull \hbox (17.81808pt too wide) in paragraph at lines 490--508
  [] 
  []
 
 [22]
-<images/debug.png, id=563, 709.14937pt x 619.56468pt>
+<images/debug.png, id=617, 709.14937pt x 619.56468pt>
 File: images/debug.png Graphic file (type png)
 <use images/debug.png>
-Package pdftex.def Info: images/debug.png  used on input line 512. on input lin
-e 512.
+Package pdftex.def Info: images/debug.png  used on input line 530. on input lin
+e 530.
 Package pdftex.def Info: Requested size: 455.24411pt x 397.73958pt on input lin
-e 512.
+e 530.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 512.
+(Font)              <10> on input line 530.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 512.
+(Font)              <7> on input line 530.
 
-Underfull \hbox (badness 1226) in paragraph at lines 520--521
+Underfull \hbox (badness 1226) in paragraph at lines 538--539
 []\T1/lmr/m/n/10.95 Nale»y do-da¢ plik ./pro-jec-t/plu-gins.sbt[][][], we-wn¡tr
 z któ-rego znaj-dzie si¦ in-struk-cja
  []
@@ -2316,12 +2322,12 @@ z któ-rego znaj-dzie si¦ in-struk-cja
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23 <./images/debug.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 527--546
+Overfull \hbox (17.0pt too wide) in paragraph at lines 546--565
 []$[]$ 
  []
 
-)
-Overfull \hbox (17.0pt too wide) in paragraph at lines 547--331
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 566--588
 []$[]$ 
  []
 
@@ -2330,301 +2336,192 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
 [25]
+Rozdzia\l  9.
+)
+Overfull \hbox (17.0pt too wide) in paragraph at lines 597--331
+[]$[]$ 
+ []
+
+[26]
 \openout2 = `main.aux'.
 
  (./main.tex
-Rozdzia\l  9.
-<images/usecases.png, id=619, 1114.1625pt x 871.255pt>
-File: images/usecases.png Graphic file (type png)
-<use images/usecases.png>
-Package pdftex.def Info: images/usecases.png  used on input line 9. on input li
-ne 9.
-Package pdftex.def Info: Requested size: 455.24411pt x 355.99379pt on input lin
-e 9.
-! Missing number, treated as zero.
-<to be read again> 
-                   \def 
-l.39 \begin
-           {center}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
+Rozdzia\l  10.
+<images/question.png, id=690, 750.55406pt x 459.96844pt>
+File: images/question.png Graphic file (type png)
+<use images/question.png>
+Package pdftex.def Info: images/question.png  used on input line 16. on input l
+ine 16.
+Package pdftex.def Info: Requested size: 455.24411pt x 278.99414pt on input lin
+e 16.
 
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \def 
-l.39 \begin
-           {center}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 17.
+See the caption package documentation for explanation.
+
+[27
 
 
-! Package calc Error: `\def ' invalid at this point.
+ <./images/question.png>]
 
-See the calc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 \begin
-           {center}
-I expected to see one of: + - * / )
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 49.
+See the caption package documentation for explanation.
 
-! Use of \@iminipage doesn't match its definition.
-<argument> \def \reserved@a {
-                             \def \@currenvir {!}\edef \@currenvline {\on@li...
-l.39 \begin
-           {center}
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Extra }, or forgotten \endgroup.
-<argument> ...{@begin@!@hook}\csname !\endcsname }
-                                                  
-l.39 \begin
-           {center}
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Use of \@iminipage doesn't match its definition.
-\calc@assign@generic ... #2\calc@open (#4!\global 
-                                                  \calc@A \calc@B \endgroup ...
-l.39 \begin
-           {center}
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-
-Overfull \hbox (24.65855pt too wide) in paragraph at lines 39--49
-[]\T1/lmr/m/n/10.95 center
- []
-
-
-Overfull \hbox (426.46764pt too wide) in paragraph at lines 39--49
-[]
- []
-
-
-! LaTeX Error: \begin{!} on input line 39 ended by \end{center}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.49 \end{center}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<images/interval.png, id=620, 460.8417pt x 367.6134pt>
+<images/interval.png, id=696, 460.8417pt x 367.6134pt>
 File: images/interval.png Graphic file (type png)
 <use images/interval.png>
-Package pdftex.def Info: images/interval.png  used on input line 54. on input l
-ine 54.
+Package pdftex.def Info: images/interval.png  used on input line 57. on input l
+ine 57.
 Package pdftex.def Info: Requested size: 455.24411pt x 363.16989pt on input lin
-e 54.
+e 57.
 
-! Package caption Error: \caption outside float.
-
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 58.
 See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 	 \caption
-               {PrzykÅ‚ad miejsc umieszczenie fiszki w kolejce w wypadku zÅ‚...
-
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.57 \end{minipage}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\endminipage ...pagefalse \color@endgroup \egroup 
-                                                  \expandafter \@iiiparbox \...
-l.57 \end{minipage}
-                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Undefined control sequence.
-\endminipage ...\expandafter \@iiiparbox \@mpargs 
-                                                  {\unvbox \@tempboxa }
-l.57 \end{minipage}
-                   
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   P
-l.59 
-     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   P
-l.59 
-     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
 
 
-! Package calc Error: `P' invalid at this point.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the calc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 
-     
-I expected to see one of: + - * / )
+ [28]
+[29 <./images/interval.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
 
-! Missing number, treated as zero.
-<to be read again> 
-                   \def 
-l.59 
-     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \def 
-l.59 
-     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+ []
 
 
-! Package calc Error: `\def ' invalid at this point.
-
-See the calc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 
-     
-I expected to see one of: + - * / )
-
-! Use of \@iminipage doesn't match its definition.
-\@checkend #1->\def \reserved@a {
-                                 #1}\ifx \reserved@a \@currenvir \else \@bad...
-l.59 
-     
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-! Extra }, or forgotten \endgroup.
-\@checkend #1->\def \reserved@a {#1}
-                                    \ifx \reserved@a \@currenvir \else \@bad...
-l.59 
-     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-! LaTeX Error: \begin{minipage} on input line 38 ended by \end{minipage}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 
-     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 78--79
+[][] 
+ []
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 59.
+ine 86.
+<images/WinStrength.png, id=711, 1927.2pt x 993.7125pt>
+File: images/WinStrength.png Graphic file (type png)
+<use images/WinStrength.png>
+Package pdftex.def Info: images/WinStrength.png  used on input line 90. on inpu
+t line 90.
+Package pdftex.def Info: Requested size: 455.24411pt x 234.73549pt on input lin
+e 90.
 
-Underfull \vbox (badness 7081) has occurred while \output is active []
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 91.
+See the caption package documentation for explanation.
 
- [26
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
 
 
-]
-[27 <./images/usecases.png>]
-<images/Repos.png, id=632, 1170.774pt x 428.802pt>
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 104--105
+[][] 
+ []
+
+<images/LossStrength.png, id=712, 1927.2pt x 993.7125pt>
+File: images/LossStrength.png Graphic file (type png)
+<use images/LossStrength.png>
+Package pdftex.def Info: images/LossStrength.png  used on input line 110. on in
+put line 110.
+Package pdftex.def Info: Requested size: 455.24411pt x 234.73549pt on input lin
+e 110.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 111.
+See the caption package documentation for explanation.
+
+[30 <./images/WinStrength.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 124--125
+[][] 
+ []
+
+
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 147--148
+[][] 
+ []
+
+[31 <./images/LossStrength.png>]
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 166--167
+[][] 
+ []
+
+
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 192--193
+[][] 
+ []
+
+[32]
+<images/Management.png, id=748, 753.5653pt x 526.96875pt>
+File: images/Management.png Graphic file (type png)
+<use images/Management.png>
+Package pdftex.def Info: images/Management.png  used on input line 235. on inpu
+t line 235.
+Package pdftex.def Info: Requested size: 455.24411pt x 318.34668pt on input lin
+e 235.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 236.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+<images/Repos.png, id=755, 1170.774pt x 428.802pt>
 File: images/Repos.png Graphic file (type png)
 <use images/Repos.png>
-Package pdftex.def Info: images/Repos.png  used on input line 69. on input line
- 69.
+Package pdftex.def Info: images/Repos.png  used on input line 246. on input lin
+e 246.
 Package pdftex.def Info: Requested size: 455.24411pt x 166.73483pt on input lin
-e 69.
-<images/Serwisy.png, id=633, 1387.584pt x 416.15475pt>
+e 246.
+<images/Serwisy.png, id=756, 1387.584pt x 416.15475pt>
 File: images/Serwisy.png Graphic file (type png)
 <use images/Serwisy.png>
-Package pdftex.def Info: images/Serwisy.png  used on input line 76. on input li
-ne 76.
+Package pdftex.def Info: images/Serwisy.png  used on input line 253. on input l
+ine 253.
 Package pdftex.def Info: Requested size: 455.24411pt x 136.53139pt on input lin
-e 76.
-<images/Controllers.png, id=634, 1224.9765pt x 411.33675pt>
+e 253.
+<images/Controllers.png, id=757, 1224.9765pt x 411.33675pt>
 File: images/Controllers.png Graphic file (type png)
 <use images/Controllers.png>
-Package pdftex.def Info: images/Controllers.png  used on input line 83. on inpu
-t line 83.
+Package pdftex.def Info: images/Controllers.png  used on input line 260. on inp
+ut line 260.
 Package pdftex.def Info: Requested size: 455.24411pt x 152.86378pt on input lin
-e 83.
- [28 <./images/Repos.png>] [29 <./images/Serwisy.png> <./images/Controllers.png
->]
-Rozdzia\l  10.
-) [30]
+e 260.
+<images/usecases.png, id=758, 1114.1625pt x 871.255pt>
+File: images/usecases.png Graphic file (type png)
+<use images/usecases.png>
+Package pdftex.def Info: images/usecases.png  used on input line 268. on input 
+line 268.
+Package pdftex.def Info: Requested size: 455.24411pt x 355.99379pt on input lin
+e 268.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 269.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./images/Management.png> <./images/Repos.png>] [35 <./images/Serwisy.png>
+ <./images/Controllers.png>] [36 <./images/usecases.png>]
+Rozdzia\l  11.
+) [37]
 \openout2 = `summary.aux'.
 
  (./summary.tex
-Rozdzia\l  11.
-) [31
+Rozdzia\l  12.
+) [38
 
 
-
-] [32
+] [39
 
 
 ]
@@ -2634,27 +2531,14 @@ r/m/sc/10.95 url\T1/lmr/m/n/10.95 : []$\T1/lmr/m/it/10.95 https : / / en . wiki
 pedia . org / wiki / Scala _
  []
 
-[33] [34]
-
-! LaTeX Error: \begin{minipage} on input line 38 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.341 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+[40]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
-(./praca.aux (./intro.aux) (./theory.aux) (./main.aux) (./summary.aux))
+ (./praca.aux (./intro.aux) (./theory.aux) (./main.aux) (./summary.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 28DED35662E88DCB2ED7D1365C820ED1;2687.
+(rerunfilecheck)             Checksum: 7A1A262227F33312C6E2B41F4A164496;3186.
 
 
 LaTeX Warning: There were undefined references.
@@ -2671,46 +2555,42 @@ Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
- )
-(\end occurred inside a group at level 3)
-
-### semi simple group (level 3) entered at line 59 (\begingroup)
-### semi simple group (level 2) entered at line 39 (\begingroup)
-### semi simple group (level 1) entered at line 38 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 41080 strings out of 492990
- 775340 string characters out of 6136335
- 1202880 words of memory out of 5000000
- 43651 multiletter control sequences out of 15000+600000
+ 41173 strings out of 492990
+ 776701 string characters out of 6136335
+ 1203880 words of memory out of 5000000
+ 43694 multiletter control sequences out of 15000+600000
  671834 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,97p,10385b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section*.13} has been referenced bu
-t does not exist, replaced by a fixed one
-
-{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/texmf
--dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}<c
-:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2017/tex
-mf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2017/texmf-dist/fonts/type
-1/public/lm/lmbxi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmcsc
-10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/
-2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2017/texmf-dist/fon
-ts/type1/public/lm/lmr6.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/l
-mr7.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/
-2017/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2017/texmf-dist/font
-s/type1/public/lm/lmri10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/
-lmri8.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texl
-ive/2017/texmf-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2017/texmf-dis
-t/fonts/type1/public/lm/lmss12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publ
-ic/lm/lmss17.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
-><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy9.pfb><c:/texlive/2017/t
-exmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on praca.pdf (39 pages, 1717699 bytes).
+ 62i,22n,97p,10385b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
+mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/
+dvips/lm/lm-mathex.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy
+.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2017/
+texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2017/texmf-dist/fonts/type1/
+public/lm/lmbx10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbx12.p
+fb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/texlive/20
+17/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmex10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm
+/lmmi10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/tex
+live/2017/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/publi
+c/lm/lmr6.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/te
+xlive/2017/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2017/texmf-dis
+t/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public
+/lm/lmri10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/
+texlive/2017/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2017/texmf
+-dist/fonts/type1/public/lm/lmss10.pfb><c:/texlive/2017/texmf-dist/fonts/type1/
+public/lm/lmss12.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmss17.p
+fb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2
+017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fon
+ts/type1/public/lm/lmsy9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/courie
+r/ucrr8a.pfb>
+Output written on praca.pdf (45 pages, 2112176 bytes).
 PDF statistics:
- 835 PDF objects out of 1000 (max. 8388607)
- 743 compressed objects within 8 object streams
- 290 named destinations out of 1000 (max. 500000)
- 432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 881 compressed objects within 9 object streams
+ 336 named destinations out of 1000 (max. 500000)
+ 516 words of extra memory for PDF output out of 10000 (max. 10000000)
 

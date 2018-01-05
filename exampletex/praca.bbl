@@ -161,6 +161,19 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{Razor}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Introduction to ASP.NET Web Programming Using the Razor
+  Syntax (C\#)}
+    \verb{url}
+    \verb https://docs.microsoft.com/en-us/aspnet/web-pages/overview/getting-st
+    \verb arted/introducing-razor-syntax-c
+    \endverb
+    \field{urlday}{04}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{RepositoryUnitOfWorkPattern}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Implementing the Repository and Unit of Work Patterns in an
@@ -261,6 +274,17 @@
     \field{urlyear}{2017}
   \endentry
 
+  \entry{AboutJS}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{JavaScript}
+    \verb{url}
+    \verb https://developer.mozilla.org/pl/docs/Web/JavaScript
+    \endverb
+    \field{urlday}{05}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{Dartium}{online}{}
     \field{labeltitlesource}{title}
     \field{title}{Dartium: Chromium with the Dart VM}
@@ -324,6 +348,17 @@
     \verb https://developers.google.com/closure/compiler/
     \endverb
     \field{urlday}{02}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{Leve}{online}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Odległość Levenshteina}
+    \verb{url}
+    \verb https://pl.wikipedia.org/wiki/Odleg%C5%82o%C5%9B%C4%87_Levenshteina
+    \endverb
+    \field{urlday}{05}
     \field{urlmonth}{01}
     \field{urlyear}{2017}
   \endentry

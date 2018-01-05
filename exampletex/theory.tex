@@ -92,7 +92,7 @@ Implementacja, która umożliwia tworzenie aplikacji dla wszystkich platform uż
 C\# jest językiem programowania trzeciej generacji. Został opublikowany w roku 2001 przez firmę Microsoft. Jest on silnie typowanym językiem wielo-paradygmatowym umożliwiającym programowanie imperatywne, deklaratywne, generyczne, funkcjonalne, komponentowe i zorientowane obiektowo. Najnowszy jego standard został wydany w listopadzie 2017 roku i jest oznaczony jako wersja 7.2. Wchodzi on w grupę języków .NET przez co jest kompilowalny do języka CIL. \cite{CPlotekInfo}
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy kod aplikacji "Hello World" w języku CIL}]
+caption={Przykładowy kod aplikacji "Hello World" w języku C\#}]
 using System;
 namespace HelloWorld
 {
@@ -116,7 +116,7 @@ ASP.NET MVC jest frameworkiem do budowania aplikacji internetowych w oparciu o w
 
 
 \section{Model-Widok-Kontroler}
-
+\label{section_Kontro}
 Większość dzisiejszych systemów komputerowych działa na zasadzie wyświetlania danych, które aktualnie znajdują się w bazie danych i ewentualnie ich modyfikacji. W celu ujednolicenia tych systemów stosowany jest wzorzec Model-Widok-Kontroler(ang. Model-View-Controller), który rozdziela logikę aplikacji na 3 główne segmenty:
 \begin{enumerate}
 	\item Model - Służy do pobierania, przechowywania i zamiany danych.
@@ -135,8 +135,25 @@ Cała aplikacja została skonstruowana zgodnie z tym wzorcem projektowym. ASP.NE
 
 Wzorzec MVC niesie za sobą korzyści związane z warstwą wyświetlania danych. Jest to warstwa aplikacji, w której bardzo często dochodzi do zmian. Dzięki odseparowaniu danych od widoku jesteśmy w stanie tworzyć, jak i zmieniać widoki, bez wpływu na kod biznesowy aplikacji.
 
-\section{Wzorzec Repozytorium}
+\section{Razor}
 
+W celu wyrenderowania stron w ASP.NET MVC należy użyć określonego renderera.
+Aktualnie dwoma najpopularniejszymi opcjami jest aspx i Razor\cite{Razor}.
+Pierwszy z nich istnieje od samego początku ASP.NET MVC. Ma bardzo ciężką i niewygodną składnie, przez co jest trudny w nauce, obsłudze i utrzymaniu.
+
+Razor natomiast został wprowadzony w wersji 3.0 ASP.NET MVC w celu eliminacji wielu problemów związanych z trudnością używania swojego poprzednika. Wprowadza całkowicie nową składnie, która jest łatwiejsza w użyciu i zrozumieniu.
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
+caption={Przykładowy kod kompatybilny z Razorem.}]
+<h1>
+        Witaj @ViewBag.Name ! Aktualna data to @DateTime.Now 
+</h1>
+\end{lstlisting}
+\end{minipage}
+
+\section{Wzorzec Repozytorium}
+\label{section_Repo}
 Wewnątrz aplikacji używana będzie baza danych Microsoft SQL. Do komunikacji z bazą bardzo często jest tworzony kod, który zwraca podobne dane. W celu zmniejszenia redundancji kodu, jak i odseparowania zależności i odpowiedzialności wykorzystany został wzorzec Repozytorium (z ang. Repository Pattern)\cite{RepositoryUnitOfWorkPattern}.
 
 Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których zadaniem jest pobieranie i modyfikowanie danych po stronie serwera SQL. Nie zawierają żadnej logiki biznesowej i są niezwiązane z resztą kodu danej aplikacji. 
@@ -348,7 +365,7 @@ object HelloWorld {
 \section{Javascript}
 
 Javascript jest głównym językiem programowania wykorzystywanym na stronach internetowych. Może być on interpretowany bądź kompilowany metodą Just In Time, która kompiluje kod tuż przed jego wykonaniem. Jest to dynamiczny język wieloparadygmatowy bazujący na prototypach. Wspiera programowanie obiektowe, imperatywne i deklaratywne.\cite{AboutJS}
-Javascript jako język posiada wiele problemów, które mogą doprowadzić do wystąpięnia błędów, między innymi takich jak:
+Javascript posiada wiele problemów, które utrudniają pisanie programów, między innymi takich jak:
 \begin{enumerate}
 	\item Niejawne rzutowania, które objawiają się przy użyciu operatora ==. Są przyczyną wielu trudnych do odkrycia błędów
 	\item Automatyczne wstawianie średników, co może spowodować, iż program działa inaczej niż zamierzał to programista. Czasami potrafi to uratować program napisany przez programistę, lecz często prowadzi do dziwnych i niezrozumiałych błędów, takich jak w przypadku poniższego listingu: \ref{lst:javascriptSUCKS}
@@ -465,6 +482,7 @@ W wyniku tego procesu otrzymywany jest plik wykonywalny o rozmiarze między 150K
 W celu użycia pełnej optymalizacji należy wywołać polecenie \textbf{FullOptJS} w sbt.
 
 \subsubsection{Pliki javascript}
+\label{sub:javascriptfiles}
 
 W wyniku działań optymalizatorów tworzone są poniższe pliki javascript. Należy mieć na uwadze fakt, iż pliki bibliotek muszą zostać dołączone do kodu strony przed plikiem z kodem wykonywalnym.
 
@@ -522,7 +540,8 @@ Za pomocą powyższych metod i narzędzi można stworzyć w bardzo prosty sposó
 	\item Plik build.sbt, który zawiera ustawienia związane z budową projektu, musi zostać zmodyfikowany w celu użycia plugina Scali.js jak i pomocniczych bibliotek. Przykładowy plik, który jest używany w projekcie można zobaczyć na listingu \ref{lst:scalasbt}.
 \end{enumerate}
 
-Po takim zabiegu należy już tylko dodać kod źródłowy Scali do folderu ./src/main/scala. Przykładowy kod można znaleźć na listingu \ref{lst:helloscalajs}
+Po takim zabiegu należy dodać kod źródłowy Scali do folderu ./src/main/scala. Przykładowy kod można znaleźć na listingu \ref{lst:helloscalajs}.
+Po wykonaniu powyższych czynności uruchomienie komendy \textbf{FastOptJs} w \textbf{sbt} powinno wygenerować pliki wynikowe(\ref{sub:javascriptfiles}), które można użyć na stronie WWW.
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[label={lst:scalasbt},
@@ -564,5 +583,29 @@ object TutorialApp {
     targetNode.appendChild(parNode)
   }
 }
+\end{lstlisting}
+\end{minipage}
+
+
+\newpage
+{\let\cleardoublepage\relax \chapter{HTML}}
+
+Głównym językiem służącym do opisu stron internetowych jest HTML (Hypertext Markup Language). Jest to język deklaratywny, którego konstrukcje 
+
+
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[
+frame=single, numbers=none,captionpos=b, 
+caption={Przykładowa strona internetowa zapisana z użyciem języka HTML.}]
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+ Pusta strona html
+</body>
+</html>
 \end{lstlisting}
 \end{minipage}

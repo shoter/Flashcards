@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Flashcards", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -57,11 +57,13 @@
                     {
                         <li>@Html.ActionLink("Management", "Index", "Management")</li>
                     }
-                    <li>
-                        @using (Html.BeginForm("ChangeLanguage", "Language", FormMethod.Post, new { id = "languageChangeForm" }))
-                        {
-                            @Html.DropDownList("currentLanguageID", langs)
-                        }
+                    <li style="height:50px">
+                        <div style="display:flex; align-items:center; align-content:center; justify-content:center; height:100%">
+                            @using (Html.BeginForm("ChangeLanguage", "Language", FormMethod.Post, new { id = "languageChangeForm" }))
+                            {
+                                @Html.DropDownList("currentLanguageID", langs)
+                            }
+                        </div>
                     </li>
                 </ul>
                 @Html.Partial("_LoginPartial")

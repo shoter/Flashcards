@@ -278,6 +278,7 @@
     </Content>
     <Content Include="Content\Styles\main.scss" />
     <Content Include="Content\Styles\definitions.scss" />
+    <Content Include="Controllers.cd" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>

@@ -14,10 +14,11 @@
 \contentsline {section}{\numberline {3.2}C\#}{6}{section.3.2}
 \contentsline {chapter}{\numberline {4}ASP.NET MVC}{7}{chapter.4}
 \contentsline {section}{\numberline {4.1}Model-Widok-Kontroler}{7}{section.4.1}
-\contentsline {section}{\numberline {4.2}Wzorzec Repozytorium}{8}{section.4.2}
-\contentsline {section}{\numberline {4.3}Jednostka Pracy}{8}{section.4.3}
-\contentsline {section}{\numberline {4.4}Mapowanie obiektowo-relacyjne}{10}{section.4.4}
-\contentsline {section}{\numberline {4.5}Wstrzykiwanie zale\IeC {\.z}no\IeC {\'s}ci}{11}{section.4.5}
+\contentsline {section}{\numberline {4.2}Razor}{8}{section.4.2}
+\contentsline {section}{\numberline {4.3}Wzorzec Repozytorium}{8}{section.4.3}
+\contentsline {section}{\numberline {4.4}Jednostka Pracy}{9}{section.4.4}
+\contentsline {section}{\numberline {4.5}Mapowanie obiektowo-relacyjne}{10}{section.4.5}
+\contentsline {section}{\numberline {4.6}Wstrzykiwanie zale\IeC {\.z}no\IeC {\'s}ci}{11}{section.4.6}
 \contentsline {chapter}{\numberline {5}Microsoft SQL Server}{13}{chapter.5}
 \contentsline {chapter}{\numberline {6}Testy}{14}{chapter.6}
 \contentsline {section}{\numberline {6.1}Testy Jednostkowe}{14}{section.6.1}
@@ -35,17 +36,23 @@
 \contentsline {subsubsection}{\numberline {8.2.2.4}Pliki javascript}{22}{subsubsection.8.2.2.4}
 \contentsline {subsubsection}{\numberline {8.2.2.5}Debugowanie}{22}{subsubsection.8.2.2.5}
 \contentsline {subsection}{\numberline {8.2.3}Hello World}{23}{subsection.8.2.3}
-\contentsline {chapter}{\numberline {9}Opis dzia\IeC {\l }ania aplikacji}{26}{chapter.9}
-\contentsline {section}{\numberline {9.1}Diagram przypadk\IeC {\'o}w u\IeC {\.z}ycia}{26}{section.9.1}
-\contentsline {section}{\numberline {9.2}Proces nauczania}{26}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Trening}{26}{subsection.9.2.1}
-\contentsline {subsection}{\numberline {9.2.2}Powt\IeC {\'o}rka}{26}{subsection.9.2.2}
-\contentsline {subsubsection}{\numberline {9.2.2.1}Miejsce w kolejce}{28}{subsubsection.9.2.2.1}
-\contentsline {subsection}{\numberline {9.2.3}Si\IeC {\l }a}{28}{subsection.9.2.3}
-\contentsline {section}{\numberline {9.3}Narz\IeC {\k e}dzia administratorskie}{28}{section.9.3}
-\contentsline {section}{\numberline {9.4}Diagramy klas}{28}{section.9.4}
-\contentsline {chapter}{\numberline {10}Kwestie implementacyjne}{30}{chapter.10}
-\contentsline {section}{\numberline {10.1}Struktura programu}{30}{section.10.1}
-\contentsline {section}{\numberline {10.2}Przechowywanie danych}{30}{section.10.2}
-\contentsline {section}{\numberline {10.3}Wy\IeC {\'s}wietlanie stron}{30}{section.10.3}
-\contentsline {chapter}{\numberline {11}Podsumowanie oraz wnioski}{31}{chapter.11}
+\contentsline {chapter}{\numberline {9}HTML}{26}{chapter.9}
+\contentsline {chapter}{\numberline {10}Opis dzia\IeC {\l }ania aplikacji}{27}{chapter.10}
+\contentsline {section}{\numberline {10.1}Proces nauczania}{27}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Trening}{27}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Powt\IeC {\'o}rka}{28}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.3}Si\IeC {\l }a}{30}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.4}Interwa\IeC {\l }y czasowe}{31}{subsection.10.1.4}
+\contentsline {subsection}{\numberline {10.1.5}Wykrywanie poprawno\IeC {\'s}ci odpowiedzi}{32}{subsection.10.1.5}
+\contentsline {subsection}{\numberline {10.1.6}Mo\IeC {\.z}liwe odpowiedzi}{32}{subsection.10.1.6}
+\contentsline {subsection}{\numberline {10.1.7}Obrazki}{33}{subsection.10.1.7}
+\contentsline {section}{\numberline {10.2}Narz\IeC {\k e}dzia administratorskie}{33}{section.10.2}
+\contentsline {section}{\numberline {10.3}Diagramy klas}{34}{section.10.3}
+\contentsline {section}{\numberline {10.4}Diagram przypadk\IeC {\'o}w u\IeC {\.z}ycia}{36}{section.10.4}
+\contentsline {chapter}{\numberline {11}Kwestie techniczne}{37}{chapter.11}
+\contentsline {section}{\numberline {11.1}Struktura programu}{37}{section.11.1}
+\contentsline {section}{\numberline {11.2}Przechowywanie danych}{37}{section.11.2}
+\contentsline {section}{\numberline {11.3}Wy\IeC {\'s}wietlanie stron}{37}{section.11.3}
+\contentsline {chapter}{\numberline {12}Podsumowanie}{38}{chapter.12}
+\contentsline {section}{\numberline {12.1}Wnioski}{38}{section.12.1}
+\contentsline {section}{\numberline {12.2}Future}{38}{section.12.2}

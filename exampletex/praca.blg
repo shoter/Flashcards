@@ -23,49 +23,48 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: praca-blx.bib
 Database file #2: bibliografia.bib
 Warning--I didn't find a database entry for "CSSDoc"
-Warning--I didn't find a database entry for "AboutJS"
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 21 entries,
+You've used 24 entries,
             6256 wiz_defined-function locations,
-            1280 strings with 11480 characters,
-and the built_in function-call counts, 75479 in all, are:
-= -- 2908
-> -- 5111
-< -- 551
-+ -- 4555
-- -- 4149
-* -- 3092
-:= -- 7673
+            1292 strings with 11841 characters,
+and the built_in function-call counts, 84314 in all, are:
+= -- 3076
+> -- 5909
+< -- 620
++ -- 5275
+- -- 4850
+* -- 3316
+:= -- 8568
 add.period$ -- 0
-call.type$ -- 21
-change.case$ -- 138
-chr.to.int$ -- 450
-cite$ -- 40
-duplicate$ -- 6765
-empty$ -- 7380
+call.type$ -- 24
+change.case$ -- 144
+chr.to.int$ -- 522
+cite$ -- 46
+duplicate$ -- 7606
+empty$ -- 8270
 format.name$ -- 266
-if$ -- 13261
+if$ -- 14637
 int.to.chr$ -- 0
-int.to.str$ -- 28
+int.to.str$ -- 31
 missing$ -- 0
-newline$ -- 322
+newline$ -- 356
 num.names$ -- 304
-pop$ -- 6484
+pop$ -- 7447
 preamble$ -- 1
-purify$ -- 156
+purify$ -- 162
 quote$ -- 0
-skip$ -- 2395
+skip$ -- 2656
 stack$ -- 0
-substring$ -- 5347
-swap$ -- 2063
-text.length$ -- 411
+substring$ -- 5631
+swap$ -- 2331
+text.length$ -- 465
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 702
+type$ -- 804
 warning$ -- 0
-while$ -- 603
+while$ -- 663
 width$ -- 0
-write$ -- 302
-(There were 2 warnings)
+write$ -- 333
+(There was 1 warning)
