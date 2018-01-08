@@ -25,7 +25,7 @@ Istnieje wiele badań \cite{PicturesRocks}\cite{SuperPictures}, które ukazują 
 
 Istnieją także badania, które zjawisko pokazują w zupełnie innym świetle, pokazując brak pozytywnego wpływu obrazków na nauczanie języków obcych\cite{OverConfidence}.
 \\
-Wewnątrz projektu starano się wykorzystać powyższy efekt wymagając na użytkowniku zapamiętania, a następnie przypomnienia słowa w języku obcym wykorzystując do tego celu obrazki. Takie postępowanie w najgorszym wypadku będzie na równi efektywne z tradycyjnym.
+Wewnątrz projektu starano się wykorzystać powyższy efekt, wymagając na użytkowniku zapamiętania, a następnie przypomnienia słowa w języku obcym wykorzystując do tego celu obrazki. Takie postępowanie w najgorszym wypadku będzie na równi efektywne z tradycyjnym.
 
 
 
@@ -43,11 +43,11 @@ Wewnątrz projektu starano się wykorzystać powyższy efekt wymagając na użyt
 	\item Ma zaimplementowane mechanizmy do obsługi operacji asynchronicznych i współbieżnych.
 	\item Można ją stosować na różnych platformach, które posiadają środowisko wykonywalne .NET.
 \end{itemize}
-Wszystkie języki używane w platformie .NET kompilowane są do Wspólnego Języka Pośredniego (po ang. \textit{Common Intermediate Language}), który następnie jest tłumaczony na kod bajtowy i wykonywany za pomocą środowiska wykonywalnego danej implementacji .NET.
+Wszystkie języki używane w platformie .NET kompilowane są do Wspólnego Języka Pośredniego (po ang. \textit{Common Intermediate Language}), który następnie jest tłumaczony na kod bajtowy i wykonywany za pomocą środowiska wykonywalnego danej implementacji .NET. CIL wyglądem przypomina język Assembler. Jest on od niego o wiele bardziej rozbudowany i łatwiejszy w zrozumieniu.
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy kod aplikacji "Hello World" w języku CIL}]
+caption={Przykładowy kod aplikacji ''Hello World'' w języku CIL}]
 .assembly HelloWorld
 .class auto ansi HelloWorldApp
 {
@@ -69,7 +69,7 @@ caption={Przykładowy kod aplikacji "Hello World" w języku CIL}]
 \section{Implementacje .NET}
 
 Każda aplikacja .NET jest uruchamiana na jednej z implementacji .NET. \\
-Od roku 2016 wprowadzono .NET Standard - wspólny zestaw API, które każda z implementacji musi posiadać. Pozwala to na pisanie i używanie bibliotek programistycznych w różnych środowiskach .NET.
+Od roku 2016 wprowadzono .NET Standard - wspólny zestaw API, które każda z implementacji musi posiadać. Pozwala to na pisanie i używanie bibliotek programistycznych w różnych środowiskach .NET. 
 
 Istnieją aktualnie 4 główne implementacje .NET:
 
@@ -91,10 +91,10 @@ Implementacja, która umożliwia tworzenie aplikacji dla wszystkich platform uż
 
 \section{C\#}
 
-C\# jest językiem programowania trzeciej generacji. Został opublikowany w roku 2001 przez firmę Microsoft. Jest on silnie typowanym językiem wielo-paradygmatowym umożliwiającym programowanie imperatywne, deklaratywne, generyczne, funkcjonalne, komponentowe i zorientowane obiektowo. Najnowszy jego standard został wydany w listopadzie 2017 roku i jest oznaczony jako wersja 7.2. Wchodzi on w grupę języków .NET przez co jest kompilowalny do języka CIL. \cite{CPlotekInfo}
+C\# jest językiem programowania trzeciej generacji. Został opublikowany w roku 2001 przez firmę Microsoft. Jest on silnie typowanym językiem wielo-paradygmatowym umożliwiającym programowanie imperatywne, deklaratywne, generyczne, funkcjonalne, komponentowe i zorientowane obiektowo. Najnowszy jego standard został wydany w listopadzie 2017 roku i jest oznaczony jako wersja 7.2. Wchodzi on w grupę języków .NET, przez co jest kompilowalny do języka CIL. \cite{CPlotekInfo}
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy kod aplikacji "Hello World" w języku C\#}]
+caption={Przykładowy kod aplikacji ''Hello World'' w języku C\#}]
 using System;
 namespace HelloWorld
 {
@@ -133,17 +133,17 @@ Większość dzisiejszych systemów komputerowych działa na zasadzie wyświetla
 	 \caption{Model MVC. Źródło: msdn.microsoft.com}
 \end{figure}
 
-Cała aplikacja została skonstruowana zgodnie z tym wzorcem projektowym. ASP.NET MVC posiada wiele narzędzi, które ułatwiają zastosowanie tego wzorca. Dostarczana jest klasa bazowa \textbf{Controller}, która posiada wszystkie podstawowe metody do wyświetlania odpowiednich treści danych i zarządzania zapytaniami.
+Cała aplikacja została skonstruowana zgodnie z tym wzorcem projektowym. ASP.NET MVC posiada wiele narzędzi, które ułatwiają zastosowanie tego wzorca. Dostarczana jest klasa bazowa \textbf{Controller}, która posiada wszystkie podstawowe metody do wyświetlania odpowiednich treści danych i zarządzania zapytaniami internetowymi użytkownika.
 
 Wzorzec MVC niesie za sobą korzyści związane z warstwą wyświetlania danych. Jest to warstwa aplikacji, w której bardzo często dochodzi do zmian. Dzięki odseparowaniu danych od widoku jesteśmy w stanie tworzyć, jak i zmieniać widoki, bez wpływu na kod biznesowy aplikacji.
 
 \section{Razor}
 
-W celu wyrenderowania stron w ASP.NET MVC należy użyć określonego renderera.
-Aktualnie dwoma najpopularniejszymi opcjami jest aspx i Razor\cite{Razor}.
-Pierwszy z nich istnieje od samego początku ASP.NET MVC. Ma bardzo ciężką i niewygodną składnie, przez co jest trudny w nauce, obsłudze i utrzymaniu.
+W celu stworzenia strony przez ASP.NET MVC należy napisać kod strony internetowej, który potrafi zostać skompilowany przez określony renderer do kodu HTML. Aktualnie dwoma najpopularniejszymi opcjami jest aspx i Razor\cite{Razor}. Pierwszy z nich istnieje od samego początku ASP.NET MVC. Ma bardzo ciężką i niewygodną składnię, przez co jest trudny w nauce, obsłudze i utrzymaniu.
 
-Razor natomiast został wprowadzony w wersji 3.0 ASP.NET MVC w celu eliminacji wielu problemów związanych z trudnością używania swojego poprzednika. Wprowadza całkowicie nową składnie, która jest łatwiejsza w użyciu i zrozumieniu.
+Razor natomiast został wprowadzony w wersji 3.0 ASP.NET MVC w celu eliminacji wielu problemów związanych z trudnością używania swojego poprzednika. Wprowadza całkowicie nową składnię, która jest łatwiejsza w użyciu i zrozumieniu. 
+
+Dzięki rendererom można używać języka C\# w celu tworzenia stron internetowych. Pozwala to na używanie wszystkich możliwych konstrukcji językowych w trakcie procesu tworzenia stron : pętli, instrukcji warunkowych, instrukcji switch, metod i wielu innych.
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
@@ -160,34 +160,30 @@ Wewnątrz aplikacji używana będzie baza danych Microsoft SQL. Do komunikacji z
 
 Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których zadaniem jest pobieranie i modyfikowanie danych po stronie serwera SQL. Nie zawierają żadnej logiki biznesowej i są niezwiązane z resztą kodu danej aplikacji. 
 
-\begin{figure}[h]
-	\centering
+\begin{center}
 	\includegraphics[width=\textwidth]{images/RepositoryPattern.png}
-	 \caption{Wzorzec repozytorium. Źródło: msdn.microsoft.com}
-\end{figure}
+	 \captionof{figure}{Wzorzec repozytorium. Źródło: msdn.microsoft.com}
+\end{center}
 
 Wewnątrz projektu cały wzorzec repozytorium został oparty na interfejsach \textbf{IRepository} i \textbf{IRepository<T>} (który implementuje \textbf{IRepository}). W założeniu te interfejsy definiują operacje, które można zrealizować na danym obiekcie klasy 'T'. Informacja o sposobie realizacji operacji jest zdefiniowana w klasie \textbf{RepositoryBase<T>}.
 Wszystkie kolejne stworzone repozytoria dziedziczą po \textbf{RepositoryBase<T>} a ich interfejsy implementują \textbf{IRepository<T>}. 
-Takie działanie pozwala nam na separację reprezentacji persystentnej (baza danych) i reprezentacji bieżącej (repozytoria). Wystarczy, iż zmienimy \textbf{RepositoryBase<T>} na jakąkolwiek inną klasę implementującą \textbf{IRepository<T>}. Dzięki temu możemy zastąpić Microsoft SQL inną implementacją.
+Takie działanie pozwala nam na separację reprezentacji persystentnej (baza danych) i reprezentacji bieżącej (repozytoria). Wystarczy, iż zmienimy \textbf{RepositoryBase<T>} na jakąkolwiek inną klasę implementującą \textbf{IRepository<T>}. Dzięki temu możemy zastąpić serwer Microsoft SQL inną implementacją.
 
-
-\begin{figure}[h]
-	\centering
+\newpage
+\begin{center}
 	\includegraphics[width=\textwidth]{images/ReviewRepository.png}
-	 \caption{Repozytorium ReviewCardRepository wraz z implementowanymi interfejsami i odziedziczonymi klasami.}
-\end{figure}
+	 \captionof{figure}{Repozytorium ReviewCardRepository wraz z implementowanymi interfejsami i odziedziczonymi klasami.}
+\end{center}
 
 \section{Jednostka Pracy}
 %https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 
 Wzorzec Jednostki Pracy (z ang. Unit of Work)\cite{RepositoryUnitOfWorkPattern} ma na celu uporządkowanie pracy z repozytoriami za pomocą umieszczenia ich wszystkich w jednej klasie. Dodatkowo dzięki temu rozwiązaniu wszystkie repozytoria współdzielą kontekst dostępu do bazy Microsoft SQL. Zapisanie danych odbywa się poprzez wywołanie metody \textbf{SaveChanges} wewnątrz Jednostki Pracy (SaveChanges jest konwencją wewnątrz projektu).
 
-\begin{figure}[h]
-	\centering
+\begin{center}
 	\includegraphics{images/UnitOfWork.png}
-	 \caption{Jednostka pracy wykorzystywana w projekcie.}
-\end{figure}
-\newpage
+	 \captionof{figure}{Jednostka pracy wykorzystywana w projekcie.}
+\end{center}
 
 \section{Mapowanie obiektowo-relacyjne}
 
@@ -231,16 +227,17 @@ Stworzenie bindingów, które będą informować, na jakich zasadach odbywa się
 Pierwsza część bidowania odpowiada za przekazanie informacji o tym jakiego \textbf{Providera} należy użyć w celu zwrócenia instancji danego typu.
 Metody \textbf{ToSelf()} i \textbf{To<T>()} używają wbudowanego \textbf{StandardProvider}a. Pierwsza z metod zawsze będzie informowała o tym, iż należy zwrócić obiekt tego samego typu, gdzie druga konkretnie informuje jaki typ powinien zostać zwrócony w wyniku danego zapytania.
 
-Ninject oferuje także opcje stworzenia własnych providerów. Można to osiągnąć za pomocą stworzenia klasy dziedziczącej po \textbf{Provider<T>} lub wykorzystania delegatów wewnątrz metody \textbf{ToMethod(Func<IConext, T>)}.
+Ninject oferuje także opcje stworzenia własnych providerów. Można to osiągnąć za pomocą stworzenia klasy dziedziczącej po \textbf{Provider<T>} lub wykorzystania funkcji wewnątrz metody \textbf{ToMethod(Func<IConext, T>)}.
 
 %https://github.com/ninject/ninject/wiki/Object-Scopes
-Ninject w swoim domyślnym zachowaniu zawsze tworzy nowy obiekt danej klasy, gdy zostanie poproszony o instancje danego typu. Nie zawsze jest to jednak sytuacja pożądana. Każdy bind posiada możliwość zdefiniowana osobnego zasięgu w którym będzie on obowiązywał. Umożliwi to współkorzystanie z danego obiektu wewnątrz danego zakresu. W wypadku środowiska webowego bardzo często stosowanym zasięgiem jest \textbf{InRequestScope()}, które powoduje, iż obiekty danego typu stworzone przez Ninject są współdzielone w trakcie danego zapytania. 
+Ninject w swoim domyślnym zachowaniu zawsze tworzy nowy obiekt danej klasy, gdy zostanie poproszony o instancje danego typu. Nie zawsze jest to jednak sytuacja pożądana. Każdy bind posiada możliwość zdefiniowana osobnego zasięgu, w którym będzie on obowiązywał. Umożliwi to współkorzystanie z danego obiektu wewnątrz danego zakresu. W wypadku środowiska internetowego bardzo często stosowanym zasięgiem jest \textbf{InRequestScope()}, które powoduje, iż obiekty danego typu stworzone przez Ninject są współdzielone w trakcie danego zapytania. Na końcu zapytania wszystkie obiekty są usuwane i ewentualnie jest wywoływana metoda \textbf{Dispose}(jeśli dany obiekt implementuje interfejs \textbf{IDispose}), która zwalnia zasoby, które w normalnych warunkach nie zostałyby zwolnione. Takimi zasobami mogą być otwarte pliki, połączenia do bazy danych i tym podobne.
 
-Takie działanie niesie za sobą szereg korzyści. Nie tylko nie ponosimy kosztów tworzenia nowych obiektów, lecz także jesteśmy w stanie współdzielić dane informacje pomiędzy różnymi serwisami. (Np. repozytoria nie muszą wykonywać dodatkowych zapytań SQL, gdyż część wyników znajduje się ich w cache'u)
+Takie działanie niesie za sobą szereg korzyści. Nie tylko nie ponosimy kosztów tworzenia nowych obiektów, lecz także jesteśmy w stanie współdzielić dane informacje pomiędzy różnymi serwisami. (Np. repozytoria nie muszą wykonywać dodatkowych zapytań SQL, gdyż część wyników znajduje się ich w cache'u). Dodatkową zaletą jest to, iż użycie tego wzorca powoduje zwiększenie czytelności kodu.
 
 \newpage
 {\let\cleardoublepage\relax \chapter{Microsoft SQL Server}}
 
+\todo[inline]{Weź to popraw bo jest złe}
 Microsoft SQL Server\cite{SqlServer} jest aplikacją, umożliwiającą zarządzanie serwerami baz danych. Został stworzony przez firmę Microsoft. Jego pierwsza edycja ukazała się w roku 1989.
 
 Do tworzenia zapytań wykorzystano tutaj język Transact-SQL (T-SQL). Jest to rozszerzenie języka SQL (Structured Query Language), które między innymi wprowadza:
@@ -254,6 +251,10 @@ Do tworzenia zapytań wykorzystano tutaj język Transact-SQL (T-SQL). Jest to ro
 \end{enumerate} 
 
 W celu integracji serwera Microsoft SQL z projektem napisanym w języku C\# należy pobrać paczkę NuGet\footnote{NuGet jest menadżerem paczek w środowisku .NET.\cite{Nuget}} o nazwie \textbf{System.Data.SqlClient}.
+
+\section{Baza danych}
+
+
 
 
 
@@ -312,7 +313,7 @@ W celu określenia wyglądu danego elementu należy zdefiniować odpowiednią re
 
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
 caption={Przykład prostej reguły, dzięki której wszystkie paragrafy będą miały domyślnie kolor pomarańczowy.}]
-p //seletor p
+p //selektor p
 {
 //Właściwość color do której przypisano wartość orange
     color: orange;
@@ -321,7 +322,7 @@ p //seletor p
 
 \section{Syntaktycznie Doskonałe Arkusze Styli}
 
-W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już czystego języka CSS do tworzenia arkuszy styli. 
+W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już samego języka CSS do tworzenia arkuszy styli. 
 Wynika to z faktu występowania zbyt dużej redundancji kodu, która jest związana z tym, iż niektóre fragmenty strony są formatowane zawsze w ten sam sposób (np. motyw kolorystyczny dla większości elementów jest ten sam). 
 
 Jest to spowodowane brakiem zmiennych, szablonów, oraz innych konstrukcji, które pomogłoby w ograniczeniu powyższego problemu. 

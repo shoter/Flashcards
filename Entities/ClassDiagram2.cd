@@ -21,26 +21,15 @@
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Flashcards.Entities.FlashcardUnit">
-    <Position X="0.75" Y="1.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Properties" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>gA4DAAAACCAAAAIBABBAAAAAAAAACAAAAAAAAAAAIAA=</HashCode>
-      <FileName>FlashcardUnit.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Interface Name="Common.EntityFramework.IRepository&lt;TEntity&gt;">
-    <Position X="11" Y="1" Width="2" />
+    <Position X="8.75" Y="2" Width="2" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier />
   </Interface>
   <Interface Name="Common.EntityFramework.IRepository">
-    <Position X="11" Y="3" Width="2" />
+    <Position X="8.75" Y="4" Width="2" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="Flashcards.Entities.Repositories.IReviewCardRepository" Collapsed="true">

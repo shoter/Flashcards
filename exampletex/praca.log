@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  8 JAN 2018 20:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  8 JAN 2018 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1865,7 +1865,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 
 Package biblatex Warning: Conflicting options.
 (biblatex)                'urldate=edtf' requires 'seconds=true'.
-(biblatex)                Setting 'seconds=true' on input line 261.
+(biblatex)                Setting 'seconds=true' on input line 262.
 
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1889,21 +1889,21 @@ LaTeX Warning: Label `lst:bundles' multiply defined.
 ) (./summary.aux))
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 261.
-LaTeX Font Info:    ... okay on input line 261.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 261.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 262.
+LaTeX Font Info:    ... okay on input line 262.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 262.
  (c:/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -2061,7 +2061,7 @@ File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring OFF on input line 261.
+Package hyperref Info: Link coloring OFF on input line 262.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2071,9 +2071,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count469
 )
-LaTeX Info: Redefining \ref on input line 261.
-LaTeX Info: Redefining \pageref on input line 261.
-LaTeX Info: Redefining \nameref on input line 261.
+LaTeX Info: Redefining \ref on input line 262.
+LaTeX Info: Redefining \pageref on input line 262.
+LaTeX Info: Redefining \nameref on input line 262.
 
 (./praca.out) (./praca.out)
 \@outlinefile=\write6
@@ -2090,57 +2090,57 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'praca.bbl' found.
  (./praca.bbl)
-Package biblatex Info: Reference section=0 on input line 261.
-Package biblatex Info: Reference segment=0 on input line 261.
+Package biblatex Info: Reference section=0 on input line 262.
+Package biblatex Info: Reference segment=0 on input line 262.
 \c__siunitx_mathsf_int=\count470
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 261.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 262.
 
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 261.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 262.
 
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 261
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 262
 .
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 261
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 262
 .
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 261.
+(Font)              <10.95> on input line 262.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 261.
+(Font)              <8> on input line 262.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 261.
-LaTeX Font Info:    Try loading font information for U+msa on input line 261.
+(Font)              <6> on input line 262.
+LaTeX Font Info:    Try loading font information for U+msa on input line 262.
 
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 261.
+LaTeX Font Info:    Try loading font information for U+msb on input line 262.
 
 (c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 261
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 262
 .
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \c__siunitx_mathtt_int=\count471
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 261
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 262
 .
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -2155,24 +2155,24 @@ ted-to.pdf>
 (epstopdf)                    size: 9044 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/agh_nzw_a_pl_1w_wbr
 _cmyk-eps-converted-to.pdf images/agh_nzw_a_pl_1w_wbr_cmyk.eps>
-(epstopdf)             \includegraphics on input line 270.
+(epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
-<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=288, pagebox=cropbox,
+<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=292, pagebox=cropbox,
  323.2075pt x 107.40125pt>
 File: images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf Graphic file (type p
 df)
 <use images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf>
 Package pdftex.def Info: images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf  
-used on input line 270. on input line 270.
+used on input line 271. on input line 271.
 Package pdftex.def Info: Requested size: 321.09592pt x 106.69783pt on input lin
-e 270.
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 272.
+e 271.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 273.
 
 
 (c:/texlive/2017/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (85.35826pt too wide) in paragraph at lines 270--277
+Overfull \hbox (85.35826pt too wide) in paragraph at lines 271--278
 [][] 
  []
 
@@ -2180,7 +2180,7 @@ Overfull \hbox (85.35826pt too wide) in paragraph at lines 270--277
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/agh_nz
 w_a_pl_1w_wbr_cmyk-eps-converted-to.pdf>] [2] (./praca.toc [3]
-Overfull \hbox (1.6587pt too wide) detected at line 51
+Overfull \hbox (1.6587pt too wide) detected at line 52
 \T1/lmr/m/n/10.95 10.1.10. 
  []
 
@@ -2204,7 +2204,7 @@ Underfull \vbox (badness 1237) has occurred while \output is active []
 
  (./intro.tex
 Rozdzia\l  1.
-<images/Browser.jpg, id=412, 3025.3025pt x 1701.35625pt>
+<images/Browser.jpg, id=417, 3025.3025pt x 1701.35625pt>
 File: images/Browser.jpg Graphic file (type jpg)
 <use images/Browser.jpg>
 Package pdftex.def Info: images/Browser.jpg  used on input line 16. on input li
@@ -2223,13 +2223,13 @@ l.26 \newpage
 ifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.333 \include{intro}
+l.334 \include{intro}
                       [2]
 \openout2 = `theory.aux'.
 
  (./theory.tex
 Rozdzia\l  2.
-<images/curve.png, id=421, 1927.2pt x 943.525pt>
+<images/curve.png, id=426, 1927.2pt x 943.525pt>
 File: images/curve.png Graphic file (type png)
 <use images/curve.png>
 Package pdftex.def Info: images/curve.png  used on input line 9. on input line 
@@ -2240,8 +2240,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 \section{Efekt przewagi obraz√≥w}
-                                       [3
+l.24 I
+      stnieje wiele bada≈Ñ \cite{PicturesRocks}\cite{SuperPictures}, kt√≥re ...
+[3
 
 
  <./images/curve.png>]
@@ -2267,8 +2268,11 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.69 \section{Implementacje .NET}
-                                  [4]pdfTeX warning (ext4): destination with th
-e same identifier (name{page.5}) has been already used, duplicate ignored
+                                  [4]
+Underfull \vbox (badness 2600) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.88 ...Universal Windows Platform (\textit{UWP})}
@@ -2280,7 +2284,7 @@ ate ignored
 l.112 \newpage
                [6]
 Rozdzia\l  4.
-<images/mvc.png, id=476, 218.8175pt x 184.69pt>
+<images/mvc.png, id=482, 218.8175pt x 184.69pt>
 File: images/mvc.png Graphic file (type png)
 <use images/mvc.png>
 Package pdftex.def Info: images/mvc.png  used on input line 132. on input line 
@@ -2291,104 +2295,108 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \section{Razor}
-                      [7 <./images/mvc.png>]
+l.143 
+       [7 <./images/mvc.png>]
 Overfull \hbox (17.0pt too wide) in paragraph at lines 148--156
 []$[]$ 
  []
 
-<images/RepositoryPattern.png, id=488, 545.03625pt x 190.7125pt>
+<images/RepositoryPattern.png, id=493, 545.03625pt x 190.7125pt>
 File: images/RepositoryPattern.png Graphic file (type png)
 <use images/RepositoryPattern.png>
-Package pdftex.def Info: images/RepositoryPattern.png  used on input line 165. 
-on input line 165.
+Package pdftex.def Info: images/RepositoryPattern.png  used on input line 164. 
+on input line 164.
 Package pdftex.def Info: Requested size: 455.24411pt x 159.29237pt on input lin
-e 165.
+e 164.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 165.
+See the caption package documentation for explanation.
 
-<images/ReviewRepository.png, id=490, 905.63344pt x 381.67593pt>
+[8 <./images/RepositoryPattern.png>] [9]
+<images/ReviewRepository.png, id=511, 538.4115pt x 368.577pt>
 File: images/ReviewRepository.png Graphic file (type png)
 <use images/ReviewRepository.png>
-Package pdftex.def Info: images/ReviewRepository.png  used on input line 176. o
-n input line 176.
-Package pdftex.def Info: Requested size: 455.24411pt x 191.85667pt on input lin
-e 176.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+Package pdftex.def Info: images/ReviewRepository.png  used on input line 174. o
+n input line 174.
+Package pdftex.def Info: Requested size: 455.24411pt x 311.64407pt on input lin
+e 174.
 
 
-Underfull \vbox (badness 3088) has occurred while \output is active []
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 175.
+See the caption package documentation for explanation.
 
- [8]
-<images/UnitOfWork.png, id=502, 182.18062pt x 274.02374pt>
+<images/UnitOfWork.png, id=513, 182.18062pt x 274.02374pt>
 File: images/UnitOfWork.png Graphic file (type png)
 <use images/UnitOfWork.png>
-Package pdftex.def Info: images/UnitOfWork.png  used on input line 187. on inpu
-t line 187.
+Package pdftex.def Info: images/UnitOfWork.png  used on input line 184. on inpu
+t line 184.
 Package pdftex.def Info: Requested size: 182.18016pt x 274.02307pt on input lin
-e 187.
+e 184.
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 185.
+See the caption package documentation for explanation.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[9 <./images/RepositoryPattern.png> <./images/ReviewRepository.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--198
-
- []
-
-[10 <./images/UnitOfWork.png>]
-<images/ninject.png, id=520, 491.9178pt x 135.6267pt>
-File: images/ninject.png Graphic file (type png)
-<use images/ninject.png>
-Package pdftex.def Info: images/ninject.png  used on input line 227. on input l
-ine 227.
-Package pdftex.def Info: Requested size: 455.24411pt x 125.51688pt on input lin
-e 227.
- [11 <./images/ninject.png>] [12]
-Rozdzia\l  5.
-[13]
-Rozdzia\l  6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-[15]
+ [10 <./images/ReviewRepository.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--194
+
+ []
+
+[11 <./images/UnitOfWork.png>]
+<images/ninject.png, id=530, 491.9178pt x 135.6267pt>
+File: images/ninject.png Graphic file (type png)
+<use images/ninject.png>
+Package pdftex.def Info: images/ninject.png  used on input line 223. on input l
+ine 223.
+Package pdftex.def Info: Requested size: 455.24411pt x 125.51688pt on input lin
+e 223.
+ [12 <./images/ninject.png>] [13]
+Rozdzia\l  5.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 240.
+[14]
+Rozdzia\l  6.
+[15] [16]
 Rozdzia\l  7.
-[16] [17]
+[17] [18]
 Rozdzia\l  8.
-[18]
-<images/javagod.png, id=642, 238.64156pt x 202.50656pt>
+[19]
+<images/javagod.png, id=652, 238.64156pt x 202.50656pt>
 File: images/javagod.png Graphic file (type png)
 <use images/javagod.png>
-Package pdftex.def Info: images/javagod.png  used on input line 395. on input l
-ine 395.
+Package pdftex.def Info: images/javagod.png  used on input line 396. on input l
+ine 396.
 Package pdftex.def Info: Requested size: 238.64096pt x 202.50604pt on input lin
-e 395.
- [19 <./images/javagod.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 444--469
+e 396.
+ [20 <./images/javagod.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 445--470
 []$[]$ 
  []
 
-[20] [21]
-Overfull \hbox (17.81808pt too wide) in paragraph at lines 493--511
+[21] [22]
+Overfull \hbox (17.81808pt too wide) in paragraph at lines 494--512
  [] 
  []
 
-[22]
-<images/debug.png, id=722, 709.14937pt x 619.56468pt>
+[23]
+<images/debug.png, id=732, 709.14937pt x 619.56468pt>
 File: images/debug.png Graphic file (type png)
 <use images/debug.png>
-Package pdftex.def Info: images/debug.png  used on input line 533. on input lin
-e 533.
+Package pdftex.def Info: images/debug.png  used on input line 534. on input lin
+e 534.
 Package pdftex.def Info: Requested size: 455.24411pt x 397.73958pt on input lin
-e 533.
+e 534.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 533.
+(Font)              <10> on input line 534.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 533.
+(Font)              <7> on input line 534.
 
-Underfull \hbox (badness 1226) in paragraph at lines 541--542
+Underfull \hbox (badness 1226) in paragraph at lines 542--543
 []\T1/lmr/m/n/10.95 Naleªy do-da¢ plik ./pro-jec-t/plu-gins.sbt[][][], we-wn°tr
 z ktÛ-rego znaj-dzie si¶ in-struk-cja
  []
@@ -2396,33 +2404,33 @@ z ktÛ-rego znaj-dzie si¶ in-struk-cja
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23 <./images/debug.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 549--568
+ [24 <./images/debug.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 550--569
 []$[]$ 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 569--591
+Overfull \hbox (17.0pt too wide) in paragraph at lines 570--592
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
-[25]
+ [25]
+[26]
 Rozdzia\l  9.
 )
-Overfull \hbox (17.0pt too wide) in paragraph at lines 602--334
+Overfull \hbox (17.0pt too wide) in paragraph at lines 603--335
 []$[]$ 
  []
 
-[26]
+[27]
 \openout2 = `main.aux'.
 
  (./main.tex
 Rozdzia\l  10.
-<images/question.png, id=794, 750.55406pt x 459.96844pt>
+<images/question.png, id=804, 750.55406pt x 459.96844pt>
 File: images/question.png Graphic file (type png)
 <use images/question.png>
 Package pdftex.def Info: images/question.png  used on input line 16. on input l
@@ -2434,7 +2442,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 17.
 See the caption package documentation for explanation.
 
-[27
+[28
 
 
  <./images/question.png>]
@@ -2443,7 +2451,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 52.
 See the caption package documentation for explanation.
 
-<images/interval.png, id=800, 460.8417pt x 367.6134pt>
+<images/interval.png, id=810, 460.8417pt x 367.6134pt>
 File: images/interval.png Graphic file (type png)
 <use images/interval.png>
 Package pdftex.def Info: images/interval.png  used on input line 60. on input l
@@ -2458,8 +2466,8 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28]
-[29 <./images/interval.png>]
+ [29]
+[30 <./images/interval.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
@@ -2469,7 +2477,7 @@ Overfull \hbox (24.29999pt too wide) in paragraph at lines 81--82
 [][] 
  []
 
-<images/WinStrength.png, id=815, 1927.2pt x 993.7125pt>
+<images/WinStrength.png, id=827, 1927.2pt x 993.7125pt>
 File: images/WinStrength.png Graphic file (type png)
 <use images/WinStrength.png>
 Package pdftex.def Info: images/WinStrength.png  used on input line 92. on inpu
@@ -2491,7 +2499,7 @@ Overfull \hbox (24.29999pt too wide) in paragraph at lines 106--107
 [][] 
  []
 
-<images/LossStrength.png, id=816, 1927.2pt x 993.7125pt>
+<images/LossStrength.png, id=828, 1927.2pt x 993.7125pt>
 File: images/LossStrength.png Graphic file (type png)
 <use images/LossStrength.png>
 Package pdftex.def Info: images/LossStrength.png  used on input line 112. on in
@@ -2503,7 +2511,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 113.
 See the caption package documentation for explanation.
 
-[30 <./images/WinStrength.png>]
+[31 <./images/WinStrength.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
@@ -2518,7 +2526,7 @@ Overfull \hbox (24.29999pt too wide) in paragraph at lines 149--150
 [][] 
  []
 
-[31 <./images/LossStrength.png>]
+[32 <./images/LossStrength.png>]
 Overfull \hbox (24.29999pt too wide) in paragraph at lines 168--169
 [][] 
  []
@@ -2528,19 +2536,17 @@ Overfull \hbox (24.29999pt too wide) in paragraph at lines 194--195
 [][] 
  []
 
-[32]
+[33]
 Overfull \hbox (24.29999pt too wide) in paragraph at lines 240--241
 [][] 
  []
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 242.
 
 Overfull \hbox (24.29999pt too wide) in paragraph at lines 258--259
 [][] 
  []
 
-[33]
+[34]
 Overfull \hbox (24.29999pt too wide) in paragraph at lines 284--285
 [][] 
  []
@@ -2550,8 +2556,8 @@ Overfull \hbox (24.29999pt too wide) in paragraph at lines 312--313
 [][] 
  []
 
-[34]
-<images/Management.png, id=886, 753.5653pt x 526.96875pt>
+[35]
+<images/Management.png, id=896, 753.5653pt x 526.96875pt>
 File: images/Management.png Graphic file (type png)
 <use images/Management.png>
 Package pdftex.def Info: images/Management.png  used on input line 326. on inpu
@@ -2564,7 +2570,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 327.
 See the caption package documentation for explanation.
 
-<images/usecases.png, id=887, 1114.1625pt x 871.255pt>
+<images/usecases.png, id=897, 1114.1625pt x 871.255pt>
 File: images/usecases.png Graphic file (type png)
 <use images/usecases.png>
 Package pdftex.def Info: images/usecases.png  used on input line 334. on input 
@@ -2579,9 +2585,9 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35 <./images/Management.png>] [36 <./images/usecases.png>]
+ [36 <./images/Management.png>] [37 <./images/usecases.png>]
 Rozdzia\l  11.
-<images/Structure.png, id=900, 963.6pt x 327.47343pt>
+<images/Structure.png, id=910, 963.6pt x 327.47343pt>
 File: images/Structure.png Graphic file (type png)
 <use images/Structure.png>
 Package pdftex.def Info: images/Structure.png  used on input line 345. on input
@@ -2601,13 +2607,13 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 354--378
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37 <./images/Structure.png>] [38]
-<images/Repos.png, id=931, 773.289pt x 537.207pt>
+ [38 <./images/Structure.png>] [39]
+<images/Repos.png, id=942, 719.0865pt x 537.207pt>
 File: images/Repos.png Graphic file (type png)
 <use images/Repos.png>
 Package pdftex.def Info: images/Repos.png  used on input line 381. on input lin
 e 381.
-Package pdftex.def Info: Requested size: 455.24411pt x 316.26082pt on input lin
+Package pdftex.def Info: Requested size: 455.24411pt x 340.10622pt on input lin
 e 381.
 
 
@@ -2615,33 +2621,33 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 382.
 See the caption package documentation for explanation.
 
-[39
+[40
 
  <./images/Repos.png>]
 Overfull \hbox (17.0pt too wide) in paragraph at lines 391--414
 []$[]$ 
  []
 
-[40
+[41
 
 ]
-<images/Controllers.png, id=961, 1224.9765pt x 411.33675pt>
+<images/Controllers.png, id=971, 791.3565pt x 434.22224pt>
 File: images/Controllers.png Graphic file (type png)
 <use images/Controllers.png>
 Package pdftex.def Info: images/Controllers.png  used on input line 427. on inp
 ut line 427.
-Package pdftex.def Info: Requested size: 597.50787pt x 200.6404pt on input line
- 427.
+Package pdftex.def Info: Requested size: 597.50787pt x 327.87222pt on input lin
+e 427.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 428.
 See the caption package documentation for explanation.
 
-[41
+[42
 
  <./images/Controllers.png>]
-<images/ControllerLifecycle.png, id=968, 316.93407pt x 359.84438pt>
+<images/ControllerLifecycle.png, id=979, 316.93407pt x 359.84438pt>
 File: images/ControllerLifecycle.png Graphic file (type png)
 <use images/ControllerLifecycle.png>
 Package pdftex.def Info: images/ControllerLifecycle.png  used on input line 444
@@ -2654,10 +2660,10 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 445.
 See the caption package documentation for explanation.
 
-[42
+[43
 
- <./images/ControllerLifecycle.png>] [43]
-<images/Serwisy.png, id=982, 972.0315pt x 579.96675pt>
+ <./images/ControllerLifecycle.png>] [44]
+<images/Serwisy.png, id=992, 972.0315pt x 579.96675pt>
 File: images/Serwisy.png Graphic file (type png)
 <use images/Serwisy.png>
 Package pdftex.def Info: images/Serwisy.png  used on input line 466. on input l
@@ -2670,10 +2676,10 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 467.
 See the caption package documentation for explanation.
 
-[44
+[45
 
  <./images/Serwisy.png>]
-<images/Solution.png, id=990, 226.59656pt x 247.67531pt>
+<images/Solution.png, id=1000, 226.59656pt x 247.67531pt>
 File: images/Solution.png Graphic file (type png)
 <use images/Solution.png>
 Package pdftex.def Info: images/Solution.png  used on input line 492. on input 
@@ -2686,10 +2692,10 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 493.
 See the caption package documentation for explanation.
 
-[45
+[46
 
- <./images/Solution.png>] [46]
-<images/erd.png, id=1001, 880.03781pt x 659.46375pt>
+ <./images/Solution.png>] [47]
+<images/erd.png, id=1011, 880.03781pt x 659.46375pt>
 File: images/erd.png Graphic file (type png)
 <use images/erd.png>
 Package pdftex.def Info: images/erd.png  used on input line 514. on input line 
@@ -2702,68 +2708,81 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 515.
 See the caption package documentation for explanation.
 
-[47
+[48
 
  <./images/erd.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 525--533
+Overfull \hbox (17.0pt too wide) in paragraph at lines 524--532
 []$[]$ 
  []
 
-[48
+[49
 
 ]
-<images/identity.png, id=1019, 380.17032pt x 349.305pt>
+<images/identity.png, id=1029, 380.17032pt x 349.305pt>
 File: images/identity.png Graphic file (type png)
 <use images/identity.png>
-Package pdftex.def Info: images/identity.png  used on input line 546. on input 
-line 546.
+Package pdftex.def Info: images/identity.png  used on input line 545. on input 
+line 545.
 Package pdftex.def Info: Requested size: 380.16939pt x 349.30414pt on input lin
-e 546.
+e 545.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 547.
+(caption)                particular \caption on input line 546.
 See the caption package documentation for explanation.
 
 
 Underfull \vbox (badness 1163) has occurred while \output is active []
 
- [49 <./images/identity.png>] [50] [51]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 637--650
+ [50 <./images/identity.png>] [51]
+
+LaTeX Warning: Citation 'ScalaNoSupport' on page 52 undefined on input line 627
+.
+
+
+LaTeX Warning: Citation 'ScalaNoSupportGoogle' on page 52 undefined on input li
+ne 627.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+\T1/lmr/m/n/10.95 Do-dat-kowo wy-niki wy-szu-ki-wa-nia w go-ogle pod ha-s™em "V
+i-sual stu-dio
+ []
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 627--628
+\T1/lmr/m/n/10.95 scala.js"[[]] nie zwra-caj° ªad-nych za-py-ta´. Moªna wi¶c do
+-mnie-
+ []
+
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 636--649
+[]$[]$ 
+ []
+
+[52]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 658--676
 []$[]$ 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 659--677
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+ [53]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 697--716
 []$[]$ 
  []
 
-
-Underfull \vbox (badness 2245) has occurred while \output is active []
-
- [52]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 698--717
-[]$[]$ 
- []
-
-[53]
+[54]
 Underfull \vbox (badness 1024) has occurred while \output is active []
 
- [54]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 748--762
-[]$[]$ 
- []
-
-
-Overfull \hbox (17.0pt too wide) in paragraph at lines 769--794
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [55]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 804--819
+Overfull \hbox (17.0pt too wide) in paragraph at lines 747--761
+[]$[]$ 
+ []
+
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 768--793
 []$[]$ 
  []
 
@@ -2771,7 +2790,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 804--819
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [56]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 835--863
+Overfull \hbox (17.0pt too wide) in paragraph at lines 803--818
 []$[]$ 
  []
 
@@ -2779,53 +2798,69 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 835--863
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [58])
-Overfull \hbox (17.0pt too wide) in paragraph at lines 879--335
+Overfull \hbox (17.0pt too wide) in paragraph at lines 834--862
 []$[]$ 
  []
 
-[59]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59])
+Overfull \hbox (17.0pt too wide) in paragraph at lines 878--336
+[]$[]$ 
+ []
+
+[60]
 \openout2 = `summary.aux'.
 
  (./summary.tex
 Rozdzia\l  12.
-) [60
+) [61
 
 
-] [61] [62
+] [62
 
 
 ] [63]
-Underfull \hbox (badness 1158) in paragraph at lines 343--343
+Underfull \hbox (badness 1158) in paragraph at lines 344--344
 []\T1/lmr/m/it/10.95 Scala (pro-gram-ming lan-gu-age)\T1/lmr/m/n/10.95 . \T1/lm
 r/m/sc/10.95 url\T1/lmr/m/n/10.95 : []$\T1/lmr/m/it/10.95 https : / / en . wiki
 pedia . org / wiki / Scala _
  []
 
 [64]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
  (./praca.aux (./intro.aux) (./theory.aux) (./main.aux) (./summary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 56B675B1784DCC604FE4C4C76B13A52B;4603.
+(rerunfilecheck)             Checksum: 9C6BE4397A795C430E91AE8864CD5FFC;4661.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                praca
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
  ) 
 Here is how much of TeX's memory you used:
- 42256 strings out of 492990
- 794086 string characters out of 6136335
- 1212607 words of memory out of 5000000
- 44513 multiletter control sequences out of 15000+600000
+ 42251 strings out of 492990
+ 793846 string characters out of 6136335
+ 1212585 words of memory out of 5000000
+ 44509 multiletter control sequences out of 15000+600000
  671834 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,22n,97p,10385b,3184s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2852,10 +2887,10 @@ fb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2
 017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fon
 ts/type1/public/lm/lmsy9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/courie
 r/ucrr8a.pfb>
-Output written on praca.pdf (71 pages, 2268506 bytes).
+Output written on praca.pdf (71 pages, 2267044 bytes).
 PDF statistics:
- 1462 PDF objects out of 1728 (max. 8388607)
- 1314 compressed objects within 14 object streams
- 563 named destinations out of 1000 (max. 500000)
- 693 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1460 PDF objects out of 1728 (max. 8388607)
+ 1311 compressed objects within 14 object streams
+ 562 named destinations out of 1000 (max. 500000)
+ 701 words of extra memory for PDF output out of 10000 (max. 10000000)
 
