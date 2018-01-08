@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSuite", "..\TestSuite\TestSuite.csproj", "{903694E3-3AFA-4C2D-B5E1-13D0C1251687}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tweaker", "..\Tweaker\Tweaker.csproj", "{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,12 @@ Global
 		{903694E3-3AFA-4C2D-B5E1-13D0C1251687}.Release|Any CPU.Build.0 = Release|Any CPU
 		{903694E3-3AFA-4C2D-B5E1-13D0C1251687}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{903694E3-3AFA-4C2D-B5E1-13D0C1251687}.Test|Any CPU.Build.0 = Release|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{0BDA94AB-D98E-4722-9DD0-A5E915F5D77F}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

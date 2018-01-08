@@ -161,7 +161,7 @@ namespace Services.Implementation
             var card = revInfo.ReviewCards.TakeFirst(c => c.FlashcardID == flashcardID);
             //put it in other place in queue
             int cardCount = revInfo.ReviewCards.Count;
-            int place = cardCount / 2;
+            int place = GetPlacementForCardInQueue(cardCount, card.InternalLossCount);
             revInfo.ReviewCards.Insert(place, card);
         }
 

@@ -203,7 +203,10 @@
 \usepackage{booktabs}
 \usepackage{makecell}
 \usepackage[flushleft]{threeparttable}
-
+% paczka do obracania figur (tak jej uzylem). Powoduje to ze mozna dac figure sideways
+\usepackage{lscape}
+\usepackage{chngpage}
+\usepackage[export]{adjustbox}
 % defines the X column to use m (\parbox[c]) instead of p (`parbox[t]`)
 \newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}
 
@@ -215,23 +218,23 @@
 % Prawdopodobnie niektóre z poniższych nie są nigdy używane.
 % Jeśli o tym wiesz, to warto rozwinąć ten szablon i udostępnić go dalej ;)
 
-\author{TODO: Damian Łączak}
-\shortauthor{TODO: Damian Łączak}
+\author{Damian Łączak}
+\shortauthor{Damian Łączak}
 
-\titlePL{TODO: Aplikacja internetowa do nauki języka obcego}
-\titleEN{TODO: Internet application for foreign language learning}
+\titlePL{Aplikacja internetowa do nauki języka obcego}
+\titleEN{Internet application for foreign language learning}
 
 % Skrócone wersje tytułów po polsku/angielsku
 % wyświetlane np. gdy normalne są bardzo długie
-\shorttitlePL{TODO: Aplikacja internetowa do nauki języka}
-\shorttitleEN{TODO: Internet application for language learning}
+\shorttitlePL{Aplikacja internetowa do nauki języka}
+\shorttitleEN{Internet application for language learning}
 
 % Rodzaj pracy
-\thesistype{Praca dyplomowa magisterska}
+	\thesistype{Praca dyplomowa magisterska}
 %\thesistype{Master of Science Thesis}
 
 % Promotor/opiekun pracy
-\supervisor{TODO: dr hab. inż Tomasz Bołd}
+\supervisor{dr hab. inż Tomasz Bołd}
 
 % Kierunek studiów
 \degreeprogramme{Informatyka Stosowana}

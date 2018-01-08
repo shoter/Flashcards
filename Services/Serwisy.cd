@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Services.Implementation.FlashcardImageService" BaseTypeListCollapsed="true">
-    <Position X="6" Y="3.75" Width="2.5" />
+    <Position X="11.5" Y="5.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Implementation\FlashcardImageService.cs</FileName>
@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Services.Implementation.FlashcardTranslationService" BaseTypeListCollapsed="true">
-    <Position X="3.25" Y="0.5" Width="2.5" />
+    <Position X="16" Y="4.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAQAAAAAAAAAAADIAAAACAAAIAACAAAAAAA=</HashCode>
       <FileName>Implementation\FlashcardTranslationService.cs</FileName>
@@ -33,7 +33,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Services.Implementation.PopupService" BaseTypeListCollapsed="true">
-    <Position X="3.25" Y="3.75" Width="2.5" />
+    <Position X="8.75" Y="6" Width="2.5" />
     <TypeIdentifier>
       <HashCode>BCEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
       <FileName>Implementation\PopupService.cs</FileName>
@@ -65,7 +65,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Services.Implementation.TrainingReviewService" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Position X="19.75" Y="0.5" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAgAAgRAAAACAAAgAECIAAgQQEAAAAIAAI=</HashCode>
       <FileName>Implementation\TrainingReviewService.cs</FileName>
@@ -81,7 +81,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Services.Implementation.UserFLashcardMemoryService" BaseTypeListCollapsed="true">
-    <Position X="6" Y="0.5" Width="2.5" />
+    <Position X="19.75" Y="5.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAABAAAgAAAAAAAQAAAAgAAAAAAAAAAAAAQKAAI=</HashCode>
       <FileName>Implementation\UserFLashcardMemoryService.cs</FileName>

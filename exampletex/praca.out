@@ -22,7 +22,7 @@
 \BOOKMARK [1][-]{section.6.1}{Testy Jednostkowe}{chapter.6}% 22
 \BOOKMARK [1][-]{section.6.2}{Testy Integracyjne}{chapter.6}% 23
 \BOOKMARK [0][-]{chapter.7}{Kaskadowe Arkusze Styli}{}% 24
-\BOOKMARK [1][-]{section.7.1}{Syntaktycznie Zarabiste Arkusze Styli}{chapter.7}% 25
+\BOOKMARK [1][-]{section.7.1}{Syntaktycznie Doskonale Arkusze Styli}{chapter.7}% 25
 \BOOKMARK [0][-]{chapter.8}{Scala}{}% 26
 \BOOKMARK [1][-]{section.8.1}{Javascript}{chapter.8}% 27
 \BOOKMARK [1][-]{section.8.2}{Scala w wersji JS}{chapter.8}% 28
@@ -39,13 +39,32 @@
 \BOOKMARK [2][-]{subsection.10.1.5}{Wykrywanie poprawnosci odpowiedzi}{section.10.1}% 39
 \BOOKMARK [2][-]{subsection.10.1.6}{Mozliwe odpowiedzi}{section.10.1}% 40
 \BOOKMARK [2][-]{subsection.10.1.7}{Obrazki}{section.10.1}% 41
-\BOOKMARK [1][-]{section.10.2}{Narzedzia administratorskie}{chapter.10}% 42
-\BOOKMARK [1][-]{section.10.3}{Diagramy klas}{chapter.10}% 43
-\BOOKMARK [1][-]{section.10.4}{Diagram przypadk\363w uzycia}{chapter.10}% 44
-\BOOKMARK [0][-]{chapter.11}{Kwestie techniczne}{}% 45
-\BOOKMARK [1][-]{section.11.1}{Struktura programu}{chapter.11}% 46
-\BOOKMARK [1][-]{section.11.2}{Przechowywanie danych}{chapter.11}% 47
-\BOOKMARK [1][-]{section.11.3}{Wyswietlanie stron}{chapter.11}% 48
-\BOOKMARK [0][-]{chapter.12}{Podsumowanie}{}% 49
-\BOOKMARK [1][-]{section.12.1}{Wnioski}{chapter.12}% 50
-\BOOKMARK [1][-]{section.12.2}{Future}{chapter.12}% 51
+\BOOKMARK [2][-]{subsection.10.1.8}{Dostosowanie wzor\363w}{section.10.1}% 42
+\BOOKMARK [2][-]{subsection.10.1.9}{Wirtualny uczen}{section.10.1}% 43
+\BOOKMARK [2][-]{subsection.10.1.10}{Wyniki symulacji}{section.10.1}% 44
+\BOOKMARK [1][-]{section.10.2}{Narzedzia administratorskie}{chapter.10}% 45
+\BOOKMARK [1][-]{section.10.3}{Diagram przypadk\363w uzycia}{chapter.10}% 46
+\BOOKMARK [0][-]{chapter.11}{Kwestie techniczne}{}% 47
+\BOOKMARK [1][-]{section.11.1}{Struktura programu}{chapter.11}% 48
+\BOOKMARK [2][-]{subsection.11.1.1}{Repozytoria}{section.11.1}% 49
+\BOOKMARK [2][-]{subsection.11.1.2}{Kontrolery}{section.11.1}% 50
+\BOOKMARK [2][-]{subsection.11.1.3}{Serwisy}{section.11.1}% 51
+\BOOKMARK [1][-]{section.11.2}{Struktura rozwiazania}{chapter.11}% 52
+\BOOKMARK [2][-]{subsection.11.2.1}{Management}{section.11.2}% 53
+\BOOKMARK [1][-]{section.11.3}{Baza danych}{chapter.11}% 54
+\BOOKMARK [2][-]{subsection.11.3.1}{Informacje dodane przez ASP.NET MVC}{section.11.3}% 55
+\BOOKMARK [2][-]{subsection.11.3.2}{Obsluga treningu}{section.11.3}% 56
+\BOOKMARK [2][-]{subsection.11.3.3}{Obsluga powt\363rki}{section.11.3}% 57
+\BOOKMARK [2][-]{subsection.11.3.4}{Informacje o Fiszkach}{section.11.3}% 58
+\BOOKMARK [2][-]{subsection.11.3.5}{Upload plik\363w}{section.11.3}% 59
+\BOOKMARK [1][-]{section.11.4}{Integracja Scala.js z ASP.NET MVC}{chapter.11}% 60
+\BOOKMARK [2][-]{subsection.11.4.1}{Uruchamianie skryptu}{section.11.4}% 61
+\BOOKMARK [1][-]{section.11.5}{Implementacje niekt\363rych rozwiazan}{chapter.11}% 62
+\BOOKMARK [2][-]{subsection.11.5.1}{Sesja uzytkownika}{section.11.5}% 63
+\BOOKMARK [2][-]{subsection.11.5.2}{Kolejka pytan}{section.11.5}% 64
+\BOOKMARK [2][-]{subsection.11.5.3}{Podobienstwo wyraz\363w}{section.11.5}% 65
+\BOOKMARK [2][-]{subsection.11.5.4}{Atrapy obiekt\363w}{section.11.5}% 66
+\BOOKMARK [0][-]{chapter.12}{Podsumowanie}{}% 67
+\BOOKMARK [1][-]{section.12.1}{Wnioski}{chapter.12}% 68
+\BOOKMARK [2][-]{subsection.12.1.1}{Scala.js}{section.12.1}% 69
+\BOOKMARK [1][-]{section.12.2}{Mozliwe ulepszenia}{chapter.12}% 70

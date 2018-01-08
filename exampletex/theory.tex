@@ -45,6 +45,7 @@ Wewnątrz projektu starano się wykorzystać powyższy efekt wymagając na użyt
 \end{itemize}
 Wszystkie języki używane w platformie .NET kompilowane są do Wspólnego Języka Pośredniego (po ang. \textit{Common Intermediate Language}), który następnie jest tłumaczony na kod bajtowy i wykonywany za pomocą środowiska wykonywalnego danej implementacji .NET.
 
+\begin{minipage}{\linewidth}
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
 caption={Przykładowy kod aplikacji "Hello World" w języku CIL}]
 .assembly HelloWorld
@@ -60,6 +61,7 @@ caption={Przykładowy kod aplikacji "Hello World" w języku CIL}]
      }
 }
 \end{lstlisting}
+\end{minipage}
 
 %https://docs.microsoft.com/en-us/dotnet/standard/tour
 % CLI ECMA http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf
@@ -317,14 +319,14 @@ p //seletor p
 }
 \end{lstlisting}
 
-\section{Syntaktycznie Zarąbiste Arkusze Styli}
+\section{Syntaktycznie Doskonałe Arkusze Styli}
 
 W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już czystego języka CSS do tworzenia arkuszy styli. 
 Wynika to z faktu występowania zbyt dużej redundancji kodu, która jest związana z tym, iż niektóre fragmenty strony są formatowane zawsze w ten sam sposób (np. motyw kolorystyczny dla większości elementów jest ten sam). 
 
 Jest to spowodowane brakiem zmiennych, szablonów, oraz innych konstrukcji, które pomogłoby w ograniczeniu powyższego problemu. 
 
-Z tego też powodu powstały rozwiązania niedogodności występujących w języku CSS. Jednym z nich jest język SASS - Syntactically Awesome Style Sheets (z ang. Syntaktycznie Zarąbiste Arkusze Styli)\cite{Sass}. Jest on kompatybilny ze wszystkimi wersjami CSS, przez co każdy kod napisany w CSS jest z nim zgodny. Oferuje bardzo dużo funkcjonalności, między innymi:
+Z tego też powodu powstały rozwiązania niedogodności występujących w języku CSS. Jednym z nich jest język SASS - Syntactically Awesome Style Sheets (z ang. Syntaktycznie Doskonałe Arkusze Styli)\cite{Sass}. Jest on kompatybilny ze wszystkimi wersjami CSS, przez co każdy kod napisany w CSS jest z nim zgodny. Oferuje bardzo dużo funkcjonalności, między innymi:
 \begin{enumerate}
 	\item Zmienne, które pozwalają wielokrotnie używać danych wartości
 	\item Możliwość zagnieżdżania reguł w innych regułach.
@@ -336,7 +338,7 @@ Z tego też powodu powstały rozwiązania niedogodności występujących w języ
 
 
 \begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
-caption={Przykładowy kod SCSS wykorzystujący mixin.}]
+caption={Przykładowy kod SASS wykorzystujący mixin.}]
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -365,6 +367,7 @@ object HelloWorld {
 \section{Javascript}
 
 Javascript jest głównym językiem programowania wykorzystywanym na stronach internetowych. Może być on interpretowany bądź kompilowany metodą Just In Time, która kompiluje kod tuż przed jego wykonaniem. Jest to dynamiczny język wieloparadygmatowy bazujący na prototypach. Wspiera programowanie obiektowe, imperatywne i deklaratywne.\cite{AboutJS}
+
 Javascript posiada wiele problemów, które utrudniają pisanie programów, między innymi takich jak:
 \begin{enumerate}
 	\item Niejawne rzutowania, które objawiają się przy użyciu operatora ==. Są przyczyną wielu trudnych do odkrycia błędów
@@ -535,7 +538,7 @@ Za pomocą powyższych metod i narzędzi można stworzyć w bardzo prosty sposó
 
 
 \begin{enumerate}
-	\item Należy dodać plik ./project/plugins.sbt\footnote{./ jest katalogiem głównym projektu w tym przypadku.}, wewnątrz którego znajdzie się instrukcja \textbf{addSbtPlugin("org.scala-js" \% "sbt-scalajs" \% "0.6.20")}, która poinformuje sbt o konieczności użycia pluginu Scali.js.
+	\item Należy dodać plik ./project/plugins.sbt\footnote{./ jest katalogiem głównym projektu w tym przypadku.}, wewnątrz którego znajdzie się instrukcja \textbf{addSbtPlugin(''org.scala-js'' \% ''sbt-scalajs'' \% ''0.6.20'')}, która poinformuje sbt o konieczności użycia pluginu Scali.js.
 	\item W pliku ./project/build.properties musi zostać określona wersja narzędzia sbt, którym będzie kompilowany projekt.
 	\item Plik build.sbt, który zawiera ustawienia związane z budową projektu, musi zostać zmodyfikowany w celu użycia plugina Scali.js jak i pomocniczych bibliotek. Przykładowy plik, który jest używany w projekcie można zobaczyć na listingu \ref{lst:scalasbt}.
 \end{enumerate}
@@ -590,7 +593,9 @@ object TutorialApp {
 \newpage
 {\let\cleardoublepage\relax \chapter{HTML}}
 
-Głównym językiem służącym do opisu stron internetowych jest HTML (Hypertext Markup Language). Jest to język deklaratywny, którego konstrukcje 
+Głównym językiem służących do opisu budowy stron internetowych jest HTML (Hypertext Markup Language). Jest to język deklaratywny, którego początki sięgają lat osiemdziesiątych. Został zapoczątkowany przez fizyka Tima Bernersa-Lee, który pracował w CERNie. Jego aktualną wersją (W dniu 2017-01-05) jest 5.1.2 wydana 1 listopada 2016 roku. Wewnątrz dokumentu HTML można zamieszczać pliki multimedialne, skrypty pisane w języku JavaScript oraz dokumenty CSS.
+
+
 
 
 

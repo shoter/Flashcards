@@ -4,12 +4,22 @@
 
 \section{Wnioski}
 
-Celem pracy było napisanie projektu aplikacji internetowej i 
+Celem pracy było napisanie projektu aplikacji internetowej wykorzystującej fiszki w celu nauki danego języka obcego. Projekt został zrealizowany z użyciem najnowszych rozwiązań technologicznych w dziedzinie aplikacji internetowych. 
 
 
-\section{Future}
 
+\todo[inline]{Tutaj jeszcze coś dopisz}
+ 
+\subsection{Scala.js}
 
-\todo[inline]{Czy poprawnie jest mówić o czymś czego nie było? Nawet wspomnieć o tym. Na przykłąd o sile dla fiszki w sekcji treningu?}
+Integracja z językiem Scala.js w projekcie ASP.NET MVC została zakończona z powodzeniem. Jest to w pełni możliwe do wykonania pomimo braku jakiegoś narzędzia integrującego Visual Studio z tym językiem. 
 
-\todo[inline]{Czy tabelka 9.1.2 i wykres są poprawne? Nie wiem jak opisać tą tabelke nie pisząc jakiegoś długiego tekstu}
+Rozwiązanie to działało bardzo dobrze. Pisanie w tym języku było bardzo przyjemne od strony programistycznej, dzięki możliwości skupienia się na kodzie i nie zwracaniu uwagi na dziwne zachowania języka, które występowały w kodzie JavaScript.
+Niestety to rozwiązanie ma poważną wadę. Z racji tego jak działa proces kompilacji Scali.js niemożliwym jest aby utworzyć kilka plików z kodem JavaScript. W dzisiejszym świecie działaniem pożądanym jest zmniejszenie rozmiaru i ilości zapytań HTTP jak to tylko możliwe. Niemożność rozdzielenia kodu na kilka modułów i wczytanie tylko jednej wymaganej części powoduje zwiększenie ilości pobieranych danych.
+Co więcej, należy mieć na uwadze fakt, iż to rozwiązanie jest niepopularne wśród programistów. W związku z tym, wszelkie napotkane problemy będą prawdopodobnie rozwiązywane w pojedynkę bez pomocy zewnętrznych źródeł.
+
+\section{Możliwe ulepszenia}
+
+Interfejs aplikacji jest napisany w języku angielskim. Pomimo wykorzystania jedynie języka obcego w trakcie nauki, interfejs mógłby być tłumaczony na język ojczysty danego użytkownika. Ułatwiłoby to posługiwanie się aplikacją dla osób nieznających języka angielskiego.
+
+Aktualnie dla opisu danej fiszki są używany obrazki oraz tłumaczenia, które wykorzystywane są w trakcie pytania i odpowiedzi. Należałoby rozważyć dodanie nowych form, które pomogłyby w nauce. Przykładem nowej funkcjonalności mogłoby być dodanie lektora, który wypowiadałby dane tłumaczenia w procesie nauczania.

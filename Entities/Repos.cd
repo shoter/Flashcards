@@ -49,7 +49,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="Flashcards.Entities.Repositories.ReviewCardRepository" BaseTypeListCollapsed="true">
-    <Position X="11.25" Y="0.5" Width="2.75" />
+    <Position X="7.75" Y="5.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAA=</HashCode>
       <FileName>Repositories\ReviewCardRepository.cs</FileName>
@@ -77,14 +77,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAIAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>Repositories\UserFlashcardMemoryRepository.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="Flashcards.Entities.FlashcardUnit" BaseTypeListCollapsed="true">
-    <Position X="15" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gA4DAAAACCAAAAIBABBAAAAAAAAACAAAAAAAAAAAIAA=</HashCode>
-      <FileName>FlashcardUnit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
