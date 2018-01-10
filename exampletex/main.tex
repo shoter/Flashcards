@@ -32,8 +32,17 @@ W powtórce mogą wystąpić jedynie te fiszki, na które użytkownik odpowiedzi
 
 W przypadku poprawnej odpowiedzi na pytanie fiszka jest usuwana z kolejki i obliczany dla niej jest nowy interwał oraz siła z jaką jest zapamiętana. W przeciwnym wypadku fiszka jest przesuwana w pewne miejsce kolejki obliczane na podstawie poprzednich niepoprawnych odpowiedzi na tą fiszkę w danej powtórce. 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/wrongAnswer.png}
+	 \caption{Widok niepoprawnej odpowiedzi.}
+\end{figure}
+
 Na poniższej tabeli i obrazku można zobaczyć wewnątrz jakich zakresów znajdzie się wstawiana fiszka. Warto tutaj zaznaczyć iż 0 będzie oznaczała tutaj pierwsze miejsce w kolejce, zaś 1 będzie ostatnim miejscem w kolejce.
-Dla przykładu jeśli fiszka ma zostać wstawiona między pozycją $\frac{1}{3}$ a $\frac{1}{2}$ i kolejka liczy aktualnie 20 kart. To zostanie ona wstawiona na pozycje 6,7,8,9, lub 10.
+Dla przykładu jeśli fiszka ma zostać wstawiona między pozycją $\frac{1}{3}$ a $\frac{1}{2}$ w kolejkę, która liczy aktualnie 20 kart. To zostanie ona wstawiona na pozycje 6,7,8,9, lub 10. Miejsce zostanie wybrane za pomocą liczby pseudolosowej.
+
+
+
 
 %\subsubsection{Miejsce w kolejce}
 
@@ -75,7 +84,7 @@ W przypadku poprawnej odpowiedzi na daną fiszkę siła jest obliczana na podsta
  \begin{minipage}{\linewidth}
   \begin{align} \label{eq:winCorr}
    r(x) &= (1 - x^3) * corr \\ 
-   \textnormal{Nowa siła} &= \frac{3x + r(x)}{3 + r(x)} \label{eq:winStr}
+   \textnormal{Nowa siła} &= \frac{2.33x + r(x)}{2.33 + r(x)} \label{eq:winStr}
   \end{align}
  \end{minipage}
 }
@@ -100,7 +109,7 @@ W przypadku poprawnej odpowiedzi na pytanie, które miało już przynajmniej 1 n
  \addtolength{\linewidth}{-2\fboxrule}%
  \begin{minipage}{\linewidth}
   \begin{equation} \label{eq:lossStr}
-  \textnormal{Nowa siła} = \frac{x}{L + x} 
+  \textnormal{Nowa siła} = 0.25 * \frac{x}{0.25L + x} 
   \end{equation}
  \end{minipage}
 }
@@ -143,7 +152,7 @@ W przypadku poprawnej odpowiedzi na dane pytanie nowy interwał jest liczony wed
   6 & \quad n = 2 \\
   \left \lceil{I(n - 1) * (1 + x * \textnormal{factor})}\right \rceil  & \quad n \geq 3 \\
   \end{cases} \\ \label{eq:intervalFactor}
-  \textnormal{factor} &= 1 - \frac{I(n - 1)}{30}
+  \textnormal{factor} &= 1 - \frac{I(n - 1)}{26}
   \end{align}
  \end{minipage}
 }
@@ -162,7 +171,7 @@ W przypadku poprawnej odpowiedzi poprzedzonej serią niepoprawnych odpowiedzi in
  \addtolength{\linewidth}{-2\fboxrule}%
  \begin{minipage}{\linewidth}
   \begin{align} \label{eq:lossInterval}
-  I(n) &= \left \lfloor{I(n - 1) * \frac{1 - x}{2}}\right \rfloor 
+  I(n) &= \left \lfloor{I(n - 1) * \frac{1 - x}{0.77}}\right \rfloor 
   \end{align}
  \end{minipage}
 }
@@ -173,6 +182,12 @@ Gdzie x oznacza siłę liczoną według wzoru \ref{eq:lossStr}.
 \label{sec:similarity}
 W celu określenia poprawności odpowiedzi używa się metryki, która w przedziale 0-1 określa podobieństwo dwóch wyrazów. Używana jest w tym celu odległość Levenshteina określająca odległość między dwoma wyrazami na podstawie najmniejszej ilości operacji prostych jakie są potrzebne, aby przekształcić jeden wyraz w drugi. \cite{Leve}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/rightAnswer.png}
+	 \caption{Widok poprawnej odpowiedzi.}
+\end{figure}
+
 Operacja prosta może być:
 \begin{itemize}
 	\item Usunięciem danego znaku
@@ -180,7 +195,7 @@ Operacja prosta może być:
 	\item Zamianą danego znaku na inny
 \end{itemize}
 
-W celu uzyskania miary podobieństwa wyrazów używa się poniższego wzoru: 
+W celu uzyskania miary podobieństwa wyrazów używa się wzoru: 
 
 \fbox{
  \addtolength{\linewidth}{-2\fboxsep}%
@@ -223,7 +238,7 @@ Każda fiszka musi zostać zaopatrzona w odpowiedni zestaw obrazów, z których 
 
 \subsection{Dostosowanie wzorów}
 
-W poprzednich podrozdziałach pojawiły się wzory związane z interwałami oraz siłą. Wzory \ref{eq:winStr}, \ref{eq:lossStr}, \ref{eq:winInterval}, \ref{eq:intervalFactor} i \ref{eq:lossInterval} powstały na zasadzie zdefiniowania sparametryzowanych równań, których parametry były dobierane na zasadzie znalezienia najlepszego ich zestawu na podstawie symulacji. Do symulacji były dobierane skończone zestawy parametrów z przestrzeni rozwiązań.
+W poprzednich podrozdziałach pojawiły się wzory związane z interwałami oraz siłą. Wzory \ref{eq:winStr}, \ref{eq:lossStr}, \ref{eq:intervalFactor} i \ref{eq:lossInterval} powstały na zasadzie zdefiniowania sparametryzowanych równań, których parametry były dobierane na zasadzie znalezienia najlepszego ich zestawu na podstawie symulacji. Do symulacji były dobierane skończone zestawy wartości parametrów z przestrzeni rozwiązań.
 
 Na potrzeby symulacji powstały następujące równania:
 
@@ -233,15 +248,17 @@ Na potrzeby symulacji powstały następujące równania:
  \addtolength{\linewidth}{-2\fboxrule}%
  \begin{minipage}{\linewidth}
   \begin{align} 
-  L &= {\frac{|s_1| + |s_2|}{2}}^{1.1} \\
-  \textnormal{Podobieństwo} &= \frac{L - D}{L} \label{eq:distance}
+   \textnormal{Nowa siła} &= \frac{Ax + r(x)}{A + r(x)}  \label{eq:winStrSimulation} \\
+  \textnormal{Nowa siła} &= B * \frac{x}{C * L + x} \label{eq:lossStrSimulation} \\
+  \label{eq:lossIntervalSimulation}
+  I(n) &= \left \lfloor{I(n - 1) * \frac{1 - x}{D}}\right \rfloor \\
+   \label{eq:intervalFactorSimulation}
+  \textnormal{factor} &= 1 - \frac{I(n - 1)}{E} 
   \end{align}
  \end{minipage}
 }
 
-\todo[inline]{Dorobić tutaj właściwe wzory. Ale to dopiero w domu}
-
-Wzory [1],[2],[3],[4] są odpowiednio odpowiednikami wzorów  \ref{eq:winStr}, \ref{eq:lossStr}, \ref{eq:intervalFactor} i \ref{eq:lossInterval}. Dla każdej ze zmiennych został określony przedział zmienności w jakim mogą się one zmieniać. Został on określony następująco:
+Wzory \ref{eq:winStrSimulation}, \ref{eq:lossStrSimulation}, \ref{eq:lossIntervalSimulation} i \ref{eq:intervalFactorSimulation} są odpowiednio odpowiednikami wzorów  \ref{eq:winStr}, \ref{eq:lossStr}, \ref{eq:lossInterval} i \ref{eq:intervalFactor}. Dla każdej ze zmiennych został określony przedział zmienności w jakim mogą się one zmieniać. Został on określony następująco:
 
 \fbox{
  \addtolength{\linewidth}{-2\fboxsep}%
@@ -252,22 +269,28 @@ Wzory [1],[2],[3],[4] są odpowiednio odpowiednikami wzorów  \ref{eq:winStr}, \
    0.25 &\leq B \leq 12 \\
    0.25 &\leq C \leq 10 \\
    0.25 &\leq D \leq 5 \\
-   20 &\leq E \leq 50 \\
+   20 &\leq E \leq 50 
   \end{align}
  \end{minipage}
 }
 
-Zmienne A,B,C,D i E przyjmują zestaw wartości ze swoich przedziałów. Wartości, które przyjmują są od siebie równoodległe. T.j każda następna wartość była osiągana poprzez zinkrementowanie poprzedniej o stałą wartość dla danej zmiennej.
+Zmienne A,B,C i D przyjmują zestaw wartości ze swoich przedziałów. Wartości, które przyjmują są od siebie równoodległe. T.j każda następna wartość była osiągana poprzez zinkrementowanie poprzedniej o stałą wartość dla danej zmiennej.
 
 Zmienna E zawierała wszystkie liczby całkowite ze swojego przedziału.
 \vspace{5mm}
 
 
-Dla każdego zestawu zmiennych została przeprowadzona symulacja, która polegała na stworzeniu wirtualnego ucznia, który przez 360 dni poświęcał 60 minut na nauczenie się fiszek. Każda próba odpowiedzi na daną fiszkę powodowała utratę 1 minuty na naukę co w efekcie dawało uczniowi możliwość przeglądnięcia 60 fiszek danego dnia. Następnie uczeń wracał do nauki dokładnie po 24 godzinach. Z powyższego wynika fakt, iż między dwoma kolejnymi rozpoczęciami powtórek mijało 25 godzin.
+Dla każdego zestawu zmiennych została przeprowadzona symulacja, która polegała na stworzeniu wirtualnego ucznia, który przez 360 dni poświęcał 60 minut na naukę. Każda próba odpowiedzi na daną fiszkę powodowała utratę 1 minuty na naukę co w efekcie dawało uczniowi możliwość przeglądnięcia 60 fiszek danego dnia. Następnie uczeń wracał do nauki dokładnie po 24 godzinach. Z powyższego wynika fakt, iż między dwoma kolejnymi rozpoczęciami powtórek mijało 25 godzin.
 
 Co więcej, uczeń każdego dnia dostawał 5 nowych fiszek do swojego zestawu fiszek, których się uczył.
 
-Wynikiem symulacji jest ilość nauczonych fiszek, które miały przynajmniej 5 powtórzeń i są zapamiętane przez ucznia na poziomie przynajmniej 75\%. Celem jest znalezienie takiego zestawu wartości zmiennych, który zmaksymalizuje ten wynik.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/tweaker.png}
+	 \caption{Okno programu do znajdywania wartości parametrów. W nawiasie są zawarte wartości parametrów, zaś po myślniku ilość nauczonych fiszek. Program informuje nas o nowej kombinacji wartości parametrów, jeśli symulacja ma większy wynik niż jej poprzedniczki.}
+\end{figure}
+
+Wynikiem symulacji jest ilość nauczonych fiszek, które miały przynajmniej 5 powtórzeń i są zapamiętane przez ucznia na poziomie przynajmniej 75\% (\ref{eq:Rememer}). Celem jest znalezienie takiego zestawu wartości zmiennych, który zmaksymalizuje ten wynik.
 
 \subsection{Wirtualny uczeń}
 
@@ -277,7 +300,7 @@ Wirtualny uczeń potrafi zapamiętywać informację zgodnie z krzywą zapominani
  \addtolength{\linewidth}{-2\fboxsep}%
  \addtolength{\linewidth}{-2\fboxrule}%
  \begin{minipage}{\linewidth}
-  \begin{align} 
+  \begin{align} \label{eq:Rememer}
    R = \displaystyle e\strut^{\displaystyle \frac{-t}{s}}
   \end{align}
  \end{minipage}
@@ -291,7 +314,8 @@ Gdzie:
 \end{itemize}
 
 Uznajemy, iż uczeń po zobaczeniu fiszki w odstępie czasu wynoszącym $t = 0$ ma 100\% szansę na poprawną odpowiedź. 
-Zmienna czasowa zawiera tutaj ilość dni, które upłynęły od ostatniego powtórzenia. Więc $t = 1$ oznacza, iż od ostatniego powtórzenia upłynął 1 dzień.
+Zmienna czasowa zawiera tutaj ilość dni, które upłynęły od ostatniego powtórzenia. Więc $t = 1$ oznacza, iż od ostatniego powtórzenia upłynął 1 dzień. 
+
 
 \subsection{Wyniki symulacji}
 W wyniku przeprowadzonych symulacji udało się uzyskać poniższy zestaw zmiennych:
@@ -302,21 +326,22 @@ W wyniku przeprowadzonych symulacji udało się uzyskać poniższy zestaw zmienn
  \addtolength{\linewidth}{-2\fboxrule}%
  \begin{minipage}{\linewidth}
   \begin{align} 
-   A &= \\
-   B &= \\
-   C &= \\
-   D &= \\
-   E &= 
+   A &= 2.33 \\
+   B &= 0.25 \\
+   C &=  0.25\\
+   D &= 0.77\\
+   E &= 26
   \end{align}
  \end{minipage}
 }
 
+\newpage
 \section{Narzędzia administratorskie}
 
 Administrator posiada dodatkowe narzędzia, które pozwalają mu na :
 \begin{itemize}
 	\item Przeglądanie wszystkich fiszek.
-	\item Dodanie nowej fiszki do systemu.
+	\item Dodawanie nowych fiszek do systemu.
 	\item Edycja danej fiszki - dodanie lub edycja tłumaczeń, dodanie lub usunięcie powiązanych obrazków.
 \end{itemize}
 Prawa administratorskie nadaje się poprzez nadanie roli administratora w tabeli \textbf{AspNetUserRoles}. Aktualnie należy użyć zapytania SQL, aby takowe uprawnienia nadać. 
@@ -331,7 +356,7 @@ Prawa administratorskie nadaje się poprzez nadanie roli administratora w tabeli
 \section{Diagram przypadków użycia}
 
 \begin{center}
-	\includegraphics[width=\textwidth]{images/usecases.png}
+	\includegraphics[height=\textwidth]{images/usecases.png}
 	 \captionof{figure}{Diagram przypadków użycia.}
 \end{center}
 
@@ -378,7 +403,7 @@ Reszta metod wewnątrz których realizowany jest dostęp do danych
 
 \begin{landscape}
 \begin{center}
-	\includegraphics[width=\textwidth]{images/Repos.png}
+	\includegraphics[width=\textwidth + 3cm]{images/Repos.png}
 	 \captionof{figure}{Diagram klas wszystkich repozytoriów w projekcie.}
 \end{center}
 \end{landscape}
@@ -424,7 +449,7 @@ Dodatkowo, jeśli dana akcja ma zwrócić widok HTML to musi być dla niej zdefi
 Metody dla akcji potrafią przyjmować argumenty, do których wartości przypisywane są na podstawie parametrów przekazanych w zapytaniu od użytkownika. 
 \begin{landscape}
 \begin{center}
-	\includegraphics[width=\paperwidth]{images/Controllers.png}
+	\includegraphics[width=\paperwidth + 2.5cm]{images/Controllers.png}
 	 \captionof{figure}{Diagram klas wszystkich kontrolerów w projekcie}
 \end{center}
 \end{landscape}
@@ -450,7 +475,6 @@ Na początku aplikacja musi określić jaki kontroler należy powołać do życi
 Dla przykładu: Domyślnie adres URI localhost:25388/Home/Index zostanie zmapowany na HomeController, który wykonuje akcje Index.
 
 Następnie \textbf{DependencyResolver} stara się utworzyć instancje danego kontrolera. Gdyby nie było DependencyResolvera, bądź zwróciłby on null w wyniku swojego działania to zostaje stworzony kontroler na podstawie jego bezparametrowego publicznego konstruktora. Jeśli takowego by nie było to rzucany jest wyjątek. Po utworzeniu kontrolera aplikacja stara się zbadać prawa do danego zasobu na podstawie wewnętrznych reguł i atrybutów przypisanych do danej akcji i kontrolera. Jeśli zdarzy się sytuacja w której użytkownik nie ma praw do danego zasobu to zostaje przekierowany na odpowiednią stronę błędu 401 lub 403.
-\todo[inline]{Opisać bardziej atrbuty i reguły?}
 
 Kolejnym krokiem jest zbindowanie możliwie jak największej ilości parametrów przekazanych w zapytaniu do argumentów metody, która po tym zabiegu zostanie wywołana.
 
@@ -463,7 +487,7 @@ Serwisy zawierają w sobie implementacje całej logiki biznesowej. Zostały podz
 
 \begin{landscape}
 \begin{center}
-	\includegraphics[width=\paperwidth]{images/Serwisy.png}
+	\includegraphics[width=\paperwidth + 2.5cm]{images/Serwisy.png}
 	 \captionof{figure}{Diagram klas wszystkich serwisów w projekcie}
 \end{center}
 \end{landscape}
@@ -485,13 +509,15 @@ Rozwiązanie jest podstawową jednostką pracy wewnątrz programu Visual Studio.
 	\item Management - zawiera porzuconą okienkową aplikacje administratora.
 	\item Services - zawiera wszystkie serwisy wykorzystywane przez projekt.
 	\item Flashcards - zawiera właściwą aplikację internetową.
+	\item Tweaker - zawiera program do znajdowania najefektywniejszego zestawu parametrów dla procesu nauczania.
 	\item wirtualny folder git - zawiera w sobie pliki związane z repozytorium git\footnote{Repozytorium git służy do wersjonowania kodu.}.
 \end{itemize}
 
-\begin{center}
+\begin{figure}[h]
+	\centering
 	\includegraphics{images/Solution.png}
-	 \captionof{figure}{Diagram przedstawiający solucje projektu.}
-\end{center}
+	 \caption{Rysunek przedstawiający rozwiązanie projektu.}
+\end{figure}
 
 \subsection{Management}
 
@@ -504,22 +530,22 @@ Jest to jeden z projektów, który zasługuję na większą uwagę. Początkowym
 Projekt nie został skasowany ze względu na to, iż nadal posiada działający interfejs. Gdyby w przyszłości wynikła potrzeba użytkowania aplikacji okienkowej to jest już ona gotowa.
 
 
-
-
 \section{Baza danych}
 
 W projekcie zastosowano bazę danych Microsoft SQL Server. Jest to najlepiej wspierana bazy danych przez C\#. Dodatkową zaletą jest jej łatwość integracji z Entity Framework.
+
 \begin{landscape}
-\begin{center}
-  \includegraphics[width=\textwidth]{images/erd.png}
-  \captionof{figure}{Diagram ERD bazy danych.}
-\end{center}
+\begin{figure}
+	\centering
+  \includegraphics[height=\textheight]{images/erd.png}
+  \caption{Diagram ERD bazy danych.}
+\end{figure}
 \end{landscape}
 
 
 \subsection{Informacje dodane przez ASP.NET MVC}
 
-ASP.NET dostarcza bibliotekę Identity, za której pomocą można łatwo wdrożyć operacje logowania, rejestracji oraz obsługi sesji dla użytkowników. Domyślnie Identity używa lokalnej bazy sqlite\footnote{Baza danych, która operuje na danym pliku binarnym w celu używania bazy danych bez konieczności posiadania dodatkowego serwera.} w celu zapisu informacji o użytkownikach. Aby używać bazy danych SQL należy zmienić connection string, który wykorzystuje biblioteka. Po takiej zmianie zostaną utworzone automatycznie tabele odpowiedzialne za przechowywane informacji o użytkownikach.
+ASP.NET dostarcza bibliotekę Identity, za której pomocą można łatwo wdrożyć operacje logowania, rejestracji oraz obsługi sesji dla użytkowników. Domyślnie Identity używa lokalnej bazy sqlite\footnote{Baza danych, która operuje na danym pliku binarnym w celu używania bazy danych bez konieczności posiadania dodatkowego serwera.} w celu zapisu informacji o użytkownikach. Aby używać bazy danych SQL należy zmienić connection string, który przechowuje informację o tym jaka baza danych powinna zostać użyta. Po takiej zmianie zostaną utworzone automatycznie tabele odpowiedzialne za przechowywane informacji o użytkownikach na nowej bazie danych.
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[
@@ -537,7 +563,7 @@ Identity dodaje następujące tabele do projektu:
 	\item AspNetUserClaims
 	\item AspNetUserLogins
 	\item AspNetUserRoles
-	\item AspNetUsers\footnote{Tylko ta tabela znalazła się na diagramie ERD}
+	\item AspNetUsers
 \end{itemize}
 
 \newpage
@@ -549,7 +575,7 @@ Identity dodaje następujące tabele do projektu:
 
 \textunderscore\textunderscore MigrationHistory zawiera informacje stworzone w wyniku migracji z danego rozwiązania bazodanego do innego. W przypadku tego projektu są tutaj zawarte informacje o zmianie domyślnej bazy sqlite na Microsoft SQL Server.
 
-AspNetRoles przechowuje dane o tym jakie role mogą zostać przypisane do użytkowników
+AspNetRoles przechowuje dane o tym, jakie role mogą zostać przypisane do użytkowników.
 
 AspNetUserClaims zawiera żądania dostępu do konta danego użytkownika. Nie jest ona wykorzystywana w tym projekcie.
 
@@ -562,8 +588,6 @@ AspNetUsers przechowuje informacje o użytkowniku.
 \vspace{5mm}
 
 Wartym uwagi jest fakt, iż biblioteka Identity przechowuje identyfikatory w postaci ciągu 128 znakowego.
-
-\todo[inline]{Jak to jest tworzone}
  
 \subsection{Obsługa treningu}
 

@@ -27,45 +27,45 @@ Warning--I didn't find a database entry for "ScalaNoSupportGoogle"
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 25 entries,
+You've used 27 entries,
             6256 wiz_defined-function locations,
-            1299 strings with 11967 characters,
-and the built_in function-call counts, 87254 in all, are:
-= -- 3132
-> -- 6175
-< -- 643
-+ -- 5515
-- -- 5083
-* -- 3390
-:= -- 8866
+            1312 strings with 12271 characters,
+and the built_in function-call counts, 95233 in all, are:
+= -- 3345
+> -- 6823
+< -- 679
++ -- 6073
+- -- 5593
+* -- 3772
+:= -- 9851
 add.period$ -- 0
-call.type$ -- 25
-change.case$ -- 146
-chr.to.int$ -- 546
-cite$ -- 48
-duplicate$ -- 7886
-empty$ -- 8566
-format.name$ -- 266
-if$ -- 15095
+call.type$ -- 27
+change.case$ -- 133
+chr.to.int$ -- 594
+cite$ -- 52
+duplicate$ -- 8737
+empty$ -- 9251
+format.name$ -- 354
+if$ -- 16336
 int.to.chr$ -- 0
-int.to.str$ -- 32
+int.to.str$ -- 36
 missing$ -- 0
-newline$ -- 367
-num.names$ -- 304
-pop$ -- 7768
+newline$ -- 413
+num.names$ -- 354
+pop$ -- 8421
 preamble$ -- 1
-purify$ -- 164
+purify$ -- 157
 quote$ -- 0
-skip$ -- 2743
+skip$ -- 2983
 stack$ -- 0
-substring$ -- 5725
-swap$ -- 2420
-text.length$ -- 483
+substring$ -- 5977
+swap$ -- 2651
+text.length$ -- 537
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 838
+type$ -- 906
 warning$ -- 0
-while$ -- 683
+while$ -- 789
 width$ -- 0
-write$ -- 343
+write$ -- 387
 (There were 2 warnings)

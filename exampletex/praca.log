@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  8 JAN 2018 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.3)  9 JAN 2018 23:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1095,299 +1095,6 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(c:/texlive/2017/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-(c:/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(c:/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-(c:/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(c:/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks35
-\XKV@tempa@toks=\toks36
-)
-\XKV@depth=\count294
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(c:/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks37
-\pgfutil@tempdima=\dimen198
-\pgfutil@tempdimb=\dimen199
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
-) (c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box55
-
-(c:/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
-Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
-))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
-))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks38
-\pgfkeys@temptoks=\toks39
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks40
-))
-\pgf@x=\dimen256
-\pgf@y=\dimen257
-\pgf@xa=\dimen258
-\pgf@ya=\dimen259
-\pgf@xb=\dimen260
-\pgf@yb=\dimen261
-\pgf@xc=\dimen262
-\pgf@yc=\dimen263
-\w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count295
-\c@pgf@countb=\count296
-\c@pgf@countc=\count297
-\c@pgf@countd=\count298
-\t@pgf@toka=\toks41
-\t@pgf@tokb=\toks42
-\t@pgf@tokc=\toks43
- (c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
-)
-Driver file for pgf: pgfsys-pdftex.def
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count299
-\pgfsyssoftpath@bigbuffer@items=\count300
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen264
-\pgfmath@count=\count301
-\pgfmath@box=\box56
-\pgfmath@toks=\toks44
-\pgfmath@stack@operand=\toks45
-\pgfmath@stack@operation=\toks46
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
-x)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
-.code.tex)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
-ex)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
-de.tex)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
-x)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
-etics.code.tex)))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count302
-))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen265
-\pgf@picmaxx=\dimen266
-\pgf@picminy=\dimen267
-\pgf@picmaxy=\dimen268
-\pgf@pathminx=\dimen269
-\pgf@pathmaxx=\dimen270
-\pgf@pathminy=\dimen271
-\pgf@pathmaxy=\dimen272
-\pgf@xx=\dimen273
-\pgf@xy=\dimen274
-\pgf@yx=\dimen275
-\pgf@yy=\dimen276
-\pgf@zx=\dimen277
-\pgf@zy=\dimen278
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
-e.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen279
-\pgf@path@lasty=\dimen280
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
-x
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen281
-\pgf@shorten@start@additional=\dimen282
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count303
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
-.tex
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen283
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
-ode.tex
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen284
-\pgf@pt@y=\dimen285
-\pgf@pt@temp=\dimen286
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
-de.tex
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen287
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen288
-\pgf@sys@shading@range@num=\count304
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box60
-))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
-.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
-)))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box61
-)
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
-)
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
-y
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen289
-\pgf@nodesepend=\dimen290
-)
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
-y
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
-)) (c:/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(c:/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen291
-\pgffor@skip=\dimen292
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
-))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
-de.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count305
-\pgfplotmarksize=\dimen293
-)
-\tikz@lastx=\dimen294
-\tikz@lasty=\dimen295
-\tikz@lastxsaved=\dimen296
-\tikz@lastysaved=\dimen297
-\tikzleveldistance=\dimen298
-\tikzsiblingdistance=\dimen299
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count306
-\tikznumberofchildren=\count307
-\tikznumberofcurrentchild=\count308
-\tikz@fig@count=\count309
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count310
-\pgfmatrixcurrentcolumn=\count311
-\pgf@matrix@numberofcolumns=\count312
-)
-\tikz@expandcount=\count313
-
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-(c:/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
-brarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-)
-\c@@todonotes@numberoftodonotes=\count314
-)
 (c:/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1441,16 +1148,16 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen300
-\Hy@linkcounter=\count315
-\Hy@pagecounter=\count316
+\@linkdim=\dimen198
+\Hy@linkcounter=\count294
+\Hy@pagecounter=\count295
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count317
+\Hy@SavedSpaceFactor=\count296
 
 (c:/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1462,12 +1169,12 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count318
+\c@Hy@tempcnt=\count297
 LaTeX Info: Redefining \url on input line 5104.
-\XeTeXLinkMargin=\dimen301
-\Fld@menulength=\count319
-\Field@Width=\dimen302
-\Fld@charsize=\dimen303
+\XeTeXLinkMargin=\dimen199
+\Fld@menulength=\count298
+\Field@Width=\dimen256
+\Fld@charsize=\dimen257
 Package hyperref Info: Hyper figures OFF on input line 6358.
 Package hyperref Info: Link nesting OFF on input line 6363.
 Package hyperref Info: Hyper index ON on input line 6366.
@@ -1477,17 +1184,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count320
-\c@Item=\count321
-\c@Hfootnote=\count322
+\Hy@abspage=\count299
+\c@Item=\count300
+\c@Hfootnote=\count301
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count323
-\c@bookmark@seq@number=\count324
+\Fld@listcount=\count302
+\c@bookmark@seq@number=\count303
 
 (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -1501,61 +1208,64 @@ Package: biblatex 2016/12/05 v3.7 programmable bibliographies (PK/JW/AB)
 
 (c:/texlive/2017/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count325
+\etb@tempcnta=\count304
 )
 (c:/texlive/2017/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count326
+\lrq@indent=\count305
 
 (c:/texlive/2017/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
+(c:/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
 (c:/texlive/2017/texmf-dist/tex/generic/xstring/xstring.sty
 (c:/texlive/2017/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write4
-\integerpart=\count327
-\decimalpart=\count328
+\@xs@message=\write3
+\integerpart=\count306
+\decimalpart=\count307
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count329
-\c@listtotal=\count330
-\c@listcount=\count331
-\c@liststart=\count332
-\c@liststop=\count333
-\c@citecount=\count334
-\c@citetotal=\count335
-\c@multicitecount=\count336
-\c@multicitetotal=\count337
-\c@instcount=\count338
-\c@maxnames=\count339
-\c@minnames=\count340
-\c@maxitems=\count341
-\c@minitems=\count342
-\c@citecounter=\count343
-\c@savedcitecounter=\count344
-\c@uniquelist=\count345
-\c@uniquename=\count346
-\c@refsection=\count347
-\c@refsegment=\count348
-\c@maxextratitle=\count349
-\c@maxextratitleyear=\count350
-\c@maxextrayear=\count351
-\c@maxextraalpha=\count352
-\c@abbrvpenalty=\count353
-\c@highnamepenalty=\count354
-\c@lownamepenalty=\count355
-\c@maxparens=\count356
-\c@parenlevel=\count357
-\blx@tempcnta=\count358
-\blx@tempcntb=\count359
-\blx@tempcntc=\count360
-\blx@maxsection=\count361
-\blx@maxsegment@0=\count362
-\blx@notetype=\count363
-\blx@parenlevel@text=\count364
-\blx@parenlevel@foot=\count365
-\blx@sectionciteorder@0=\count366
+\c@tabx@nest=\count308
+\c@listtotal=\count309
+\c@listcount=\count310
+\c@liststart=\count311
+\c@liststop=\count312
+\c@citecount=\count313
+\c@citetotal=\count314
+\c@multicitecount=\count315
+\c@multicitetotal=\count316
+\c@instcount=\count317
+\c@maxnames=\count318
+\c@minnames=\count319
+\c@maxitems=\count320
+\c@minitems=\count321
+\c@citecounter=\count322
+\c@savedcitecounter=\count323
+\c@uniquelist=\count324
+\c@uniquename=\count325
+\c@refsection=\count326
+\c@refsegment=\count327
+\c@maxextratitle=\count328
+\c@maxextratitleyear=\count329
+\c@maxextrayear=\count330
+\c@maxextraalpha=\count331
+\c@abbrvpenalty=\count332
+\c@highnamepenalty=\count333
+\c@lownamepenalty=\count334
+\c@maxparens=\count335
+\c@parenlevel=\count336
+\blx@tempcnta=\count337
+\blx@tempcntb=\count338
+\blx@tempcntc=\count339
+\blx@maxsection=\count340
+\blx@maxsegment@0=\count341
+\blx@notetype=\count342
+\blx@parenlevel@text=\count343
+\blx@parenlevel@foot=\count344
+\blx@sectionciteorder@0=\count345
 \labelnumberwidth=\skip115
 \labelalphawidth=\skip116
 \biblabelsep=\skip117
@@ -1564,11 +1274,11 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \bibinitsep=\skip120
 \bibparsep=\skip121
 \bibhang=\skip122
-\blx@bcfin=\read3
-\blx@bcfout=\write5
-\c@mincomprange=\count367
-\c@maxcomprange=\count368
-\c@mincompwidth=\count369
+\blx@bcfin=\read2
+\blx@bcfout=\write4
+\c@mincomprange=\count346
+\c@maxcomprange=\count347
+\c@mincompwidth=\count348
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1577,72 +1287,72 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count370
-\c@savedafterword=\count371
-\c@annotator=\count372
-\c@savedannotator=\count373
-\c@author=\count374
-\c@savedauthor=\count375
-\c@bookauthor=\count376
-\c@savedbookauthor=\count377
-\c@commentator=\count378
-\c@savedcommentator=\count379
-\c@editor=\count380
-\c@savededitor=\count381
-\c@editora=\count382
-\c@savededitora=\count383
-\c@editorb=\count384
-\c@savededitorb=\count385
-\c@editorc=\count386
-\c@savededitorc=\count387
-\c@foreword=\count388
-\c@savedforeword=\count389
-\c@holder=\count390
-\c@savedholder=\count391
-\c@introduction=\count392
-\c@savedintroduction=\count393
-\c@namea=\count394
-\c@savednamea=\count395
-\c@nameb=\count396
-\c@savednameb=\count397
-\c@namec=\count398
-\c@savednamec=\count399
-\c@translator=\count400
-\c@savedtranslator=\count401
-\c@shortauthor=\count402
-\c@savedshortauthor=\count403
-\c@shorteditor=\count404
-\c@savedshorteditor=\count405
-\c@labelname=\count406
-\c@savedlabelname=\count407
-\c@institution=\count408
-\c@savedinstitution=\count409
-\c@lista=\count410
-\c@savedlista=\count411
-\c@listb=\count412
-\c@savedlistb=\count413
-\c@listc=\count414
-\c@savedlistc=\count415
-\c@listd=\count416
-\c@savedlistd=\count417
-\c@liste=\count418
-\c@savedliste=\count419
-\c@listf=\count420
-\c@savedlistf=\count421
-\c@location=\count422
-\c@savedlocation=\count423
-\c@organization=\count424
-\c@savedorganization=\count425
-\c@origlocation=\count426
-\c@savedoriglocation=\count427
-\c@origpublisher=\count428
-\c@savedorigpublisher=\count429
-\c@publisher=\count430
-\c@savedpublisher=\count431
-\c@language=\count432
-\c@savedlanguage=\count433
-\c@pageref=\count434
-\c@savedpageref=\count435
+\c@afterword=\count349
+\c@savedafterword=\count350
+\c@annotator=\count351
+\c@savedannotator=\count352
+\c@author=\count353
+\c@savedauthor=\count354
+\c@bookauthor=\count355
+\c@savedbookauthor=\count356
+\c@commentator=\count357
+\c@savedcommentator=\count358
+\c@editor=\count359
+\c@savededitor=\count360
+\c@editora=\count361
+\c@savededitora=\count362
+\c@editorb=\count363
+\c@savededitorb=\count364
+\c@editorc=\count365
+\c@savededitorc=\count366
+\c@foreword=\count367
+\c@savedforeword=\count368
+\c@holder=\count369
+\c@savedholder=\count370
+\c@introduction=\count371
+\c@savedintroduction=\count372
+\c@namea=\count373
+\c@savednamea=\count374
+\c@nameb=\count375
+\c@savednameb=\count376
+\c@namec=\count377
+\c@savednamec=\count378
+\c@translator=\count379
+\c@savedtranslator=\count380
+\c@shortauthor=\count381
+\c@savedshortauthor=\count382
+\c@shorteditor=\count383
+\c@savedshorteditor=\count384
+\c@labelname=\count385
+\c@savedlabelname=\count386
+\c@institution=\count387
+\c@savedinstitution=\count388
+\c@lista=\count389
+\c@savedlista=\count390
+\c@listb=\count391
+\c@savedlistb=\count392
+\c@listc=\count393
+\c@savedlistc=\count394
+\c@listd=\count395
+\c@savedlistd=\count396
+\c@liste=\count397
+\c@savedliste=\count398
+\c@listf=\count399
+\c@savedlistf=\count400
+\c@location=\count401
+\c@savedlocation=\count402
+\c@organization=\count403
+\c@savedorganization=\count404
+\c@origlocation=\count405
+\c@savedoriglocation=\count406
+\c@origpublisher=\count407
+\c@savedorigpublisher=\count408
+\c@publisher=\count409
+\c@savedpublisher=\count410
+\c@language=\count411
+\c@savedlanguage=\count412
+\c@pageref=\count413
+\c@savedpageref=\count414
 \shorthandwidth=\skip123
 \shortjournalwidth=\skip124
 \shortserieswidth=\skip125
@@ -1670,13 +1380,13 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (c:/texlive/2017/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
-\c@textcitecount=\count436
-\c@textcitetotal=\count437
-\c@textcitemaxnames=\count438
-\c@biburlnumpenalty=\count439
-\c@biburlucpenalty=\count440
-\c@biburllcpenalty=\count441
-\c@smartand=\count442
+\c@textcitecount=\count415
+\c@textcitetotal=\count416
+\c@textcitemaxnames=\count417
+\c@biburlnumpenalty=\count418
+\c@biburlucpenalty=\count419
+\c@biburllcpenalty=\count420
+\c@smartand=\count421
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1688,8 +1398,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (c:/texlive/2017/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
-\c@bbx:relatedcount=\count443
-\c@bbx:relatedtotal=\count444
+\c@bbx:relatedcount=\count422
+\c@bbx:relatedtotal=\count423
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1720,13 +1430,13 @@ dtf' instead.
 
 ) (c:/texlive/2017/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2017/03/11 v5.2b context-sensitive quotations (JAW)
-\csq@reset=\count445
-\csq@gtype=\count446
-\csq@glevel=\count447
-\csq@qlevel=\count448
-\csq@maxlvl=\count449
-\csq@tshold=\count450
-\csq@ltx@everypar=\toks49
+\csq@reset=\count424
+\csq@gtype=\count425
+\csq@glevel=\count426
+\csq@qlevel=\count427
+\csq@maxlvl=\count428
+\csq@tshold=\count429
+\csq@ltx@everypar=\toks35
 
 (c:/texlive/2017/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2017/03/11 v5.2b csquotes generic definitions (JAW)
@@ -1751,68 +1461,79 @@ File: lstlang3.sty 2015/06/04 1.6 listings language file
 )
 (c:/texlive/2017/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
-\AP@output=\toks50
-\AP@partial=\box66
-\AP@footins=\box67
+\AP@output=\toks36
+\AP@partial=\box55
+\AP@footins=\box56
 )
 (c:/texlive/2017/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
-\TX@col@width=\dimen304
-\TX@old@table=\dimen305
-\TX@old@col=\dimen306
-\TX@target=\dimen307
-\TX@delta=\dimen308
-\TX@cols=\count451
-\TX@ftn=\toks51
+\TX@col@width=\dimen258
+\TX@old@table=\dimen259
+\TX@old@col=\dimen260
+\TX@target=\dimen261
+\TX@delta=\dimen262
+\TX@cols=\count430
+\TX@ftn=\toks37
 )
 (c:/texlive/2017/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip129
-\multirow@cntb=\count452
+\multirow@cntb=\count431
 \multirow@dima=\skip130
-\bigstrutjot=\dimen309
+\bigstrutjot=\dimen263
 )
 (c:/texlive/2017/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
-\heavyrulewidth=\dimen310
-\lightrulewidth=\dimen311
-\cmidrulewidth=\dimen312
-\belowrulesep=\dimen313
-\belowbottomsep=\dimen314
-\aboverulesep=\dimen315
-\abovetopsep=\dimen316
-\cmidrulesep=\dimen317
-\cmidrulekern=\dimen318
-\defaultaddspace=\dimen319
-\@cmidla=\count453
-\@cmidlb=\count454
-\@aboverulesep=\dimen320
-\@belowrulesep=\dimen321
-\@thisruleclass=\count455
-\@lastruleclass=\count456
-\@thisrulewidth=\dimen322
+\heavyrulewidth=\dimen264
+\lightrulewidth=\dimen265
+\cmidrulewidth=\dimen266
+\belowrulesep=\dimen267
+\belowbottomsep=\dimen268
+\aboverulesep=\dimen269
+\abovetopsep=\dimen270
+\cmidrulesep=\dimen271
+\cmidrulekern=\dimen272
+\defaultaddspace=\dimen273
+\@cmidla=\count432
+\@cmidlb=\count433
+\@aboverulesep=\dimen274
+\@belowrulesep=\dimen275
+\@thisruleclass=\count434
+\@lastruleclass=\count435
+\@thisrulewidth=\dimen276
 )
 (c:/texlive/2017/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen323
-\c@nlinenum=\count457
-\TeXr@lab=\toks52
+\rotheadsize=\dimen277
+\c@nlinenum=\count436
+\TeXr@lab=\toks38
 )
 (c:/texlive/2017/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box68
+\@tempboxb=\box57
 )
 (c:/texlive/2017/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (c:/texlive/2017/texmf-dist/tex/latex/changepage/chngpage.sty
 Package: chngpage 2009/10/20 v1.2b change page layout
-\c@cp@cnt=\count458
-\c@cp@tempcnt=\count459
+\c@cp@cnt=\count437
+\c@cp@tempcnt=\count438
 )
 (c:/texlive/2017/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
 
+(c:/texlive/2017/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(c:/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks39
+\XKV@tempa@toks=\toks40
+)
+\XKV@depth=\count439
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
 (c:/texlive/2017/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
@@ -1822,33 +1543,33 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 (c:/texlive/2017/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box69
+\collectedbox=\box58
 )
-\tc@llx=\dimen324
-\tc@lly=\dimen325
-\tc@urx=\dimen326
-\tc@ury=\dimen327
+\tc@llx=\dimen278
+\tc@lly=\dimen279
+\tc@urx=\dimen280
+\tc@ury=\dimen281
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (c:/texlive/2017/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen328
-\adjbox@Height=\dimen329
-\adjbox@Depth=\dimen330
-\adjbox@Totalheight=\dimen331
+\adjbox@Width=\dimen282
+\adjbox@Height=\dimen283
+\adjbox@Depth=\dimen284
+\adjbox@Totalheight=\dimen285
 
 (c:/texlive/2017/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count460
+\c@checkoddpage=\count440
 LaTeX Info: Redefining \checkoddpage on input line 45.
 )
 (c:/texlive/2017/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box70
-\sift@deathcycles=\count461
-\@vwid@loff=\dimen332
-\@vwid@roff=\dimen333
+\@vwid@box=\box59
+\sift@deathcycles=\count441
+\@vwid@loff=\dimen286
+\@vwid@roff=\dimen287
 ))
 Package biblatex Info: Trying to load language 'polish'...
 Package biblatex Info: ... file 'polish.lbx' found.
@@ -1881,9 +1602,6 @@ LaTeX Warning: Label `lst:scalasbt' multiply defined.
 
 ) (./main.aux
 
-LaTeX Warning: Label `eq:distance' multiply defined.
-
-
 LaTeX Warning: Label `lst:bundles' multiply defined.
 
 ) (./summary.aux))
@@ -1909,17 +1627,17 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count462
-\scratchdimen=\dimen334
-\scratchbox=\box71
-\nofMPsegments=\count463
-\nofMParguments=\count464
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count465
-\MPscratchDim=\dimen335
-\MPnumerator=\count466
-\makeMPintoPDFobject=\count467
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count442
+\scratchdimen=\dimen288
+\scratchbox=\box60
+\nofMPsegments=\count443
+\nofMParguments=\count444
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count445
+\MPscratchDim=\dimen289
+\MPnumerator=\count446
+\makeMPintoPDFobject=\count447
+\everyMPtoPDFconversion=\toks42
 ) (c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -2057,10 +1775,8 @@ Dictionary: translator-basic-dictionary, Language: English
 (c:/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 )
-\c@lstlisting=\count468
-
-ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box72
+\c@lstlisting=\count448
+\AtBeginShipoutBox=\box61
 Package hyperref Info: Link coloring OFF on input line 262.
 
 (c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -2069,15 +1785,15 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (c:/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count469
+\c@section@level=\count449
 )
 LaTeX Info: Redefining \ref on input line 262.
 LaTeX Info: Redefining \pageref on input line 262.
 LaTeX Info: Redefining \nameref on input line 262.
 
 (./praca.out) (./praca.out)
-\@outlinefile=\write6
-\openout6 = `praca.out'.
+\@outlinefile=\write5
+\openout5 = `praca.out'.
 
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -2085,14 +1801,14 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' specified.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout5 = `praca-blx.bib'.
+\openout4 = `praca-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'praca.bbl' found.
  (./praca.bbl)
 Package biblatex Info: Reference section=0 on input line 262.
 Package biblatex Info: Reference segment=0 on input line 262.
-\c__siunitx_mathsf_int=\count470
+\c__siunitx_mathsf_int=\count450
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 262.
 
 
@@ -2139,7 +1855,7 @@ LaTeX Font Info:    Try loading font information for OT1+lmss on input line 262
 (c:/texlive/2017/texmf-dist/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\c__siunitx_mathtt_int=\count471
+\c__siunitx_mathtt_int=\count451
 LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 262
 .
 
@@ -2157,7 +1873,7 @@ ted-to.pdf>
 _cmyk-eps-converted-to.pdf images/agh_nzw_a_pl_1w_wbr_cmyk.eps>
 (epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
-<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=292, pagebox=cropbox,
+<images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf, id=289, pagebox=cropbox,
  323.2075pt x 107.40125pt>
 File: images/agh_nzw_a_pl_1w_wbr_cmyk-eps-converted-to.pdf Graphic file (type p
 df)
@@ -2179,7 +1895,12 @@ Overfull \hbox (85.35826pt too wide) in paragraph at lines 271--278
 [1
 
 {c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/agh_nz
-w_a_pl_1w_wbr_cmyk-eps-converted-to.pdf>] [2] (./praca.toc [3]
+w_a_pl_1w_wbr_cmyk-eps-converted-to.pdf>]
+Overfull \hbox (3.71217pt too wide) in paragraph at lines 304--309
+ [] 
+ []
+
+[2] [3] [4] (./praca.toc [5]
 Overfull \hbox (1.6587pt too wide) detected at line 52
 \T1/lmr/m/n/10.95 10.1.10. 
  []
@@ -2187,24 +1908,17 @@ Overfull \hbox (1.6587pt too wide) detected at line 52
 
 Underfull \vbox (badness 1237) has occurred while \output is active []
 
- [4])
-\tf@toc=\write7
-\openout7 = `praca.toc'.
+ [6])
+\tf@toc=\write6
+\openout6 = `praca.toc'.
 
 
-[5] [6
-
-
-] (./praca.tdo)
-\tf@tdo=\write8
-\openout8 = `praca.tdo'.
-
- [7]
+[7]
 \openout2 = `intro.aux'.
 
  (./intro.tex
 Rozdzia\l  1.
-<images/Browser.jpg, id=417, 3025.3025pt x 1701.35625pt>
+<images/Browser.jpg, id=403, 3025.3025pt x 1701.35625pt>
 File: images/Browser.jpg Graphic file (type jpg)
 <use images/Browser.jpg>
 Package pdftex.def Info: images/Browser.jpg  used on input line 16. on input li
@@ -2219,33 +1933,41 @@ l.26 \newpage
               [1
 
 
+
  <./images/Browser.jpg>])pdfTeX warning (ext4): destination with the same ident
 ifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.334 \include{intro}
+l.342 \include{intro}
                       [2]
 \openout2 = `theory.aux'.
 
  (./theory.tex
 Rozdzia\l  2.
-<images/curve.png, id=426, 1927.2pt x 943.525pt>
+<images/curve.png, id=412, 1927.2pt x 943.525pt>
 File: images/curve.png Graphic file (type png)
 <use images/curve.png>
 Package pdftex.def Info: images/curve.png  used on input line 9. on input line 
 9.
 Package pdftex.def Info: Requested size: 455.24411pt x 222.88016pt on input lin
 e 9.
+
+Underfull \vbox (badness 2460) has occurred while \output is active []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.24 I
-      stnieje wiele bada≈Ñ \cite{PicturesRocks}\cite{SuperPictures}, kt√≥re ...
-[3
+l.20 \section{Efekt przewagi obraz√≥w}
+                                       [3
 
 
- <./images/curve.png>]
+ <./images/curve.png>]pdfTeX warning (ext4): destination with the same identifi
+er (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 \newpage
+              [4]
 Rozdzia\l  3.
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 50.
 (c:/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -2260,48 +1982,39 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 48--65
 []$[]$ 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.69 \section{Implementacje .NET}
-                                  [4]
-Underfull \vbox (badness 2600) has occurred while \output is active []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.88 ...Universal Windows Platform (\textit{UWP})}
-                                                   [5]pdfTeX warning (ext4): de
-stination with the same identifier (name{page.6}) has been already used, duplic
-ate ignored
+l.74 I
+      stniejƒÖ aktualnie 4 g≈Ç√≥wne implementacje .NET: [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.112 \newpage
-               [6]
+               [6]pdfTeX warning (ext4): destination with the same identifier (
+name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.112 \newpage
+               [7]
 Rozdzia\l  4.
-<images/mvc.png, id=482, 218.8175pt x 184.69pt>
+<images/mvc.png, id=470, 218.8175pt x 184.69pt>
 File: images/mvc.png Graphic file (type png)
 <use images/mvc.png>
 Package pdftex.def Info: images/mvc.png  used on input line 132. on input line 
 132.
 Package pdftex.def Info: Requested size: 170.23622pt x 143.68642pt on input lin
 e 132.
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.143 
-       [7 <./images/mvc.png>]
+[8 <./images/mvc.png>]
 Overfull \hbox (17.0pt too wide) in paragraph at lines 148--156
 []$[]$ 
  []
 
-<images/RepositoryPattern.png, id=493, 545.03625pt x 190.7125pt>
+<images/RepositoryPattern.png, id=483, 545.03625pt x 190.7125pt>
 File: images/RepositoryPattern.png Graphic file (type png)
 <use images/RepositoryPattern.png>
 Package pdftex.def Info: images/RepositoryPattern.png  used on input line 164. 
@@ -2313,8 +2026,12 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 165.
 See the caption package documentation for explanation.
 
-[8 <./images/RepositoryPattern.png>] [9]
-<images/ReviewRepository.png, id=511, 538.4115pt x 368.577pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10 <./images/RepositoryPattern.png>]
+<images/ReviewRepository.png, id=501, 538.4115pt x 368.577pt>
 File: images/ReviewRepository.png Graphic file (type png)
 <use images/ReviewRepository.png>
 Package pdftex.def Info: images/ReviewRepository.png  used on input line 174. o
@@ -2327,7 +2044,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 175.
 See the caption package documentation for explanation.
 
-<images/UnitOfWork.png, id=513, 182.18062pt x 274.02374pt>
+<images/UnitOfWork.png, id=503, 182.18062pt x 274.02374pt>
 File: images/UnitOfWork.png Graphic file (type png)
 <use images/UnitOfWork.png>
 Package pdftex.def Info: images/UnitOfWork.png  used on input line 184. on inpu
@@ -2342,61 +2059,70 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./images/ReviewRepository.png>]
+ [11 <./images/ReviewRepository.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 190--194
 
  []
 
-[11 <./images/UnitOfWork.png>]
-<images/ninject.png, id=530, 491.9178pt x 135.6267pt>
+[12 <./images/UnitOfWork.png>]
+<images/ninject.png, id=521, 484.4499pt x 135.6267pt>
 File: images/ninject.png Graphic file (type png)
 <use images/ninject.png>
 Package pdftex.def Info: images/ninject.png  used on input line 223. on input l
 ine 223.
-Package pdftex.def Info: Requested size: 455.24411pt x 125.51688pt on input lin
+Package pdftex.def Info: Requested size: 455.24411pt x 127.45184pt on input lin
 e 223.
- [12 <./images/ninject.png>] [13]
+
+Underfull \vbox (badness 2057) has occurred while \output is active []
+
+ [13 <./images/ninject.png>] [14]
 Rozdzia\l  5.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 240.
-[14]
-Rozdzia\l  6.
-[15] [16]
-Rozdzia\l  7.
-[17] [18]
-Rozdzia\l  8.
-[19]
-<images/javagod.png, id=652, 238.64156pt x 202.50656pt>
-File: images/javagod.png Graphic file (type png)
-<use images/javagod.png>
-Package pdftex.def Info: images/javagod.png  used on input line 396. on input l
-ine 396.
-Package pdftex.def Info: Requested size: 238.64096pt x 202.50604pt on input lin
-e 396.
- [20 <./images/javagod.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 445--470
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 260--267
 []$[]$ 
  []
 
-[21] [22]
-Overfull \hbox (17.81808pt too wide) in paragraph at lines 494--512
- [] 
+[15]
+Rozdzia\l  6.
+[16] [17]
+Rozdzia\l  7.
+[18] [19]
+Rozdzia\l  8.
+[20]
+<images/javagod.png, id=648, 238.64156pt x 202.50656pt>
+File: images/javagod.png Graphic file (type png)
+<use images/javagod.png>
+Package pdftex.def Info: images/javagod.png  used on input line 405. on input l
+ine 405.
+Package pdftex.def Info: Requested size: 238.64096pt x 202.50604pt on input lin
+e 405.
+
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [21 <./images/javagod.png>] [22]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 454--479
+[]$[]$ 
  []
 
 [23]
-<images/debug.png, id=732, 709.14937pt x 619.56468pt>
+Overfull \hbox (17.81808pt too wide) in paragraph at lines 503--521
+ [] 
+ []
+
+[24]
+<images/debug.png, id=730, 709.14937pt x 619.56468pt>
 File: images/debug.png Graphic file (type png)
 <use images/debug.png>
-Package pdftex.def Info: images/debug.png  used on input line 534. on input lin
-e 534.
+Package pdftex.def Info: images/debug.png  used on input line 543. on input lin
+e 543.
 Package pdftex.def Info: Requested size: 455.24411pt x 397.73958pt on input lin
-e 534.
+e 543.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 534.
+(Font)              <10> on input line 543.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 534.
+(Font)              <7> on input line 543.
 
-Underfull \hbox (badness 1226) in paragraph at lines 542--543
+Underfull \hbox (badness 1226) in paragraph at lines 551--552
 []\T1/lmr/m/n/10.95 Naleªy do-da¢ plik ./pro-jec-t/plu-gins.sbt[][][], we-wn°tr
 z ktÛ-rego znaj-dzie si¶ in-struk-cja
  []
@@ -2404,33 +2130,33 @@ z ktÛ-rego znaj-dzie si¶ in-struk-cja
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <./images/debug.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 550--569
+ [25 <./images/debug.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 559--578
 []$[]$ 
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 570--592
+Overfull \hbox (17.0pt too wide) in paragraph at lines 579--601
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-[26]
+ [26]
+[27]
 Rozdzia\l  9.
 )
-Overfull \hbox (17.0pt too wide) in paragraph at lines 603--335
+Overfull \hbox (17.0pt too wide) in paragraph at lines 612--343
 []$[]$ 
  []
 
-[27]
+[28]
 \openout2 = `main.aux'.
 
  (./main.tex
 Rozdzia\l  10.
-<images/question.png, id=804, 750.55406pt x 459.96844pt>
+<images/question.png, id=801, 750.55406pt x 459.96844pt>
 File: images/question.png Graphic file (type png)
 <use images/question.png>
 Package pdftex.def Info: images/question.png  used on input line 16. on input l
@@ -2442,363 +2168,374 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 17.
 See the caption package documentation for explanation.
 
-[28
+[29
 
 
  <./images/question.png>]
+<images/wrongAnswer.png, id=807, 1160.83687pt x 686.565pt>
+File: images/wrongAnswer.png Graphic file (type png)
+<use images/wrongAnswer.png>
+Package pdftex.def Info: images/wrongAnswer.png  used on input line 37. on inpu
+t line 37.
+Package pdftex.def Info: Requested size: 455.24411pt x 269.24687pt on input lin
+e 37.
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 52.
-See the caption package documentation for explanation.
-
-<images/interval.png, id=810, 460.8417pt x 367.6134pt>
-File: images/interval.png Graphic file (type png)
-<use images/interval.png>
-Package pdftex.def Info: images/interval.png  used on input line 60. on input l
-ine 60.
-Package pdftex.def Info: Requested size: 455.24411pt x 363.16989pt on input lin
-e 60.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 61.
 See the caption package documentation for explanation.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1383) has occurred while \output is active []
 
- [29]
-[30 <./images/interval.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
+ [30 <./images/wrongAnswer.png>]
+<images/interval.png, id=815, 460.8417pt x 367.6134pt>
+File: images/interval.png Graphic file (type png)
+<use images/interval.png>
+Package pdftex.def Info: images/interval.png  used on input line 69. on input l
+ine 69.
+Package pdftex.def Info: Requested size: 455.24411pt x 363.16989pt on input lin
+e 69.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 70.
+See the caption package documentation for explanation.
+
+[31 <./images/interval.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
 
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 81--82
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 90--91
 [][] 
  []
 
-<images/WinStrength.png, id=827, 1927.2pt x 993.7125pt>
+<images/WinStrength.png, id=826, 1156.32pt x 566.115pt>
 File: images/WinStrength.png Graphic file (type png)
 <use images/WinStrength.png>
-Package pdftex.def Info: images/WinStrength.png  used on input line 92. on inpu
-t line 92.
-Package pdftex.def Info: Requested size: 455.24411pt x 234.73549pt on input lin
-e 92.
+Package pdftex.def Info: images/WinStrength.png  used on input line 101. on inp
+ut line 101.
+Package pdftex.def Info: Requested size: 455.24411pt x 222.8744pt on input line
+ 101.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 93.
+(caption)                particular \caption on input line 102.
 See the caption package documentation for explanation.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 106--107
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 115--116
 [][] 
  []
 
-<images/LossStrength.png, id=828, 1927.2pt x 993.7125pt>
+<images/LossStrength.png, id=827, 1156.32pt x 566.115pt>
 File: images/LossStrength.png Graphic file (type png)
 <use images/LossStrength.png>
-Package pdftex.def Info: images/LossStrength.png  used on input line 112. on in
-put line 112.
-Package pdftex.def Info: Requested size: 455.24411pt x 234.73549pt on input lin
-e 112.
+Package pdftex.def Info: images/LossStrength.png  used on input line 121. on in
+put line 121.
+Package pdftex.def Info: Requested size: 455.24411pt x 222.8744pt on input line
+ 121.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 113.
+(caption)                particular \caption on input line 122.
 See the caption package documentation for explanation.
 
-[31 <./images/WinStrength.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+[32 <./images/WinStrength.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 126--127
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 135--136
 [][] 
  []
 
 
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 149--150
-[][] 
- []
-
-[32 <./images/LossStrength.png>]
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 168--169
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 158--159
 [][] 
  []
 
 
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 194--195
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 177--178
 [][] 
  []
 
-[33]
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 240--241
+[33 <./images/LossStrength.png>]
+<images/rightAnswer.png, id=855, 1133.73563pt x 686.565pt>
+File: images/rightAnswer.png Graphic file (type png)
+<use images/rightAnswer.png>
+Package pdftex.def Info: images/rightAnswer.png  used on input line 187. on inp
+ut line 187.
+Package pdftex.def Info: Requested size: 455.24411pt x 275.67921pt on input lin
+e 187.
+
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 209--210
 [][] 
  []
 
-
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 258--259
-[][] 
- []
-
-[34]
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 284--285
-[][] 
- []
-
-
-Overfull \hbox (24.29999pt too wide) in paragraph at lines 312--313
+[34 <./images/rightAnswer.png>]
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 259--260
 [][] 
  []
 
 [35]
-<images/Management.png, id=896, 753.5653pt x 526.96875pt>
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 275--276
+[][] 
+ []
+
+<images/tweaker.png, id=884, 830.35219pt x 228.10219pt>
+File: images/tweaker.png Graphic file (type png)
+<use images/tweaker.png>
+Package pdftex.def Info: images/tweaker.png  used on input line 289. on input l
+ine 289.
+Package pdftex.def Info: Requested size: 455.24411pt x 125.0563pt on input line
+ 289.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 307--308
+[][] 
+ []
+
+[36]
+Overfull \hbox (24.29999pt too wide) in paragraph at lines 336--337
+[][] 
+ []
+
+[37 <./images/tweaker.png>]
+<images/Management.png, id=912, 753.5653pt x 526.96875pt>
 File: images/Management.png Graphic file (type png)
 <use images/Management.png>
-Package pdftex.def Info: images/Management.png  used on input line 326. on inpu
-t line 326.
+Package pdftex.def Info: images/Management.png  used on input line 351. on inpu
+t line 351.
 Package pdftex.def Info: Requested size: 455.24411pt x 318.34668pt on input lin
-e 326.
+e 351.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 327.
+(caption)                particular \caption on input line 352.
 See the caption package documentation for explanation.
 
-<images/usecases.png, id=897, 1114.1625pt x 871.255pt>
+<images/usecases.png, id=913, 1063.975pt x 963.6pt>
 File: images/usecases.png Graphic file (type png)
 <use images/usecases.png>
-Package pdftex.def Info: images/usecases.png  used on input line 334. on input 
-line 334.
-Package pdftex.def Info: Requested size: 455.24411pt x 355.99379pt on input lin
-e 334.
+Package pdftex.def Info: images/usecases.png  used on input line 359. on input 
+line 359.
+Package pdftex.def Info: Requested size: 502.66591pt x 455.24411pt on input lin
+e 359.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 335.
+(caption)                particular \caption on input line 360.
 See the caption package documentation for explanation.
+
+
+Overfull \hbox (47.4218pt too wide) in paragraph at lines 359--360
+ [] 
+ []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36 <./images/Management.png>] [37 <./images/usecases.png>]
+ [38 <./images/Management.png>] [39 <./images/usecases.png>]
 Rozdzia\l  11.
-<images/Structure.png, id=910, 963.6pt x 327.47343pt>
+<images/Structure.png, id=925, 963.6pt x 542.025pt>
 File: images/Structure.png Graphic file (type png)
 <use images/Structure.png>
-Package pdftex.def Info: images/Structure.png  used on input line 345. on input
- line 345.
-Package pdftex.def Info: Requested size: 455.24411pt x 154.71202pt on input lin
-e 345.
+Package pdftex.def Info: images/Structure.png  used on input line 370. on input
+ line 370.
+Package pdftex.def Info: Requested size: 455.24411pt x 256.07507pt on input lin
+e 370.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 346.
+(caption)                particular \caption on input line 371.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 354--378
+Overfull \hbox (17.0pt too wide) in paragraph at lines 379--403
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38 <./images/Structure.png>] [39]
-<images/Repos.png, id=942, 719.0865pt x 537.207pt>
+ [40 <./images/Structure.png>] [41]
+<images/Repos.png, id=957, 719.0865pt x 537.207pt>
 File: images/Repos.png Graphic file (type png)
 <use images/Repos.png>
-Package pdftex.def Info: images/Repos.png  used on input line 381. on input lin
-e 381.
-Package pdftex.def Info: Requested size: 455.24411pt x 340.10622pt on input lin
-e 381.
+Package pdftex.def Info: images/Repos.png  used on input line 406. on input lin
+e 406.
+Package pdftex.def Info: Requested size: 540.60237pt x 403.87152pt on input lin
+e 406.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 382.
-See the caption package documentation for explanation.
-
-[40
-
- <./images/Repos.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 391--414
-[]$[]$ 
- []
-
-[41
-
-]
-<images/Controllers.png, id=971, 791.3565pt x 434.22224pt>
-File: images/Controllers.png Graphic file (type png)
-<use images/Controllers.png>
-Package pdftex.def Info: images/Controllers.png  used on input line 427. on inp
-ut line 427.
-Package pdftex.def Info: Requested size: 597.50787pt x 327.87222pt on input lin
-e 427.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 428.
+(caption)                particular \caption on input line 407.
 See the caption package documentation for explanation.
 
 [42
 
- <./images/Controllers.png>]
-<images/ControllerLifecycle.png, id=979, 316.93407pt x 359.84438pt>
-File: images/ControllerLifecycle.png Graphic file (type png)
-<use images/ControllerLifecycle.png>
-Package pdftex.def Info: images/ControllerLifecycle.png  used on input line 444
-. on input line 444.
-Package pdftex.def Info: Requested size: 316.93329pt x 359.84349pt on input lin
-e 444.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 445.
-See the caption package documentation for explanation.
+ <./images/Repos.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 416--439
+[]$[]$ 
+ []
 
 [43
 
- <./images/ControllerLifecycle.png>] [44]
-<images/Serwisy.png, id=992, 972.0315pt x 579.96675pt>
-File: images/Serwisy.png Graphic file (type png)
-<use images/Serwisy.png>
-Package pdftex.def Info: images/Serwisy.png  used on input line 466. on input l
-ine 466.
-Package pdftex.def Info: Requested size: 597.50787pt x 356.51372pt on input lin
-e 466.
+]
+<images/Controllers.png, id=987, 791.3565pt x 434.22224pt>
+File: images/Controllers.png Graphic file (type png)
+<use images/Controllers.png>
+Package pdftex.def Info: images/Controllers.png  used on input line 452. on inp
+ut line 452.
+Package pdftex.def Info: Requested size: 668.63976pt x 366.90416pt on input lin
+e 452.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 467.
+(caption)                particular \caption on input line 453.
+See the caption package documentation for explanation.
+
+[44
+
+ <./images/Controllers.png>]
+<images/ControllerLifecycle.png, id=994, 316.93407pt x 359.84438pt>
+File: images/ControllerLifecycle.png Graphic file (type png)
+<use images/ControllerLifecycle.png>
+Package pdftex.def Info: images/ControllerLifecycle.png  used on input line 469
+. on input line 469.
+Package pdftex.def Info: Requested size: 316.93329pt x 359.84349pt on input lin
+e 469.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 470.
 See the caption package documentation for explanation.
 
 [45
 
+ <./images/ControllerLifecycle.png>] [46]
+<images/Serwisy.png, id=1007, 972.0315pt x 579.96675pt>
+File: images/Serwisy.png Graphic file (type png)
+<use images/Serwisy.png>
+Package pdftex.def Info: images/Serwisy.png  used on input line 490. on input l
+ine 490.
+Package pdftex.def Info: Requested size: 668.63976pt x 398.95625pt on input lin
+e 490.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 491.
+See the caption package documentation for explanation.
+
+[47
+
  <./images/Serwisy.png>]
-<images/Solution.png, id=1000, 226.59656pt x 247.67531pt>
+<images/Solution.png, id=1015, 274.02374pt x 245.41687pt>
 File: images/Solution.png Graphic file (type png)
 <use images/Solution.png>
-Package pdftex.def Info: images/Solution.png  used on input line 492. on input 
-line 492.
-Package pdftex.def Info: Requested size: 226.596pt x 247.6747pt on input line 4
-92.
+Package pdftex.def Info: images/Solution.png  used on input line 518. on input 
+line 518.
+Package pdftex.def Info: Requested size: 274.02307pt x 245.41626pt on input lin
+e 518.
 
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 493.
-See the caption package documentation for explanation.
-
-[46
-
- <./images/Solution.png>] [47]
-<images/erd.png, id=1011, 880.03781pt x 659.46375pt>
-File: images/erd.png Graphic file (type png)
-<use images/erd.png>
-Package pdftex.def Info: images/erd.png  used on input line 514. on input line 
-514.
-Package pdftex.def Info: Requested size: 455.24411pt x 341.14204pt on input lin
-e 514.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 515.
-See the caption package documentation for explanation.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [48
 
- <./images/erd.png>]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 524--532
+] [49 <./images/Solution.png>]
+<images/erd.png, id=1027, 649.67719pt x 482.55281pt>
+File: images/erd.png Graphic file (type png)
+<use images/erd.png>
+Package pdftex.def Info: images/erd.png  used on input line 540. on input line 
+540.
+Package pdftex.def Info: Requested size: 612.92712pt x 455.24411pt on input lin
+e 540.
+
+
+LaTeX Warning: Float too large for page by 25.60002pt on input line 542.
+
+[50 <./images/erd.png>]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 550--558
 []$[]$ 
  []
 
-[49
+[51
+
 
 ]
-<images/identity.png, id=1029, 380.17032pt x 349.305pt>
+<images/identity.png, id=1042, 380.17032pt x 349.305pt>
 File: images/identity.png Graphic file (type png)
 <use images/identity.png>
-Package pdftex.def Info: images/identity.png  used on input line 545. on input 
-line 545.
+Package pdftex.def Info: images/identity.png  used on input line 571. on input 
+line 571.
 Package pdftex.def Info: Requested size: 380.16939pt x 349.30414pt on input lin
-e 545.
+e 571.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 546.
+(caption)                particular \caption on input line 572.
 See the caption package documentation for explanation.
 
 
-Underfull \vbox (badness 1163) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50 <./images/identity.png>] [51]
+ [52 <./images/identity.png>] [53]
 
-LaTeX Warning: Citation 'ScalaNoSupport' on page 52 undefined on input line 627
+LaTeX Warning: Citation 'ScalaNoSupport' on page 54 undefined on input line 651
 .
 
 
-LaTeX Warning: Citation 'ScalaNoSupportGoogle' on page 52 undefined on input li
-ne 627.
+LaTeX Warning: Citation 'ScalaNoSupportGoogle' on page 54 undefined on input li
+ne 651.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--628
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
 \T1/lmr/m/n/10.95 Do-dat-kowo wy-niki wy-szu-ki-wa-nia w go-ogle pod ha-s™em "V
 i-sual stu-dio
  []
 
 
-Underfull \hbox (badness 1521) in paragraph at lines 627--628
+Underfull \hbox (badness 1521) in paragraph at lines 651--652
 \T1/lmr/m/n/10.95 scala.js"[[]] nie zwra-caj° ªad-nych za-py-ta´. Moªna wi¶c do
 -mnie-
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 636--649
+Overfull \hbox (17.0pt too wide) in paragraph at lines 660--673
 []$[]$ 
  []
 
-[52]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 658--676
+[54]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 682--700
 []$[]$ 
  []
 
 
 Underfull \vbox (badness 2277) has occurred while \output is active []
 
- [53]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 697--716
+ [55]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 721--740
 []$[]$ 
  []
 
-[54]
+[56]
 Underfull \vbox (badness 1024) has occurred while \output is active []
 
- [55]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 747--761
-[]$[]$ 
- []
-
-
-Overfull \hbox (17.0pt too wide) in paragraph at lines 768--793
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 803--818
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [57]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 834--862
+Overfull \hbox (17.0pt too wide) in paragraph at lines 771--785
+[]$[]$ 
+ []
+
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 792--817
 []$[]$ 
  []
 
@@ -2806,39 +2543,64 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 834--862
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [58]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59])
-Overfull \hbox (17.0pt too wide) in paragraph at lines 878--336
+Overfull \hbox (17.0pt too wide) in paragraph at lines 827--842
 []$[]$ 
  []
 
-[60]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 858--886
+[]$[]$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61])
+Overfull \hbox (17.0pt too wide) in paragraph at lines 902--344
+[]$[]$ 
+ []
+
+[62]
 \openout2 = `summary.aux'.
 
  (./summary.tex
 Rozdzia\l  12.
-) [61
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63
 
 
-] [62
+])
+[64] [65
 
 
-] [63]
-Underfull \hbox (badness 1158) in paragraph at lines 344--344
+]
+Underfull \hbox (badness 1158) in paragraph at lines 352--352
 []\T1/lmr/m/it/10.95 Scala (pro-gram-ming lan-gu-age)\T1/lmr/m/n/10.95 . \T1/lm
 r/m/sc/10.95 url\T1/lmr/m/n/10.95 : []$\T1/lmr/m/it/10.95 https : / / en . wiki
 pedia . org / wiki / Scala _
  []
 
-[64]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
- (./praca.aux (./intro.aux) (./theory.aux) (./main.aux) (./summary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+[66] (./praca.lof [67])
+\tf@lof=\write7
+\openout7 = `praca.lof'.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+ [68]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
+ (./praca.aux (./intro.aux) (./theory.aux)
+(./main.aux) (./summary.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 Package rerunfilecheck Info: File `praca.out' has not changed.
-(rerunfilecheck)             Checksum: 9C6BE4397A795C430E91AE8864CD5FFC;4661.
+(rerunfilecheck)             Checksum: 47F4DEDA2492875B3962843EFF9E50A0;4654.
 
 
 LaTeX Warning: There were undefined references.
@@ -2854,16 +2616,16 @@ Package biblatex Warning: Please (re)run BibTeX on the file(s):
 Package logreq Info: Writing requests to 'praca.run.xml'.
 \openout1 = `praca.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 42251 strings out of 492990
- 793846 string characters out of 6136335
- 1212585 words of memory out of 5000000
- 44509 multiletter control sequences out of 15000+600000
- 671834 words of font info for 106 fonts, out of 8000000 for 9000
+ 32250 strings out of 492990
+ 578185 string characters out of 6136335
+ 1023793 words of memory out of 5000000
+ 34713 multiletter control sequences out of 15000+600000
+ 674849 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,22n,97p,10385b,3184s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,22n,80p,10385b,3184s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2017/tex
 mf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2017/texmf-dist/fonts/enc/
 dvips/lm/lm-mathex.enc}{c:/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathsy
@@ -2887,10 +2649,10 @@ fb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2
 017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2017/texmf-dist/fon
 ts/type1/public/lm/lmsy9.pfb><c:/texlive/2017/texmf-dist/fonts/type1/urw/courie
 r/ucrr8a.pfb>
-Output written on praca.pdf (71 pages, 2267044 bytes).
+Output written on praca.pdf (75 pages, 4437505 bytes).
 PDF statistics:
- 1460 PDF objects out of 1728 (max. 8388607)
- 1311 compressed objects within 14 object streams
- 562 named destinations out of 1000 (max. 500000)
- 701 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1522 PDF objects out of 1728 (max. 8388607)
+ 1363 compressed objects within 14 object streams
+ 568 named destinations out of 1000 (max. 500000)
+ 704 words of extra memory for PDF output out of 10000 (max. 10000000)
 

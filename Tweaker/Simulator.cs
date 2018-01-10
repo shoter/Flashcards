@@ -43,11 +43,13 @@ namespace Tweaker
                                 {
                                     max = cards;
                                     Console.WriteLine(
-                                        $"({A}, {B}, {C}, {D}, {E}) - {cards}");
+                                        $"[{DateTime.Now.ToShortTimeString()}]( {A}, {B}, {C}, {D}, {E}) - {cards}");
                                 }
 
                             }
             Console.WriteLine("DONE");
+            Console.ReadKey();
+            Console.ReadKey();
             Console.ReadKey();
         }
     }

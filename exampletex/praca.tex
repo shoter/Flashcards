@@ -63,7 +63,7 @@
 \usepackage{lmodern}
 \usepackage{listings}
 %notki todo
-\usepackage{todonotes}
+%\usepackage{todonotes}
 % Polskie literki w listingach:
 \lstset{
     literate=
@@ -218,23 +218,23 @@
 % Prawdopodobnie niektóre z poniższych nie są nigdy używane.
 % Jeśli o tym wiesz, to warto rozwinąć ten szablon i udostępnić go dalej ;)
 
-\author{Damian Łączak}
-\shortauthor{Damian Łączak}
+\author{}
+\shortauthor{}
 
-\titlePL{Aplikacja internetowa do nauki języka obcego}
+\titlePL{}
 \titleEN{Internet application for foreign language learning}
 
 % Skrócone wersje tytułów po polsku/angielsku
 % wyświetlane np. gdy normalne są bardzo długie
-\shorttitlePL{Aplikacja internetowa do nauki języka}
+\shorttitlePL{}
 \shorttitleEN{Internet application for language learning}
 
 % Rodzaj pracy
-	\thesistype{Praca dyplomowa magisterska}
+	\thesistype{Praca dyplomowa inżynierska}
 %\thesistype{Master of Science Thesis}
 
 % Promotor/opiekun pracy
-\supervisor{dr hab. inż Tomasz Bołd}
+\supervisor{dr hab. inż. Tomasz Bołd}
 
 % Kierunek studiów
 \degreeprogramme{Informatyka Stosowana}
@@ -250,14 +250,14 @@
 \faculty{Wydział Fizyki i Informatyki Stosowanej}
 
 % TODO: Nie jest pewne czy jest wykorzystywane
-%\acknowledgements{Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora, żony, sąsiada itp.}
+\acknowledgements{Serdecznie dziękuję \dots tu ciąg dalszych podziękowań np. dla promotora, żony, sąsiada itp.}
 
 
 \setlength{\cftsecnumwidth}{10mm}
 %---------------------------------------------------------------------------
 \setcounter{secnumdepth}{4}
 
-\titlespacing{\section}{0pt}{*0.5}{*0.5}
+\titlespacing{\section}{0pt}{*0.5}{5mm}
 
 \begin{document}
 
@@ -281,7 +281,7 @@
     % --------------------------- IMIE I NAZWISKO -------------------------------
     {\bf\LARGE\textsf{Damian Łączak}}\\
     \vspace{3ex}
-    {\sf \normalsize kierunek studiów:} {\bf\normalsize\textsf{Informatyka Stosowana}}\\
+    {\sf \normalsize kierunek studiów:} {\bf\normalsize\textsf{informatyka stosowana}}\\
     \vspace{15ex}
     %% ------------------------ TYTUL PRACY --------------------------------------
     {\bf\Huge\textsf{Aplikacja internetowa do nauki języka}}\\
@@ -300,13 +300,21 @@
 
 \vspace{14ex}
 
-%\begin{center}
-%    \begin{tabular}{lr}
-%        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &
-%        ................................................................. \\
-%        ~ & {\sf (czytelny podpis)} \\
-%    \end{tabular}
-%\end{center}
+\begin{center}
+    \begin{tabular}{lr}
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ &
+        ................................................................. \\
+        ~ & {\sf (czytelny podpis)} \\
+    \end{tabular}
+\end{center}
+
+\newpage
+
+Merytoryczna ocena pracy przez opiekuna:
+
+\newpage
+
+Merytoryczna ocena pracy przez recenzenta:
 
 %% =====  TYL STRONY TYTULOWEJ PRACY INŻYNIERSKIEJ  ====
 \newpage
@@ -326,8 +334,8 @@
 \tableofcontents
 \clearpage
 
-\newpage
-\listoftodos
+%\newpage
+%\listoftodos
 \clearpage
 
 \pagenumbering{arabic}
@@ -341,5 +349,9 @@
 %-zostawienia odnośnika dla czytelnika, jeśli chciałby o danym temacie poczytać więcej. Na przykład odnośnik do kompilatora Closure, gdy wspominam o tym, że scala.js spełnia wszystkie warunki do użycia kompilatora closure.}
 
 \printbibliography
+
+\newpage
+
+\listoffigures
 
 \end{document}

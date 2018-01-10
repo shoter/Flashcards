@@ -81,12 +81,11 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{number}{4}
-    \field{pages}{236\bibrangedash 243}
     \field{title}{VISUAL INSTRUCTION: AN ADVANTAGE OR A DISADVANTAGE? WHAT
   ABOUT ITS EFFECT ON EFL LEARNERS’ VOCABULARY LEARNING?}
     \verb{url}
-    \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.581.7467&rep
-    \verb =rep1&type=pdf
+    \verb http://www.ajssh.leena-luna.co.jp/AJSSHPDFs/Vol.2(4)/AJSSH2013(2.4-23
+    \verb ).pdf
     \endverb
     \field{volume}{2}
     \field{journaltitle}{Asian journal of social sciences \& humanities}
@@ -115,7 +114,7 @@
     \verb https://www.ncbi.nlm.nih.gov/pubmed/1003125
     \endverb
     \field{volume}{2}
-    \field{journaltitle}{ournal of Experimental Psychology: Human Learning and
+    \field{journaltitle}{Journal of Experimental Psychology: Human Learning and
   Memory}
     \field{month}{09}
     \field{year}{1976}
@@ -123,30 +122,29 @@
 
   \entry{OverConfidence}{article}{}
     \name{author}{1}{}{%
-      {{hash=SKCKMO}{%
-         family={Shana K.\bibnamedelima Carpenter},
-         familyi={S\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
-  C\bibinitperiod},
-         given={Kellie M.\bibnamedelima Olson},
-         giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim
-  O\bibinitperiod},
+      {{hash=RJG}{%
+         family={Raaijmakers},
+         familyi={R\bibinitperiod},
+         given={Jeroen\bibnamedelima G.W.},
+         giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
     }
     \list{publisher}{1}{%
-      {American Psychological Association}%
+      {Elsevier}%
     }
-    \strng{namehash}{SKCKMO1}
-    \strng{fullhash}{SKCKMO1}
+    \strng{namehash}{RJG1}
+    \strng{fullhash}{RJG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
+    \field{pages}{431\bibrangedash 452}
     \field{title}{Spacing and repetition effects in human memory: application
   of the SAM mode}
     \verb{url}
     \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.581.7467&rep
     \verb =rep1&type=pdf
     \endverb
-    \field{journaltitle}{Journal of Experimental Psychology: Learning, Memory,
-  and Cognition}
+    \field{journaltitle}{Cognitive Science}
+    \field{year}{2002}
   \endentry
 
   \entry{CPlotekInfo}{online}{}
@@ -204,6 +202,29 @@
     \field{title}{SQL Server 2016}
     \verb{url}
     \verb https://www.microsoft.com/pl-pl/sql-server/sql-server-2016
+    \endverb
+    \field{urlday}{03}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{SqlLearning}{online}{}
+    \name{author}{1}{}{%
+      {{hash=dAB}{%
+         prefix={dr},
+         prefixi={d\bibinitperiod},
+         family={Artur\bibnamedelima Bartoszewski},
+         familyi={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ABd1}
+    \strng{fullhash}{ABd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Wprowadzenie do baz danych}
+    \verb{url}
+    \verb http://www.bartoszewski.pr.radom.pl/bazy/Wprowadzenie%20do%20baz%20da
+    \verb nych%20wyklad%2001.pdf
     \endverb
     \field{urlday}{03}
     \field{urlmonth}{01}
@@ -292,6 +313,28 @@
     \verb https://developer.mozilla.org/pl/docs/Web/JavaScript
     \endverb
     \field{urlday}{05}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{JsTenDays}{online}{}
+    \name{author}{1}{}{%
+      {{hash=SC}{%
+         family={Severance},
+         familyi={S\bibinitperiod},
+         given={Charles},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SC1}
+    \strng{fullhash}{SC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Java Script: Designing a Language in 10 Days}
+    \verb{url}
+    \verb https://www.computer.org/csdl/mags/co/2012/02/mco2012020007.html
+    \endverb
+    \field{urlday}{09}
     \field{urlmonth}{01}
     \field{urlyear}{2017}
   \endentry

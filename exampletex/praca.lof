@@ -1,0 +1,40 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\select@language {polish}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Przegl\IeC {\k a}darka internetowa wbudowana w telewizor.\relax }}{1}{figure.caption.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Eksponencjalna krzywa zapominania.\relax }}{3}{figure.caption.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Model MVC. \IeC {\'Z}r\IeC {\'o}d\IeC {\l }o: msdn.microsoft.com\relax }}{8}{figure.caption.3}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wzorzec repozytorium. \IeC {\'Z}r\IeC {\'o}d\IeC {\l }o: msdn.microsoft.com\relax }}{10}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Repozytorium ReviewCardRepository wraz z implementowanymi interfejsami i odziedziczonymi klasami.\relax }}{11}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Jednostka pracy wykorzystywana w projekcie.\relax }}{12}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Proces bindowania z wyszczeg\IeC {\'o}lnionymi cz\IeC {\k e}\IeC {\'s}ciami sk\IeC {\l }adowymi.\relax }}{13}{figure.caption.4}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Przyk\IeC {\l }ad dziwnego zachowania j\IeC {\k e}zyka Javascript. \IeC {\'Z}r\IeC {\'o}d\IeC {\l }o: devrant.com\relax }}{21}{figure.caption.5}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Przyk\IeC {\l }ad procesu debugowania kodu. Nasz program zostaje zatrzymany na linijce przed dodaniem napisu Hello World.}}{25}{figure.caption.6}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {10.1}{\ignorespaces Widok pytania w projekcie. Jest on wsp\IeC {\'o}lny dla ka\IeC {\.z}dego z etap\IeC {\'o}w\relax }}{29}{figure.10.1}
+\contentsline {figure}{\numberline {10.2}{\ignorespaces Widok niepoprawnej odpowiedzi.\relax }}{30}{figure.caption.7}
+\contentsline {figure}{\numberline {10.3}{\ignorespaces Zobrazowanie informacji zawartych w tabeli \ref {table:internals}\relax }}{31}{figure.10.3}
+\contentsline {figure}{\numberline {10.4}{\ignorespaces Wykres przedstawia ilo\IeC {\'s}\IeC {\'c} zdobytej si\IeC {\l }y po poprawnej odpowiedzi. Powsta\IeC {\l } na podstawie r\IeC {\'o}\IeC {\.z}nicy mi\IeC {\k e}dzy now\IeC {\k a} si\IeC {\l }\IeC {\k a} a jej poprzedni\IeC {\k a} warto\IeC {\'s}ci\IeC {\k a}.\relax }}{32}{figure.10.4}
+\contentsline {figure}{\numberline {10.5}{\ignorespaces Wykres przedstawia ilo\IeC {\'s}\IeC {\'c} straconej si\IeC {\l }y dla L = 1. Wz\IeC {\'o}r \ref {eq:lossStr}.\relax }}{33}{figure.10.5}
+\contentsline {figure}{\numberline {10.6}{\ignorespaces Widok poprawnej odpowiedzi.\relax }}{34}{figure.caption.8}
+\contentsline {figure}{\numberline {10.7}{\ignorespaces Okno programu do znajdywania warto\IeC {\'s}ci parametr\IeC {\'o}w. W nawiasie s\IeC {\k a} zawarte warto\IeC {\'s}ci parametr\IeC {\'o}w, za\IeC {\'s} po my\IeC {\'s}lniku ilo\IeC {\'s}\IeC {\'c} nauczonych fiszek. Program informuje nas o nowej kombinacji warto\IeC {\'s}ci parametr\IeC {\'o}w, je\IeC {\'s}li symulacja ma wi\IeC {\k e}kszy wynik ni\IeC {\.z} jej poprzedniczki.\relax }}{37}{figure.caption.9}
+\contentsline {figure}{\numberline {10.8}{\ignorespaces Widok edycji fiszki.\relax }}{38}{figure.10.8}
+\contentsline {figure}{\numberline {10.9}{\ignorespaces Diagram przypadk\IeC {\'o}w u\IeC {\.z}ycia.\relax }}{39}{figure.10.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11.1}{\ignorespaces Diagram przedstawiaj\IeC {\k a}cy struktur\IeC {\k e} programu.\relax }}{40}{figure.11.1}
+\contentsline {figure}{\numberline {11.2}{\ignorespaces Diagram klas wszystkich repozytori\IeC {\'o}w w projekcie.\relax }}{42}{figure.11.2}
+\contentsline {figure}{\numberline {11.3}{\ignorespaces Diagram klas wszystkich kontroler\IeC {\'o}w w projekcie\relax }}{44}{figure.11.3}
+\contentsline {figure}{\numberline {11.4}{\ignorespaces Cykl \IeC {\.z}ycia kontrolera. \IeC {\'Z}r\IeC {\'o}d\IeC {\l }o: docs.microsoft.com.\relax }}{45}{figure.11.4}
+\contentsline {figure}{\numberline {11.5}{\ignorespaces Diagram klas wszystkich serwis\IeC {\'o}w w projekcie\relax }}{47}{figure.11.5}
+\contentsline {figure}{\numberline {11.6}{\ignorespaces Rysunek przedstawiaj\IeC {\k a}cy rozwi\IeC {\k a}zanie projektu.\relax }}{49}{figure.caption.10}
+\contentsline {figure}{\numberline {11.7}{\ignorespaces Diagram ERD bazy danych.\relax }}{50}{figure.caption.11}
+\contentsline {figure}{\numberline {11.8}{\ignorespaces Diagram ERD ASP.NET Identity\relax }}{52}{figure.11.8}
+\addvspace {10\p@ }

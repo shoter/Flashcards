@@ -1,6 +1,6 @@
 {\let\cleardoublepage\relax \chapter{Przyswajanie wiedzy}}
 
-Hermann Ebbinghaus\cite{HumanMemory} (1850-1909) był Niemieckim psychologiem, który jako jeden z pierwszych zajmował się tematyką eksperymentalnej psychologii związanej z przyswajaniem wiedzy. 
+Hermann Ebbinghaus\cite{HumanMemory} (1850-1909) był niemieckim psychologiem, który jako jeden z pierwszych zajmował się tematyką eksperymentalnej psychologii związanej z przyswajaniem wiedzy. 
 Jednym z jego pierwszych eksperymentów było stworzenie testu, podczas którego uczył się zestawu 20 sylab, które były bezsensowne ze względu na fakt, iż w jego języku nie występowały żadne słowa, które ich używały.
 Eksperyment ten pozwolił mu skonstruować pierwszą na świecie krzywą zapominania. Miała ona charakter eksponencjalny.  Możemy z niej wywnioskować, iż podczas początkowego okresu zapominania tracimy najwięcej zapamiętanych informacji.
 
@@ -21,9 +21,9 @@ Interwał musi być wystarczająco krótki, aby zapobiec zapominaniu i wystarcza
 
 Efekt przewagi obrazów odnosi się do zjawiska, w którym zdjęcia i obrazy mają większą szanse na bycie zapamiętanymi niż ich zapisane odpowiedniki. 
 
-Istnieje wiele badań \cite{PicturesRocks}\cite{SuperPictures}, które ukazują pozytywny wpływ obrazków na łatwość zapamiętania informacji. 
+Istnieje wiele badań \cite{PicturesRocks}\cite{SuperPictures}, które ukazują pozytywny wpływ metod nauczania z wykorzystaniem obrazków.
 
-Istnieją także badania, które zjawisko pokazują w zupełnie innym świetle, pokazując brak pozytywnego wpływu obrazków na nauczanie języków obcych\cite{OverConfidence}.
+Istnieją także badania, które zjawisko pokazują w zupełnie innym świetle, pokazując brak pozytywnego wpływu prezentacji obrazków na nauczanie języków obcych\cite{OverConfidence}.
 \\
 Wewnątrz projektu starano się wykorzystać powyższy efekt, wymagając na użytkowniku zapamiętania, a następnie przypomnienia słowa w języku obcym wykorzystując do tego celu obrazki. Takie postępowanie w najgorszym wypadku będzie na równi efektywne z tradycyjnym.
 
@@ -32,7 +32,7 @@ Wewnątrz projektu starano się wykorzystać powyższy efekt, wymagając na uży
 
 
 
-
+\newpage
 {\let\cleardoublepage\relax \chapter{.NET}}
 
 
@@ -156,7 +156,7 @@ caption={Przykładowy kod kompatybilny z Razorem.}]
 
 \section{Wzorzec Repozytorium}
 \label{section_Repo}
-Wewnątrz aplikacji używana będzie baza danych Microsoft SQL. Do komunikacji z bazą bardzo często jest tworzony kod, który zwraca podobne dane. W celu zmniejszenia redundancji kodu, jak i odseparowania zależności i odpowiedzialności wykorzystany został wzorzec Repozytorium (z ang. Repository Pattern)\cite{RepositoryUnitOfWorkPattern}.
+Wewnątrz aplikacji używana jest baza danych Microsoft SQL. Do komunikacji z bazą bardzo często jest tworzony kod, który zwraca podobne dane. W celu zmniejszenia redundancji kodu, jak i odseparowania zależności i odpowiedzialności wykorzystany został wzorzec Repozytorium (z ang. Repository Pattern)\cite{RepositoryUnitOfWorkPattern}.
 
 Wzorzec ten wykorzystuje obiekty, zwane repozytoriami, których zadaniem jest pobieranie i modyfikowanie danych po stronie serwera SQL. Nie zawierają żadnej logiki biznesowej i są niezwiązane z resztą kodu danej aplikacji. 
 
@@ -237,10 +237,16 @@ Takie działanie niesie za sobą szereg korzyści. Nie tylko nie ponosimy koszt�
 \newpage
 {\let\cleardoublepage\relax \chapter{Microsoft SQL Server}}
 
-\todo[inline]{Weź to popraw bo jest złe}
-Microsoft SQL Server\cite{SqlServer} jest aplikacją, umożliwiającą zarządzanie serwerami baz danych. Został stworzony przez firmę Microsoft. Jego pierwsza edycja ukazała się w roku 1989.
 
-Do tworzenia zapytań wykorzystano tutaj język Transact-SQL (T-SQL). Jest to rozszerzenie języka SQL (Structured Query Language), które między innymi wprowadza:
+Microsoft SQL Server\cite{SqlServer} jest serwerem bazodanowym, który umożliwia przechowywanie, odczytywanie oraz modyfikowanie zapisanych w nim danych. Został stworzony przez firmę Microsoft Corporation. Jego pierwsza edycja ukazała się w roku 1989. 
+Wszystkie przechowywane na nim dane są podzielone na tabele, które składają się z rekordów o ściśle określonej strukturze, wewnątrz których przechowywane są zapisane informacje. Taki sposób zapisu danych znany jest też pod nazwą modelu relacyjnego. \cite{SqlLearning}
+
+W celu integracji serwera Microsoft SQL z projektem napisanym w języku C\# należy pobrać paczkę NuGet\footnote{NuGet jest menadżerem paczek w środowisku .NET.\cite{Nuget}} o nazwie \textbf{System.Data.SqlClient}.
+
+\section{Język zapytań}
+
+Wewnątrz Microsoft SQL Server do operacji na danych używany jest język Transact-SQL (T-SQL). Stosuje się go w celu tworzenia zapytań T-SQL, które są komendami potrafią pobierać, modyfikować oraz zapisywać informacje w bazie danych. T-SQL jest rozszerzeniem języka SQL(Structured Query Language) i między innymi wprowadza:
+
 
 \begin{enumerate}
 	\item Lokalne zmienne.
@@ -250,11 +256,14 @@ Do tworzenia zapytań wykorzystano tutaj język Transact-SQL (T-SQL). Jest to ro
 	\item Procedury, funkcje składowane i wyzwalacze.
 \end{enumerate} 
 
-W celu integracji serwera Microsoft SQL z projektem napisanym w języku C\# należy pobrać paczkę NuGet\footnote{NuGet jest menadżerem paczek w środowisku .NET.\cite{Nuget}} o nazwie \textbf{System.Data.SqlClient}.
 
-\section{Baza danych}
-
-
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[frame=single, numbers=none,captionpos=b, 
+caption={Przykładowe zapytanie stworzone w języku T-SQL.}]
+select flashcard.ID, trans.Translation from Flashcards flashcard
+inner join FlashcardTranslations trans on flashcard.id = trans.FlashcardID
+\end{lstlisting}
+\end{minipage}
 
 
 
@@ -322,7 +331,7 @@ p //selektor p
 
 \section{Syntaktycznie Doskonałe Arkusze Styli}
 
-W dzisiejszym świecie nikt obeznany z technologią tworzenia stron internetowych nie używa już samego języka CSS do tworzenia arkuszy styli. 
+W dzisiejszym świecie doświadczeni programiści nie używają już samego języka CSS do tworzenia arkuszy styli. 
 Wynika to z faktu występowania zbyt dużej redundancji kodu, która jest związana z tym, iż niektóre fragmenty strony są formatowane zawsze w ten sam sposób (np. motyw kolorystyczny dla większości elementów jest ten sam). 
 
 Jest to spowodowane brakiem zmiennych, szablonów, oraz innych konstrukcji, które pomogłoby w ograniczeniu powyższego problemu. 
@@ -369,7 +378,7 @@ object HelloWorld {
 
 Javascript jest głównym językiem programowania wykorzystywanym na stronach internetowych. Może być on interpretowany bądź kompilowany metodą Just In Time, która kompiluje kod tuż przed jego wykonaniem. Jest to dynamiczny język wieloparadygmatowy bazujący na prototypach. Wspiera programowanie obiektowe, imperatywne i deklaratywne.\cite{AboutJS}
 
-Javascript posiada wiele problemów, które utrudniają pisanie programów, między innymi takich jak:
+JavaScript został stworzony w ciągu 10 dni \cite{JsTenDays} przez firmę Netscape. Był stworzony z myślą o wzbogaceniu stron WWW o proste skrypty dodające elementy interakcji ze stroną. Prawdopodobnie krótki czas powstawania wpłynął negatywnie na język. JavaScript posiada wiele problemów, które utrudniają pisanie programów. Między innymi takich jak:
 \begin{enumerate}
 	\item Niejawne rzutowania, które objawiają się przy użyciu operatora ==. Są przyczyną wielu trudnych do odkrycia błędów
 	\item Automatyczne wstawianie średników, co może spowodować, iż program działa inaczej niż zamierzał to programista. Czasami potrafi to uratować program napisany przez programistę, lecz często prowadzi do dziwnych i niezrozumiałych błędów, takich jak w przypadku poniższego listingu: \ref{lst:javascriptSUCKS}
@@ -397,7 +406,7 @@ Z tego też powodu powstały języki, które starają się być lepsze i przyja�
 	 \caption{Przykład dziwnego zachowania języka Javascript. Źródło: devrant.com}
 \end{figure}
 
-\section{Scala w wersji JS}
+\section{Scala.js}
 
 Scala.js jest narzędziem umożliwiającym kompilacje kodu Scali do języka Javascript. Umożliwia to pozbycie się niedogodności wymienionych powyżej. Jest to możliwe dzięki:
 
@@ -414,7 +423,7 @@ Scala.js jest narzędziem umożliwiającym kompilacje kodu Scali do języka Java
 \subsection{sbt}
 	
 
-sbt (Simple Build Tool) jest narzędziem o otwartym kodzie źródłowym, pozwalającym na zarządzanie procesem budowania aplikacji napisanej w języku Scala lub Java. Jest to narzędzie bardzo rozbudowane, które m.in. umożliwia:
+sbt (Simple Build Tool) jest narzędziem o otwartym kodzie źródłowym, pozwalającym na zarządzanie procesem budowania aplikacji napisanej w języku Scala lub Java. Jest to narzędzie bardzo rozbudowane, które umożliwia m.in.:
 \begin{enumerate}
 	\item Współpracę z wieloma narzędziami testującymi dla scali.
 	\item Inkrementacyjne kompilowanie i testowanie.
